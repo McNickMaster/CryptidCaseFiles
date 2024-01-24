@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class Draggable_old : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     private bool _dragging;
     private Vector2 offset;
