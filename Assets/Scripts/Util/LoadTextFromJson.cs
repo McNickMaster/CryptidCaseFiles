@@ -7,7 +7,7 @@ using System;
 public class LoadTextFromJson : MonoBehaviour
 {
 
-    public string fileName = "";
+    string fileName = "";
 
     ListItem items;
 
