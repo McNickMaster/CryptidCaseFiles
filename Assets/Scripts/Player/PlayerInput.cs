@@ -19,7 +19,7 @@ public class PlayerInput : MonoBehaviour
     private Vector3 mousePosOnClick = Vector3.zero;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         
     }
