@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
-
+    public static PlayerInput instance;
     public Camera cam;
     public GameObject objectInteracted;
 
@@ -21,7 +21,7 @@ public class PlayerInput : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame
@@ -122,12 +122,21 @@ public class PlayerInput : MonoBehaviour
         return hitData;
     }
 
-    private Vector3 GetConvertedMousePos()
+    public Vector3 GetConvertedMousePos()
     {
         //Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         //Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
         //Vector2 mousePos = Input.mousePosition;
         Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -cam.transform.position.z));
+        return new Vector3(mousePos.x, mousePos.y, -0.5f);
+    }
+
+    public Vector3 GetConvertedMousePos(float camZ)
+    {
+        //Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
+        //Vector2 mousePos = Input.mousePosition;
+        Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, camZ));
         return new Vector3(mousePos.x, mousePos.y, -0.5f);
     }
 

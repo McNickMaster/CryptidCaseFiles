@@ -60,6 +60,12 @@ public class Notes : Interactable
         }
     }
 
+    public void DisableNote()
+    {
+        //this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
+    }
+
     public override void Interact()
     {
         //this.transform.GetChild(0).gameObject.SetActive(true);
