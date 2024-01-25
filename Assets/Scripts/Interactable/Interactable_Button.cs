@@ -7,6 +7,8 @@ public class Interactable_Button : Interactable
 
     public ButtonType btn_type = ButtonType.SPAWN;
 
+    public bool pageButtonLeft = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,16 @@ public class Interactable_Button : Interactable
             
             case ButtonType.PAGE:
             {
+                Notes note = GetComponentInParent<Notes>();
+                
+                if(pageButtonLeft)
+                {
+                    note.PageTurn_Left();
+                } else 
+                {
+                    note.PageTurn_Right();
+                }
+
                 Debug.Log("turn page");
                 break;
             }

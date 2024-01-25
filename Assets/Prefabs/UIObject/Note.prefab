@@ -432,7 +432,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6170802178589962290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -760,6 +760,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  textSlides:
+  - Lorum ipsum, Lorum ipsum Lorum ipsum Lorum ipsum, Lorum ipsum, Lorum ipsum Lorum
+    ipsum Lorum ipsum, Lorum ipsum, Lorum ipsum Lorum ipsum Lorum ipsum
+  - 222222222222222222222222222222222222222222222222222222222222222222222222
+  - 33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+  - 4444444444444444444444444444444444444444444444444444444444444444
+  - 55555555555555555555555555555555555555555555555555555555555
+  textBody: {fileID: 863899721181522350}
 --- !u!54 &5665466246625113762
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -784,8 +792,8 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 118
+  m_Interpolate: 1
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!1 &7031762248259501136
 GameObject:
@@ -880,6 +888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   btn_type: 1
+  pageButtonLeft: 1
 --- !u!65 &1750441330202765439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1021,6 +1030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   btn_type: 1
+  pageButtonLeft: 0
 --- !u!65 &1652318103564488541
 BoxCollider:
   m_ObjectHideFlags: 0
