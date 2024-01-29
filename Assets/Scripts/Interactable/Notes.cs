@@ -9,6 +9,7 @@ public class Notes : Interactable
     public string[] textSlides;
     public TextMeshPro textBody;
     public LoadTextFromJson jsonText;
+    public GameObject[] pageButtons;
 
     private int currentTextIndex = 0;
     private Rigidbody rb;
@@ -24,6 +25,11 @@ public class Notes : Interactable
         jsonText.LoadJson();
         textSlides = jsonText.GetNotePages();
         SetBodyTextToIndex(0);
+
+        if(textSlides.Length < 2)
+        {
+            DisablePageButtons();
+        }
     }
 
     // Update is called once per frame
@@ -58,6 +64,18 @@ public class Notes : Interactable
             currentTextIndex++;
             textBody.text = textSlides[currentTextIndex];
         }
+    }
+
+    public void DisablePageButtons()
+    {
+        pageButtons[0].SetActive(false);
+        pageButtons[1].SetActive(false);
+    }
+
+    public void DisableNote()
+    {
+        //this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
     }
 
     public override void Interact()
