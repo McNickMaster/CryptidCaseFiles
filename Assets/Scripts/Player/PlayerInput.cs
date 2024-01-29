@@ -8,7 +8,6 @@ public class PlayerInput : MonoBehaviour
 {
     public static PlayerInput instance;
     public Camera cam;
-    public LineRenderer line;
     public GameObject objectInteracted;
     public Transform backPlane;
     private GameObject hoveredObject;
@@ -22,33 +21,21 @@ public class PlayerInput : MonoBehaviour
     private Vector3 mousePosOnClick = Vector3.zero;
 
 
-    private Vector3[] linePos = new Vector3[5];
-    private bool drawingLine = false;
-    private int lineIndex = 0;
-
     // Start is called before the first frame update
     void Awake()
     {
         instance = this;
+
+        UpdateBackplane();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && Input.GetKey(KeyCode.LeftShift))
-        {
-            DrawLine();
-        } else if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0))
         {
             MouseClick();
             _dragging = true;
-            drawingLine = false;
-        }
-        
-        if(Input.GetMouseButtonDown(0) && Input.GetKey(KeyCode.LeftControl))
-        {
-            line.positionCount = 0;
-            lineIndex = 0;
         }
         
 
@@ -99,6 +86,11 @@ public class PlayerInput : MonoBehaviour
         objectInteracted = null;
     }
 
+    public void UpdateBackplane()
+    {
+        backPlane = GameObject.FindWithTag("Backplane").transform;
+    }
+
     private void SendCastForInteract()
     {
         RaycastHit hit = SendCast();
@@ -109,6 +101,8 @@ public class PlayerInput : MonoBehaviour
 
             if(interacted != null)
             {
+                Debug.Log(interacted.gameObject.name);
+
                 switch(interacted.type)
                 {
                     case (InteractType.DRAGGABLE):
@@ -121,6 +115,12 @@ public class PlayerInput : MonoBehaviour
 
                     case (InteractType.BUTTON):
                     {   
+                        interacted.Interact();
+                        break;
+                    }
+
+                    case (InteractType.LINE):
+                    {
                         interacted.Interact();
                         break;
                     }
@@ -200,18 +200,7 @@ public class PlayerInput : MonoBehaviour
     }
 
 
-    private void DrawLine()
-    {
-        drawingLine = true;
-        line.positionCount = lineIndex + 1;
-
-        line.SetPosition(lineIndex, GetConvertedMousePos() + (Vector3.forward * 1.25f));
-
-        lineIndex++;
-        
-
-
-    }
+    
 
 
     public Vector3 GetConvertedMousePos()

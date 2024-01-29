@@ -40,7 +40,7 @@ public class Notes : Interactable
 
     void FixedUpdate()
     {
-        rb.AddForce(10*Vector3.forward);
+        rb.AddForce(25*Vector3.forward);
     }
 
     public void SetBodyTextToIndex(int i)

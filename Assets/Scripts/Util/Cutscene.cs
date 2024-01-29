@@ -37,5 +37,6 @@ public class Cutscene : MonoBehaviour
     {
         destination.SetActive(true);
         cutsceneObj.SetActive(false);
+        PlayerInput.instance.UpdateBackplane();
     }
 }
