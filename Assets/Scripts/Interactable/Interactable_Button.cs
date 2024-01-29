@@ -137,9 +137,9 @@ public class Interactable_Button : Interactable
                     noteSpawned.GetComponent<Notes>().DisableNote();
                 } else 
                 {
-                    noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position, Quaternion.identity, TempNode.instance.transform);
+                    noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position, Quaternion.identity, GetComponentInParent<TempNode>().transform);
                 }
-                Debug.Log("spawn somethin");
+//                Debug.Log("spawn somethin");
                 break;
             }
             
@@ -169,10 +169,12 @@ public class Interactable_Button : Interactable
             case ButtonType.TRAVEL:
             {
 
+                /*
                 for(int i = 0; i < TempNode.instance.transform.childCount; i++)
                 {
                     Destroy(TempNode.instance.transform.GetChild(i).gameObject);
                 }
+                */
 
                 thisLocation.SetActive(false);
                 travelCutscene.StartCutscene(destination);
@@ -202,7 +204,7 @@ public class Interactable_Button : Interactable
 
         mat = mesh.material;
         mat.GetColor("_TintColor");
-        Debug.Log(mat.name);
+//        Debug.Log(mat.name);
     }
 
 }

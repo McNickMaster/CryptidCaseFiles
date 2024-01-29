@@ -83,30 +83,31 @@ public class PlayerInput : MonoBehaviour
 
     private void SendCastForInteract()
     {
-        //add a null check to this, it errors when sent out into the void
-        interacted = SendCast().transform.GetComponent<Interactable>();
-
-        if(interacted != null)
+        RaycastHit hit = SendCast();
+        if(hit.transform != null)
         {
-            switch(interacted.type)
+        
+            interacted = hit.transform.GetComponent<Interactable>();
+
+            if(interacted != null)
             {
-                case (InteractType.DRAGGABLE):
+                switch(interacted.type)
                 {
-                    objectInteracted = interacted.gameObject.gameObject;
-                    objectOffset =  new Vector2(objectInteracted.transform.position.x - GetConvertedMousePos().x, objectInteracted.transform.position.y - GetConvertedMousePos().y);
-                    
-                    break;
-                }
-                
-                case (InteractType.BUTTON):
-                {
-                    interacted.Interact();
-                    break;
+                    case (InteractType.DRAGGABLE):
+                    {
+                        objectInteracted = interacted.gameObject.gameObject;
+                        objectOffset =  new Vector2(objectInteracted.transform.position.x - GetConvertedMousePos().x, objectInteracted.transform.position.y - GetConvertedMousePos().y);
+
+                        break;
+                    }
+
+                    case (InteractType.BUTTON):
+                    {   
+                        interacted.Interact();
+                        break;
+                    }
                 }
             }
-
-
-            
 
         }
     }
@@ -116,7 +117,7 @@ public class PlayerInput : MonoBehaviour
         RaycastHit hit = SendCast();
         if(hit.transform != null)
         {
-            interacted = SendCast().transform.GetComponent<Interactable>();
+            interacted = hit.transform.GetComponent<Interactable>();
 
             if(interacted != null)
             {
