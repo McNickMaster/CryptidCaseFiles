@@ -35,24 +35,42 @@ public class Interactable_Button : Interactable
     [Header("Dialogue Button Settings")]
     public DialogueScriptable dialogue;
 
+    [Header("Toggle Button Settings")]
+    public GameObject objectToToggle;
+    public bool state = false;
+
+    private DrawLine lineDrawer;
+
 
     // Start is called before the first frame update
     void Awake()
     {
-        btn_image = GetComponent<Image>();
+        
 
         if(is3D)
         {            
             GetMaterialInstance();
         } else 
         {
-
+            btn_image = GetComponent<Image>();
         }
 
-        if(btn_type == ButtonType.DIALOGUE)
+
+        switch(btn_type)
         {
-            dialogue.Init();
+            case ButtonType.DIALOGUE:
+            {
+                dialogue.Init();
+                break;
+            }
+
+            case ButtonType.TOGGLE:
+            {
+                objectToToggle.SetActive(state);
+                break;
+            }
         }
+        
 
 
         ResetButtonTint();
@@ -82,6 +100,18 @@ public class Interactable_Button : Interactable
         
         selected = false;
         hovering = false;
+
+        if(lineDrawer != null)
+        {
+            lineDrawer.SetPoint(1, PlayerInput.instance.GetConvertedMousePos());
+            
+            if(Input.GetMouseButtonUp(0))
+            {
+                lineDrawer.DisableLineDraw();
+                lineDrawer = null;
+            }
+            
+        }
 
         
     }
@@ -137,9 +167,8 @@ public class Interactable_Button : Interactable
                     noteSpawned.GetComponent<Notes>().DisableNote();
                 } else 
                 {
-                    noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position, Quaternion.identity, GetComponentInParent<TempNode>().transform);
+                    noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position + new Vector3(0,0, -0.1f), Quaternion.identity, GetComponentInParent<TempNode>().transform);
                 }
-//                Debug.Log("spawn somethin");
                 break;
             }
             
@@ -176,8 +205,10 @@ public class Interactable_Button : Interactable
                 }
                 */
 
-                thisLocation.SetActive(false);
+                GameManager.instance.currentLocation.SetActive(false);
+                GameManager.instance.currentLocation = destination;
                 travelCutscene.StartCutscene(destination);
+                
                 break;
             }
 
@@ -185,6 +216,25 @@ public class Interactable_Button : Interactable
             {
 
                 DialogueManager.instance.SpawnDialogue(dialogue);
+
+                break;
+            }
+
+            case ButtonType.TACK:
+            {
+                lineDrawer = GameManager.instance.SpawnLineDrawer();
+
+                lineDrawer.SetPoint(0, PlayerInput.instance.GetConvertedMousePos());
+
+
+                break;
+            }
+
+            case ButtonType.TOGGLE:
+            {
+                state = !state;
+
+                objectToToggle.SetActive(state);
 
                 break;
             }
@@ -211,5 +261,5 @@ public class Interactable_Button : Interactable
 
 public enum ButtonType
 {
-    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE
+    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE
 }

@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour
     public static PlayerInput instance;
     public Camera cam;
     public GameObject objectInteracted;
+    public Transform backPlane;
     private GameObject hoveredObject;
 
     public Interactable interacted;
@@ -19,10 +20,13 @@ public class PlayerInput : MonoBehaviour
 
     private Vector3 mousePosOnClick = Vector3.zero;
 
+
     // Start is called before the first frame update
     void Awake()
     {
         instance = this;
+
+        UpdateBackplane();
     }
 
     // Update is called once per frame
@@ -33,6 +37,7 @@ public class PlayerInput : MonoBehaviour
             MouseClick();
             _dragging = true;
         }
+        
 
         if(Input.GetMouseButtonUp(0))
         {
@@ -81,6 +86,11 @@ public class PlayerInput : MonoBehaviour
         objectInteracted = null;
     }
 
+    public void UpdateBackplane()
+    {
+        backPlane = GameObject.FindWithTag("Backplane").transform;
+    }
+
     private void SendCastForInteract()
     {
         RaycastHit hit = SendCast();
@@ -91,6 +101,8 @@ public class PlayerInput : MonoBehaviour
 
             if(interacted != null)
             {
+                Debug.Log(interacted.gameObject.name);
+
                 switch(interacted.type)
                 {
                     case (InteractType.DRAGGABLE):
@@ -103,6 +115,12 @@ public class PlayerInput : MonoBehaviour
 
                     case (InteractType.BUTTON):
                     {   
+                        interacted.Interact();
+                        break;
+                    }
+
+                    case (InteractType.LINE):
+                    {
                         interacted.Interact();
                         break;
                     }
@@ -181,13 +199,17 @@ public class PlayerInput : MonoBehaviour
         return hitData;
     }
 
+
+    
+
+
     public Vector3 GetConvertedMousePos()
     {
         //Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         //Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
         //Vector2 mousePos = Input.mousePosition;
-        Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -cam.transform.position.z));
-        return new Vector3(mousePos.x, mousePos.y, -0.5f);
+        Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -cam.transform.position.z + backPlane.position.z));
+        return new Vector3(mousePos.x, mousePos.y, backPlane.position.z - 1.5f);
     }
 
     public Vector3 GetConvertedMousePos(float camZ)

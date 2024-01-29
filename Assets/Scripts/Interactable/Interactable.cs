@@ -10,5 +10,5 @@ public abstract class Interactable : MonoBehaviour
 
 public enum InteractType
 {
-    BUTTON, DRAGGABLE
+    BUTTON, DRAGGABLE, LINE
 }

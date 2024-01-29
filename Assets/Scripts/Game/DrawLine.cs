@@ -1,0 +1,91 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DrawLine : MonoBehaviour
+{
+    
+    public LineRenderer line;
+    public MeshCollider meshCollider;
+    
+    private Vector3[] linePos = new Vector3[5];
+    private bool drawingLine = false;
+    private int lineIndex = 0;
+
+    public int maxIndex = 2;
+/**
+
+    okay so the problem with this implementation is that it should only connect to other tacks, but it just reacts to any click for the second tack. 
+    this code might be better off in PlayerINput, where they could detect whether or not the second click is on a tack. 
+    it def should NOT be in InteractableButton, because the line drawing stuff is NOT a button.
+
+
+**/
+
+    void Awake()
+    {
+        line.positionCount = 2;
+    }
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            DisableLineDraw();
+        }
+    }
+
+    public void SetPoint(int index, Vector3 pos)
+    {
+        line.SetPosition(index, pos + (Vector3.forward * 1.25f));
+
+    }
+
+    public void SetNextPoint(Vector3 pos)
+    {
+        
+        if(lineIndex < maxIndex)
+        {
+            //line.positionCount = lineIndex + 1;
+            SetPoint(lineIndex, pos);
+            lineIndex++;
+        } else 
+        {
+            //this.enabled = false;
+        }
+    }
+
+    public void DisableLineDraw()
+    {
+        if(Vector3.Distance(line.GetPosition(0), line.GetPosition(1) )< 1)
+        {
+            Destroy(this.gameObject);
+        } else 
+        {
+            
+            Mesh mesh = new Mesh();
+            line.BakeMesh(mesh, PlayerInput.instance.cam, true);
+
+            meshCollider.sharedMesh = mesh;
+        }
+
+    }
+
+    public void ClearLine()
+    {
+        line.positionCount = 0;
+        lineIndex = 0;
+        
+    }
+
+
+}
