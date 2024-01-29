@@ -15,11 +15,16 @@ public class Magnify : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         //shitty implementation, fix this to be event based later
         myGlass.SetActive(Input.GetKey(KeyCode.LeftShift));
 
         Vector3 mousePos = PlayerInput.instance.GetConvertedMousePos(z);
         transform.position = new Vector3(mousePos.x, mousePos.y, transform.position.z);
+        */
+
+        // @ToDo: this thing is so broken and offset, come back and fix when you get all yourp lanes sorted
+
 
         //myGlass.transform.LookAt(PlayerInput.instance.cam.transform.position);
     }

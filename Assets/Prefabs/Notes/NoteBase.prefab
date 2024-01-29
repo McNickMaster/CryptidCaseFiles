@@ -172,8 +172,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 6.96}
+  m_AnchoredPosition: {x: -0.1528, y: 0.0167}
+  m_SizeDelta: {x: 6.3339, y: 8.123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6143772326848749535
 Canvas:
@@ -267,7 +267,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.0721335, y: 6.9756, z: 0.02}
+  m_LocalScale: {x: 7, y: 8.5, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6005716576845062787}
@@ -300,7 +300,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3638572e919d32f4e8948b8977d584b4, type: 2}
+  - {fileID: 2100000, guid: 2ed8174775dbaeb41abb150cc7abf4ba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -376,9 +376,9 @@ RectTransform:
   - {fileID: 8703775343692006565}
   m_Father: {fileID: 5790714968387002637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -6.29}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8607448409104913322
@@ -396,8 +396,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 1
     m_Right: 1
-    m_Top: 0
-    m_Bottom: 0
+    m_Top: 1
+    m_Bottom: 2
   m_ChildAlignment: 4
   m_Spacing: 1
   m_ChildForceExpandWidth: 0
@@ -575,8 +575,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2.5, y: -3.39}
-  m_SizeDelta: {x: 5, y: 5.03}
+  m_AnchoredPosition: {x: 3.167, y: -3.7066}
+  m_SizeDelta: {x: 6.3338, y: 6.9033}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1215833006442687908
 MeshRenderer:
@@ -668,12 +668,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
+  m_fontSize: 6.3
   m_fontSizeBase: 5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 8
-  m_fontSizeMax: 32
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 2
+  m_fontSizeMax: 8
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -1046,9 +1046,13 @@ MonoBehaviour:
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   hovering: 0
   selected: 0
+  destination: {fileID: 0}
+  thisLocation: {fileID: 0}
+  travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   pageButtonLeft: 1
+  dialogue: {fileID: 0}
 --- !u!65 &1750441330202765439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1135,7 +1139,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.4, y: -0.48}
+  m_AnchoredPosition: {x: -0.41, y: -0.28}
   m_SizeDelta: {x: 0.7, y: 0.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6344586957378279633
@@ -1196,9 +1200,13 @@ MonoBehaviour:
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   hovering: 0
   selected: 0
+  destination: {fileID: 0}
+  thisLocation: {fileID: 0}
+  travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   pageButtonLeft: 1
+  dialogue: {fileID: 0}
 --- !u!65 &6294395468113924639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1346,9 +1354,13 @@ MonoBehaviour:
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   hovering: 0
   selected: 0
+  destination: {fileID: 0}
+  thisLocation: {fileID: 0}
+  travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   pageButtonLeft: 0
+  dialogue: {fileID: 0}
 --- !u!65 &1652318103564488541
 BoxCollider:
   m_ObjectHideFlags: 0

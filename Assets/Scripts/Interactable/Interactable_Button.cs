@@ -13,7 +13,9 @@ public class Interactable_Button : Interactable
     public Color selectTint = new Color(0.8f, 0.8f, 0.8f);
     private Image btn_image;
     private Material mat;
+    [HideInInspector]
     public bool hovering = false;
+    [HideInInspector]
     public bool selected = false;
 
     [Header("Travel Button Settings")]
@@ -26,23 +28,30 @@ public class Interactable_Button : Interactable
     public Transform noteSpawnPoint;
     private GameObject noteSpawned;
     private bool spawnedNote;
-    
-
 
     [Header("Page Button Settings")]
     public bool pageButtonLeft = false;
 
+    [Header("Dialogue Button Settings")]
+    public DialogueScriptable dialogue;
+
+
     // Start is called before the first frame update
     void Awake()
     {
-        btn_image = GetComponent<Image>();
+        
 
         if(is3D)
         {            
             GetMaterialInstance();
         } else 
         {
+            btn_image = GetComponent<Image>();
+        }
 
+        if(btn_type == ButtonType.DIALOGUE)
+        {
+            dialogue.Init();
         }
 
 
@@ -128,9 +137,9 @@ public class Interactable_Button : Interactable
                     noteSpawned.GetComponent<Notes>().DisableNote();
                 } else 
                 {
-                    noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position, Quaternion.identity, TempNode.instance.transform);
+                    noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position + new Vector3(0,0, -0.1f), Quaternion.identity, GetComponentInParent<TempNode>().transform);
                 }
-                Debug.Log("spawn somethin");
+//                Debug.Log("spawn somethin");
                 break;
             }
             
@@ -160,13 +169,24 @@ public class Interactable_Button : Interactable
             case ButtonType.TRAVEL:
             {
 
+                /*
                 for(int i = 0; i < TempNode.instance.transform.childCount; i++)
                 {
                     Destroy(TempNode.instance.transform.GetChild(i).gameObject);
                 }
+                */
 
-                thisLocation.SetActive(false);
+                GameManager.instance.currentLocation.SetActive(false);
+                GameManager.instance.currentLocation = destination;
                 travelCutscene.StartCutscene(destination);
+                break;
+            }
+
+            case ButtonType.DIALOGUE:
+            {
+
+                DialogueManager.instance.SpawnDialogue(dialogue);
+
                 break;
             }
 
@@ -178,14 +198,19 @@ public class Interactable_Button : Interactable
 
     void GetMaterialInstance()
     {
-        mat = GetComponent<MeshRenderer>().material;
+        MeshRenderer mesh = GetComponent<MeshRenderer>();
+
+        mesh = GetComponent<MeshRenderer>() != null ? GetComponent<MeshRenderer>() : GetComponentInChildren<MeshRenderer>();
+
+
+        mat = mesh.material;
         mat.GetColor("_TintColor");
-        Debug.Log(mat.name);
+//        Debug.Log(mat.name);
     }
 
 }
 
 public enum ButtonType
 {
-    SPAWN, PAGE, DESTROY_NOTE, TRAVEL
+    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE
 }
