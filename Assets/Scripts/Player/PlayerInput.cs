@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
-
+    public static PlayerInput instance;
     public Camera cam;
     public GameObject objectInteracted;
+    private GameObject hoveredObject;
 
     public Interactable interacted;
 
@@ -21,7 +22,7 @@ public class PlayerInput : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame
@@ -51,6 +52,9 @@ public class PlayerInput : MonoBehaviour
 
         mousePosition = GetConvertedMousePos();
 
+
+        SendCastForHover();
+
     }
 
 
@@ -79,6 +83,7 @@ public class PlayerInput : MonoBehaviour
 
     private void SendCastForInteract()
     {
+        //add a null check to this, it errors when sent out into the void
         interacted = SendCast().transform.GetComponent<Interactable>();
 
         if(interacted != null)
@@ -105,6 +110,59 @@ public class PlayerInput : MonoBehaviour
 
         }
     }
+
+    private void SendCastForHover()
+    {
+        RaycastHit hit = SendCast();
+        if(hit.transform != null)
+        {
+            interacted = SendCast().transform.GetComponent<Interactable>();
+
+            if(interacted != null)
+            {
+                switch(interacted.type)
+                {
+                    case (InteractType.DRAGGABLE):
+                    {
+                    
+                    
+                        break;
+                    }   
+                
+                    case (InteractType.BUTTON):
+                    {
+                        if(Input.GetMouseButton(0))
+                        {
+                            hoveredObject = interacted.gameObject;
+                            interacted.GetComponent<Interactable_Button>().selected = true;
+                            interacted.GetComponent<Interactable_Button>().hovering = false;
+                        } else {
+                            
+                            hoveredObject = interacted.gameObject;
+                            interacted.GetComponent<Interactable_Button>().selected = false;
+                            interacted.GetComponent<Interactable_Button>().hovering = true;
+                        }
+                        break;
+                    }
+                }
+            } 
+            
+            if((interacted == null && hoveredObject != null) || (interacted != null && hoveredObject != null && !interacted.gameObject.name.Equals(hoveredObject.name)))
+            {  
+                hoveredObject.GetComponent<Interactable_Button>().hovering = false;
+                hoveredObject = null;
+
+            }
+            
+
+        }
+        
+
+        
+
+
+        
+    }
         
 
     private RaycastHit SendCast()
@@ -115,19 +173,28 @@ public class PlayerInput : MonoBehaviour
         if(Physics.Raycast(ray, out hitData, 1000))
         {
 
-            Debug.Log(hitData.transform.gameObject.name);
+//            Debug.Log(hitData.transform.gameObject.name);
             
         }
 
         return hitData;
     }
 
-    private Vector3 GetConvertedMousePos()
+    public Vector3 GetConvertedMousePos()
     {
         //Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         //Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
         //Vector2 mousePos = Input.mousePosition;
         Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -cam.transform.position.z));
+        return new Vector3(mousePos.x, mousePos.y, -0.5f);
+    }
+
+    public Vector3 GetConvertedMousePos(float camZ)
+    {
+        //Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
+        //Vector2 mousePos = Input.mousePosition;
+        Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, camZ));
         return new Vector3(mousePos.x, mousePos.y, -0.5f);
     }
 
