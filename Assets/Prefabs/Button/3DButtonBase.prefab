@@ -20,25 +20,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5338583861811406877
-RectTransform:
+--- !u!4 &5338583861811406877
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3760214029402143198}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 19.47}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.96, y: 0, z: 0}
+  m_LocalScale: {x: 1.6018, y: 1.8076, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.72, y: -12.880001}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &9024776510994308763
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -130,6 +126,10 @@ MonoBehaviour:
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   hovering: 0
   selected: 0
+  destination: {fileID: 0}
+  thisLocation: {fileID: 0}
+  travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 685055463906669924, guid: 25d7a046861a7a44bb274d9bfcc77261, type: 3}
   noteSpawnPoint: {fileID: 0}
   pageButtonLeft: 0
+  dialogue: {fileID: 0}

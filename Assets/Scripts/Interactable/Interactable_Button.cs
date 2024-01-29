@@ -39,14 +39,14 @@ public class Interactable_Button : Interactable
     // Start is called before the first frame update
     void Awake()
     {
-        btn_image = GetComponent<Image>();
+        
 
         if(is3D)
         {            
             GetMaterialInstance();
         } else 
         {
-
+            btn_image = GetComponent<Image>();
         }
 
         if(btn_type == ButtonType.DIALOGUE)
@@ -137,7 +137,7 @@ public class Interactable_Button : Interactable
                     noteSpawned.GetComponent<Notes>().DisableNote();
                 } else 
                 {
-                    noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position, Quaternion.identity, GetComponentInParent<TempNode>().transform);
+                    noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position + new Vector3(0,0, -0.1f), Quaternion.identity, GetComponentInParent<TempNode>().transform);
                 }
 //                Debug.Log("spawn somethin");
                 break;
@@ -176,7 +176,8 @@ public class Interactable_Button : Interactable
                 }
                 */
 
-                thisLocation.SetActive(false);
+                GameManager.instance.currentLocation.SetActive(false);
+                GameManager.instance.currentLocation = destination;
                 travelCutscene.StartCutscene(destination);
                 break;
             }
