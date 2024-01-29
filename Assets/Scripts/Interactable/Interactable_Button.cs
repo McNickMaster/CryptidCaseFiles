@@ -137,7 +137,7 @@ public class Interactable_Button : Interactable
                     noteSpawned.GetComponent<Notes>().DisableNote();
                 } else 
                 {
-                    noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position, Quaternion.identity, TempNode.instance.transform);
+                    noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position, Quaternion.identity, GetComponentInParent<TempNode>().transform);
                 }
 //                Debug.Log("spawn somethin");
                 break;
