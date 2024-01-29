@@ -13,7 +13,9 @@ public class Interactable_Button : Interactable
     public Color selectTint = new Color(0.8f, 0.8f, 0.8f);
     private Image btn_image;
     private Material mat;
+    [HideInInspector]
     public bool hovering = false;
+    [HideInInspector]
     public bool selected = false;
 
     [Header("Travel Button Settings")]
@@ -26,11 +28,13 @@ public class Interactable_Button : Interactable
     public Transform noteSpawnPoint;
     private GameObject noteSpawned;
     private bool spawnedNote;
-    
-
 
     [Header("Page Button Settings")]
     public bool pageButtonLeft = false;
+
+    [Header("Dialogue Button Settings")]
+    public DialogueScriptable dialogue;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -43,6 +47,11 @@ public class Interactable_Button : Interactable
         } else 
         {
 
+        }
+
+        if(btn_type == ButtonType.DIALOGUE)
+        {
+            dialogue.Init();
         }
 
 
@@ -170,6 +179,14 @@ public class Interactable_Button : Interactable
                 break;
             }
 
+            case ButtonType.DIALOGUE:
+            {
+
+                DialogueManager.instance.SpawnDialogue(dialogue);
+
+                break;
+            }
+
         }
 
         
@@ -178,7 +195,12 @@ public class Interactable_Button : Interactable
 
     void GetMaterialInstance()
     {
-        mat = GetComponent<MeshRenderer>().material;
+        MeshRenderer mesh = GetComponent<MeshRenderer>();
+
+        mesh = GetComponent<MeshRenderer>() != null ? GetComponent<MeshRenderer>() : GetComponentInChildren<MeshRenderer>();
+
+
+        mat = mesh.material;
         mat.GetColor("_TintColor");
         Debug.Log(mat.name);
     }
@@ -187,5 +209,5 @@ public class Interactable_Button : Interactable
 
 public enum ButtonType
 {
-    SPAWN, PAGE, DESTROY_NOTE, TRAVEL
+    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE
 }
