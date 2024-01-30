@@ -374,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 200741593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.97, y: -1.68, z: 0}
+  m_LocalPosition: {x: 11, y: -2.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -914,7 +914,7 @@ GameObject:
   - component: {fileID: 369783832}
   - component: {fileID: 369783831}
   - component: {fileID: 369783830}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +930,7 @@ Transform:
   m_GameObject: {fileID: 369783828}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.56, y: -2.32, z: 0}
+  m_LocalPosition: {x: 5.56, y: -3.59, z: 0}
   m_LocalScale: {x: 8.0369, y: 1.8768519, z: 4.751406}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   - {fileID: 1095381398}
   - {fileID: 1913702969}
   lineDrawer: {fileID: 4221701233302851193, guid: dfaf92cfdac5c034fa577d3e7f8ef2df, type: 3}
-  caseFileObj: {fileID: 0}
+  caseFileObj: {fileID: 1017424402}
   cases:
   - {fileID: 11400000, guid: e25036c690f860441ab4ce21e12022e6, type: 2}
   - {fileID: 11400000, guid: c42b497838b49644eb7fa09f54038924, type: 2}
@@ -2441,7 +2441,7 @@ Transform:
   m_GameObject: {fileID: 1017424400}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.52, z: 14.71}
+  m_LocalPosition: {x: 0, y: 2.878, z: 14.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2464,7 +2464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   culpritGuess: 0
   causeOfDeathGuess: 0
-  thisCase: {fileID: 0}
+  thisCase: {fileID: 11400000, guid: e25036c690f860441ab4ce21e12022e6, type: 2}
 --- !u!1 &1054757748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3457,7 +3457,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   myCulprit: 1
+  myCauseOfDeath: 0
   normal: {x: 0, y: 0, z: 1}
+  culpritPhoto: 1
+  causeOfDeathPhoto: 0
 --- !u!1 &1345736861
 GameObject:
   m_ObjectHideFlags: 0
@@ -5783,7 +5786,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   myCulprit: 1
+  myCauseOfDeath: 0
   normal: {x: 0, y: -1, z: 0}
+  culpritPhoto: 1
+  causeOfDeathPhoto: 0
 --- !u!1 &1875376321
 GameObject:
   m_ObjectHideFlags: 0

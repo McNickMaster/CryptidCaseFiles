@@ -11,6 +11,11 @@ public class CaseFile : MonoBehaviour
     public Case thisCase;
 
 
+    void Awake()
+    {
+        
+        
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +29,10 @@ public class CaseFile : MonoBehaviour
         
     }
 
-    
+    public void SetCulpritGuess()
+    {
+
+    }
     
     public Case GetGuess()
     {
@@ -40,8 +48,27 @@ public class CaseFile : MonoBehaviour
 
     public void PopulateCulprits()
     {
-        
+        //spawn all the culprit/cause of death photos listed in the Case
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Interactable_Picture interactable = other.GetComponent<Interactable_Picture>();
+        if(interactable != null)
+        {
+            if(interactable.culpritPhoto)
+            {
+                culpritGuess = interactable.myCulprit;
+            }
+            
+            if(interactable.causeOfDeathPhoto)
+            {
+                causeOfDeathGuess = interactable.myCauseOfDeath;
+            }
+        }
+    }
+
+
 
     
 

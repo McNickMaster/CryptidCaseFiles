@@ -136,7 +136,7 @@ public class PlayerInput : MonoBehaviour
 
             if(interacted != null)
             {
-                Debug.Log(interacted.gameObject.name);
+                //Debug.Log(interacted.gameObject.name);
 
                 switch(interacted.type)
                 {
@@ -247,7 +247,6 @@ public class PlayerInput : MonoBehaviour
         if(Physics.Raycast(ray, out hitData, 1000))
         {
 
-//            Debug.Log(hitData.transform.gameObject.name);
                 
             
         }
