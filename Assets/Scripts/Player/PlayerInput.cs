@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class PlayerInput : MonoBehaviour
 {
     public static PlayerInput instance;
-    public Camera cam;
+    //public Camera cam;
     public GameObject objectInteracted;
     public Transform backPlane;
     private GameObject hoveredObject;
 
     public Interactable interacted;
 
-    public Vector3 mousePosition, objectOffset = Vector3.zero;
+    public Vector3 mousePosition, mousePosition3D, objectOffset = Vector3.zero;
 
     private bool _dragging = false;
 
@@ -32,10 +32,37 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HandleMouse();
+        HandleKeys();
+    }
+
+    void HandleKeys()
+    {
+
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            GameManager.instance.SetView(0);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            GameManager.instance.SetView(1);
+        }
+    }
+
+    void HandleMouse()
+    {
+
         if(Input.GetMouseButtonDown(0))
         {
             MouseClick();
             _dragging = true;
+        }
+
+
+        if(Input.GetMouseButtonDown(1))
+        {
+            MouseRightClick();
         }
         
 
@@ -59,7 +86,6 @@ public class PlayerInput : MonoBehaviour
 
 
         SendCastForHover();
-
     }
 
 
@@ -70,11 +96,19 @@ public class PlayerInput : MonoBehaviour
         mousePosOnClick = GetConvertedMousePos();
     }
 
+    public void MouseRightClick()
+    {
+        SendCastForAltInteract();
+
+    }
+
     public void MouseDrag()
     {
         if(objectInteracted != null)
         { 
-            objectInteracted.transform.position = GetConvertedMousePos() + objectOffset;
+            objectInteracted.transform.position = GetConvertedMousePos();
+
+            objectInteracted.GetComponentInChildren<Collider>().enabled = false;
 
         }
         
@@ -83,6 +117,7 @@ public class PlayerInput : MonoBehaviour
     private void StopDrag()
     {
         objectInteracted.GetComponent<Rigidbody>().AddForce(100*Vector3.forward);
+        objectInteracted.GetComponentInChildren<Collider>().enabled = true;
         objectInteracted = null;
     }
 
@@ -108,7 +143,7 @@ public class PlayerInput : MonoBehaviour
                     case (InteractType.DRAGGABLE):
                     {
                         objectInteracted = interacted.gameObject.gameObject;
-                        objectOffset =  new Vector2(objectInteracted.transform.position.x - GetConvertedMousePos().x, objectInteracted.transform.position.y - GetConvertedMousePos().y);
+                        //objectOffset =  new Vector3(objectInteracted.transform.position.x - GetConvertedMousePos().x, objectInteracted.transform.position.y - GetConvertedMousePos().y, objectInteracted.transform.position.y - GetConvertedMousePos().z);
 
                         break;
                     }
@@ -119,6 +154,27 @@ public class PlayerInput : MonoBehaviour
                         break;
                     }
 
+                    
+                }
+            }
+
+        }
+    }
+
+    private void SendCastForAltInteract()
+    {
+        RaycastHit hit = SendCast();
+        if(hit.transform != null)
+        {
+        
+            interacted = hit.transform.GetComponent<Interactable>();
+
+            if(interacted != null)
+            {
+                Debug.Log(interacted.gameObject.name);
+                switch(interacted.type)
+                {
+
                     case (InteractType.LINE):
                     {
                         interacted.Interact();
@@ -126,7 +182,6 @@ public class PlayerInput : MonoBehaviour
                     }
                 }
             }
-
         }
     }
 
@@ -187,14 +242,16 @@ public class PlayerInput : MonoBehaviour
     private RaycastHit SendCast()
     {
 
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Ray ray = GameManager.instance.currentView.myCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitData;
         if(Physics.Raycast(ray, out hitData, 1000))
         {
 
 //            Debug.Log(hitData.transform.gameObject.name);
+                
             
         }
+        mousePosition3D = hitData.point;
 
         return hitData;
     }
@@ -205,26 +262,43 @@ public class PlayerInput : MonoBehaviour
 
     public Vector3 GetConvertedMousePos()
     {
-        //Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        //Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
-        //Vector2 mousePos = Input.mousePosition;
-        Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -cam.transform.position.z + backPlane.position.z));
-        return new Vector3(mousePos.x, mousePos.y, backPlane.position.z - 1.5f);
+        View myView = GameManager.instance.currentView;
+        
+        
+        Vector3 pos = mousePosition3D;
+
+
+        Debug.DrawLine(myView.myCamera.transform.position, pos, Color.magenta);
+
+        return pos;
     }
 
-    public Vector3 GetConvertedMousePos(float camZ)
+     public Vector3 GetConvertedMousePos_Old()
     {
+        View myView = GameManager.instance.currentView;
         //Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         //Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
         //Vector2 mousePos = Input.mousePosition;
-        Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, camZ));
-        return new Vector3(mousePos.x, mousePos.y, -0.5f);
+        Vector3 mousePos = myView.myCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -myView.myCamera.transform.position.z + myView.myBackPlane.position.z));
+
+        Debug.DrawLine(myView.myCamera.transform.position, mousePos, Color.magenta);
+        
+        
+        Vector3 pos = Vector3.zero;
+
+        if(myView.normal == Vector3.forward)
+        {
+            pos = new Vector3(mousePos.x, mousePos.y, myView.myBackPlane.position.z - 1.5f);
+            Debug.Log("using forward math");
+        } else if(myView.normal == Vector3.down)
+        {
+            pos = new Vector3(mousePos.x, myView.myBackPlane.position.z - 1.5f, mousePos.y);
+//            Debug.Log("using down math");
+        }
+
+       // mousePosition3D = pos;
+
+        return mousePosition3D;
     }
-
-
-
-
-
-
 
 }
