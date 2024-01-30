@@ -45,6 +45,7 @@ public class DialogueManager : MonoBehaviour
 
 
         objInstance = Instantiate(dialogueBase, Vector3.zero, Quaternion.identity, transform.GetChild(0).transform);
+        objInstance.transform.localPosition = Vector3.zero;
         title = objInstance.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         body = objInstance.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
 

@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public GameObject currentLocation;
-    
+
+    public GameObject lineDrawer;
+
     void Awake()
     {
         instance = this;
@@ -23,5 +25,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public DrawLine SpawnLineDrawer()
+    {
+        return Instantiate(lineDrawer, Vector3.zero, Quaternion.identity, currentLocation.transform).GetComponent<DrawLine>();
     }
 }
