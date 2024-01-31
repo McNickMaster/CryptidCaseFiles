@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
-    public GameObject currentLocation;
+    public LocationManager currentLocation;
     public View currentView;
     public View[] views;
     public GameObject lineDrawer;
@@ -23,6 +23,12 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         currentCase = cases[0];
+
+        if(currentView == null)
+        {
+            currentView = currentLocation.defaultView;
+        }
+            
     }
 
     // Start is called before the first frame update
@@ -39,6 +45,15 @@ public class GameManager : MonoBehaviour
         {
             TrySolveCase();
         }
+    }
+
+    public void Travel(LocationManager destination)
+    {
+        
+        currentLocation.gameObject.SetActive(false);
+        currentLocation = destination;
+
+        SetView(currentLocation.defaultView);
     }
 
     public void TrySolveCase()
@@ -64,7 +79,7 @@ public class GameManager : MonoBehaviour
     void NextCase()
     {
         caseIndex++;
-        SetNewCase(cases[caseIndex]);
+//        SetNewCase(cases[caseIndex]);
     }
 
     public DrawLine SpawnLineDrawer()

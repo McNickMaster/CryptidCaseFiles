@@ -20,8 +20,8 @@ public class Interactable_Button : Interactable
     public bool selected = false;
 
     [Header("Travel Button Settings")]
-    public GameObject destination;
-    public GameObject thisLocation;
+    public LocationManager destination;
+    public LocationManager thisLocation;
     public Cutscene travelCutscene;
 
     [Header("Spawn Button Settings")]
@@ -224,9 +224,8 @@ public class Interactable_Button : Interactable
                 }
                 */
 
-                GameManager.instance.currentLocation.SetActive(false);
-                GameManager.instance.currentLocation = destination;
-                travelCutscene.StartCutscene(destination);
+                GameManager.instance.Travel(destination);
+                travelCutscene.StartCutscene(destination.gameObject);
                 
                 break;
             }
