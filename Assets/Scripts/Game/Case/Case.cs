@@ -9,6 +9,7 @@ public class Case : ScriptableObject
     public CauseOfDeath causeOfDeath;
 
     public List<Culprit> culpritList = new List<Culprit>();
+    public List<CauseOfDeath> causeOfDeathList = new List<CauseOfDeath>();
     
     public void Init(Culprit culp, CauseOfDeath cause)
     {

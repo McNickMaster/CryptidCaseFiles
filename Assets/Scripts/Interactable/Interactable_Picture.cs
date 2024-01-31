@@ -25,7 +25,7 @@ public class Interactable_Picture : Interactable
 
     void FixedUpdate()
     {
-        rb.AddForce(25*normal);
+        rb.velocity = normal * 5;
     }
 
     public override void Interact()

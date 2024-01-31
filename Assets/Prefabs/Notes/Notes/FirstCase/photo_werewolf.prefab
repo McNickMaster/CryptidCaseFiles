@@ -174,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6005716576845062787, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.01
+      value: -7.78
       objectReference: {fileID: 0}
     - target: {fileID: 6005716576845062787, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalPosition.y
@@ -186,23 +186,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6005716576845062787, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710784
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6005716576845062787, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.70710576
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6005716576845062787, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6005716576845062787, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6005716576845062787, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6005716576845062787, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -214,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6474779225616199491, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_Name
-      value: mugshot_wolf Variant
+      value: mugshot_werewolf
       objectReference: {fileID: 0}
     - target: {fileID: 6474779225616199491, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_IsActive
@@ -223,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 7258097124293127839, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a4bc7bcddf1d8054889b5ed3393011ac, type: 2}
+      objectReference: {fileID: 2100000, guid: 9d64d45aa8bb74d48b16543a8e4665b9, type: 2}
     - target: {fileID: 8414655508992057222, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.85
@@ -242,11 +242,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414655508992057222, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8414655508992057222, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8414655508992057222, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalRotation.w
@@ -258,11 +258,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414655508992057222, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8414655508992057222, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414655508992057222, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8414655508992057222, guid: 2a22266ed4a79184abbd194c22f1c451, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -313,5 +317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  myCulprit: 1
+  myCulprit: 2
+  myCauseOfDeath: 0
   normal: {x: 0, y: -1, z: 0}
+  culpritPhoto: 1
+  causeOfDeathPhoto: 0
