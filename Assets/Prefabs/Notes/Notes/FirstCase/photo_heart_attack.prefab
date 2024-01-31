@@ -30,12 +30,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4020818537763092565, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: m_Name
-      value: photo_heart_attack Variant
+      value: photo_heart_attack
       objectReference: {fileID: 0}
     - target: {fileID: 5040449770936109322, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b61119fa0e6984441b2c8f4e7fc165b3, type: 2}
+    - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
+      propertyPath: myCulprit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
+      propertyPath: culpritPhoto
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
+      propertyPath: causeOfDeathPhoto
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6044363245983303018, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.01

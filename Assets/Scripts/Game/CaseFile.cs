@@ -19,6 +19,8 @@ public class CaseFile : MonoBehaviour
 
     void Awake()
     {
+        PopulateCulprits();
+        PopulateCauses();
         
         
     }
@@ -34,8 +36,6 @@ public class CaseFile : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.P))
         {
-            PopulateCulprits();
-            PopulateCauses();
         }
     }
 
