@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class Interactable_Button : Interactable
 {
 
@@ -38,6 +38,8 @@ public class Interactable_Button : Interactable
     [Header("Toggle Button Settings")]
     public GameObject objectToToggle;
     public bool state = false;
+
+   
 
     private DrawLine lineDrawer;
 
@@ -239,9 +241,22 @@ public class Interactable_Button : Interactable
                 break;
             }
 
+            case ButtonType.SOLVE_CASE:
+            {
+
+                GameManager.instance.TrySolveCase();
+
+                break;
+            }
+
         }
 
         
+    }
+
+    public void SetGuess()
+    {
+
     }
 
 
@@ -261,5 +276,5 @@ public class Interactable_Button : Interactable
 
 public enum ButtonType
 {
-    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE
+    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE
 }
