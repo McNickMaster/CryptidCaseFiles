@@ -42,7 +42,7 @@ public class DrawLine : MonoBehaviour
 
     public void SetPoint(int index, Vector3 pos)
     {
-        line.SetPosition(index, pos + (Vector3.forward * 1.25f));
+        line.SetPosition(index, pos + (Vector3.forward * -0.25f));
 
     }
 

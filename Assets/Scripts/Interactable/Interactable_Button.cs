@@ -8,6 +8,7 @@ public class Interactable_Button : Interactable
 
     public ButtonType btn_type = ButtonType.SPAWN;
     public bool is3D = false;
+    public bool isVisible = true;
     public Color normalTint = Color.white;
     public Color hoverTint = new Color(0.9f, 0.9f, 0.9f);
     public Color selectTint = new Color(0.8f, 0.8f, 0.8f);
@@ -39,7 +40,8 @@ public class Interactable_Button : Interactable
     public GameObject objectToToggle;
     public bool state = false;
 
-   
+    [Header("Change View Button Settings")]
+    public View newView;
 
     private DrawLine lineDrawer;
 
@@ -48,13 +50,15 @@ public class Interactable_Button : Interactable
     void Awake()
     {
         
-
-        if(is3D)
-        {            
-            GetMaterialInstance();
-        } else 
+        if(isVisible)
         {
-            btn_image = GetComponent<Image>();
+            if(is3D)
+            {            
+                GetMaterialInstance();
+            } else 
+            {
+                btn_image = GetComponent<Image>();
+            }
         }
 
 
@@ -123,35 +127,48 @@ public class Interactable_Button : Interactable
 //this sucks to implemenet, think about it for a bit before trying
     public void HoverButton()
     {
-        if(is3D)
+        if(isVisible)
         {
-            mat.SetColor("_TintColor", hoverTint);
-        } else 
-        {
-            btn_image.color = hoverTint;
-            
+
+            if(is3D)
+            {
+                mat.SetColor("_TintColor", hoverTint);
+            } else 
+            {
+                btn_image.color = hoverTint;
+                
+            }
         }
     }
     private void SelectButton()
     {
-        if(is3D)
+        
+        if(isVisible)
         {
-            mat.SetColor("_TintColor", selectTint);
-        } else 
-        {
-            btn_image.color = selectTint;
-            
+            if(is3D)
+            {
+                mat.SetColor("_TintColor", selectTint);
+            } else 
+            {
+                btn_image.color = selectTint;
+                
+            }
         }
     }
     private void ResetButtonTint()
     {
-        if(is3D)
+        if(isVisible)
         {
-            mat.SetColor("_TintColor", normalTint);
-        } else 
-        {
-            btn_image.color = normalTint;
-            
+                
+            if(is3D)
+            {
+                mat.SetColor("_TintColor", normalTint);
+            } else 
+            {
+                btn_image.color = normalTint;
+                
+            }
+
         }
     }
 
@@ -249,6 +266,13 @@ public class Interactable_Button : Interactable
                 break;
             }
 
+            case ButtonType.CHANGE_VIEW:
+            {
+                GameManager.instance.SetView(newView);
+
+                break;
+            }
+
         }
 
         
@@ -276,5 +300,5 @@ public class Interactable_Button : Interactable
 
 public enum ButtonType
 {
-    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE
+    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE, CHANGE_VIEW
 }

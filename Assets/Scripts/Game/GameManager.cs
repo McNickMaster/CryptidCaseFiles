@@ -79,6 +79,13 @@ public class GameManager : MonoBehaviour
         currentView.enabled = true;
     }
 
+    public void SetView(View view)
+    {
+        currentView.enabled = false;
+        currentView = view;
+        currentView.enabled = true;
+    }
+
 
 
 }
