@@ -101,7 +101,7 @@ public class CaseFile : MonoBehaviour
 
         objName = "photo_" + enumName.ToLower();
 
-        Debug.Log(objName);
+//        Debug.Log(objName);
 
 
         return objName;

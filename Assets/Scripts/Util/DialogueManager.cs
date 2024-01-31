@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
 
 
     public LoadTextFromJson jsonLoader; 
-    public GameObject dialogueBase;
+    //public GameObject dialogueBase;
     TextMeshProUGUI title, body;
 
     private DialogueScriptable dialogueData;
@@ -44,7 +44,7 @@ public class DialogueManager : MonoBehaviour
         PlayerInput.instance.enabled = false;
 
 
-        objInstance = Instantiate(dialogueBase, Vector3.zero, Quaternion.identity, transform.GetChild(0).transform);
+        objInstance = Instantiate(dialogueData.dialogueObject, Vector3.zero, Quaternion.identity, transform.GetChild(0).transform);
         objInstance.transform.localPosition = Vector3.zero;
         title = objInstance.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         body = objInstance.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();

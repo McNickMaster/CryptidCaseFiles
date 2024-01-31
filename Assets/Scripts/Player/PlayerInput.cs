@@ -106,7 +106,9 @@ public class PlayerInput : MonoBehaviour
     {
         if(objectInteracted != null)
         { 
-            objectInteracted.transform.position = GetConvertedMousePos();
+            
+            objectInteracted.transform.position = mousePosition3D;
+            //objectInteracted.transform.position = mousePosition3D + objectOffset;
 
             objectInteracted.GetComponentInChildren<Collider>().enabled = false;
 
@@ -143,7 +145,7 @@ public class PlayerInput : MonoBehaviour
                     case (InteractType.DRAGGABLE):
                     {
                         objectInteracted = interacted.gameObject.gameObject;
-                        //objectOffset =  new Vector3(objectInteracted.transform.position.x - GetConvertedMousePos().x, objectInteracted.transform.position.y - GetConvertedMousePos().y, objectInteracted.transform.position.y - GetConvertedMousePos().z);
+                        objectOffset = CalcOffset();
 
                         break;
                     }
@@ -256,7 +258,22 @@ public class PlayerInput : MonoBehaviour
     }
 
 
-    
+    public Vector3 CalcOffset()
+    {
+
+        //this works for forward, but not for up
+        Vector3 offset;
+
+        offset = new Vector3(objectInteracted.transform.position.x - mousePosition3D.x, objectInteracted.transform.position.y - mousePosition3D.y, objectInteracted.transform.position.y - mousePosition3D.z);
+
+        Vector3 normalMask = GameManager.instance.currentView.normal;
+        normalMask = (new Vector3(normalMask.x - 1, normalMask.y - 1, normalMask.z - 1)).normalized;
+
+        offset = new Vector3(-offset.x * normalMask.x, -offset.y * normalMask.y, -offset.z * normalMask.z);
+
+
+        return offset;
+    }
 
 
     public Vector3 GetConvertedMousePos()

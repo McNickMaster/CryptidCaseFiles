@@ -8,15 +8,28 @@ public class DialogueScriptable : ScriptableObject
 {
 
     public string dialogueName;
-    public int numPages = 1;
+    public int numPages = 1;//get rid of
     public string[] dialogueNames;
+    public GameObject dialogueObject;
+    private bool multipage;
 
     public void Init()
     {
+        multipage = numPages > 1 ? true : false;
         dialogueNames = new string[numPages];
-        for(int i = 0; i < numPages; i++)
+
+        if(multipage)
         {
-            dialogueNames[i] = dialogueName + "_" + (i + 1);
+            
+            for(int i = 0; i < numPages; i++)
+            {
+                dialogueNames[i] = dialogueName + "_" + (i + 1);
+            }
+
+
+        } else 
+        {
+            dialogueNames[0] = dialogueName;
         }
     }
 
