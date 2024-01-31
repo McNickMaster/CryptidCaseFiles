@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8985997002039496005}
   - component: {fileID: 5716243578042685058}
   - component: {fileID: 6331975408068902286}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 6143772326848749535}
   - component: {fileID: 7268780613724935723}
   - component: {fileID: 1324011805190438667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464222886132715702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.03}
+  m_LocalPosition: {x: 0, y: 0, z: -0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 8779448961079720285}
   - component: {fileID: 7800230679070464085}
   - component: {fileID: 7454081187808928826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4044206492775990649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.03399992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -344,6 +344,8 @@ MonoBehaviour:
   noteSpawnPoint: {fileID: 0}
   pageButtonLeft: 1
   dialogue: {fileID: 0}
+  objectToToggle: {fileID: 0}
+  state: 0
 --- !u!65 &7800230679070464085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -404,7 +406,7 @@ GameObject:
   - component: {fileID: 5577600487933987516}
   - component: {fileID: 7258097124293127839}
   - component: {fileID: 6314076874410829588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +422,7 @@ Transform:
   m_GameObject: {fileID: 4825883402346815519}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.75}
   m_LocalScale: {x: 7, y: 8.5, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -507,7 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7685555536455616744}
   - component: {fileID: 8607448409104913322}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ButtonGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,7 +524,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5668719904387635652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.03399992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -572,7 +574,7 @@ GameObject:
   - component: {fileID: 5398622057455232262}
   - component: {fileID: 4992961554799098591}
   - component: {fileID: 2203688667205736683}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +708,7 @@ GameObject:
   - component: {fileID: 8507674485108677104}
   - component: {fileID: 1215833006442687908}
   - component: {fileID: 863899721181522350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +723,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6170802178589962290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.014}
+  m_LocalPosition: {x: 0, y: 0, z: -0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -878,7 +880,7 @@ GameObject:
   - component: {fileID: 4216881074359804047}
   - component: {fileID: 1436511303978507193}
   - component: {fileID: 1556582213063180706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1015,7 @@ GameObject:
   - component: {fileID: 3537522312027564058}
   - component: {fileID: 5665466246625113762}
   - component: {fileID: 2701732330167772555}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NoteBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1062,6 +1064,7 @@ MonoBehaviour:
   pageButtons:
   - {fileID: 7031762248259501136}
   - {fileID: 9136040270975931723}
+  normal: {x: 0, y: 0, z: 1}
 --- !u!54 &5665466246625113762
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1115,7 +1118,7 @@ GameObject:
   - component: {fileID: 1171864507209675301}
   - component: {fileID: 1750441330202765439}
   - component: {fileID: 2074163918075178878}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1207,6 +1210,8 @@ MonoBehaviour:
   noteSpawnPoint: {fileID: 0}
   pageButtonLeft: 1
   dialogue: {fileID: 0}
+  objectToToggle: {fileID: 0}
+  state: 0
 --- !u!65 &1750441330202765439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1269,7 +1274,7 @@ GameObject:
   - component: {fileID: 4826859207535814462}
   - component: {fileID: 6294395468113924639}
   - component: {fileID: 7027941528083734413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1284,7 +1289,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7068081860402064740}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0099999625}
+  m_LocalPosition: {x: 0, y: 0, z: -0.04399988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1361,6 +1366,8 @@ MonoBehaviour:
   noteSpawnPoint: {fileID: 0}
   pageButtonLeft: 1
   dialogue: {fileID: 0}
+  objectToToggle: {fileID: 0}
+  state: 0
 --- !u!65 &6294395468113924639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1423,7 +1430,7 @@ GameObject:
   - component: {fileID: 5379660234803821652}
   - component: {fileID: 1652318103564488541}
   - component: {fileID: 1975579161273598434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1515,6 +1522,8 @@ MonoBehaviour:
   noteSpawnPoint: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  objectToToggle: {fileID: 0}
+  state: 0
 --- !u!65 &1652318103564488541
 BoxCollider:
   m_ObjectHideFlags: 0

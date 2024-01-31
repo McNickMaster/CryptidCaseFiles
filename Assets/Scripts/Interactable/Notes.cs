@@ -11,6 +11,8 @@ public class Notes : Interactable
     public LoadTextFromJson jsonText;
     public GameObject[] pageButtons;
 
+    public Vector3 normal = Vector3.forward;
+
     private int currentTextIndex = 0;
     private Rigidbody rb;
 
@@ -40,7 +42,7 @@ public class Notes : Interactable
 
     void FixedUpdate()
     {
-        rb.AddForce(25*Vector3.forward);
+        rb.AddForce(25*normal);
     }
 
     public void SetBodyTextToIndex(int i)

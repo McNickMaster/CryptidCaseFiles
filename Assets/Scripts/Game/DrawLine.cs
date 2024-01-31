@@ -9,7 +9,6 @@ public class DrawLine : MonoBehaviour
     public MeshCollider meshCollider;
     
     private Vector3[] linePos = new Vector3[5];
-    private bool drawingLine = false;
     private int lineIndex = 0;
 
     public int maxIndex = 2;
@@ -38,10 +37,7 @@ public class DrawLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            DisableLineDraw();
-        }
+        
     }
 
     public void SetPoint(int index, Vector3 pos)
@@ -73,7 +69,7 @@ public class DrawLine : MonoBehaviour
         {
             
             Mesh mesh = new Mesh();
-            line.BakeMesh(mesh, PlayerInput.instance.cam, true);
+            line.BakeMesh(mesh, GameManager.instance.currentView.myCamera, true);
 
             meshCollider.sharedMesh = mesh;
         }
