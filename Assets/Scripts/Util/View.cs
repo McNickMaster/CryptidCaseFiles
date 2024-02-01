@@ -24,12 +24,12 @@ public class View : MonoBehaviour
 
     void OnEnable()
     {
-        myCamera.enabled = true;
+        myCamera.gameObject.SetActive(true);
     }
 
     void OnDisable()
     {
-        myCamera.enabled = false;
+        myCamera.gameObject.SetActive(false);
     }
 
 
