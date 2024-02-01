@@ -157,9 +157,9 @@ RectTransform:
   - {fileID: 1003893095}
   m_Father: {fileID: 617287391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -87.6}
   m_SizeDelta: {x: 180, y: 94.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9360667
@@ -416,9 +416,9 @@ RectTransform:
   - {fileID: 313969405}
   m_Father: {fileID: 617287391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -212.4}
   m_SizeDelta: {x: 180, y: 94.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134057862
@@ -5013,7 +5013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jsonLoader: {fileID: 1640901874}
-  dialogueBase: {fileID: 0}
+  dialogueBase: {fileID: 3648608809818996775, guid: 5a6b95ab6d94fd0469e6cfccd63b66fb, type: 3}
 --- !u!114 &1640901874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7708,7 +7708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4766594968311845928
 MonoBehaviour:
   m_ObjectHideFlags: 0
