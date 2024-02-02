@@ -10,7 +10,6 @@ public class DialogueScriptable : ScriptableObject
     public string dialogueName;
     public int numPages = 1;//get rid of
     public string[] dialogueNames;
-    public GameObject dialogueObject;
     private bool multipage;
 
     public void Init()
