@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 public class Interactable_Button : Interactable
 {
 
@@ -301,7 +302,13 @@ public class Interactable_Button : Interactable
 
 
         mat = mesh.material;
-        mat.GetColor("_TintColor");
+
+        try{
+            mat.GetColor("_TintColor");
+        } catch (Exception e)
+        {
+
+        }
 //        Debug.Log(mat.name);
     }
 

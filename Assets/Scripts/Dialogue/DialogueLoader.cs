@@ -170,7 +170,7 @@ public class DialogueLoader : MonoBehaviour
         {
             SpawnSlide(currentPath.slides[pathIndex]);
             
-            Debug.Log("path: " + pathIndex + "/" + currentPath.slides.Length);
+            //Debug.Log("path: " + pathIndex + "/" + currentPath.slides.Length);
         } else 
         {
 
@@ -180,18 +180,18 @@ public class DialogueLoader : MonoBehaviour
                 Path unlockPath = FindPath(currentPath.unlockPathID); 
                 if(unlockPath != null)
                 {
-                    Debug.Log("unlocking...");
+                    //Debug.Log("unlocking...");
                     unlockPath.locked = false;
                 }
 
             }
             
-            Debug.Log("reached end of path: " + currentPath.pathEndBehaviour);
+            //Debug.Log("reached end of path: " + currentPath.pathEndBehaviour);
             switch(currentPath.pathEndBehaviour)
             {
                 case PathEndBehaviour.GOTO:
                 {
-                    Debug.Log("trying to spawn new branch with id: " + currentPath.gotoID);
+//                    Debug.Log("trying to spawn new branch with id: " + currentPath.gotoID);
                     SpawnBranch(FindBranch(currentPath.gotoID));
                     break;
                 }
@@ -204,7 +204,7 @@ public class DialogueLoader : MonoBehaviour
                 
                 case PathEndBehaviour.CONTINUE:
                 {
-                    Debug.Log("trying to continue new branch with id: " + currentPath.gotoID);
+                    //Debug.Log("trying to continue new branch with id: " + currentPath.gotoID);
                     SpawnBranch(FindBranch(currentPath.gotoID));
                     break;
                 }

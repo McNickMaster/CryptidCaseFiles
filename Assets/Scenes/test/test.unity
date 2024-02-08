@@ -7301,6 +7301,14 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: d33d5cb125de12d4bac07cfcf00c8528, type: 2}
+    - target: {fileID: 452197340893939255, guid: 068c6b6905a137644941366bef97c768, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130871719126420935, guid: 068c6b6905a137644941366bef97c768, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 548b2fb53014f5d44b6a81f355f029c2, type: 2}
     - target: {fileID: 1625748590515602318, guid: 068c6b6905a137644941366bef97c768, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7341,22 +7349,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4318298674672232968, guid: 068c6b6905a137644941366bef97c768, type: 3}
+      propertyPath: m_Name
+      value: Police
+      objectReference: {fileID: 0}
     - target: {fileID: 5177026460667099960, guid: 068c6b6905a137644941366bef97c768, type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 6e98882b3a41ccd48b88ba605782524a, type: 2}
+    - target: {fileID: 5177026460667099960, guid: 068c6b6905a137644941366bef97c768, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185486900378839146, guid: 068c6b6905a137644941366bef97c768, type: 3}
+      propertyPath: m_Name
+      value: Eric
+      objectReference: {fileID: 0}
     - target: {fileID: 7874115996764969308, guid: 068c6b6905a137644941366bef97c768, type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 7c6677a83f3f5d242b0b3fc7a9415d6f, type: 2}
+    - target: {fileID: 7874115996764969308, guid: 068c6b6905a137644941366bef97c768, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7958136475529834430, guid: 068c6b6905a137644941366bef97c768, type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 20918163bf2890b469956187b7932e65, type: 2}
+    - target: {fileID: 7958136475529834430, guid: 068c6b6905a137644941366bef97c768, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8599926502993680451, guid: 068c6b6905a137644941366bef97c768, type: 3}
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 11400000, guid: 4aab7d4ff0ab6584cad56a0add8432f0, type: 2}
+    - target: {fileID: 8599926502993680451, guid: 068c6b6905a137644941366bef97c768, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
