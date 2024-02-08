@@ -1257,7 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4faa29287b9032640afd422edf0fa2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLocation: {fileID: 1776956370}
+  currentLocation: {fileID: 969226245384755351}
   currentView: {fileID: 0}
   views:
   - {fileID: 1095381398}
@@ -4630,7 +4630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 247386192805089765, guid: 068c6b6905a137644941366bef97c768, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 452197340893939255, guid: 068c6b6905a137644941366bef97c768, type: 3}
       propertyPath: dialogue
@@ -5723,7 +5723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4982921777381696013, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5279462844706190532, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_IsActive
