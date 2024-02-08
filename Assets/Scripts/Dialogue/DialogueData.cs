@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[CreateAssetMenu(fileName = "DialogueData", menuName = "ScriptableObjects/DialogueScriptableObject", order = 1)]
-public class DialogueScriptable : ScriptableObject
-{
-
+[CreateAssetMenu(fileName = "DialogueData", menuName = "Dialogue/NewDialogueData", order = 1)]
+public class DialogueData : ScriptableObject{
+   
+    public string fileName;
+    public bool isConversation;
+    
     public string dialogueName;
     public int numPages = 1;//get rid of
     public string[] dialogueNames;
@@ -36,6 +37,4 @@ public class DialogueScriptable : ScriptableObject
     {
         return dialogueNames[i];
     }
-    
-
 }

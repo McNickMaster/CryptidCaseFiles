@@ -24,7 +24,7 @@ public class LoadTextFromCSV : MonoBehaviour
     public Path path;
 
 
-    int numberConvos = -999;
+   
 
 
     // Start is called before the first frame update
@@ -125,7 +125,7 @@ public class LoadTextFromCSV : MonoBehaviour
             Debug.Log("end paths");
         }
         Debug.Log("end branches");
-*/  
+  
         //Debug.Log("size of tree: " + tree.Count);
 
 
@@ -145,7 +145,7 @@ public class LoadTextFromCSV : MonoBehaviour
         }
         Debug.Log("end branches");
 
-
+*/
 
 
         
@@ -218,7 +218,7 @@ public class LoadTextFromCSV : MonoBehaviour
             
             for(int i = 0; i < list.Count; i++)
             {
-                Slide slide = null;
+                //Slide slide = null;
                 //if it could find a slide with matching id and convoID, dont add it
                 for(int j = 0; j < slides.Count; j++)
                 {
@@ -228,7 +228,7 @@ public class LoadTextFromCSV : MonoBehaviour
                     //Debug.Log("convoID: " + convoID + " list value: " + list[i].Value.ToString() + " slideID: " + slides[j].ID + " slideConvoID: " + slides[j].ConvoID + " 1: " + condition1 + " 2: " + condition2);
                     if((condition1 && condition2))
                     {
-                        Debug.Log("convoID: " + convoID + " list value: " + list[i].Value.ToString() + " slideID: " + slides[j].ID + " slideConvoID: " + slides[j].ConvoID);
+                        //Debug.Log("convoID: " + convoID + " list value: " + list[i].Value.ToString() + " slideID: " + slides[j].ID + " slideConvoID: " + slides[j].ConvoID);
                         pathChoices[i] = GetRestOfPath(slides[j]);
                     }
                 }
@@ -340,7 +340,7 @@ public class LoadTextFromCSV : MonoBehaviour
                 {
                     if(tree.Contains(temp) || IsTempElementInTree(tree, temp))
                     {
-                        Debug.Log("temp was already in tree: " + temp[0].Value);
+                        //Debug.Log("temp was already in tree: " + temp[0].Value);
                     } else 
                     {
                         tree.Add(temp);
@@ -383,7 +383,7 @@ public class LoadTextFromCSV : MonoBehaviour
                     pathsFoundInThisBranch++;
                     if(Int32.Parse(id) == 0)
                     {
-                        Debug.Log("zero found");
+                        //Debug.Log("zero found");
                     } else 
                     {
                         KeyValuePair<int, int> pair = new KeyValuePair<int, int>(j, Int32.Parse(id));
@@ -435,7 +435,7 @@ public class LoadTextFromCSV : MonoBehaviour
         {
             foreach(List<KeyValuePair<int,int>> list in tree)
             {
-                Debug.Log("is " + element.Value + " in list already? " + list.Contains(element));
+                //Debug.Log("is " + element.Value + " in list already? " + list.Contains(element));
                 isElement = list.Contains(element);
             }
         }
@@ -469,7 +469,7 @@ public class LoadTextFromCSV : MonoBehaviour
 
     public Slide GetFirstSlide()
     {
-        Debug.Log("first slide: " + data[0].BODY);
+        //Debug.Log("first slide: " + data[0].BODY);
         return new Slide(data[0].TITLE, data[0].BODY, data[0].ID);
     }
 

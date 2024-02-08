@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -26,15 +26,25 @@ public class DialogueLoader : MonoBehaviour
     private Branch currentBranch;
     private int pathIndex;
 
+    //json part
+    public LoadTextFromJson jsonLoader; 
+    public GameObject dialogueBase;
+    TextMeshProUGUI title, body;
+
+    private DialogueData dialogueData;
+    private GameObject objInstance;
+
+    private int dialogueIndex = 0, numPages = 0;
+
     void Awake()
     {
         instance = this;
 
 
         csvLoader = GetComponent<LoadTextFromCSV>();
-        csvLoader.LoadCSV(fileToLoad);
+        jsonLoader = GetComponent<LoadTextFromJson>();
 
-        myBranches = csvLoader.GetBranches();
+        LoadConversation("output1");
 
         //LoadDialogueBranch("1");
 
@@ -72,6 +82,60 @@ public class DialogueLoader : MonoBehaviour
         }
     }
 */
+
+    public void LoadMonologue(string file)
+    {
+        
+        jsonLoader.LoadJson(file);
+    }
+    public void StartMonologue()
+    {
+        dialogueIndex = 0;
+        PlayerInput.instance.enabled = false;
+
+
+        objInstance = Instantiate(slidePrefab, Vector3.zero, Quaternion.identity, transform.GetChild(0).transform);
+        objInstance.transform.localPosition = Vector3.zero;
+        title = objInstance.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+        body = objInstance.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
+
+        Button btn = objInstance.GetComponent<Button>();
+        btn.onClick.AddListener(NextPage);
+
+        numPages = dialogueData.numPages;
+
+        title.text = jsonLoader.GetNotePages()[0];
+        body.text = jsonLoader.GetNotePages()[1];
+
+
+    }
+
+    public void NextPage()
+    {
+        dialogueIndex++;
+
+        if(dialogueIndex >= numPages)
+        {
+            Destroy(objInstance);
+            PlayerInput.instance.enabled = true;
+
+        } else 
+        {
+            
+            jsonLoader.LoadJson(dialogueData.GetDialoguePage(dialogueIndex));
+
+            title.text = jsonLoader.GetNotePages()[0];
+            body.text = jsonLoader.GetNotePages()[1];
+
+        }
+    }
+    public void LoadConversation(string file)
+    {
+        
+        csvLoader.LoadCSV(file);
+
+        myBranches = csvLoader.GetBranches();
+    }
 
     public void StartConversation()
     {

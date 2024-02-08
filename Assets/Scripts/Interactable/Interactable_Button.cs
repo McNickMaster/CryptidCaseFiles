@@ -34,7 +34,8 @@ public class Interactable_Button : Interactable
     public bool pageButtonLeft = false;
 
     [Header("Dialogue Button Settings")]
-    public DialogueScriptable dialogue;
+    public DialogueData dialogue;
+    
 
     [Header("Toggle Button Settings")]
     public GameObject objectToToggle;
@@ -67,6 +68,13 @@ public class Interactable_Button : Interactable
             case ButtonType.DIALOGUE:
             {
                 dialogue.Init();
+                if(dialogue.isConversation)
+                {   
+                    DialogueLoader.instance.LoadConversation(dialogue.fileName);
+                } else 
+                {
+                    DialogueLoader.instance.LoadMonologue(dialogue.fileName);
+                }
                 break;
             }
 
@@ -232,8 +240,13 @@ public class Interactable_Button : Interactable
 
             case ButtonType.DIALOGUE:
             {
-
-                DialogueManager.instance.SpawnDialogue(dialogue);
+                
+                if(dialogue.isConversation)
+                {   
+                    DialogueLoader.instance.StartConversation();
+                } else {
+                    DialogueLoader.instance.StartConversation();
+                }
 
                 break;
             }
