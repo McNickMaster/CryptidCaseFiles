@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public View currentView;
     public View[] views;
     public GameObject lineDrawer;
+    public GameObject winScreen, loseScreen;
     public CaseFile caseFileObj;
 
     public Case[] cases;
@@ -63,11 +64,11 @@ public class GameManager : MonoBehaviour
 
        if(currentCase.SolveCase(currentGuess))
        {
-            NextCase();
-            Debug.Log("Case solved");
+            //NextCase();
+            Win();
        } else 
        {
-            Debug.Log("Case NOT solved you bozo");
+            Lose();
        }
     }
 
@@ -80,6 +81,16 @@ public class GameManager : MonoBehaviour
     {
         caseIndex++;
 //        SetNewCase(cases[caseIndex]);
+    }
+
+    public void Win()
+    {
+        winScreen.SetActive(true);
+    }
+
+    public void Lose()
+    {
+        loseScreen.SetActive(true);
     }
 
     public DrawLine SpawnLineDrawer()
