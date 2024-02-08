@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     void StartGame()
     {
-        SceneManager.LoadScene("crimeScene");
+        SceneManager.LoadScene(1);
     }
     void Settings()
     {
