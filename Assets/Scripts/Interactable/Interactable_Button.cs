@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 public class Interactable_Button : Interactable
 {
 
@@ -34,7 +35,8 @@ public class Interactable_Button : Interactable
     public bool pageButtonLeft = false;
 
     [Header("Dialogue Button Settings")]
-    public DialogueScriptable dialogue;
+    public DialogueData dialogue;
+    
 
     [Header("Toggle Button Settings")]
     public GameObject objectToToggle;
@@ -67,6 +69,7 @@ public class Interactable_Button : Interactable
             case ButtonType.DIALOGUE:
             {
                 dialogue.Init();
+                
                 break;
             }
 
@@ -233,7 +236,15 @@ public class Interactable_Button : Interactable
             case ButtonType.DIALOGUE:
             {
 
-                DialogueManager.instance.SpawnDialogue(dialogue);
+                
+                if(dialogue.isConversation)
+                {   
+                    DialogueLoader.instance.LoadConversation(dialogue.fileName);
+                    DialogueLoader.instance.StartConversation();
+                } else {
+                    DialogueLoader.instance.LoadMonologue(dialogue.fileName);
+                    DialogueLoader.instance.StartConversation();
+                }
 
                 break;
             }
@@ -291,7 +302,13 @@ public class Interactable_Button : Interactable
 
 
         mat = mesh.material;
-        mat.GetColor("_TintColor");
+
+        try{
+            mat.GetColor("_TintColor");
+        } catch (Exception e)
+        {
+
+        }
 //        Debug.Log(mat.name);
     }
 
