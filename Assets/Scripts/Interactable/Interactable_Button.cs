@@ -68,13 +68,7 @@ public class Interactable_Button : Interactable
             case ButtonType.DIALOGUE:
             {
                 dialogue.Init();
-                if(dialogue.isConversation)
-                {   
-                    DialogueLoader.instance.LoadConversation(dialogue.fileName);
-                } else 
-                {
-                    DialogueLoader.instance.LoadMonologue(dialogue.fileName);
-                }
+                
                 break;
             }
 
@@ -240,11 +234,14 @@ public class Interactable_Button : Interactable
 
             case ButtonType.DIALOGUE:
             {
+
                 
                 if(dialogue.isConversation)
                 {   
+                    DialogueLoader.instance.LoadConversation(dialogue.fileName);
                     DialogueLoader.instance.StartConversation();
                 } else {
+                    DialogueLoader.instance.LoadMonologue(dialogue.fileName);
                     DialogueLoader.instance.StartConversation();
                 }
 
