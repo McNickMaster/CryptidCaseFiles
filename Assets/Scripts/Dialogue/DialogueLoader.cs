@@ -102,7 +102,7 @@ public class DialogueLoader : MonoBehaviour
         Button btn = objInstance.GetComponent<Button>();
         btn.onClick.AddListener(NextPage);
 
-        numPages = dialogueData.numPages;
+//        numPages = dialogueData.numPages;
 
         title.text = jsonLoader.GetNotePages()[0];
         body.text = jsonLoader.GetNotePages()[1];
@@ -245,6 +245,7 @@ public class DialogueLoader : MonoBehaviour
         Destroy(currentUIObject);
         SlideObject spawnSlide = Instantiate(slidePrefab, Vector3.zero, Quaternion.identity, dialogueParent).GetComponent<SlideObject>();
         spawnSlide.gameObject.transform.localPosition = Vector3.zero;
+        spawnSlide.GetComponent<Button>().onClick.AddListener(DialogueLoader.instance.LoadNextInPath);
         currentUIObject = spawnSlide.gameObject;
         spawnSlide.slide = s;
         spawnSlide.PopulateTexts();
