@@ -13,11 +13,13 @@ public class GameManager : MonoBehaviour
     public GameObject lineDrawer;
     public GameObject winScreen, loseScreen;
     public CaseFile caseFileObj;
-
     public Case[] cases;
     private Case currentCase;
     private Case currentGuess;
     private int caseIndex;
+
+    [Header("Debug")]
+    public List<Milestone> completedMilestones = new List<Milestone>();
 
     void Awake()
     {
@@ -44,7 +46,7 @@ public class GameManager : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.F))
         {
-            TrySolveCase();
+            //TrySolveCase();
         }
     }
 
@@ -112,7 +114,20 @@ public class GameManager : MonoBehaviour
         currentView.enabled = true;
     }
 
+    public bool CheckMilestone(Milestone m)
+    {
+        return completedMilestones.Contains(m);
+    }
+    public void CompleteMilestone(Milestone m)
+    {
+        if(CheckMilestone(m))
+        {
 
+        } else 
+        {
+            completedMilestones.Add(m);
+        }
+    }
 
 }
 
@@ -127,16 +142,11 @@ public enum CauseOfDeath
     HEART_ATTACK, BLED_OUT, POISONED
 }
 
-
-[Serializable]
-public class SerializableEnum<T> where T : struct, IConvertible
+public enum Milestone
 {
-    public T Value
-    {
-        get { return m_EnumValue; }
-        set { m_EnumValue = value; }
-    }
-    private string m_EnumValueAsString;
-    [SerializeField]
-    private T m_EnumValue;
+
+    PUZZLE_FOUND
+
+
+
 }
