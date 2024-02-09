@@ -26,7 +26,7 @@ public class SlideObject : MonoBehaviour
 
     public void PopulateTexts()
     {
-        titleText.text = slide.Title + " " + slide.ID;
+        titleText.text = slide.Title;// + " " + slide.ID;
         bodyText.text = slide.Body;
     }
 }

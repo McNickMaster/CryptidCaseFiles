@@ -15,7 +15,7 @@ public class Path
     public Branch endBranch;
 
     public bool locked = false;
-    public string unlockPathID = "";
+    public string unlockPathID = "", lockPathID = "";
     
 
 
@@ -44,6 +44,13 @@ public class Path
             unlockPathID = endSlide.Body.Substring(index, endSlide.Body.Length - index - 1);
             endSlide.Body = endSlide.Body.Substring(0, endSlide.Body.Length - unlockPathID.Length - 8);
 //            Debug.Log("endSlide after unlock removal: " + endSlide.Body);
+        }
+
+        if(endSlide.Body.Contains("[lock"))
+        {
+            int index = endSlide.Body.IndexOf("[lock")+5;
+            lockPathID = endSlide.Body.Substring(index, endSlide.Body.Length - index - 1);
+            endSlide.Body = endSlide.Body.Substring(0, endSlide.Body.Length - unlockPathID.Length - 5);
         }
 
         if(endSlide.Body.Contains("[end]"))
