@@ -15,6 +15,7 @@ public class Path
     public Branch endBranch;
 
     public bool locked = false;
+    public bool chosenBefore = false;
     public string unlockPathID = "", lockPathID = "";
     
 

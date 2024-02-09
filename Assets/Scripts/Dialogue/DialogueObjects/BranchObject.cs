@@ -32,7 +32,7 @@ public class BranchObject : MonoBehaviour
 
         
 
-// this is broken and clips out some options sometimes
+        // this is broken and clips out some options sometimes
         //Debug.Log("Option length: " + options.Length + " Branch path count: " + branch.myPathOptions.Count);
         for(int i = options.Length; i > branch.myPathOptions.Count; i--)
         {
@@ -44,6 +44,11 @@ public class BranchObject : MonoBehaviour
         {
             options[i].transform.parent.gameObject.SetActive(!branch.myPathOptions[i].locked);
             options[i].text = branch.myPathOptions[i].firstSlide.Body;
+
+            if(branch.myPathOptions[i].chosenBefore)
+            {
+                
+            }
         }
 
         closeButton.onClick.AddListener(DialogueLoader.instance.EndConversation);
@@ -58,6 +63,7 @@ public class BranchObject : MonoBehaviour
         } else 
         {
             DialogueLoader.instance.LoadPath(branch.myPathOptions[i]);
+            branch.myPathOptions[i].chosenBefore = true;
         }
         
     }

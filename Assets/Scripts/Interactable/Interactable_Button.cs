@@ -9,12 +9,15 @@ public class Interactable_Button : Interactable
 
     public ButtonType btn_type = ButtonType.SPAWN;
     public bool is3D = false;
+    private MeshRenderer[] meshes;
+    //private Material mat;
+    private Material[] mats;
     public bool isVisible = true;
     public Color normalTint = Color.white;
     public Color hoverTint = new Color(0.9f, 0.9f, 0.9f);
     public Color selectTint = new Color(0.8f, 0.8f, 0.8f);
     private Image btn_image;
-    private Material mat;
+    
     [HideInInspector]
     public bool hovering = false;
     [HideInInspector]
@@ -135,7 +138,7 @@ public class Interactable_Button : Interactable
 
             if(is3D)
             {
-                mat.SetColor("_TintColor", hoverTint);
+                SetAllMats(hoverTint);
             } else 
             {
                 btn_image.color = hoverTint;
@@ -150,7 +153,7 @@ public class Interactable_Button : Interactable
         {
             if(is3D)
             {
-                mat.SetColor("_TintColor", selectTint);
+                SetAllMats(selectTint);
             } else 
             {
                 btn_image.color = selectTint;
@@ -165,7 +168,7 @@ public class Interactable_Button : Interactable
                 
             if(is3D)
             {
-                mat.SetColor("_TintColor", normalTint);
+                SetAllMats(normalTint);
             } else 
             {
                 btn_image.color = normalTint;
@@ -293,23 +296,41 @@ public class Interactable_Button : Interactable
 
     }
 
-
     void GetMaterialInstance()
+    {
+
+        meshes = GetComponentsInChildren<MeshRenderer>();
+        mats = new Material[meshes.Length];
+        for(int i = 0; i < meshes.Length; i++)
+        {
+            mats[i] = meshes[i].material;
+        }
+
+
+    }
+
+
+
+    void GetMaterialInstance_Old()
     {
         MeshRenderer mesh = GetComponent<MeshRenderer>();
 
         mesh = GetComponent<MeshRenderer>() != null ? GetComponent<MeshRenderer>() : GetComponentInChildren<MeshRenderer>();
 
 
-        mat = mesh.material;
+       // mat = mesh.material;
 
-        try{
-            mat.GetColor("_TintColor");
-        } catch (Exception e)
-        {
 
-        }
+        
 //        Debug.Log(mat.name);
+    }
+
+    void SetAllMats(Color c)
+    {
+        foreach(Material mat in mats)
+        {
+            mat.SetColor("_TintColor", c);
+        }
     }
 
 }

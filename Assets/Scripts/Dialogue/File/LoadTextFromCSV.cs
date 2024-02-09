@@ -24,8 +24,6 @@ public class LoadTextFromCSV : MonoBehaviour
     public Path path;
 
 
-    int numberConvos = -999;
-
 
     // Start is called before the first frame update
     void Awake()
@@ -215,7 +213,7 @@ public class LoadTextFromCSV : MonoBehaviour
             
             for(int i = 0; i < list.Count; i++)
             {
-                Slide slide = null;
+                //Slide slide = null;
                 //if it could find a slide with matching id and convoID, dont add it
                 for(int j = 0; j < slides.Count; j++)
                 {

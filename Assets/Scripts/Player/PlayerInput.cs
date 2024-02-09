@@ -17,7 +17,7 @@ public class PlayerInput : MonoBehaviour
 
     public Vector3 mousePosition, mousePosition3D, objectOffset = Vector3.zero;
 
-    private bool _dragging = false, inUI = false;
+    private bool _dragging = false;//inUI = false;
 
     private Vector3 mousePosOnClick = Vector3.zero;
 
@@ -62,12 +62,12 @@ public class PlayerInput : MonoBehaviour
             Application.Quit();
         }
 
-        if(Input.GetKeyDown(NOTEBOOK_OPEN) && !mapObj.active)
+        if(Input.GetKeyDown(NOTEBOOK_OPEN) && !mapObj.activeSelf)
         {
             ToggleNotebook();
         }
 
-        if(Input.GetKeyDown(MAP_OPEN) && !notebookObj.active)
+        if(Input.GetKeyDown(MAP_OPEN) && !notebookObj.activeSelf)
         {
             ToggleMap();
         }
@@ -154,13 +154,13 @@ public class PlayerInput : MonoBehaviour
 
     void ToggleNotebook()
     {   
-        notebookObj.SetActive(!notebookObj.active);
+        notebookObj.SetActive(!notebookObj.activeSelf);
 
         //inUI = inUI || notebookObj.active;
     }
     void ToggleMap()
     {   
-        mapObj.SetActive(!mapObj.active);
+        mapObj.SetActive(!mapObj.activeSelf);
 
         //inUI = inUI || mapObj.active;
     }
