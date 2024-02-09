@@ -11,14 +11,20 @@ public class PlayerInput : MonoBehaviour
     public GameObject objectInteracted;
     public Transform backPlane;
     private GameObject hoveredObject;
+    public GameObject notebookObj, mapObj;
 
     public Interactable interacted;
 
     public Vector3 mousePosition, mousePosition3D, objectOffset = Vector3.zero;
 
-    private bool _dragging = false;
+    private bool _dragging = false, inUI = false;
 
     private Vector3 mousePosOnClick = Vector3.zero;
+
+
+    [Header("Controls Config")]
+    public KeyCode PAUSE_MENU = KeyCode.Escape;
+    public KeyCode NOTEBOOK_OPEN = KeyCode.Tab, MAP_OPEN = KeyCode.M;
 
 
     // Start is called before the first frame update
@@ -38,7 +44,7 @@ public class PlayerInput : MonoBehaviour
 
     void HandleKeys()
     {
-
+/*
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             GameManager.instance.SetView(0);
@@ -48,6 +54,24 @@ public class PlayerInput : MonoBehaviour
         {
             GameManager.instance.SetView(1);
         }
+        */
+
+
+        if(Input.GetKeyDown(PAUSE_MENU))
+        {
+            Application.Quit();
+        }
+
+        if(Input.GetKeyDown(NOTEBOOK_OPEN) && !mapObj.active)
+        {
+            ToggleNotebook();
+        }
+
+        if(Input.GetKeyDown(MAP_OPEN) && !notebookObj.active)
+        {
+            ToggleMap();
+        }
+        
     }
 
     void HandleMouse()
@@ -126,6 +150,19 @@ public class PlayerInput : MonoBehaviour
     public void UpdateBackplane()
     {
         backPlane = GameObject.FindWithTag("Backplane").transform;
+    }
+
+    void ToggleNotebook()
+    {   
+        notebookObj.SetActive(!notebookObj.active);
+
+        //inUI = inUI || notebookObj.active;
+    }
+    void ToggleMap()
+    {   
+        mapObj.SetActive(!mapObj.active);
+
+        //inUI = inUI || mapObj.active;
     }
 
     private void SendCastForInteract()
@@ -245,10 +282,12 @@ public class PlayerInput : MonoBehaviour
     {
 
         Ray ray = GameManager.instance.currentView.myCamera.ScreenPointToRay(Input.mousePosition);
+           
+        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
+
         RaycastHit hitData;
         if(Physics.Raycast(ray, out hitData, 1000))
         {
-
                 
             
         }
@@ -283,7 +322,7 @@ public class PlayerInput : MonoBehaviour
         
         Vector3 pos = mousePosition3D;
 
-
+//        Debug.Log(myView.myCamera.transform.position + " " + pos);
         Debug.DrawLine(myView.myCamera.transform.position, pos, Color.magenta);
 
         return pos;

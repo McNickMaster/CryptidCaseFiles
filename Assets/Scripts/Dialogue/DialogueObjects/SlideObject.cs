@@ -15,7 +15,7 @@ public class SlideObject : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        GetComponent<Button>().onClick.AddListener(DialogueLoader.instance.LoadNextInPath);
+        
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class SlideObject : MonoBehaviour
 
     public void PopulateTexts()
     {
-        titleText.text = slide.Title + " " + slide.ID;
+        titleText.text = slide.Title;// + " " + slide.ID;
         bodyText.text = slide.Body;
     }
 }

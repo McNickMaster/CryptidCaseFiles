@@ -243,7 +243,7 @@ public class Interactable_Button : Interactable
                     DialogueLoader.instance.StartConversation();
                 } else {
                     DialogueLoader.instance.LoadMonologue(dialogue.fileName);
-                    DialogueLoader.instance.StartConversation();
+                    DialogueLoader.instance.StartMonologue();
                 }
 
                 break;
