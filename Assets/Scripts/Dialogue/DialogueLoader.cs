@@ -44,7 +44,7 @@ public class DialogueLoader : MonoBehaviour
         csvLoader = GetComponent<LoadTextFromCSV>();
         jsonLoader = GetComponent<LoadTextFromJson>();
 
-        LoadConversation("output1");
+        //LoadConversation("output1");
 
         //LoadDialogueBranch("1");
 
@@ -184,6 +184,12 @@ public class DialogueLoader : MonoBehaviour
                     unlockPath.locked = false;
                 }
 
+                Path lockPath = FindPath(currentPath.lockPathID); 
+                if(lockPath != null)
+                {
+                    //Debug.Log("locking...");
+                    lockPath.locked = true;
+                }
             }
             
             //Debug.Log("reached end of path: " + currentPath.pathEndBehaviour);

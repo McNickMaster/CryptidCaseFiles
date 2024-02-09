@@ -24,7 +24,7 @@ public class LoadTextFromCSV : MonoBehaviour
     public Path path;
 
 
-   
+    int numberConvos = -999;
 
 
     // Start is called before the first frame update
@@ -101,7 +101,7 @@ public class LoadTextFromCSV : MonoBehaviour
             Debug.Log("end list");    
         }
         Debug.Log("end tree");
-     
+ */    
 
         
         Debug.Log("start branches");  
@@ -110,8 +110,7 @@ public class LoadTextFromCSV : MonoBehaviour
             Debug.Log("start paths");  
             foreach(Path path in branch.myPathOptions)
             {
-                if(path != null)
-                {
+               
                     
                     Debug.Log("start slides");
                     foreach(Slide slide in path.slides)
@@ -120,7 +119,7 @@ public class LoadTextFromCSV : MonoBehaviour
                     }
                     Debug.Log("end slides");
 
-                }
+                
             }
             Debug.Log("end paths");
         }
@@ -128,7 +127,7 @@ public class LoadTextFromCSV : MonoBehaviour
   
         //Debug.Log("size of tree: " + tree.Count);
 
-
+/*
         Debug.Log("start branches");  
         foreach(Branch branch in branches)
         {
@@ -144,8 +143,8 @@ public class LoadTextFromCSV : MonoBehaviour
             Debug.Log("end paths");
         }
         Debug.Log("end branches");
+ */ 
 
-*/
 
 
         
@@ -189,8 +188,6 @@ public class LoadTextFromCSV : MonoBehaviour
                 {
                     pathChoices[i] = GetRestOfPath(slide);
                 }
-                
-                //list[i].Value + " " + list[i].Key
 
                 //Debug.Log("      " + list[i].Value + " " + list[i].Key);
             }
@@ -218,7 +215,7 @@ public class LoadTextFromCSV : MonoBehaviour
             
             for(int i = 0; i < list.Count; i++)
             {
-                //Slide slide = null;
+                Slide slide = null;
                 //if it could find a slide with matching id and convoID, dont add it
                 for(int j = 0; j < slides.Count; j++)
                 {
@@ -228,7 +225,7 @@ public class LoadTextFromCSV : MonoBehaviour
                     //Debug.Log("convoID: " + convoID + " list value: " + list[i].Value.ToString() + " slideID: " + slides[j].ID + " slideConvoID: " + slides[j].ConvoID + " 1: " + condition1 + " 2: " + condition2);
                     if((condition1 && condition2))
                     {
-                        //Debug.Log("convoID: " + convoID + " list value: " + list[i].Value.ToString() + " slideID: " + slides[j].ID + " slideConvoID: " + slides[j].ConvoID);
+                        Debug.Log("convoID: " + convoID + " list value: " + list[i].Value.ToString() + " slideID: " + slides[j].ID + " slideConvoID: " + slides[j].ConvoID);
                         pathChoices[i] = GetRestOfPath(slides[j]);
                     }
                 }
@@ -278,7 +275,7 @@ public class LoadTextFromCSV : MonoBehaviour
             string startID = ""+firstSlideInPath.ID;
 
 //            Debug.Log(startID + " = " + id);
-//           Debug.Log("     " + id.StartsWith(startID));
+//            Debug.Log("     " + id.StartsWith(startID));
             bool flag = true;
 
             //int x;
@@ -321,17 +318,51 @@ public class LoadTextFromCSV : MonoBehaviour
         return new Path(tempSlides.ToArray());
     }
 
+/*
+okay so this function is just incorrect. it does not look at the rest of the string when comparing digits. we need it to FindBranchAt the location, but also checks
+    that the new branch has members of the same number stem, i.e. (111, 112, 133) have the same stem of 11.
+    it also needs to loop through a couple times, remembering which stems are complete/which ones havent been done yet.
+
+    idk the best way to do this. it ignores 316 when looking at the 3rd correctly with the substring method i have here, but it does not loop back around to 
+    put 316 in the branch it belongs
+
+
+
+*/
     public List<List<KeyValuePair<int,int>>> FindAllBranches()
     {
         tree = new List<List<KeyValuePair<int,int>>>();
-        List<KeyValuePair<int,int>> root = FindBranchAt(0,0);
+        List<KeyValuePair<int,int>> root = FindBranchAt(0,0,data.Count,"");
         tree.Add(root);
         List<KeyValuePair<int,int>> temp = new List<KeyValuePair<int,int>>();
-        for(int j = 0; j < 6; j++)
+
+        int startLine, endLine;
+        
+        for(int j = 0; j < 8; j++)
         {
             for(int i = 0; i < root.Count; i++)
             {
-                temp = FindBranchAt(j, root[i].Key);
+                
+                string s = "";
+                if(tree.Count > 1)
+                {
+                    s=root[i]+"";
+                } else 
+                {
+                    s=root[0].Value + "";
+                }
+
+                startLine = root[i].Key;
+                if(i+1 < root.Count)
+                { 
+                    endLine = root[i+1].Key;
+                } else 
+                {
+                    endLine = data.Count;
+                }
+
+                temp = FindBranchAt(j, startLine, endLine, "" + s);
+//                Debug.Log("finding branches: " + root[i].Value + " " + s);
 
                 if(temp == null)
                 {
@@ -340,24 +371,23 @@ public class LoadTextFromCSV : MonoBehaviour
                 {
                     if(tree.Contains(temp) || IsTempElementInTree(tree, temp))
                     {
-                        //Debug.Log("temp was already in tree: " + temp[0].Value);
+//                        Debug.Log("temp was already in tree: " + temp[0].Value);
                     } else 
                     {
-                        tree.Add(temp);
+                        //tree.Add(temp);
                     }
+
+                    tree.Add(temp);
                     
                 }
-                    
-                
-                
             }
         }
-        
+
 
         return tree;
     }
 
-    List<KeyValuePair<int,int>> FindBranchAt(int startDigit, int startLine)
+    List<KeyValuePair<int,int>> FindBranchAt(int startDigit, int startLine, int endLine, string subString)
     { 
         List<KeyValuePair<int,int>> branch1 = new List<KeyValuePair<int,int>>();
         
@@ -367,7 +397,7 @@ public class LoadTextFromCSV : MonoBehaviour
 
 
         //get digits line by line    
-        for(int j = startLine; j < data.Count; j++)
+        for(int j = startLine; j < endLine; j++)
         {
             string id = data[j].ID;
         
@@ -380,14 +410,30 @@ public class LoadTextFromCSV : MonoBehaviour
                 {
                     max = x;
                     pathAtI = startDigit;
+                    //Debug.Log("start digit: " + startDigit + " id: " + id);
                     pathsFoundInThisBranch++;
                     if(Int32.Parse(id) == 0)
                     {
-                        //Debug.Log("zero found");
+                        Debug.Log("zero found");
                     } else 
                     {
                         KeyValuePair<int, int> pair = new KeyValuePair<int, int>(j, Int32.Parse(id));
-                        branch1.Add(pair);
+                        
+                        bool check = true;
+                        if(GetAllButLastStr(id).Equals(subString))
+                        {
+
+                        } else if(id.Length > 1)
+                        {
+                            //check = false;
+                        }
+
+                        if(check)
+                        {
+                          branch1.Add(pair);
+                        }
+
+                        Debug.Log("pair to add: " + pair.Key + " " + pair.Value);
                     }
                         
 
@@ -435,7 +481,7 @@ public class LoadTextFromCSV : MonoBehaviour
         {
             foreach(List<KeyValuePair<int,int>> list in tree)
             {
-                //Debug.Log("is " + element.Value + " in list already? " + list.Contains(element));
+//                Debug.Log("is " + element.Value + " in list already? " + list.Contains(element));
                 isElement = list.Contains(element);
             }
         }
@@ -460,7 +506,14 @@ public class LoadTextFromCSV : MonoBehaviour
         return isNull;
     }
 
-
+    string GetAllButLastStr(string s)
+    {
+        if(s.Length < 2)
+        {
+            return s;
+        }
+        return s.Substring(0, s.Length-2);
+    }
 
     public List<Branch> GetBranches()
     {
@@ -469,7 +522,7 @@ public class LoadTextFromCSV : MonoBehaviour
 
     public Slide GetFirstSlide()
     {
-        //Debug.Log("first slide: " + data[0].BODY);
+        Debug.Log("first slide: " + data[0].BODY);
         return new Slide(data[0].TITLE, data[0].BODY, data[0].ID);
     }
 
