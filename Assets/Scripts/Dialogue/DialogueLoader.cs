@@ -64,6 +64,7 @@ public class DialogueLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerInput.instance.gameObject.SetActive(currentUIObject==null);
         
     }
 
