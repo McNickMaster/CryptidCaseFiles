@@ -190,6 +190,12 @@ public class DialogueLoader : MonoBehaviour
                     //Debug.Log("locking...");
                     lockPath.locked = true;
                 }
+
+                if(currentPath.milestoneID != "")
+                {
+                    GameManager.instance.AddMilestone(currentPath.milestoneID);
+                    
+                }
             }
             
             //Debug.Log("reached end of path: " + currentPath.pathEndBehaviour);

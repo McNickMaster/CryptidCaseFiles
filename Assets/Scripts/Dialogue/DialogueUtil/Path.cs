@@ -16,7 +16,7 @@ public class Path
 
     public bool locked = false;
     public bool chosenBefore = false;
-    public string unlockPathID = "", lockPathID = "";
+    public string unlockPathID = "", lockPathID = "", milestoneID = "";
     
 
 
@@ -47,6 +47,7 @@ public class Path
 //            Debug.Log("endSlide after unlock removal: " + endSlide.Body);
         }
 
+
         if(endSlide.Body.Contains("[lock"))
         {
             int index = endSlide.Body.IndexOf("[lock")+5;
@@ -73,6 +74,14 @@ public class Path
 //            Debug.Log("back not found in " + endSlide.ID);
             gotoID = endSlide.ID + "1";
             pathEndBehaviour = PathEndBehaviour.CONTINUE;
+        }
+
+        
+        if(endSlide.Body.Contains("[get"))
+        {
+            int index = endSlide.Body.IndexOf("[get")+4;
+            milestoneID = endSlide.Body.Substring(index, endSlide.Body.Length - index);
+            endSlide.Body = endSlide.Body.Substring(0, endSlide.Body.Length - milestoneID.Length - 4);
         }
 
 

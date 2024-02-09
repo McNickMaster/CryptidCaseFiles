@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
     {
         return completedMilestones.Contains(m);
     }
-    public void CompleteMilestone(Milestone m)
+    public void AddMilestone(Milestone m)
     {
         if(CheckMilestone(m))
         {
@@ -129,6 +129,10 @@ public class GameManager : MonoBehaviour
         {
             completedMilestones.Add(m);
         }
+    }
+    public void AddMilestone(string milestoneID)
+    {
+        AddMilestone(Enum.Parse<Milestone>(milestoneID));
     }
 
 }
@@ -147,7 +151,7 @@ public enum CauseOfDeath
 public enum Milestone
 {
 
-    PUZZLE_FOUND
+    PUZZLEFOUND
 
 
 
