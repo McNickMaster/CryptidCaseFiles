@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
+        currentLocation = FindObjectOfType<LocationManager>();
+
         currentCase = cases[0];
 
         if(currentView == null)
