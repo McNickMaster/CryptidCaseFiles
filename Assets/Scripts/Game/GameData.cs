@@ -11,6 +11,9 @@ public class GameData : MonoBehaviour
 
     public GameObject[] CAUSE_MUGSHOTS;
 
+    public const string EDITOR_FILE_PATH = "Assets/TextSRC/";
+    public const string BUILD_FILE_PATH = "data/";
+
     void Awake()
     {
         instance = this;

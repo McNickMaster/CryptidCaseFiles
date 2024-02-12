@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
+
+        //LoadSave();
+
+        
+
         currentLocation = FindObjectOfType<LocationManager>();
 
         currentCase = cases[0];
@@ -39,7 +44,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -49,6 +54,10 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             ResetWinLoss();
+        }
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            SaveGame();
         }
     }
 
@@ -140,6 +149,24 @@ public class GameManager : MonoBehaviour
     {
         AddMilestone(Enum.Parse<Milestone>(milestoneID));
     }
+    
+    void SaveGame()
+    {
+        SaveLoadData.SaveData(this);
+    }
+
+    void LoadSave()
+    {
+        try{
+            
+            SaveData mySave = SaveLoadData.LoadData();
+            completedMilestones = mySave.GetMilestones();
+
+        } catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+    }
 
 }
 
@@ -154,6 +181,7 @@ public enum CauseOfDeath
     HEART_ATTACK, BLED_OUT, POISONED
 }
 
+[Serializable]
 public enum Milestone
 {
 
