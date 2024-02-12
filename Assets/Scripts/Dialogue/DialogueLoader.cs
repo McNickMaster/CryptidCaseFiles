@@ -64,6 +64,7 @@ public class DialogueLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerInput.instance.gameObject.SetActive(currentUIObject==null);
         
     }
 
@@ -189,6 +190,12 @@ public class DialogueLoader : MonoBehaviour
                 {
                     //Debug.Log("locking...");
                     lockPath.locked = true;
+                }
+
+                if(currentPath.milestoneID != "")
+                {
+                    GameManager.instance.AddMilestone(currentPath.milestoneID);
+                    
                 }
             }
             

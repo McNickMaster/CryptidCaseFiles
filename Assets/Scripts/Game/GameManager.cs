@@ -13,15 +13,19 @@ public class GameManager : MonoBehaviour
     public GameObject lineDrawer;
     public GameObject winScreen, loseScreen;
     public CaseFile caseFileObj;
-
     public Case[] cases;
     private Case currentCase;
     private Case currentGuess;
     private int caseIndex;
 
+    [Header("Debug")]
+    public List<Milestone> completedMilestones = new List<Milestone>();
+
     void Awake()
     {
         instance = this;
+
+        currentLocation = FindObjectOfType<LocationManager>();
 
         currentCase = cases[0];
 
@@ -42,9 +46,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.R))
         {
-            TrySolveCase();
+            ResetWinLoss();
         }
     }
 
@@ -93,6 +97,12 @@ public class GameManager : MonoBehaviour
         loseScreen.SetActive(true);
     }
 
+    public void ResetWinLoss()
+    {
+        winScreen.SetActive(false);
+        loseScreen.SetActive(false);
+    }
+
     public DrawLine SpawnLineDrawer()
     {
         return Instantiate(lineDrawer, Vector3.zero, Quaternion.identity, currentLocation.transform).GetComponent<DrawLine>();
@@ -112,7 +122,24 @@ public class GameManager : MonoBehaviour
         currentView.enabled = true;
     }
 
+    public bool CheckMilestone(Milestone m)
+    {
+        return completedMilestones.Contains(m);
+    }
+    public void AddMilestone(Milestone m)
+    {
+        if(CheckMilestone(m))
+        {
 
+        } else 
+        {
+            completedMilestones.Add(m);
+        }
+    }
+    public void AddMilestone(string milestoneID)
+    {
+        AddMilestone(Enum.Parse<Milestone>(milestoneID));
+    }
 
 }
 
@@ -127,16 +154,11 @@ public enum CauseOfDeath
     HEART_ATTACK, BLED_OUT, POISONED
 }
 
-
-[Serializable]
-public class SerializableEnum<T> where T : struct, IConvertible
+public enum Milestone
 {
-    public T Value
-    {
-        get { return m_EnumValue; }
-        set { m_EnumValue = value; }
-    }
-    private string m_EnumValueAsString;
-    [SerializeField]
-    private T m_EnumValue;
+
+    PUZZLEFOUND
+
+
+
 }

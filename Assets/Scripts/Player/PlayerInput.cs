@@ -20,6 +20,7 @@ public class PlayerInput : MonoBehaviour
     private bool _dragging = false, inUI = false;
 
     private Vector3 mousePosOnClick = Vector3.zero;
+    private Notes noteInteracted;
 
 
     [Header("Controls Config")]
@@ -131,8 +132,13 @@ public class PlayerInput : MonoBehaviour
         if(objectInteracted != null)
         { 
             
-            objectInteracted.transform.position = mousePosition3D;
-            //objectInteracted.transform.position = mousePosition3D + objectOffset;
+            //objectInteracted.transform.position = mousePosition3D;
+            objectInteracted.transform.position = mousePosition3D + objectOffset;
+
+            if(noteInteracted!=null)
+            {
+                noteInteracted.enabled = false;
+            }
 
             objectInteracted.GetComponentInChildren<Collider>().enabled = false;
 
@@ -144,6 +150,10 @@ public class PlayerInput : MonoBehaviour
     {
         objectInteracted.GetComponent<Rigidbody>().AddForce(100*Vector3.forward);
         objectInteracted.GetComponentInChildren<Collider>().enabled = true;
+        if(noteInteracted!=null)
+        {
+            noteInteracted.enabled = true;
+        }
         objectInteracted = null;
     }
 
@@ -182,6 +192,7 @@ public class PlayerInput : MonoBehaviour
                     case (InteractType.DRAGGABLE):
                     {
                         objectInteracted = interacted.gameObject.gameObject;
+                        noteInteracted = interacted.GetComponent<Notes>();
                         objectOffset = CalcOffset();
 
                         break;
@@ -303,12 +314,19 @@ public class PlayerInput : MonoBehaviour
         //this works for forward, but not for up
         Vector3 offset;
 
-        offset = new Vector3(objectInteracted.transform.position.x - mousePosition3D.x, objectInteracted.transform.position.y - mousePosition3D.y, objectInteracted.transform.position.y - mousePosition3D.z);
+        offset = new Vector3(objectInteracted.transform.position.x - mousePosition3D.x, objectInteracted.transform.position.y - mousePosition3D.y, objectInteracted.transform.position.z - mousePosition3D.z);
+//        Debug.Log(objectInteracted.transform.position.z + " " + mousePosition3D.z + " offset " + offset.z);
+//        Debug.DrawLine(objectInteracted.transform.position, mousePosition3D, Color.yellow, 10);
 
-        Vector3 normalMask = GameManager.instance.currentView.normal;
-        normalMask = (new Vector3(normalMask.x - 1, normalMask.y - 1, normalMask.z - 1)).normalized;
 
-        offset = new Vector3(-offset.x * normalMask.x, -offset.y * normalMask.y, -offset.z * normalMask.z);
+
+        offset += GameManager.instance.currentView.normal * 0.75f;
+        
+       // Debug.Log(normalMask);
+
+        //offset = new Vector3(-offset.x * normalMask.x, -offset.y * normalMask.y, offset.z * normalMask.z);
+
+        
 
 
         return offset;
