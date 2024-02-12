@@ -8,6 +8,8 @@ using System.IO;
 public class LoadTextFromCSV : MonoBehaviour
 {
     public string fileName;
+
+    private const string FILE_PATH = "Assets/TextSRC/";
     
     [HideInInspector]
     public List<Line> data = new List<Line>();
@@ -33,14 +35,14 @@ public class LoadTextFromCSV : MonoBehaviour
         
         //Sinbad.CsvUtil.SaveObjects<Line>();
 
-        StreamReader sr = new StreamReader("Assets/RawText/"+fileName+".csv");
+        StreamReader sr = new StreamReader(FILE_PATH+fileName+".csv");
         string bigInput = sr.ReadToEnd();
 
         string[] splits = bigInput.Split("@");
 
         string output;
         for(int i = 0; i < splits.Length; i++){
-            using (StreamWriter outputFile = new StreamWriter("Assets/RawText/output" + i + ".csv"))
+            using (StreamWriter outputFile = new StreamWriter(FILE_PATH + "/output" + i + ".csv"))
             {
                 output = splits[i];
                 if(i > 0)
@@ -70,7 +72,7 @@ public class LoadTextFromCSV : MonoBehaviour
 
     public void LoadCSV(string file)
     {
-        data = Sinbad.CsvUtil.LoadObjects<Line>("Assets/RawText/" + file + ".csv");
+        data = Sinbad.CsvUtil.LoadObjects<Line>(FILE_PATH + file + ".csv");
 
         //int i = 2;
         //Debug.Log(data[i].ID + " " + data[i].TITLE + " " + data[i].BODY);
