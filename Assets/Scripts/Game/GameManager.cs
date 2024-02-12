@@ -46,9 +46,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.R))
         {
-            //TrySolveCase();
+            ResetWinLoss();
         }
     }
 
@@ -95,6 +95,12 @@ public class GameManager : MonoBehaviour
     public void Lose()
     {
         loseScreen.SetActive(true);
+    }
+
+    public void ResetWinLoss()
+    {
+        winScreen.SetActive(false);
+        loseScreen.SetActive(false);
     }
 
     public DrawLine SpawnLineDrawer()
