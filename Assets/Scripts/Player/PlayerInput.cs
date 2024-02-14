@@ -17,7 +17,7 @@ public class PlayerInput : MonoBehaviour
 
     public Vector3 mousePosition, mousePosition3D, objectOffset = Vector3.zero;
 
-    private bool _dragging = false; //inUI = false;
+    private bool _dragging = false, inUI = false;
 
     private Vector3 mousePosOnClick = Vector3.zero;
     private Notes noteInteracted;
@@ -39,7 +39,14 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleMouse();
+        inUI = mapObj.activeSelf || notebookObj.activeSelf;
+        if(inUI)
+        {
+
+        } else 
+        {
+            HandleMouse();
+        }
         HandleKeys();
     }
 

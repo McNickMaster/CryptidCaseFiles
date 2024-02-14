@@ -21,12 +21,16 @@ public class GameManager : MonoBehaviour
     [Header("Debug")]
     public List<Milestone> completedMilestones = new List<Milestone>();
 
+    void OnEnable()
+    {
+        //instance = this;
+    }
     void Awake()
     {
         instance = this;
 
 
-        //LoadSave();
+        LoadSave();
 
         
 
@@ -185,7 +189,13 @@ public enum CauseOfDeath
 public enum Milestone
 {
 
-    PUZZLEFOUND
+    EVIDENCE_C1_1, EVIDENCE_C1_2, EVIDENCE_C1_3, EVIDENCE_C1_4, EVIDENCE_C1_5, 
+    EVIDENCE_C2_1, EVIDENCE_C2_2, EVIDENCE_C2_3, EVIDENCE_C2_4, EVIDENCE_C2_5, 
+    EVIDENCE_C3_1, EVIDENCE_C3_2, EVIDENCE_C3_3, EVIDENCE_C3_4, EVIDENCE_C3_5, 
+    EVIDENCE_C4_1, EVIDENCE_C4_2, EVIDENCE_C4_3, EVIDENCE_C4_4, EVIDENCE_C4_5, 
+    EVIDENCE_C5_1, EVIDENCE_C5_2, EVIDENCE_C5_3, EVIDENCE_C5_4, EVIDENCE_C5_5, 
+    PUZZLEFOUND,
+    CS1_DONE, CS2_DONE, CS3_DONE, CS4_DONE, CS5_DONE
 
 
 
