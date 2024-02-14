@@ -39,7 +39,14 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleMouse();
+        inUI = mapObj.activeSelf || notebookObj.activeSelf;
+        if(inUI)
+        {
+
+        } else 
+        {
+            HandleMouse();
+        }
         HandleKeys();
     }
 
@@ -63,12 +70,12 @@ public class PlayerInput : MonoBehaviour
             Application.Quit();
         }
 
-        if(Input.GetKeyDown(NOTEBOOK_OPEN) && !mapObj.active)
+        if(Input.GetKeyDown(NOTEBOOK_OPEN) && !mapObj.activeSelf)
         {
             ToggleNotebook();
         }
 
-        if(Input.GetKeyDown(MAP_OPEN) && !notebookObj.active)
+        if(Input.GetKeyDown(MAP_OPEN) && !notebookObj.activeSelf)
         {
             ToggleMap();
         }
@@ -164,13 +171,13 @@ public class PlayerInput : MonoBehaviour
 
     void ToggleNotebook()
     {   
-        notebookObj.SetActive(!notebookObj.active);
+        notebookObj.SetActive(!notebookObj.activeSelf);
 
         //inUI = inUI || notebookObj.active;
     }
     void ToggleMap()
     {   
-        mapObj.SetActive(!mapObj.active);
+        mapObj.SetActive(!mapObj.activeSelf);
 
         //inUI = inUI || mapObj.active;
     }

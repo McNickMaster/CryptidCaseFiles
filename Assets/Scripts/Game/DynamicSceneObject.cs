@@ -17,16 +17,21 @@ public class DynamicSceneObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateObject();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            transform.GetChild(0).gameObject.SetActive(GameManager.instance.CheckMilestone(myMilestone));
-            //Debug.Log(GameManager.instance.CheckMilestone(myMilestone));
-        }
+    }
+
+    void UpdateObject()
+    {
+        transform.GetChild(0).gameObject.SetActive(GameManager.instance.CheckMilestone(myMilestone));
+    }
+
+    void OnEnable()
+    {
+        
     }
 }
