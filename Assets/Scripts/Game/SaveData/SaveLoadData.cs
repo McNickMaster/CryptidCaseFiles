@@ -6,16 +6,17 @@ public static class SaveLoadData
     public static void SaveData(GameManager game)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/Game.cryptid";
+        string path = Application.persistentDataPath + "/Save01.cryptid";
         FileStream stream = new FileStream(path, FileMode.Create);
         SaveData data = new SaveData(game);
         formatter.Serialize(stream, data);
+        Debug.Log(Application.persistentDataPath);
         stream.Flush();
         stream.Close();
     }
     public static SaveData LoadData()
     {
-        string path = Application.persistentDataPath + "/Game.cryptid";
+        string path = Application.persistentDataPath + "/Save01.cryptid";
         if(File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -25,7 +26,7 @@ public static class SaveLoadData
             return data;
         } else
         {
-            Debug.LogError("Error: Save file not found in " + path);
+            //Debug.LogError("Error: Save file not found in " + path);
             return null;
         }
     }
