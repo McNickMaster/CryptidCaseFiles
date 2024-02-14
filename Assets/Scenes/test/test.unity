@@ -1267,9 +1267,33 @@ MonoBehaviour:
   fileToLoad: 
   convoIDToLoad: 
   myBranches: []
+  mySlides: []
   dialogueParent: {fileID: 1600459893}
   slidePrefab: {fileID: 7232690847493515766, guid: 08c07c747650b8d43bea7d07ce714fed, type: 3}
   branchPrefab: {fileID: 4617611816227279890, guid: 6b37361f32c8b6b4f822cc2f811ef305, type: 3}
+  currentPath:
+    slides: []
+    firstSlide:
+      Title: 
+      Body: 
+      ID: 
+      ConvoID: 
+    endSlide:
+      Title: 
+      Body: 
+      ID: 
+      ConvoID: 
+    myBranch:
+      myPathOptions: []
+    pathEndBehaviour: 0
+    gotoID: 
+    endBranch:
+      myPathOptions: []
+    locked: 0
+    chosenBefore: 0
+    unlockPathID: 
+    lockPathID: 
+    milestoneID: 
   jsonLoader: {fileID: 0}
   dialogueBase: {fileID: 0}
 --- !u!114 &387250541
@@ -1297,9 +1321,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: test4
+  simpleTextData:
+  - {fileID: 11400000, guid: ccbbe86c6b4ccfe4f9ab2b8d4750062b, type: 2}
   data: []
   slides: []
   branches: []
+  path:
+    slides: []
+    firstSlide:
+      Title: 
+      Body: 
+      ID: 
+      ConvoID: 
+    endSlide:
+      Title: 
+      Body: 
+      ID: 
+      ConvoID: 
+    myBranch:
+      myPathOptions: []
+    pathEndBehaviour: 0
+    gotoID: 
+    endBranch:
+      myPathOptions: []
+    locked: 0
+    chosenBefore: 0
+    unlockPathID: 
+    lockPathID: 
+    milestoneID: 
 --- !u!1 &526874091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,11 +2297,11 @@ Transform:
   m_GameObject: {fileID: 876580629}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70707405, y: -0, z: -0, w: 0.70713955}
-  m_LocalPosition: {x: -6.07, y: 36.79, z: 7.19}
+  m_LocalPosition: {x: -6.07, y: 36.79, z: 7.1900005}
   m_LocalScale: {x: 2.3170004, y: 2.317, z: 2.3170004}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1508091038}
+  m_Father: {fileID: 1429384602}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &876580631
 Light:
@@ -3782,10 +3831,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.2332516, y: -0.67433906, z: -0.23880395, w: 0.6586602}
   m_LocalPosition: {x: -9.832, y: 4.369, z: 15.157}
-  m_LocalScale: {x: 2.3170004, y: 2.317, z: 2.3170004}
+  m_LocalScale: {x: 2.3170004, y: 2.3170002, z: 2.3170004}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1508091038}
+  m_Father: {fileID: 1429384602}
   m_LocalEulerAnglesHint: {x: -39.001, y: -91.348, z: 0}
 --- !u!108 &1822973449
 Light:
@@ -4824,7 +4873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 838395952688112813, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1068494753721806702, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5488,6 +5537,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2020655396964808207, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020655396964808207, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5637,7 +5690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4982921777381696013, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4982921777381696013, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5751,6 +5804,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 6757872819470128695, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: noteToSpawn
+      value: 
+      objectReference: {fileID: 1233914839373039238, guid: 31ad05327d6c5424dafc6ec86f90e200, type: 3}
     - target: {fileID: 6843511680976147309, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -5851,6 +5908,10 @@ PrefabInstance:
       propertyPath: myBackPlane
       value: 
       objectReference: {fileID: 1455724984}
+    - target: {fileID: 8940185134768687808, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9067576899532839294, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -5871,20 +5932,20 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 3833735998262721082, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4162375725676883519, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 900302394770470014, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       insertIndex: 0
+      addedObject: {fileID: 876580630}
+    - targetCorrespondingSourceObject: {fileID: 900302394770470014, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      insertIndex: 1
       addedObject: {fileID: 1822973448}
     - targetCorrespondingSourceObject: {fileID: 4162375725676883519, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 876580630}
-    - targetCorrespondingSourceObject: {fileID: 4162375725676883519, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
-      insertIndex: 4
+      insertIndex: 2
       addedObject: {fileID: 970075856}
     - targetCorrespondingSourceObject: {fileID: 4162375725676883519, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
-      insertIndex: 6
+      insertIndex: 4
       addedObject: {fileID: 2073566119}
     - targetCorrespondingSourceObject: {fileID: 4162375725676883519, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
-      insertIndex: 9
+      insertIndex: 7
       addedObject: {fileID: 1959691020}
     - targetCorrespondingSourceObject: {fileID: 498890603553618100, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       insertIndex: -1

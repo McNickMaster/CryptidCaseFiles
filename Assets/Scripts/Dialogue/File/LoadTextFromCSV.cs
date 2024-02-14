@@ -8,6 +8,7 @@ using System.IO;
 public class LoadTextFromCSV : MonoBehaviour
 {
     public string fileName;
+    public SimpleTextData[] simpleTextData;
 
     private const string FILE_PATH = "Assets/TextSRC/";
     
@@ -25,6 +26,7 @@ public class LoadTextFromCSV : MonoBehaviour
     [HideInInspector]
     public Path path;
 
+    int numFiles = 0;
 
 
     // Start is called before the first frame update
@@ -52,6 +54,24 @@ public class LoadTextFromCSV : MonoBehaviour
                 outputFile.Write(output);
             }
         }
+        numFiles = splits.Length;
+
+        ConvertAllCSVToBin();
+
+        string[] tempText; //go through each textData
+        for(int i = 0; i < simpleTextData.Length; i++)
+        {
+            List<SimpleLine> temp = Sinbad.CsvUtil.LoadObjects<SimpleLine>(FILE_PATH + simpleTextData[i].file + ".csv");
+
+            tempText = new string[simpleTextData.Length];
+            //set temp to be temp
+            for(int j = 0; j < temp.Count; j++)
+            {
+                tempText[j] = temp[j].BODY;
+            }
+
+            SaveLoadData.SaveSimpleTextData(tempText, ""+i);
+        }
         
     }
 
@@ -62,48 +82,27 @@ public class LoadTextFromCSV : MonoBehaviour
     }
 
 
-
-
-
-    public void LoadCSV()
+    void ConvertAllCSVToBin()
     {
-        LoadCSV(fileName);
+        for(int i = 0; i < numFiles; i++)
+        {
+            LoadDialogueCSV("output" + i);
+            SaveLoadData.SaveDialogueData(branches, slides, i);
+        }
+        
     }
 
-    public void LoadCSV(string file)
+
+    public void LoadDialogueCSV(string file)
     {
         data = Sinbad.CsvUtil.LoadObjects<Line>(FILE_PATH + file + ".csv");
 
-        //int i = 2;
-        //Debug.Log(data[i].ID + " " + data[i].TITLE + " " + data[i].BODY);
-
-      
-        
         slides = GetAllSlides();
         tree = FindAllBranches();
-        //conversations = CreateConversationObjects();
         branches = CreateBranchObjects();
 
-        //branches = CreateBranchObjects("A");
-        
-        /*
-        Debug.Log("lists in tree: ");
-        foreach(List<KeyValuePair<int,int>> list in tree)
-        {
-            Debug.Log("start list");    
-            for(int i = 0; i < list.Count; i++)
-            {
-                Debug.Log("      " + list[i].Value + " " + list[i].Key);
 
-                
-            }
-
-            Debug.Log("end list");    
-        }
-        Debug.Log("end tree");
- */    
-
-        
+       /* 
         Debug.Log("start branches");  
         foreach(Branch branch in branches)
         {
@@ -147,30 +146,22 @@ public class LoadTextFromCSV : MonoBehaviour
 
 
 
-        
 
 
     }
-    
-    /*
-    List<Conversation> CreateConversationObjects()
+
+    public string[] LoadSimpleCSV(string file)
     {
-        List<Conversation> tempConvos = new List<Conversation>();
-
-        string convertedID;
-        for(int i = 0; i < numberConvos; i++)
-        {
-            convertedID = (Convert.ToChar(i+65)).ToString();
-            //Debug.Log("converted id: " + convertedID);
-            branches = CreateBranchObjects(convertedID);
-            Conversation convo = new Conversation(convertedID, branches);
-            tempConvos.Add(convo);
-        }
-
-        return tempConvos;
+    
+        string[] temp = SaveLoadData.LoadText(file).textPages;
         
+
+        return temp;
     }
-    */
+
+    
+
+
 
     List<Branch> CreateBranchObjects()
     {
@@ -414,7 +405,7 @@ okay so this function is just incorrect. it does not look at the rest of the str
                     pathsFoundInThisBranch++;
                     if(Int32.Parse(id) == 0)
                     {
-                        Debug.Log("zero found");
+//                        Debug.Log("zero found");
                     } else 
                     {
                         KeyValuePair<int, int> pair = new KeyValuePair<int, int>(j, Int32.Parse(id));
@@ -433,7 +424,7 @@ okay so this function is just incorrect. it does not look at the rest of the str
                           branch1.Add(pair);
                         }
 
-                        Debug.Log("pair to add: " + pair.Key + " " + pair.Value);
+                        //Debug.Log("pair to add: " + pair.Key + " " + pair.Value);
                     }
                         
 
@@ -542,4 +533,10 @@ public class Line
     public string BODY;
 
 
+}
+
+[System.Serializable]
+public class SimpleLine
+{
+    public string BODY;
 }

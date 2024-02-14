@@ -11,12 +11,14 @@ public class DialogueLoader : MonoBehaviour
     public static DialogueLoader instance;
 
     public GameObject textAsset;
-    LoadTextFromCSV csvLoader;
 
     public string fileToLoad = "";
     public string convoIDToLoad = "";
 
+    string[] simpleTextPages;
+
     public List<Branch> myBranches = new List<Branch>();
+    public List<Slide> mySlides = new List<Slide>();
 
     public Transform dialogueParent;
     public GameObject slidePrefab, branchPrefab;
@@ -40,8 +42,6 @@ public class DialogueLoader : MonoBehaviour
     {
         instance = this;
 
-
-        csvLoader = GetComponent<LoadTextFromCSV>();
         jsonLoader = GetComponent<LoadTextFromJson>();
 
         //LoadConversation("output1");
@@ -86,8 +86,9 @@ public class DialogueLoader : MonoBehaviour
 
     public void LoadMonologue(string file)
     {
-        
-        jsonLoader.LoadJson(file);
+//        Debug.Log("loading mono with id: " + file);
+        SimpleTextFileData dataFile = SaveLoadData.LoadText(file);
+        simpleTextPages = dataFile.GetFilePages();
     }
     public void StartMonologue()
     {
@@ -105,8 +106,8 @@ public class DialogueLoader : MonoBehaviour
 
 //        numPages = dialogueData.numPages;
 
-        title.text = jsonLoader.GetNotePages()[0];
-        body.text = jsonLoader.GetNotePages()[1];
+        title.text = "Inner Monolouge";
+        body.text = simpleTextPages[0];
 
 
     }
@@ -130,17 +131,17 @@ public class DialogueLoader : MonoBehaviour
 
         }
     }
-    public void LoadConversation(string file)
+    public void LoadConversation(string id)
     {
-        
-        csvLoader.LoadCSV(file);
+        DialogueFileData dialogueFile = SaveLoadData.LoadDialogue(Int32.Parse(id));       
 
-        myBranches = csvLoader.GetBranches();
+        myBranches = dialogueFile.GetBranches();
+        mySlides = dialogueFile.GetSlides();
     }
 
     public void StartConversation()
     {
-        Path initPath = new Path(new Slide[]{csvLoader.GetFirstSlide()});
+        Path initPath = new Path(new Slide[]{mySlides[0]});
         currentPath = initPath;
         initPath.firstSlide.Body = initPath.endSlide.Body + "[back]";
         initPath.DetectPathEnd();
@@ -239,10 +240,7 @@ public class DialogueLoader : MonoBehaviour
 
         if(p.pathEndBehaviour.Equals(PathEndBehaviour.CONTINUE))
         {
-            //Slide temp = csvLoader.slides[1 + csvLoader.slides.FindIndex(x => x.ID == p.endSlide.ID)];
-            Slide temp = csvLoader.slides[1 + csvLoader.slides.FindIndex(x => x.ID == p.endSlide.ID)];
-            //Debug.Log(temp.Body + " " + p.endSlide.ID + " " + (1 + csvLoader.slides.FindIndex(x => x.ID == p.endSlide.ID)));
-
+            Slide temp = mySlides[1 + mySlides.FindIndex(x => x.ID == p.endSlide.ID)];
             p.endBranch = FindBranch(temp.ID);
 
         }
