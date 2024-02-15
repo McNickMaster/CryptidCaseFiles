@@ -582,6 +582,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201432947}
   m_CullTransparentMesh: 1
+--- !u!1 &273229341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 273229342}
+  m_Layer: 0
+  m_Name: BR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &273229342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273229341}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.973, y: -0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1714302796}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &311150285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,7 +1179,6 @@ GameObject:
   - component: {fileID: 387250538}
   - component: {fileID: 387250539}
   - component: {fileID: 387250542}
-  - component: {fileID: 387250541}
   - component: {fileID: 387250540}
   m_Layer: 0
   m_Name: GameManager
@@ -1235,23 +1265,35 @@ MonoBehaviour:
   fileToLoad: 
   convoIDToLoad: 
   myBranches: []
+  mySlides: []
   dialogueParent: {fileID: 1600459893}
   slidePrefab: {fileID: 7232690847493515766, guid: 08c07c747650b8d43bea7d07ce714fed, type: 3}
   branchPrefab: {fileID: 4617611816227279890, guid: 6b37361f32c8b6b4f822cc2f811ef305, type: 3}
+  currentPath:
+    slides: []
+    firstSlide:
+      Title: 
+      Body: 
+      ID: 
+      ConvoID: 
+    endSlide:
+      Title: 
+      Body: 
+      ID: 
+      ConvoID: 
+    myBranch:
+      myPathOptions: []
+    pathEndBehaviour: 0
+    gotoID: 
+    endBranch:
+      myPathOptions: []
+    locked: 0
+    chosenBefore: 0
+    unlockPathID: 
+    lockPathID: 
+    milestoneID: 
   jsonLoader: {fileID: 0}
   dialogueBase: {fileID: 0}
---- !u!114 &387250541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387250535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885ac96e016441141ac339f9c3339ada, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &387250542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1265,9 +1307,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: test4
+  simpleTextData:
+  - {fileID: 11400000, guid: ccbbe86c6b4ccfe4f9ab2b8d4750062b, type: 2}
+  - {fileID: 11400000, guid: 53bf0770d491f11468da11080be74409, type: 2}
+  - {fileID: 11400000, guid: 7ea3cdc1e0563cf489a3a7679f38a646, type: 2}
+  - {fileID: 11400000, guid: 908d6dbfb2ad5ca4f8aee979d053b0f2, type: 2}
+  - {fileID: 11400000, guid: ae62f18906bc6e54697f89bbe533fc15, type: 2}
   data: []
   slides: []
   branches: []
+  path:
+    slides: []
+    firstSlide:
+      Title: 
+      Body: 
+      ID: 
+      ConvoID: 
+    endSlide:
+      Title: 
+      Body: 
+      ID: 
+      ConvoID: 
+    myBranch:
+      myPathOptions: []
+    pathEndBehaviour: 0
+    gotoID: 
+    endBranch:
+      myPathOptions: []
+    locked: 0
+    chosenBefore: 0
+    unlockPathID: 
+    lockPathID: 
+    milestoneID: 
 --- !u!1 &526874091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,7 +2295,6 @@ MonoBehaviour:
   notebookObj: {fileID: 322028335}
   mapObj: {fileID: 1957850284}
   interacted: {fileID: 0}
-  mousePosition: {x: 0, y: 0, z: 0}
   mousePosition3D: {x: 0, y: 0, z: 0}
   objectOffset: {x: 0, y: 0, z: 0}
   PAUSE_MENU: 27
@@ -3059,6 +3129,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   z: 20.5
   myGlass: {fileID: 110316705}
+--- !u!1 &1714302795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714302796}
+  m_Layer: 0
+  m_Name: InteractArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1714302796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714302795}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 28.064}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2068396332}
+  - {fileID: 273229342}
+  m_Father: {fileID: 1493339245}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1723575188
 GameObject:
   m_ObjectHideFlags: 0
@@ -3799,8 +3902,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 322028335}
   state: 0
   newView: {fileID: 0}
@@ -4461,8 +4566,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -4817,6 +4924,10 @@ PrefabInstance:
       propertyPath: myMilestone
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 507769191093782534, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: textData
+      value: 
+      objectReference: {fileID: 11400000, guid: 53bf0770d491f11468da11080be74409, type: 2}
     - target: {fileID: 900302394770470014, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4910,6 +5021,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2020655396964808207, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020655396964808207, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5001,6 +5116,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3563876050806096890, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3906074351230243009, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -5037,6 +5156,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4737980490580586205, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4741615448916916863, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -5049,6 +5172,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4783546832493152583, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: textData
+      value: 
+      objectReference: {fileID: 11400000, guid: ae62f18906bc6e54697f89bbe533fc15, type: 2}
     - target: {fileID: 4982921777381696013, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_Name
       value: Location_Office
@@ -5169,6 +5296,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 6757872819470128695, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: textData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ea3cdc1e0563cf489a3a7679f38a646, type: 2}
+    - target: {fileID: 6757872819470128695, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: noteToSpawn
+      value: 
+      objectReference: {fileID: 1233914839373039238, guid: 31ad05327d6c5424dafc6ec86f90e200, type: 3}
     - target: {fileID: 6843511680976147309, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -5273,6 +5408,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 8865947407730918523, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: BR
+      value: 
+      objectReference: {fileID: 273229342}
+    - target: {fileID: 8865947407730918523, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: TL
+      value: 
+      objectReference: {fileID: 2068396332}
     - target: {fileID: 8865947407730918523, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: normal.z
       value: -1
