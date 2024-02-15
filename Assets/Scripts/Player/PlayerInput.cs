@@ -140,8 +140,8 @@ public class PlayerInput : MonoBehaviour
         { 
             
             //objectInteracted.transform.position = mousePosition3D;
-            objectInteracted.transform.position = mousePosition3D + objectOffset;
             SetObjectToBounds();
+            objectInteracted.transform.position = mousePosition3D + objectOffset;
 
             if(noteInteracted!=null)
             {
@@ -156,7 +156,7 @@ public class PlayerInput : MonoBehaviour
 
     private void StopDrag()
     {
-        //SetObjectToBounds();
+        SetObjectToBounds();
 
         objectInteracted.GetComponent<Rigidbody>().AddForce(100*Vector3.forward);
         objectInteracted.GetComponentInChildren<Collider>().enabled = true;
