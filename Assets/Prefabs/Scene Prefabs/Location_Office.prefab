@@ -197,8 +197,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 1233914839373039238, guid: 0229508e753a44446a0ec93ce8c74b77, type: 3}
   noteSpawnPoint: {fileID: 3294727828088490832}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -252,7 +254,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
   m_LocalPosition: {x: -5.27, y: 8.68, z: 28.41}
-  m_LocalScale: {x: 3.969175, y: 1, z: 2.0547464}
+  m_LocalScale: {x: 9.210073, y: 1, z: 3.9853861}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 498890603553618100}
@@ -462,8 +464,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 387950292090338713}
@@ -621,6 +625,7 @@ Transform:
   - {fileID: 6077232456097999192}
   - {fileID: 2336213187984862931}
   - {fileID: 978694774204457475}
+  - {fileID: 3370539577876112576}
   m_Father: {fileID: 900302394770470014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8865947407730918523
@@ -638,6 +643,8 @@ MonoBehaviour:
   myCamera: {fileID: 131846430011373412}
   myBackPlane: {fileID: 2336213187984862931}
   normal: {x: 0, y: 0, z: -1}
+  TL: {fileID: 6356525962013179917}
+  BR: {fileID: 6274020220368250529}
 --- !u!1 &2717193033992823845
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +751,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2742038817868435679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3370539577876112576}
+  m_Layer: 0
+  m_Name: InteractableBounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3370539577876112576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2742038817868435679}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 27.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6356525962013179917}
+  - {fileID: 6274020220368250529}
+  m_Father: {fileID: 498890603553618100}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2743206147362479612
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,8 +890,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 1233914839373039238, guid: 78b4bbf9cb0a0444d9542996240d11e7, type: 3}
   noteSpawnPoint: {fileID: 3294727828088490832}
+  textData: {fileID: 11400000, guid: 53bf0770d491f11468da11080be74409, type: 2}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -876,6 +918,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8173706, y: 0.86869645, z: 0.27858537}
   m_Center: {x: -1.281318, y: -0.18565226, z: -1.4576801}
+--- !u!1 &3106241901445368985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6356525962013179917}
+  m_Layer: 0
+  m_Name: TL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6356525962013179917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3106241901445368985}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.56, y: 18.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3370539577876112576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3247252112532707828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1263,8 @@ MonoBehaviour:
   myCamera: {fileID: 8940185134768687808}
   myBackPlane: {fileID: 7438024281836427843}
   normal: {x: 0, y: 1, z: 0}
+  TL: {fileID: 6356525962013179917}
+  BR: {fileID: 6274020220368250529}
 --- !u!1 &5205988351548270771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,10 +1477,12 @@ MonoBehaviour:
   destination: {fileID: 0}
   thisLocation: {fileID: 0}
   travelCutscene: {fileID: 0}
-  noteToSpawn: {fileID: 1233914839373039238, guid: b601e70f791f02047a9b29dad4bed1ba, type: 3}
+  noteToSpawn: {fileID: 1233914839373039238, guid: 31ad05327d6c5424dafc6ec86f90e200, type: 3}
   noteSpawnPoint: {fileID: 3294727828088490832}
+  textData: {fileID: 11400000, guid: 7ea3cdc1e0563cf489a3a7679f38a646, type: 2}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -1758,11 +1835,44 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 8865947407730918523}
+--- !u!1 &6088960247976503832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6274020220368250529}
+  m_Layer: 0
+  m_Name: BR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6274020220368250529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6088960247976503832}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.27, y: -0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3370539577876112576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6147228841732778324
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,8 +2265,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -2663,8 +2775,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 1233914839373039238, guid: 7be1a8684c85aee4e84788ac0fb16b66, type: 3}
   noteSpawnPoint: {fileID: 3294727828088490832}
+  textData: {fileID: 11400000, guid: ae62f18906bc6e54697f89bbe533fc15, type: 2}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -3267,8 +3381,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 5279462844706190532}
   state: 0
   newView: {fileID: 0}
@@ -4678,7 +4794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5d5e3cc03bea7ff499ef4e0fcf2cf3da, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5d5e3cc03bea7ff499ef4e0fcf2cf3da, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4765,8 +4881,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  btn_type: 0
+  type: 0
+  btn_type: 6
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -4779,8 +4895,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 8237184059454314815}
   state: 1
   newView: {fileID: 0}
