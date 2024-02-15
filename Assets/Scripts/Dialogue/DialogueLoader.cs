@@ -86,9 +86,16 @@ public class DialogueLoader : MonoBehaviour
 
     public void LoadMonologue(string file)
     {
-        Debug.Log("loading mono with id: " + file);
-        SimpleTextFileData dataFile = SaveLoadData.LoadText(file);
-        simpleTextPages = dataFile.GetFilePages();
+        if(file == "-1")
+        {
+            
+        } else 
+        {
+            Debug.Log("loading mono with id: " + file);
+            SimpleTextFileData dataFile = SaveLoadData.LoadText(file);
+            simpleTextPages = dataFile.GetFilePages();
+
+        }
     }
     public void StartMonologue()
     {

@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 745809419340166245}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.91, y: 0, z: 2.87}
+  m_LocalPosition: {x: -2.35, y: 0, z: 2.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -391,6 +391,8 @@ MonoBehaviour:
   myCamera: {fileID: 4982293536360685032}
   myBackPlane: {fileID: 7858862360690989347}
   normal: {x: 0, y: 0, z: 1}
+  TL: {fileID: 0}
+  BR: {fileID: 0}
 --- !u!1 &6626506613978430642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +1005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  btn_type: 4
+  btn_type: 9
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -1016,8 +1018,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 38fd098000c9707459038bbadc573b2e, type: 2}
+  monologue: {fileID: 11400000, guid: 3cb5ea1fdfdc8334eafb6e2072de9302, type: 2}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -1821,7 +1825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 398a5fba7124a614797b026089afcf72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.279286
+      value: -12.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 398a5fba7124a614797b026089afcf72, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1829,11 +1833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 398a5fba7124a614797b026089afcf72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.010532
+      value: -30.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 398a5fba7124a614797b026089afcf72, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.66146284
+      value: 0.71805716
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 398a5fba7124a614797b026089afcf72, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1841,7 +1845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 398a5fba7124a614797b026089afcf72, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.74997795
+      value: -0.6959842
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 398a5fba7124a614797b026089afcf72, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1853,7 +1857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 398a5fba7124a614797b026089afcf72, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -97.177
+      value: -88.211
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 398a5fba7124a614797b026089afcf72, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1905,8 +1909,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 112af563afa3907419baf87afeb73093, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -2046,7 +2052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c88f6b28aff4b2f4c9f250610ce1a3c7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5047847
+      value: 0.593649
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c88f6b28aff4b2f4c9f250610ce1a3c7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2054,7 +2060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c88f6b28aff4b2f4c9f250610ce1a3c7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.8632453
+      value: -0.80472404
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c88f6b28aff4b2f4c9f250610ce1a3c7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2066,7 +2072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c88f6b28aff4b2f4c9f250610ce1a3c7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -119.366
+      value: -107.167
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c88f6b28aff4b2f4c9f250610ce1a3c7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2199,8 +2205,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: e2a1a5152cd33e3489207af6cd5eb404, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -2595,7 +2603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0ffb48099668fd4d9429a4a537185c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.76
+      value: -16.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0ffb48099668fd4d9429a4a537185c1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2603,7 +2611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0ffb48099668fd4d9429a4a537185c1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.62
+      value: -32.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0ffb48099668fd4d9429a4a537185c1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2914,7 +2922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  btn_type: 4
+  btn_type: 9
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -2927,8 +2935,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 2406ed6ca995df04f95ee4179909e61b, type: 2}
+  monologue: {fileID: 11400000, guid: aee97ac3da060d04ab6cfa64c5fa7598, type: 2}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -3121,7 +3131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  btn_type: 4
+  btn_type: 9
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -3134,8 +3144,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 909dcefb2f11ddd4ea0cef7a92f0495b, type: 2}
+  monologue: {fileID: 11400000, guid: 80d8cdcdc5f7f4543ac459730b1b4192, type: 2}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -4183,8 +4195,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 6a54a7f7684b6a647a898fdb8a622cca, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -4338,7 +4352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  btn_type: 4
+  btn_type: 9
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -4351,8 +4365,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 22ac467d0ab8dc443aff7a94aa1434f4, type: 2}
+  monologue: {fileID: 11400000, guid: a728c7b5423816c43a30c67885b24710, type: 2}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -4950,7 +4966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.83
+      value: -17.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4958,7 +4974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -31.68
+      value: -31.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5050,7 +5066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  btn_type: 4
+  btn_type: 9
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -5063,8 +5079,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 8831d4b608b7cf9499ee61fc4e8702fe, type: 2}
+  monologue: {fileID: 11400000, guid: 3298f074912aa954aa3680a2d9aba429, type: 2}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
