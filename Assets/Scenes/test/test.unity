@@ -1180,7 +1180,6 @@ GameObject:
   - component: {fileID: 387250538}
   - component: {fileID: 387250539}
   - component: {fileID: 387250542}
-  - component: {fileID: 387250541}
   - component: {fileID: 387250540}
   m_Layer: 0
   m_Name: GameManager
@@ -1296,18 +1295,6 @@ MonoBehaviour:
     milestoneID: 
   jsonLoader: {fileID: 0}
   dialogueBase: {fileID: 0}
---- !u!114 &387250541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387250535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885ac96e016441141ac339f9c3339ada, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &387250542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1323,6 +1310,10 @@ MonoBehaviour:
   fileName: test4
   simpleTextData:
   - {fileID: 11400000, guid: ccbbe86c6b4ccfe4f9ab2b8d4750062b, type: 2}
+  - {fileID: 11400000, guid: 53bf0770d491f11468da11080be74409, type: 2}
+  - {fileID: 11400000, guid: 7ea3cdc1e0563cf489a3a7679f38a646, type: 2}
+  - {fileID: 11400000, guid: 908d6dbfb2ad5ca4f8aee979d053b0f2, type: 2}
+  - {fileID: 11400000, guid: ae62f18906bc6e54697f89bbe533fc15, type: 2}
   data: []
   slides: []
   branches: []
@@ -4444,8 +4435,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 322028335}
   state: 0
   newView: {fileID: 0}
@@ -4873,7 +4866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 838395952688112813, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1068494753721806702, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4915,6 +4908,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1315945889511563032, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
+      propertyPath: btn_type
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315945889511563032, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
+      propertyPath: monologue
+      value: 
+      objectReference: {fileID: 11400000, guid: ed4d1e48296faf34cab14cfa3b62a0a1, type: 2}
+    - target: {fileID: 3249803017995646451, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
+      propertyPath: btn_type
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249803017995646451, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
+      propertyPath: monologue
+      value: 
+      objectReference: {fileID: 11400000, guid: bb8df49392bd2cb47bee17a851120f55, type: 2}
+    - target: {fileID: 3733367779949720074, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
+      propertyPath: btn_type
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733367779949720074, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
+      propertyPath: monologue
+      value: 
+      objectReference: {fileID: 11400000, guid: 2da925a0a08a0f843a99dae2c2068bbe, type: 2}
+    - target: {fileID: 4508579525941265816, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
+      propertyPath: btn_type
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508579525941265816, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
+      propertyPath: monologue
+      value: 
+      objectReference: {fileID: 11400000, guid: d72352b1776ca784eadcb4b005030963, type: 2}
+    - target: {fileID: 5270722457367821113, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
+      propertyPath: btn_type
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5270722457367821113, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
+      propertyPath: monologue
+      value: 
+      objectReference: {fileID: 11400000, guid: ccbbe86c6b4ccfe4f9ab2b8d4750062b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5200,8 +5233,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -5440,6 +5475,10 @@ PrefabInstance:
       propertyPath: myMilestone
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 507769191093782534, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: textData
+      value: 
+      objectReference: {fileID: 11400000, guid: 53bf0770d491f11468da11080be74409, type: 2}
     - target: {fileID: 900302394770470014, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5538,7 +5577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2020655396964808207, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2020655396964808207, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5684,13 +5723,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4783546832493152583, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: textData
+      value: 
+      objectReference: {fileID: 11400000, guid: ae62f18906bc6e54697f89bbe533fc15, type: 2}
     - target: {fileID: 4982921777381696013, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_Name
       value: Location_Office
       objectReference: {fileID: 0}
     - target: {fileID: 4982921777381696013, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4982921777381696013, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5804,6 +5847,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 6757872819470128695, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: textData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ea3cdc1e0563cf489a3a7679f38a646, type: 2}
     - target: {fileID: 6757872819470128695, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: noteToSpawn
       value: 

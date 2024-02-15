@@ -6,4 +6,5 @@ using UnityEngine;
 public class SimpleTextData : ScriptableObject
 {
     public string file = "";
+    public int order = -1;
 }

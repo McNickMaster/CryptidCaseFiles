@@ -42,7 +42,7 @@ public class DialogueLoader : MonoBehaviour
     {
         instance = this;
 
-        jsonLoader = GetComponent<LoadTextFromJson>();
+        //jsonLoader = GetComponent<LoadTextFromJson>();
 
         //LoadConversation("output1");
 
@@ -86,7 +86,7 @@ public class DialogueLoader : MonoBehaviour
 
     public void LoadMonologue(string file)
     {
-//        Debug.Log("loading mono with id: " + file);
+        Debug.Log("loading mono with id: " + file);
         SimpleTextFileData dataFile = SaveLoadData.LoadText(file);
         simpleTextPages = dataFile.GetFilePages();
     }

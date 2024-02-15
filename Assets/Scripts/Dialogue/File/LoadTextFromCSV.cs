@@ -61,13 +61,16 @@ public class LoadTextFromCSV : MonoBehaviour
         string[] tempText; //go through each textData
         for(int i = 0; i < simpleTextData.Length; i++)
         {
-            List<SimpleLine> temp = Sinbad.CsvUtil.LoadObjects<SimpleLine>(FILE_PATH + simpleTextData[i].file + ".csv");
+            List<SimpleLine> tempFile = Sinbad.CsvUtil.LoadObjects<SimpleLine>(FILE_PATH + simpleTextData[i].file + ".csv");
+            simpleTextData[i].order = i;
 
-            tempText = new string[simpleTextData.Length];
+            tempText = new string[tempFile.Count];
             //set temp to be temp
-            for(int j = 0; j < temp.Count; j++)
+            for(int j = 0; j < tempText.Length; j++)
             {
-                tempText[j] = temp[j].BODY;
+                //Debug.Log(j + " " + tempText.Length + " " + tempFile.Count);
+                string s = tempFile[j].BODY;
+                tempText[j] = s;
             }
 
             SaveLoadData.SaveSimpleTextData(tempText, ""+i);
