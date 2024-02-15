@@ -15,7 +15,8 @@ public class PlayerInput : MonoBehaviour
 
     public Interactable interacted;
 
-    public Vector3 mousePosition, mousePosition3D, objectOffset = Vector3.zero;
+    public Vector3 mousePosition3D, objectOffset = Vector3.zero;
+    private Vector3 lastMousePos;
 
     private bool _dragging = false, inUI = false;
 
@@ -114,7 +115,6 @@ public class PlayerInput : MonoBehaviour
             MouseDrag();
         }
 
-        mousePosition = GetConvertedMousePos();
 
 
         SendCastForHover();
@@ -141,6 +141,7 @@ public class PlayerInput : MonoBehaviour
             
             //objectInteracted.transform.position = mousePosition3D;
             objectInteracted.transform.position = mousePosition3D + objectOffset;
+            SetObjectToBounds();
 
             if(noteInteracted!=null)
             {
@@ -155,6 +156,8 @@ public class PlayerInput : MonoBehaviour
 
     private void StopDrag()
     {
+        //SetObjectToBounds();
+
         objectInteracted.GetComponent<Rigidbody>().AddForce(100*Vector3.forward);
         objectInteracted.GetComponentInChildren<Collider>().enabled = true;
         if(noteInteracted!=null)
@@ -162,6 +165,15 @@ public class PlayerInput : MonoBehaviour
             noteInteracted.enabled = true;
         }
         objectInteracted = null;
+    }
+
+    void SetObjectToBounds()
+    {
+        Vector3 newPos = GameManager.instance.currentView.InBounds(mousePosition3D);
+        if(newPos != Vector3.forward * 7571)
+        {
+            objectInteracted.transform.position = newPos;
+        }
     }
 
     public void UpdateBackplane()
@@ -245,7 +257,7 @@ public class PlayerInput : MonoBehaviour
     private void SendCastForHover()
     {
         RaycastHit hit = SendCast();
-        if(hit.transform != null)
+        if(hit.transform != null && !_dragging)
         {
             interacted = hit.transform.GetComponent<Interactable>();
 
@@ -300,16 +312,27 @@ public class PlayerInput : MonoBehaviour
     {
 
         Ray ray = GameManager.instance.currentView.myCamera.ScreenPointToRay(Input.mousePosition);
-           
+        //Vector3 clampedPoint;
         //Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
 
         RaycastHit hitData;
         if(Physics.Raycast(ray, out hitData, 1000))
         {
-                
+            mousePosition3D = GameManager.instance.currentView.InBounds(hitData.point);
             
+            
+             
+            /*
+            mousePosition3D = hitData.point;
+            */
+            lastMousePos = mousePosition3D;
+            
+        } else 
+        {
+            mousePosition3D = lastMousePos;
         }
-        mousePosition3D = hitData.point;
+
+        
 
         return hitData;
     }

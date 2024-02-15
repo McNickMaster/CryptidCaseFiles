@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2267137652025137465, guid: e987e731c7750264d903a86439f11b72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 4020818537763092565, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: m_Name
-      value: MugshotBase Variant
+      value: photo_mothman
       objectReference: {fileID: 0}
     - target: {fileID: 6044363245983303018, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: m_LocalPosition.x
