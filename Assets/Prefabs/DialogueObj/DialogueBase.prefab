@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 4.5700073, y: -0.7999878}
+  m_AnchoredPosition: {x: 289, y: -665}
   m_SizeDelta: {x: 333.9927, y: 69.201}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &78357836766228740
@@ -162,7 +162,7 @@ RectTransform:
   m_GameObject: {fileID: 3433371570712583623}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.69059, y: 0.69059, z: 0.69059}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2640659947905401659}
@@ -170,7 +170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -10}
+  m_AnchoredPosition: {x: -208, y: -665}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &991229357342783491
@@ -226,6 +226,7 @@ MonoBehaviour:
   type: 0
   btn_type: 2
   is3D: 0
+  isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
@@ -238,6 +239,9 @@ MonoBehaviour:
   noteSpawnPoint: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  objectToToggle: {fileID: 0}
+  state: 0
+  newView: {fileID: 0}
 --- !u!1 &3648608809818996775
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +281,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1100, y: 300}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &3569724804570269093
 CanvasRenderer:
@@ -307,7 +311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: efac2693a496e374bbf2f2664fdfc6fc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65cdc3e88117c6a45bd2033a05686768, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -623,7 +627,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 241.64752, y: 673.36395, z: 143.7793, w: 59.61255}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
