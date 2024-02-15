@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DialogueData", menuName = "Dialogue/NewDialogueData", order = 1)]
+[CreateAssetMenu(fileName = "DialogueData", menuName = "Text/NewDialogueData", order = 1)]
 public class DialogueData : ScriptableObject{
    
     public string fileName;

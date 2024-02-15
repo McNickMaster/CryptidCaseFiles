@@ -23,6 +23,7 @@ public class Interactable_Button : Interactable
     [HideInInspector]
     public bool selected = false;
 
+
     [Header("Travel Button Settings")]
     public LocationManager destination;
     public LocationManager thisLocation;
@@ -31,6 +32,7 @@ public class Interactable_Button : Interactable
     [Header("Spawn Button Settings")]
     public GameObject noteToSpawn;
     public Transform noteSpawnPoint;
+    public SimpleTextData textData;
     private GameObject noteSpawned;
     private bool spawnedNote;
 
@@ -39,7 +41,9 @@ public class Interactable_Button : Interactable
 
     [Header("Dialogue Button Settings")]
     public DialogueData dialogue;
-    
+
+    [Header("Monologue Button Settings")]
+    public SimpleTextData monologue;
 
     [Header("Toggle Button Settings")]
     public GameObject objectToToggle;
@@ -47,8 +51,8 @@ public class Interactable_Button : Interactable
 
     [Header("Change View Button Settings")]
     public View newView;
-
     private DrawLine lineDrawer;
+
 
 
     // Start is called before the first frame update
@@ -193,6 +197,8 @@ public class Interactable_Button : Interactable
                 } else 
                 {
                     noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position + new Vector3(0,0, -0.1f), Quaternion.identity, GetComponentInParent<TempNode>().transform);
+                    noteSpawned.GetComponent<Notes>().textData = textData;
+                    noteSpawned.GetComponent<Notes>().Init();
                 }
                 break;
             }
@@ -238,16 +244,18 @@ public class Interactable_Button : Interactable
 
             case ButtonType.DIALOGUE:
             {
-
+  
+                DialogueLoader.instance.LoadConversation(dialogue.fileName);
+                DialogueLoader.instance.StartConversation();
                 
-                if(dialogue.isConversation)
-                {   
-                    DialogueLoader.instance.LoadConversation(dialogue.fileName);
-                    DialogueLoader.instance.StartConversation();
-                } else {
-                    DialogueLoader.instance.LoadMonologue(dialogue.fileName);
-                    DialogueLoader.instance.StartMonologue();
-                }
+
+                break;
+            }
+
+            case ButtonType.MONOLOGUE:
+            {
+                DialogueLoader.instance.LoadMonologue(""+monologue.order);
+                DialogueLoader.instance.StartMonologue();
 
                 break;
             }
@@ -337,5 +345,5 @@ public class Interactable_Button : Interactable
 
 public enum ButtonType
 {
-    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE, CHANGE_VIEW
+    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE, CHANGE_VIEW, MONOLOGUE
 }

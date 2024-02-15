@@ -79,14 +79,16 @@ public class GameManager : MonoBehaviour
         currentGuess = caseFileObj.GetGuess();
 
 
-       if(currentCase.SolveCase(currentGuess))
-       {
+        if (currentCase.SolveCase(currentGuess))
+        {
             //NextCase();
             Win();
-       } else 
-       {
+        }
+        else
+        {
             Lose();
-       }
+        }
+
     }
 
     void SetNewCase(Case newCase)
