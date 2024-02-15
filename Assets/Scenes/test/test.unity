@@ -1308,10 +1308,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileName: test4
   simpleTextData:
-  - {fileID: 11400000, guid: ccbbe86c6b4ccfe4f9ab2b8d4750062b, type: 2}
   - {fileID: 11400000, guid: 53bf0770d491f11468da11080be74409, type: 2}
-  - {fileID: 11400000, guid: 7ea3cdc1e0563cf489a3a7679f38a646, type: 2}
   - {fileID: 11400000, guid: 908d6dbfb2ad5ca4f8aee979d053b0f2, type: 2}
+  - {fileID: 11400000, guid: 7ea3cdc1e0563cf489a3a7679f38a646, type: 2}
+  - {fileID: 11400000, guid: ccbbe86c6b4ccfe4f9ab2b8d4750062b, type: 2}
+  - {fileID: 11400000, guid: ed4d1e48296faf34cab14cfa3b62a0a1, type: 2}
+  - {fileID: 11400000, guid: bb8df49392bd2cb47bee17a851120f55, type: 2}
+  - {fileID: 11400000, guid: 2da925a0a08a0f843a99dae2c2068bbe, type: 2}
+  - {fileID: 11400000, guid: d72352b1776ca784eadcb4b005030963, type: 2}
   - {fileID: 11400000, guid: ae62f18906bc6e54697f89bbe533fc15, type: 2}
   data: []
   slides: []
@@ -3158,9 +3162,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2068396332}
   - {fileID: 273229342}
-  m_Father: {fileID: 1493339245}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1723575188
 GameObject:
@@ -4225,10 +4228,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Location_CrimeScene1
       objectReference: {fileID: 0}
-    - target: {fileID: 838395952688112813, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1068494753721806702, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4268,18 +4267,6 @@ PrefabInstance:
     - target: {fileID: 1068494753721806702, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1825785320792307397, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1825785320792307397, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 1825785320792307397, guid: d4813be3b3979cc44bcc247eecd7e5bd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.83
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5621,3 +5608,4 @@ SceneRoots:
   - {fileID: 387250537}
   - {fileID: 143930936}
   - {fileID: 614991682}
+  - {fileID: 1714302796}

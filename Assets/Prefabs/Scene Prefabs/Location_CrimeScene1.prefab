@@ -311,8 +311,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 16fff8da49e849644afea75ce4b65c58, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -448,8 +450,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: bbe603a69a7216542b95719ae7d3d7ad, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -632,8 +636,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 9c1d7ab11c33ea949b9fa234f820c49d, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -719,8 +725,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: c3b6edce339911d439926365f0c8c235, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -939,8 +947,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 8aebc5ca47e7f7f45bbbdb60a21041b4, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -1428,8 +1438,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 88a1d2178f4278948b8c1fbdb4110464, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -1650,6 +1662,8 @@ MonoBehaviour:
   myCamera: {fileID: 7028207634248780797}
   myBackPlane: {fileID: 5056429862947496519}
   normal: {x: 0, y: 0, z: 1}
+  TL: {fileID: 0}
+  BR: {fileID: 0}
 --- !u!1 &8133243219868048364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,7 +1691,7 @@ Transform:
   m_GameObject: {fileID: 8133243219868048364}
   serializedVersion: 2
   m_LocalRotation: {x: 0.21092498, y: -0.039085448, z: 0.008440905, w: 0.9766841}
-  m_LocalPosition: {x: 0.17, y: 7.56, z: -17.62}
+  m_LocalPosition: {x: 0.11, y: 7.85, z: -16.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2069,6 +2083,8 @@ MonoBehaviour:
   myCamera: {fileID: 7028207634248780797}
   myBackPlane: {fileID: 5056429862947496519}
   normal: {x: 0, y: 0, z: 1}
+  TL: {fileID: 0}
+  BR: {fileID: 0}
 --- !u!1001 &9534663964577337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4326,7 +4342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  btn_type: 4
+  btn_type: 9
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -4339,8 +4355,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 20918163bf2890b469956187b7932e65, type: 2}
+  monologue: {fileID: 11400000, guid: ccbbe86c6b4ccfe4f9ab2b8d4750062b, type: 2}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -4987,8 +5005,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: fb9f18331a8d6ce45b37b6d3d87a5dd6, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -6099,8 +6119,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 182df45894afcaa438927072f9a7f292, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -6381,7 +6403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  btn_type: 4
+  btn_type: 9
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -6394,8 +6416,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 7c6677a83f3f5d242b0b3fc7a9415d6f, type: 2}
+  monologue: {fileID: 11400000, guid: bb8df49392bd2cb47bee17a851120f55, type: 2}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -7262,7 +7286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  btn_type: 4
+  btn_type: 9
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -7275,8 +7299,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: d33d5cb125de12d4bac07cfcf00c8528, type: 2}
+  monologue: {fileID: 11400000, guid: d72352b1776ca784eadcb4b005030963, type: 2}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -9610,7 +9636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  btn_type: 4
+  btn_type: 9
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -9623,8 +9649,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 4aab7d4ff0ab6584cad56a0add8432f0, type: 2}
+  monologue: {fileID: 11400000, guid: 2da925a0a08a0f843a99dae2c2068bbe, type: 2}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -9755,8 +9783,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 548b2fb53014f5d44b6a81f355f029c2, type: 2}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
@@ -10920,7 +10950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  btn_type: 4
+  btn_type: 9
   is3D: 1
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
@@ -10933,8 +10963,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 11400000, guid: 6e98882b3a41ccd48b88ba605782524a, type: 2}
+  monologue: {fileID: 11400000, guid: ed4d1e48296faf34cab14cfa3b62a0a1, type: 2}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
