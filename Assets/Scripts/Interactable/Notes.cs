@@ -30,11 +30,6 @@ public class Notes : Interactable
 
         rb = GetComponent<Rigidbody>();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> nick
-        
     }
 
     // Update is called once per frame
