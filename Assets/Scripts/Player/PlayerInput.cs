@@ -318,12 +318,18 @@ public class PlayerInput : MonoBehaviour
         RaycastHit hitData;
         if(Physics.Raycast(ray, out hitData, 1000))
         {
-            mousePosition3D = GameManager.instance.currentView.InBounds(hitData.point);
-            
+            if(GameManager.instance.currentView.normal == Vector3.up)
+            {
+                mousePosition3D = hitData.point;
+            } else 
+            {   
+                
+                mousePosition3D = GameManager.instance.currentView.InBounds(hitData.point);
+            }
             
              
             /*
-            mousePosition3D = hitData.point;
+            
             */
             lastMousePos = mousePosition3D;
             
