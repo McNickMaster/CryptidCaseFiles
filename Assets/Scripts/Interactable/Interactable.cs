@@ -5,6 +5,9 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour
 {
     public InteractType type = InteractType.DRAGGABLE;
+    [HideInInspector]
+    public bool thisEnabled = true;
+    
     public abstract void Interact();
 }
 

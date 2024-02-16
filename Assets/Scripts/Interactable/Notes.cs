@@ -21,7 +21,7 @@ public class Notes : Interactable
     private Rigidbody rb;
 
 
-
+    
 
     // Start is called before the first frame update
     void Awake()
@@ -30,6 +30,10 @@ public class Notes : Interactable
 
         rb = GetComponent<Rigidbody>();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> nick
         
     }
 
@@ -41,17 +45,20 @@ public class Notes : Interactable
 
     void FixedUpdate()
     {
-        rb.AddForce(25*normal);
+        if(thisEnabled)
+        {
+            rb.AddForce(25*normal);
+        }
     }
 
     public void Enable()
     {
-
+        thisEnabled = true;
     }
 
     public void Disable()
     {
-
+        thisEnabled = false;
     }
 
     public void Init()
