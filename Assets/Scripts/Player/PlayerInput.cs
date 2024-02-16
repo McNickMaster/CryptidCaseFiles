@@ -11,14 +11,22 @@ public class PlayerInput : MonoBehaviour
     public GameObject objectInteracted;
     public Transform backPlane;
     private GameObject hoveredObject;
+    public GameObject notebookObj, mapObj;
 
     public Interactable interacted;
 
-    public Vector3 mousePosition, mousePosition3D, objectOffset = Vector3.zero;
+    public Vector3 mousePosition3D, objectOffset = Vector3.zero;
+    private Vector3 lastMousePos;
 
-    private bool _dragging = false;
+    private bool _dragging = false, inUI = false;
 
     private Vector3 mousePosOnClick = Vector3.zero;
+    private Notes noteInteracted;
+
+
+    [Header("Controls Config")]
+    public KeyCode PAUSE_MENU = KeyCode.Escape;
+    public KeyCode NOTEBOOK_OPEN = KeyCode.Tab, MAP_OPEN = KeyCode.M;
 
 
     // Start is called before the first frame update
@@ -32,13 +40,20 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleMouse();
+        inUI = mapObj.activeSelf || notebookObj.activeSelf;
+        if(inUI)
+        {
+
+        } else 
+        {
+            HandleMouse();
+        }
         HandleKeys();
     }
 
     void HandleKeys()
     {
-
+/*
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             GameManager.instance.SetView(0);
@@ -48,6 +63,24 @@ public class PlayerInput : MonoBehaviour
         {
             GameManager.instance.SetView(1);
         }
+        */
+
+
+        if(Input.GetKeyDown(PAUSE_MENU))
+        {
+            Application.Quit();
+        }
+
+        if(Input.GetKeyDown(NOTEBOOK_OPEN) && !mapObj.activeSelf)
+        {
+            ToggleNotebook();
+        }
+
+        if(Input.GetKeyDown(MAP_OPEN) && !notebookObj.activeSelf)
+        {
+            ToggleMap();
+        }
+        
     }
 
     void HandleMouse()
@@ -82,7 +115,6 @@ public class PlayerInput : MonoBehaviour
             MouseDrag();
         }
 
-        mousePosition = GetConvertedMousePos();
 
 
         SendCastForHover();
@@ -106,7 +138,15 @@ public class PlayerInput : MonoBehaviour
     {
         if(objectInteracted != null)
         { 
-            objectInteracted.transform.position = GetConvertedMousePos();
+            
+            //objectInteracted.transform.position = mousePosition3D;
+            SetObjectToBounds();
+            objectInteracted.transform.position = mousePosition3D + objectOffset;
+
+            if(noteInteracted!=null)
+            {
+                noteInteracted.Disable();
+            }
 
             objectInteracted.GetComponentInChildren<Collider>().enabled = false;
 
@@ -116,14 +156,42 @@ public class PlayerInput : MonoBehaviour
 
     private void StopDrag()
     {
+        SetObjectToBounds();
+
         objectInteracted.GetComponent<Rigidbody>().AddForce(100*Vector3.forward);
         objectInteracted.GetComponentInChildren<Collider>().enabled = true;
+        if(noteInteracted!=null)
+        {
+            noteInteracted.Enable();
+        }
         objectInteracted = null;
+    }
+
+    void SetObjectToBounds()
+    {
+        Vector3 newPos = GameManager.instance.currentView.InBounds(objectInteracted.transform.position);
+        if(newPos != Vector3.forward * 7571)
+        {
+            objectInteracted.transform.position = newPos;
+        }
     }
 
     public void UpdateBackplane()
     {
         backPlane = GameObject.FindWithTag("Backplane").transform;
+    }
+
+    void ToggleNotebook()
+    {   
+        notebookObj.SetActive(!notebookObj.activeSelf);
+
+        //inUI = inUI || notebookObj.active;
+    }
+    void ToggleMap()
+    {   
+        mapObj.SetActive(!mapObj.activeSelf);
+
+        //inUI = inUI || mapObj.active;
     }
 
     private void SendCastForInteract()
@@ -143,7 +211,8 @@ public class PlayerInput : MonoBehaviour
                     case (InteractType.DRAGGABLE):
                     {
                         objectInteracted = interacted.gameObject.gameObject;
-                        //objectOffset =  new Vector3(objectInteracted.transform.position.x - GetConvertedMousePos().x, objectInteracted.transform.position.y - GetConvertedMousePos().y, objectInteracted.transform.position.y - GetConvertedMousePos().z);
+                        noteInteracted = interacted.GetComponent<Notes>();
+                        objectOffset = CalcOffset();
 
                         break;
                     }
@@ -188,7 +257,7 @@ public class PlayerInput : MonoBehaviour
     private void SendCastForHover()
     {
         RaycastHit hit = SendCast();
-        if(hit.transform != null)
+        if(hit.transform != null && !_dragging)
         {
             interacted = hit.transform.GetComponent<Interactable>();
 
@@ -243,20 +312,55 @@ public class PlayerInput : MonoBehaviour
     {
 
         Ray ray = GameManager.instance.currentView.myCamera.ScreenPointToRay(Input.mousePosition);
+        //Vector3 clampedPoint;
+        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
+
         RaycastHit hitData;
         if(Physics.Raycast(ray, out hitData, 1000))
         {
-
-                
+            mousePosition3D = GameManager.instance.currentView.InBounds(hitData.point);
             
+            
+             
+            /*
+            mousePosition3D = hitData.point;
+            */
+            lastMousePos = mousePosition3D;
+            
+        } else 
+        {
+            mousePosition3D = lastMousePos;
         }
-        mousePosition3D = hitData.point;
+
+        
 
         return hitData;
     }
 
 
-    
+    public Vector3 CalcOffset()
+    {
+
+        //this works for forward, but not for up
+        Vector3 offset;
+
+        offset = new Vector3(objectInteracted.transform.position.x - mousePosition3D.x, objectInteracted.transform.position.y - mousePosition3D.y, objectInteracted.transform.position.z - mousePosition3D.z);
+//        Debug.Log(objectInteracted.transform.position.z + " " + mousePosition3D.z + " offset " + offset.z);
+//        Debug.DrawLine(objectInteracted.transform.position, mousePosition3D, Color.yellow, 10);
+
+
+
+        offset += GameManager.instance.currentView.normal * 0.75f;
+        
+       // Debug.Log(normalMask);
+
+        //offset = new Vector3(-offset.x * normalMask.x, -offset.y * normalMask.y, offset.z * normalMask.z);
+
+        
+
+
+        return offset;
+    }
 
 
     public Vector3 GetConvertedMousePos()
@@ -266,7 +370,7 @@ public class PlayerInput : MonoBehaviour
         
         Vector3 pos = mousePosition3D;
 
-
+//        Debug.Log(myView.myCamera.transform.position + " " + pos);
         Debug.DrawLine(myView.myCamera.transform.position, pos, Color.magenta);
 
         return pos;

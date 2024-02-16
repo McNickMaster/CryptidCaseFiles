@@ -7,11 +7,12 @@ public class GameData : MonoBehaviour
 {
     public static GameData instance;
 
-    //this is in order of the Culprit enum
     public GameObject[] CULPRIT_MUGSHOTS;
 
-    //this is in order of the CauseOfDeath enum
     public GameObject[] CAUSE_MUGSHOTS;
+
+    public const string EDITOR_FILE_PATH = "Assets/TextSRC/";
+    public const string BUILD_FILE_PATH = "data/";
 
     void Awake()
     {

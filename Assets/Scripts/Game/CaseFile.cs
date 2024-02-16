@@ -14,6 +14,7 @@ public class CaseFile : MonoBehaviour
     public Case thisCase;
 
 
+
     public Transform photoSpawnTL, photoSpawnBR;
 
 
@@ -34,9 +35,7 @@ public class CaseFile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-        }
+       
     }
 
     public void SetCulpritGuess()
@@ -101,7 +100,7 @@ public class CaseFile : MonoBehaviour
 
         objName = "photo_" + enumName.ToLower();
 
-        Debug.Log(objName);
+//        Debug.Log(objName);
 
 
         return objName;

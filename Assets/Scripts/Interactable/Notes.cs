@@ -2,19 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+using UnityEngine.UI;
 
 public class Notes : Interactable
 {
 
     public string[] textSlides;
     public TextMeshPro textBody;
-    public LoadTextFromJson jsonText;
+    //public LoadTextFromJson jsonText;
+    public SimpleTextData textData;
     public GameObject[] pageButtons;
+    public Button[] noteButtons;
 
     public Vector3 normal = Vector3.forward;
 
     private int currentTextIndex = 0;
     private Rigidbody rb;
+
+
 
 
     // Start is called before the first frame update
@@ -24,14 +30,7 @@ public class Notes : Interactable
 
         rb = GetComponent<Rigidbody>();
 
-        jsonText.LoadJson();
-        textSlides = jsonText.GetNotePages();
-        SetBodyTextToIndex(0);
-
-        if(textSlides.Length < 2)
-        {
-            DisablePageButtons();
-        }
+        
     }
 
     // Update is called once per frame
@@ -43,6 +42,36 @@ public class Notes : Interactable
     void FixedUpdate()
     {
         rb.AddForce(25*normal);
+    }
+
+    public void Enable()
+    {
+
+    }
+
+    public void Disable()
+    {
+
+    }
+
+    public void Init()
+    {
+        SimpleTextFileData data = SaveLoadData.LoadText(""+textData.order);
+
+        string[] temp = data.GetFilePages();
+        textSlides = new string[temp.Length];
+        for(int i = 0; i < data.GetFilePages().Length; i++)
+        {
+            string s = temp[i];
+            s = s.Replace("|", System.Environment.NewLine); 
+            textSlides[i] = s;
+        }
+        SetBodyTextToIndex(0);
+
+        if(textSlides.Length < 2)
+        {
+            DisablePageButtons();
+        }
     }
 
     public void SetBodyTextToIndex(int i)

@@ -3,29 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 public class Interactable_Button : Interactable
 {
 
     public ButtonType btn_type = ButtonType.SPAWN;
     public bool is3D = false;
+    private MeshRenderer[] meshes;
+    //private Material mat;
+    private Material[] mats;
+    public bool isVisible = true;
     public Color normalTint = Color.white;
     public Color hoverTint = new Color(0.9f, 0.9f, 0.9f);
     public Color selectTint = new Color(0.8f, 0.8f, 0.8f);
     private Image btn_image;
-    private Material mat;
+    
     [HideInInspector]
     public bool hovering = false;
     [HideInInspector]
     public bool selected = false;
 
+
     [Header("Travel Button Settings")]
-    public GameObject destination;
-    public GameObject thisLocation;
+    public LocationManager destination;
+    public LocationManager thisLocation;
     public Cutscene travelCutscene;
 
     [Header("Spawn Button Settings")]
     public GameObject noteToSpawn;
     public Transform noteSpawnPoint;
+    public SimpleTextData textData;
     private GameObject noteSpawned;
     private bool spawnedNote;
 
@@ -33,28 +40,34 @@ public class Interactable_Button : Interactable
     public bool pageButtonLeft = false;
 
     [Header("Dialogue Button Settings")]
-    public DialogueScriptable dialogue;
+    public DialogueData dialogue;
+
+    [Header("Monologue Button Settings")]
+    public SimpleTextData monologue;
 
     [Header("Toggle Button Settings")]
     public GameObject objectToToggle;
     public bool state = false;
 
-   
-
+    [Header("Change View Button Settings")]
+    public View newView;
     private DrawLine lineDrawer;
+
 
 
     // Start is called before the first frame update
     void Awake()
     {
         
-
-        if(is3D)
-        {            
-            GetMaterialInstance();
-        } else 
+        if(isVisible)
         {
-            btn_image = GetComponent<Image>();
+            if(is3D)
+            {            
+                GetMaterialInstance();
+            } else 
+            {
+                btn_image = GetComponent<Image>();
+            }
         }
 
 
@@ -63,6 +76,7 @@ public class Interactable_Button : Interactable
             case ButtonType.DIALOGUE:
             {
                 dialogue.Init();
+                
                 break;
             }
 
@@ -123,35 +137,48 @@ public class Interactable_Button : Interactable
 //this sucks to implemenet, think about it for a bit before trying
     public void HoverButton()
     {
-        if(is3D)
+        if(isVisible)
         {
-            mat.SetColor("_TintColor", hoverTint);
-        } else 
-        {
-            btn_image.color = hoverTint;
-            
+
+            if(is3D)
+            {
+                SetAllMats(hoverTint);
+            } else 
+            {
+                btn_image.color = hoverTint;
+                
+            }
         }
     }
     private void SelectButton()
     {
-        if(is3D)
+        
+        if(isVisible)
         {
-            mat.SetColor("_TintColor", selectTint);
-        } else 
-        {
-            btn_image.color = selectTint;
-            
+            if(is3D)
+            {
+                SetAllMats(selectTint);
+            } else 
+            {
+                btn_image.color = selectTint;
+                
+            }
         }
     }
     private void ResetButtonTint()
     {
-        if(is3D)
+        if(isVisible)
         {
-            mat.SetColor("_TintColor", normalTint);
-        } else 
-        {
-            btn_image.color = normalTint;
-            
+                
+            if(is3D)
+            {
+                SetAllMats(normalTint);
+            } else 
+            {
+                btn_image.color = normalTint;
+                
+            }
+
         }
     }
 
@@ -170,6 +197,8 @@ public class Interactable_Button : Interactable
                 } else 
                 {
                     noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position + new Vector3(0,0, -0.1f), Quaternion.identity, GetComponentInParent<TempNode>().transform);
+                    noteSpawned.GetComponent<Notes>().textData = textData;
+                    noteSpawned.GetComponent<Notes>().Init();
                 }
                 break;
             }
@@ -207,17 +236,26 @@ public class Interactable_Button : Interactable
                 }
                 */
 
-                GameManager.instance.currentLocation.SetActive(false);
-                GameManager.instance.currentLocation = destination;
-                travelCutscene.StartCutscene(destination);
+                GameManager.instance.Travel(destination);
+                travelCutscene.StartCutscene(destination.gameObject);
                 
                 break;
             }
 
             case ButtonType.DIALOGUE:
             {
+  
+                DialogueLoader.instance.LoadConversation(dialogue.fileName);
+                DialogueLoader.instance.StartConversation();
+                
 
-                DialogueManager.instance.SpawnDialogue(dialogue);
+                break;
+            }
+
+            case ButtonType.MONOLOGUE:
+            {
+                DialogueLoader.instance.LoadMonologue(""+monologue.order);
+                DialogueLoader.instance.StartMonologue();
 
                 break;
             }
@@ -249,6 +287,13 @@ public class Interactable_Button : Interactable
                 break;
             }
 
+            case ButtonType.CHANGE_VIEW:
+            {
+                GameManager.instance.SetView(newView);
+
+                break;
+            }
+
         }
 
         
@@ -259,22 +304,46 @@ public class Interactable_Button : Interactable
 
     }
 
-
     void GetMaterialInstance()
+    {
+
+        meshes = GetComponentsInChildren<MeshRenderer>();
+        mats = new Material[meshes.Length];
+        for(int i = 0; i < meshes.Length; i++)
+        {
+            mats[i] = meshes[i].material;
+        }
+
+
+    }
+
+
+
+    void GetMaterialInstance_Old()
     {
         MeshRenderer mesh = GetComponent<MeshRenderer>();
 
         mesh = GetComponent<MeshRenderer>() != null ? GetComponent<MeshRenderer>() : GetComponentInChildren<MeshRenderer>();
 
 
-        mat = mesh.material;
-        mat.GetColor("_TintColor");
+       // mat = mesh.material;
+
+
+        
 //        Debug.Log(mat.name);
+    }
+
+    void SetAllMats(Color c)
+    {
+        foreach(Material mat in mats)
+        {
+            mat.SetColor("_TintColor", c);
+        }
     }
 
 }
 
 public enum ButtonType
 {
-    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE
+    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE, CHANGE_VIEW, MONOLOGUE
 }
