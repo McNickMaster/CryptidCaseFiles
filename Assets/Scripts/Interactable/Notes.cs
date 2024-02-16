@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using Unity.UI;
 
 public class Notes : Interactable
 {
@@ -28,8 +29,6 @@ public class Notes : Interactable
         //SetBodyTextToIndex(currentTextIndex);
 
         rb = GetComponent<Rigidbody>();
-
-        
 
         
     }
