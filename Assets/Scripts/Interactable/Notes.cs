@@ -12,11 +12,14 @@ public class Notes : Interactable
     //public LoadTextFromJson jsonText;
     public SimpleTextData textData;
     public GameObject[] pageButtons;
+    public Button[] 
 
     public Vector3 normal = Vector3.forward;
 
     private int currentTextIndex = 0;
     private Rigidbody rb;
+
+
 
 
     // Start is called before the first frame update
@@ -40,6 +43,16 @@ public class Notes : Interactable
     void FixedUpdate()
     {
         rb.AddForce(25*normal);
+    }
+
+    public void Enable()
+    {
+
+    }
+
+    public void Disable()
+    {
+
     }
 
     public void Init()

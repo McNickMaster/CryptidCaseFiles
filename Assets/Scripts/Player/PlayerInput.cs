@@ -145,7 +145,7 @@ public class PlayerInput : MonoBehaviour
 
             if(noteInteracted!=null)
             {
-                noteInteracted.enabled = false;
+                noteInteracted.Disable();
             }
 
             objectInteracted.GetComponentInChildren<Collider>().enabled = false;
@@ -162,14 +162,14 @@ public class PlayerInput : MonoBehaviour
         objectInteracted.GetComponentInChildren<Collider>().enabled = true;
         if(noteInteracted!=null)
         {
-            noteInteracted.enabled = true;
+            noteInteracted.Enable();
         }
         objectInteracted = null;
     }
 
     void SetObjectToBounds()
     {
-        Vector3 newPos = GameManager.instance.currentView.InBounds(mousePosition3D);
+        Vector3 newPos = GameManager.instance.currentView.InBounds(objectInteracted.transform.position);
         if(newPos != Vector3.forward * 7571)
         {
             objectInteracted.transform.position = newPos;
