@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-using Unity.UI;
+using UnityEngine.UI;
 
 public class Notes : Interactable
 {
