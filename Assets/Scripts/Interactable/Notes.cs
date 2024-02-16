@@ -12,7 +12,7 @@ public class Notes : Interactable
     //public LoadTextFromJson jsonText;
     public SimpleTextData textData;
     public GameObject[] pageButtons;
-    public Button[] 
+    public Button[] noteButtons;
 
     public Vector3 normal = Vector3.forward;
 
