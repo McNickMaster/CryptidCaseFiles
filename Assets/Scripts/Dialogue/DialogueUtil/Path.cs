@@ -8,6 +8,7 @@ public class Path
 {
     public Slide[] slides;
     public Slide firstSlide, endSlide;
+    [HideInInspector]
     public Branch myBranch;
 
     public PathEndBehaviour pathEndBehaviour = PathEndBehaviour.CONTINUE;
