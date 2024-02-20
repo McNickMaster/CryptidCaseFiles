@@ -2279,10 +2279,10 @@ MonoBehaviour:
   objectOffset: {x: 0, y: 0, z: 0}
   defaultMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3059
   interactMask:
     serializedVersion: 2
-    m_Bits: 503
+    m_Bits: 499
   PAUSE_MENU: 27
   NOTEBOOK_OPEN: 9
   MAP_OPEN: 109
@@ -4961,6 +4961,10 @@ PrefabInstance:
     - target: {fileID: 4982921777381696013, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_Name
       value: Location_Office
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982921777381696013, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5238114451011292056, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_IsActive
