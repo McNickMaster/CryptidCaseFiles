@@ -372,6 +372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle Piece 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91cd6e23980324f4cb15a02b6862ce9f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 91cd6e23980324f4cb15a02b6862ce9f, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -621,6 +625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle Piece 10
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 245bd28f94c68844f9b4433ea14727fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 245bd28f94c68844f9b4433ea14727fb, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -756,6 +764,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0c29561cb787ad34aab73de6c62d5407, type: 3}
       propertyPath: m_Name
       value: Puzzle Piece 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c29561cb787ad34aab73de6c62d5407, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 0c29561cb787ad34aab73de6c62d5407, type: 3}
       propertyPath: m_Convex
@@ -1553,6 +1565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle Piece 9
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83ebfc592eafda04a84852e0c1960965, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 83ebfc592eafda04a84852e0c1960965, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -1613,6 +1629,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ea6dead62abb7764d8ecfae33fc4e07b, type: 3}
       propertyPath: m_Name
       value: Puzzle Piece 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ea6dead62abb7764d8ecfae33fc4e07b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: ea6dead62abb7764d8ecfae33fc4e07b, type: 3}
       propertyPath: m_Convex
@@ -1706,6 +1726,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc34cfd12d55f0f43b3e3a5110d8314e, type: 3}
       propertyPath: m_Name
       value: Puzzle Piece 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc34cfd12d55f0f43b3e3a5110d8314e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: dc34cfd12d55f0f43b3e3a5110d8314e, type: 3}
       propertyPath: m_Convex
@@ -2218,6 +2242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle Piece 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ba93fdffa5e0b844699a0cd22ae2e979, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: ba93fdffa5e0b844699a0cd22ae2e979, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -2340,6 +2368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle Piece 4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 050f4cae509cfe34fae3e2a467a67c58, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 050f4cae509cfe34fae3e2a467a67c58, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -2367,7 +2399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &769065718
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2408,7 +2440,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  thisEnabled: 1
 --- !u!4 &769065720
 Transform:
   m_ObjectHideFlags: 0
@@ -3261,6 +3292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle Piece 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b3c767e3ad878ca4e952e0ba8fd6b3e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: b3c767e3ad878ca4e952e0ba8fd6b3e8, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -4061,6 +4096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle Piece 8
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 835281dd36a45fb4d89e7df638a992cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 835281dd36a45fb4d89e7df638a992cf, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -4668,7 +4707,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  thisEnabled: 1
   btn_type: 6
   is3D: 0
   isVisible: 1
@@ -4796,6 +4834,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dd490277b981c5a4db8a0ce51a1f3669, type: 3}
       propertyPath: m_Name
       value: Puzzle Piece 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd490277b981c5a4db8a0ce51a1f3669, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: dd490277b981c5a4db8a0ce51a1f3669, type: 3}
       propertyPath: m_Convex
@@ -5382,7 +5424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  thisEnabled: 1
   btn_type: 2
   is3D: 0
   isVisible: 1
@@ -5687,6 +5728,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1095381398}
     - target: {fileID: 2020655396964808207, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743206147362479612, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
