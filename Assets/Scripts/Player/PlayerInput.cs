@@ -163,7 +163,7 @@ public class PlayerInput : MonoBehaviour
     {
         SetObjectToBounds();
 
-        objectInteracted.GetComponent<Rigidbody>().AddForce(100*Vector3.forward);
+        //objectInteracted.GetComponent<Rigidbody>().AddForce(100*Vector3.forward);
         objectInteracted.GetComponentInChildren<Collider>().enabled = true;
         if(noteInteracted!=null)
         {
@@ -173,6 +173,7 @@ public class PlayerInput : MonoBehaviour
         {
             puzzleInteracted.Enable();
         }
+        //objectInteracted.layer = LayerMask.GetMask("IgnoreRaycast");
         objectInteracted = null;
     }
 
@@ -222,6 +223,7 @@ public class PlayerInput : MonoBehaviour
                         objectInteracted = interacted.gameObject.gameObject;
                         noteInteracted = interacted.GetComponent<Notes>();
                         puzzleInteracted = interacted.GetComponent<Interactable_PuzzleObject>();
+                        interacted.GetComponent<Draggable>().Grab();
                         objectOffset = CalcOffset();
 
                         break;
