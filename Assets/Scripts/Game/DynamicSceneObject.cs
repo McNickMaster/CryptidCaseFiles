@@ -11,13 +11,12 @@ public class DynamicSceneObject : MonoBehaviour
 
     void Awake()
     {
-        
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        UpdateObject();
+        
     }
 
     // Update is called once per frame
@@ -25,13 +24,15 @@ public class DynamicSceneObject : MonoBehaviour
     {
     }
 
-    void UpdateObject()
+    IEnumerator UpdateObject()
     {
+        yield return 0;
         transform.GetChild(0).gameObject.SetActive(GameManager.instance.CheckMilestone(myMilestone));
     }
 
     void OnEnable()
     {
-        
+
+        StartCoroutine(UpdateObject());
     }
 }

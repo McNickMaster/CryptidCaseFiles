@@ -24,6 +24,8 @@ public class PlayerInput : MonoBehaviour
     private Notes noteInteracted;
     private Interactable_PuzzleObject puzzleInteracted;
 
+    public LayerMask defaultMask, interactMask;
+
 
     [Header("Controls Config")]
     public KeyCode PAUSE_MENU = KeyCode.Escape;
@@ -223,7 +225,11 @@ public class PlayerInput : MonoBehaviour
                         objectInteracted = interacted.gameObject.gameObject;
                         noteInteracted = interacted.GetComponent<Notes>();
                         puzzleInteracted = interacted.GetComponent<Interactable_PuzzleObject>();
-                        interacted.GetComponent<Draggable>().Grab();
+                        if(puzzleInteracted != null)
+                        {
+                            
+                            puzzleInteracted.Grab();
+                        }
                         objectOffset = CalcOffset();
 
                         break;
@@ -326,10 +332,13 @@ public class PlayerInput : MonoBehaviour
         Ray ray = GameManager.instance.currentView.myCamera.ScreenPointToRay(Input.mousePosition);
         //Vector3 clampedPoint;
         //Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
-
+        //this occludes drawing a line with the linedraw. it should include it
+        bool isNotInteracting = (objectInteracted == null);
+        LayerMask mask = isNotInteracting ? defaultMask : interactMask;
         RaycastHit hitData;
-        if(Physics.Raycast(ray, out hitData, 1000))
+        if(Physics.Raycast(ray, out hitData, 1000, mask))
         {
+//            Debug.Log(hitData.transform.gameObject.name);
             if(GameManager.instance.currentView.normal == Vector3.up)
             {
                 mousePosition3D = hitData.point;

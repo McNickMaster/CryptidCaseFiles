@@ -18,8 +18,11 @@ public class Interactable_PuzzleObject : Draggable
     {
 
         rb = GetComponent<Rigidbody>();
+        
         boxCollider = GetComponentInChildren<BoxCollider>();
         meshCollider = GetComponentInChildren<MeshCollider>();
+
+        Invoke("ResetRB", 0.1f);
 
     }
 
@@ -43,14 +46,18 @@ public class Interactable_PuzzleObject : Draggable
             if(locked)
             {
                 boxCollider.enabled = false;
+                meshCollider.enabled = true;
+                meshCollider.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
                 rb.isKinematic = true;
+                transform.localPosition = new Vector3(lockPosition.x, -2.7f, lockPosition.z);
             } else {
                 boxCollider.enabled = true;
+                meshCollider.enabled = false;
                 
                 rb.AddForce(35*-normal);
 
-
-                if(Vector3.Distance(transform.localPosition, lockPosition) < GameData.instance.PUZZLE_AUTO_LOCK)
+                Vector3 temp = new Vector3(transform.localPosition.x, lockPosition.y, transform.localPosition.z);
+                if(Vector3.Distance(temp, lockPosition) < GameData.instance.PUZZLE_AUTO_LOCK)
                 {
                     locked = true;
                     transform.localPosition = new Vector3(lockPosition.x, -2.7f, lockPosition.z);
@@ -75,6 +82,7 @@ public class Interactable_PuzzleObject : Draggable
     {
         thisEnabled = true;
         boxCollider.enabled = true;
+        
         //meshCollider.enabled = true;
     }
 
@@ -84,5 +92,10 @@ public class Interactable_PuzzleObject : Draggable
         
         boxCollider.enabled = false;
         meshCollider.enabled = false;
+    }
+
+    void ResetRB()
+    {
+        
     }
 }

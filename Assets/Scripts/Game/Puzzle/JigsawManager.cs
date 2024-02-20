@@ -5,11 +5,14 @@ using UnityEngine;
 public class JigsawManager : MonoBehaviour
 {
 
+    public GameObject jigsawParent;
     public Interactable_PuzzleObject[] jigsaw_pieces;
-    public Transform[] spawnBounds;
+    //public Transform[] spawnBounds;
 
     void Awake()
     {
+        //jigsawParent.SetActive(false);
+/*
         Vector3 TR, BL;
         TR = spawnBounds[0].localPosition;
         BL = spawnBounds[1].localPosition;
@@ -22,8 +25,12 @@ public class JigsawManager : MonoBehaviour
             z = Random.Range(BL.z, TR.z);
             spawnPosition = new Vector3(x, -2.5f, z);
 
-            p.transform.localPosition = spawnPosition;
+            //p.GetComponent<Rigidbody>().isKinematic = true;
+            //p.transform.localPosition = spawnPosition;
         }
+        */
+
+        
 
     }
 
