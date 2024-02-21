@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  thisEnabled: 1
   btn_type: 5
   is3D: 0
   isVisible: 1
@@ -1056,6 +1057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  thisEnabled: 1
   textSlides:
   - Lorum ipsum, Lorum ipsum Lorum ipsum Lorum ipsum, Lorum ipsum, Lorum ipsum Lorum
     ipsum Lorum ipsum, Lorum ipsum, Lorum ipsum Lorum ipsum Lorum ipsum
@@ -1068,6 +1070,7 @@ MonoBehaviour:
   pageButtons:
   - {fileID: 7031762248259501136}
   - {fileID: 9136040270975931723}
+  noteButtons: []
   normal: {x: 0, y: 0, z: 1}
 --- !u!54 &5665466246625113762
 Rigidbody:
@@ -1200,6 +1203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  thisEnabled: 1
   btn_type: 1
   is3D: 0
   isVisible: 1
@@ -1360,6 +1364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  thisEnabled: 1
   btn_type: 2
   is3D: 0
   isVisible: 1
@@ -1520,6 +1525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  thisEnabled: 1
   btn_type: 1
   is3D: 0
   isVisible: 1
