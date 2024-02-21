@@ -22,6 +22,7 @@ public class PlayerInput : MonoBehaviour
 
     private Vector3 mousePosOnClick = Vector3.zero;
     private Notes noteInteracted;
+    private Interactable_PuzzleObject puzzleInteracted;
 
 
     [Header("Controls Config")]
@@ -147,6 +148,10 @@ public class PlayerInput : MonoBehaviour
             {
                 noteInteracted.Disable();
             }
+            if(puzzleInteracted!=null)
+            {
+                puzzleInteracted.Disable();
+            }
 
             objectInteracted.GetComponentInChildren<Collider>().enabled = false;
 
@@ -163,6 +168,10 @@ public class PlayerInput : MonoBehaviour
         if(noteInteracted!=null)
         {
             noteInteracted.Enable();
+        }
+        if(puzzleInteracted!=null)
+        {
+            puzzleInteracted.Enable();
         }
         objectInteracted = null;
     }
@@ -212,6 +221,7 @@ public class PlayerInput : MonoBehaviour
                     {
                         objectInteracted = interacted.gameObject.gameObject;
                         noteInteracted = interacted.GetComponent<Notes>();
+                        puzzleInteracted = interacted.GetComponent<Interactable_PuzzleObject>();
                         objectOffset = CalcOffset();
 
                         break;
@@ -318,12 +328,18 @@ public class PlayerInput : MonoBehaviour
         RaycastHit hitData;
         if(Physics.Raycast(ray, out hitData, 1000))
         {
-            mousePosition3D = GameManager.instance.currentView.InBounds(hitData.point);
-            
+            if(GameManager.instance.currentView.normal == Vector3.up)
+            {
+                mousePosition3D = hitData.point;
+            } else 
+            {   
+                
+                mousePosition3D = GameManager.instance.currentView.InBounds(hitData.point);
+            }
             
              
             /*
-            mousePosition3D = hitData.point;
+            
             */
             lastMousePos = mousePosition3D;
             
