@@ -2555,66 +2555,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &964523826 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6921611002409664260, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
-  m_PrefabInstance: {fileID: 1620308341}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &964523828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964523826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  thisEnabled: 1
-  btn_type: 4
-  is3D: 1
-  isVisible: 1
-  normalTint: {r: 1, g: 1, b: 1, a: 1}
-  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
-  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  hovering: 0
-  selected: 0
-  destination: {fileID: 0}
-  thisLocation: {fileID: 0}
-  travelCutscene: {fileID: 0}
-  noteToSpawn: {fileID: 0}
-  noteSpawnPoint: {fileID: 0}
-  textData: {fileID: 0}
-  pageButtonLeft: 0
-  dialogue: {fileID: 11400000, guid: d26b134e32bacc144963b60c9d7a3874, type: 2}
-  monologue: {fileID: 0}
-  objectToToggle: {fileID: 0}
-  state: 0
-  newView: {fileID: 0}
---- !u!65 &964523829
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964523826}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 4, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1003292299 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4770197060767519481, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
@@ -3542,66 +3482,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 303}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 1}
---- !u!1 &1602623963 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 754976244743382770, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
-  m_PrefabInstance: {fileID: 1620308341}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1602623965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602623963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  thisEnabled: 1
-  btn_type: 4
-  is3D: 1
-  isVisible: 1
-  normalTint: {r: 1, g: 1, b: 1, a: 1}
-  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
-  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  hovering: 0
-  selected: 0
-  destination: {fileID: 0}
-  thisLocation: {fileID: 0}
-  travelCutscene: {fileID: 0}
-  noteToSpawn: {fileID: 0}
-  noteSpawnPoint: {fileID: 0}
-  textData: {fileID: 0}
-  pageButtonLeft: 0
-  dialogue: {fileID: 11400000, guid: c3d3b3ae24df7de459f9404fd9a001e2, type: 2}
-  monologue: {fileID: 0}
-  objectToToggle: {fileID: 0}
-  state: 0
-  newView: {fileID: 0}
---- !u!65 &1602623966
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602623963}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.9, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1620308341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4144,7 +4024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3474289873731951262, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3474289873731951262, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5251,18 +5131,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 788175773836316954, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1518629838}
+    - targetCorrespondingSourceObject: {fileID: 8796456626858800407, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1522616974}
+    - targetCorrespondingSourceObject: {fileID: 8796456626858800407, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1522616973}
     - targetCorrespondingSourceObject: {fileID: 1135988773760140329, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
       insertIndex: -1
       addedObject: {fileID: 741513457}
     - targetCorrespondingSourceObject: {fileID: 1135988773760140329, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
       insertIndex: -1
       addedObject: {fileID: 741513456}
-    - targetCorrespondingSourceObject: {fileID: 6488028437553305563, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 547917163}
-    - targetCorrespondingSourceObject: {fileID: 6488028437553305563, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 547917162}
     - targetCorrespondingSourceObject: {fileID: 6257741578917267596, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1925099753}
@@ -5281,24 +5161,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8640242180722898393, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2125350684}
-    - targetCorrespondingSourceObject: {fileID: 6921611002409664260, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 6488028437553305563, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 964523829}
-    - targetCorrespondingSourceObject: {fileID: 6921611002409664260, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
+      addedObject: {fileID: 547917163}
+    - targetCorrespondingSourceObject: {fileID: 6488028437553305563, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 964523828}
-    - targetCorrespondingSourceObject: {fileID: 754976244743382770, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1602623966}
-    - targetCorrespondingSourceObject: {fileID: 754976244743382770, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1602623965}
-    - targetCorrespondingSourceObject: {fileID: 8796456626858800407, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1522616974}
-    - targetCorrespondingSourceObject: {fileID: 8796456626858800407, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1522616973}
+      addedObject: {fileID: 547917162}
   m_SourcePrefab: {fileID: 100100000, guid: d4ceebb9fd9239a45ba63345bfa0d836, type: 3}
 --- !u!4 &1620308342 stripped
 Transform:
@@ -7640,7 +7508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4982921777381696013, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5238114451011292056, guid: 90583dc5301ea4044aaa1f2d99803f20, type: 3}
       propertyPath: m_IsActive
