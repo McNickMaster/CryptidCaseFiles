@@ -181,7 +181,15 @@ public class PlayerInput : MonoBehaviour
 
     void SetObjectToBounds()
     {
-        Vector3 newPos = GameManager.instance.currentView.InBounds(objectInteracted.transform.position);
+        Vector3 newPos;
+        if(GameManager.instance.currentView.normal == Vector3.up)
+        {
+            newPos = GameManager.instance.currentView.InBoundsTop(objectInteracted.transform.position);
+        } else 
+        {
+            newPos = GameManager.instance.currentView.InBounds(objectInteracted.transform.position);
+        }
+        
         if(newPos != Vector3.forward * 7571)
         {
             objectInteracted.transform.position = newPos;
@@ -331,7 +339,7 @@ public class PlayerInput : MonoBehaviour
 
         Ray ray = GameManager.instance.currentView.myCamera.ScreenPointToRay(Input.mousePosition);
         //Vector3 clampedPoint;
-        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
         //this occludes drawing a line with the linedraw. it should include it
         bool isNotInteracting = (objectInteracted == null);
         LayerMask mask = isNotInteracting ? defaultMask : interactMask;
@@ -339,9 +347,12 @@ public class PlayerInput : MonoBehaviour
         if(Physics.Raycast(ray, out hitData, 1000, mask))
         {
 //            Debug.Log(hitData.transform.gameObject.name);
+//if we are looking down, how do we calc this
             if(GameManager.instance.currentView.normal == Vector3.up)
             {
-                mousePosition3D = hitData.point;
+                //mousePosition3D = hitData.point;
+                
+                mousePosition3D = GameManager.instance.currentView.InBoundsTop(hitData.point);
             } else 
             {   
                 
