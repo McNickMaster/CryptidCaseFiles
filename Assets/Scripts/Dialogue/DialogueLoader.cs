@@ -113,11 +113,25 @@ public class DialogueLoader : MonoBehaviour
 
 //        numPages = dialogueData.numPages;
 
+        string milestoneID = "";
+        if(simpleTextPages[0].Contains("[get"))
+        {
+            int index = simpleTextPages[0].IndexOf("[get")+4;
+            milestoneID = simpleTextPages[0].Substring(index, simpleTextPages[0].Length - index - 1);
+            simpleTextPages[0] = simpleTextPages[0].Substring(0, simpleTextPages[0].Length - milestoneID.Length - 5);
+        }
+        if(milestoneID != "")
+        {
+            GameManager.instance.AddMilestone(milestoneID);
+            
+        }
+
         title.text = "Inner Monolouge";
         body.text = simpleTextPages[0];
 
 
     }
+
 
     public void NextPage()
     {
@@ -128,16 +142,10 @@ public class DialogueLoader : MonoBehaviour
             Destroy(objInstance);
             PlayerInput.instance.enabled = true;
 
-        } else 
-        {
-            
-            jsonLoader.LoadJson(dialogueData.GetDialoguePage(dialogueIndex));
-
-            title.text = jsonLoader.GetNotePages()[0];
-            body.text = jsonLoader.GetNotePages()[1];
-
         }
     }
+    
+    
     public void LoadConversation(string id)
     {
         DialogueFileData dialogueFile = SaveLoadData.LoadDialogue(Int32.Parse(id));       
@@ -200,6 +208,7 @@ public class DialogueLoader : MonoBehaviour
                     lockPath.locked = true;
                 }
 
+                
                 if(currentPath.milestoneID != "")
                 {
                     GameManager.instance.AddMilestone(currentPath.milestoneID);
