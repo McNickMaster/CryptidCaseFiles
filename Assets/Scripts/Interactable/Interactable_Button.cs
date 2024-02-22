@@ -215,7 +215,7 @@ public class Interactable_Button : Interactable
                 {
                     note.PageTurn_Right();
                 }
-
+                SoundManager.instance.PlaySFX(GameData.instance.pageTurn);
 //                Debug.Log("turn page");
                 break;
             }

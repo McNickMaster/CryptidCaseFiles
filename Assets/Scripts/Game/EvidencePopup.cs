@@ -40,6 +40,7 @@ public class EvidencePopup : MonoBehaviour
         
         transform.GetChild(0).gameObject.SetActive(true);
         animator.SetTrigger("start");
+        SoundManager.instance.PlaySFX_Delay(GameData.instance.evidenceFound, 0.5f);
     }
     public void Despawn()
     {

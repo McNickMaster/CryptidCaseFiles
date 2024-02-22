@@ -103,7 +103,7 @@ public class DialogueLoader : MonoBehaviour
         PlayerInput.instance.enabled = false;
 
 
-        objInstance = Instantiate(slidePrefab, Vector3.zero, Quaternion.identity, transform.GetChild(0).transform);
+        objInstance = Instantiate(slidePrefab, Vector3.zero, Quaternion.identity, dialogueParent);
         objInstance.transform.localPosition = Vector3.zero;
         title = objInstance.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         body = objInstance.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();

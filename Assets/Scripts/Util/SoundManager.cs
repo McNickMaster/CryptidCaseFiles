@@ -32,4 +32,16 @@ public class SoundManager : MonoBehaviour
         sfxSource.clip = clip;
         sfxSource.Play();
     }
+
+    public void PlaySFX_Delay(AudioClip clip, float delay)
+    {
+        sfxSource.clip = clip;
+        Invoke("PlaySFXSource",delay);
+
+    }
+
+    private void PlaySFXSource()
+    {
+        sfxSource.Play();
+    }
 }

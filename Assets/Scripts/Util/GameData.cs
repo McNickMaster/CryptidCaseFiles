@@ -11,6 +11,10 @@ public class GameData : MonoBehaviour
 
     public GameObject[] CAUSE_MUGSHOTS;
 
+    public AudioClip pageTurn;
+    public AudioClip puzzleDrop;
+    public AudioClip evidenceFound;
+
     public float PUZZLE_AUTO_LOCK = 0.3f;
 
     public const string EDITOR_FILE_PATH = "Assets/TextSRC/";
