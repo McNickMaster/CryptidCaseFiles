@@ -29,10 +29,8 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
-
         LoadSave();
 
-        
 
         currentLocation = FindObjectOfType<LocationManager>();
 
@@ -77,7 +75,6 @@ public class GameManager : MonoBehaviour
     public void TrySolveCase()
     {
         currentGuess = caseFileObj.GetGuess();
-
 
         if (currentCase.SolveCase(currentGuess))
         {

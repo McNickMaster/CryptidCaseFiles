@@ -52,13 +52,53 @@ public class View : MonoBehaviour
         {
             return new Vector3(pos.x, Mathf.Clamp(pos.y, BR.position.y, TL.position.y), clampedZ);
         }
-       // if(inY) not needed? it actually is for edge cases
+       
         if(inY)
         {
             return new Vector3(Mathf.Clamp(pos.x, TL.position.x, BR.position.x), pos.y, clampedZ);
         }
 
         return new Vector3(Mathf.Clamp(pos.x, TL.position.x, BR.position.x), Mathf.Clamp(pos.y, BR.position.y, TL.position.y), clampedZ);
+
+    
+    }
+
+    public Vector3 InBoundsTop(Vector3 pos)
+    {
+
+        if(TL == null)
+        {
+            return pos;
+        }   
+
+
+        bool flag, inX, inZ;
+        float x = pos.x, z = pos.z, clampedY;
+        inX = (x < BR.position.x && x > TL.position.x);
+        inZ = (z < TL.position.z && z > BR.position.z);
+        flag = inX && inZ;
+
+        //clampedZ = Mathf.Clamp(pos.z, myBackPlane.position.z - 0.3f, myBackPlane.position.z);
+        clampedY = myBackPlane.position.y + 0.3f;
+
+        if(flag)
+        { 
+            return new Vector3(pos.x, clampedY, pos.z);
+        }
+         //if not in bounds then continue
+
+
+        if(inX)
+        {
+            return new Vector3(pos.x, clampedY, Mathf.Clamp(pos.z, BR.position.z, TL.position.z));
+        }
+      
+        if(inZ)
+        {
+            return new Vector3(Mathf.Clamp(pos.x, TL.position.x, BR.position.x), clampedY, pos.z);
+        }
+
+        return new Vector3(Mathf.Clamp(pos.x, TL.position.x, BR.position.x), clampedY, Mathf.Clamp(pos.z, BR.position.z, TL.position.z));
 
     
     }

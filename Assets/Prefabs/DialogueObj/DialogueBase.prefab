@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  thisEnabled: 1
   btn_type: 2
   is3D: 0
   isVisible: 1
@@ -237,8 +238,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}

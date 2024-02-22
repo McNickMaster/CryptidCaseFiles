@@ -5,6 +5,7 @@ using UnityEngine;
 public class LocationManager : MonoBehaviour
 {
     public View defaultView;
+    //public Light myDirectional;
     
     // Start is called before the first frame update
     void Start()
@@ -16,5 +17,15 @@ public class LocationManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnEnable()
+    {
+        //myDirectional.enabled = true;
+    }
+    
+    void OnDisable()
+    {
+        //myDirectional.enabled = false;
     }
 }

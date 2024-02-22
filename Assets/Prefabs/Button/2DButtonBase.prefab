@@ -89,8 +89,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  thisEnabled: 1
   btn_type: 3
   is3D: 0
+  isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
@@ -101,5 +103,10 @@ MonoBehaviour:
   travelCutscene: {fileID: 0}
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
+  monologue: {fileID: 0}
+  objectToToggle: {fileID: 0}
+  state: 0
+  newView: {fileID: 0}

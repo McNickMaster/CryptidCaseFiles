@@ -184,7 +184,7 @@ public class Interactable_Button : Interactable
 
     public override void Interact()
     {
-
+        //SoundManager.instance.PlaySound(mySound);
 
         switch(btn_type)
         {
@@ -215,7 +215,7 @@ public class Interactable_Button : Interactable
                     note.PageTurn_Right();
                 }
 
-                Debug.Log("turn page");
+//                Debug.Log("turn page");
                 break;
             }
 
