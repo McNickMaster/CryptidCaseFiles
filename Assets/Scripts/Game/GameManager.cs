@@ -79,6 +79,8 @@ public class GameManager : MonoBehaviour
 
         PhoneManager.instance.Trigger_CaseSolved(currentCase.SolveCase(currentGuess));
 
+        NextCase();
+
     }
 
     void SetNewCase(Case newCase)
@@ -89,7 +91,16 @@ public class GameManager : MonoBehaviour
     void NextCase()
     {
         caseIndex++;
-//        SetNewCase(cases[caseIndex]);
+
+        if(caseIndex>=cases.Length)
+        {
+
+        } else 
+        {
+            
+            SetNewCase(cases[caseIndex]);
+            caseFileObj.ResetCaseFile();
+        }
     }
 
     

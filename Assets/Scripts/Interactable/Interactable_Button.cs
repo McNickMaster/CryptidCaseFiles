@@ -8,7 +8,8 @@ public class Interactable_Button : Interactable
 {
 
     public ButtonType btn_type = ButtonType.SPAWN;
-    public bool is3D = false;
+    public bool is3D = true;
+    public AudioClip myClip;
     private MeshRenderer[] meshes;
     //private Material mat;
     private Material[] mats;
@@ -184,7 +185,7 @@ public class Interactable_Button : Interactable
 
     public override void Interact()
     {
-        //SoundManager.instance.PlaySound(mySound);
+        SoundManager.instance.PlaySFX(myClip);
 
         switch(btn_type)
         {

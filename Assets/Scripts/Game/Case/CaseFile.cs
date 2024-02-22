@@ -13,6 +13,7 @@ public class CaseFile : MonoBehaviour
 
     public Case thisCase;
 
+    GameObject objectParent;
 
 
     public Transform photoSpawnTL, photoSpawnBR;
@@ -20,8 +21,7 @@ public class CaseFile : MonoBehaviour
 
     void Awake()
     {
-        PopulateCulprits();
-        PopulateCauses();
+        ResetCaseFile();
         
         
     }
@@ -55,9 +55,19 @@ public class CaseFile : MonoBehaviour
 
     }
 
+    public void ResetCaseFile()
+    {
+        Destroy(objectParent);
+        objectParent = new GameObject("PolaroidParent");
+        objectParent.transform.parent = GetComponentInParent<TempNode>().transform;
+        PopulateCulprits();
+        PopulateCauses();
+    }
+
     public void PopulateCulprits()
     {
         //spawn all the culprit/cause of death photos listed in the Case
+        
 
         int culpritAmount = thisCase.culpritList.Count;
         
@@ -69,7 +79,7 @@ public class CaseFile : MonoBehaviour
                 if(GameData.instance.CULPRIT_MUGSHOTS[j].name.Equals(objName))
                 {
                     
-                    Instantiate(GameData.instance.CULPRIT_MUGSHOTS[j], GetRandomPointWithinSpawn(), Quaternion.identity, GetComponentInParent<TempNode>().transform);
+                    Instantiate(GameData.instance.CULPRIT_MUGSHOTS[j], GetRandomPointWithinSpawn(), Quaternion.identity, objectParent.transform);
                 }
             }
         }
@@ -88,7 +98,7 @@ public class CaseFile : MonoBehaviour
                 if(GameData.instance.CAUSE_MUGSHOTS[j].name.Equals(objName))
                 {
                     
-                    Instantiate(GameData.instance.CAUSE_MUGSHOTS[j], GetRandomPointWithinSpawn(), Quaternion.identity, GetComponentInParent<TempNode>().transform);
+                    Instantiate(GameData.instance.CAUSE_MUGSHOTS[j], GetRandomPointWithinSpawn(), Quaternion.identity, objectParent.transform);
                 }
             }
         }
