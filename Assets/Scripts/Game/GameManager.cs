@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject winScreen, loseScreen;
     public CaseFile caseFileObj;
     public Case[] cases;
-    private Case currentCase;
+    public Case currentCase;
     private Case currentGuess;
     private int caseIndex;
 
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /*
         if(Input.GetKeyDown(KeyCode.R))
         {
             ResetWinLoss();
@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
         {
             SaveGame();
         }
+        */
     }
 
     public void Travel(LocationManager destination)
@@ -76,15 +77,7 @@ public class GameManager : MonoBehaviour
     {
         currentGuess = caseFileObj.GetGuess();
 
-        if (currentCase.SolveCase(currentGuess))
-        {
-            //NextCase();
-            Win();
-        }
-        else
-        {
-            Lose();
-        }
+        PhoneManager.instance.Trigger_CaseSolved(currentCase.SolveCase(currentGuess));
 
     }
 
@@ -99,15 +92,7 @@ public class GameManager : MonoBehaviour
 //        SetNewCase(cases[caseIndex]);
     }
 
-    public void Win()
-    {
-        winScreen.SetActive(true);
-    }
-
-    public void Lose()
-    {
-        loseScreen.SetActive(true);
-    }
+    
 
     public void ResetWinLoss()
     {
@@ -145,7 +130,12 @@ public class GameManager : MonoBehaviour
 
         } else 
         {
+            
             completedMilestones.Add(m);
+            string[] temp = m.ToString().Split('_');
+            string title = temp[0], id = temp[1];
+            
+            EvidencePopup.instance.Spawn(title, id);
         }
     }
     public void AddMilestone(string milestoneID)
@@ -188,12 +178,12 @@ public enum CauseOfDeath
 public enum Milestone
 {
 
-    EVIDENCE_C1_1, EVIDENCE_C1_2, EVIDENCE_C1_3, EVIDENCE_C1_4, EVIDENCE_C1_5, 
+    EVIDENCE_FOOTPRINTS, EVIDENCE_FEATHERS, EVIDENCE_C1_3, EVIDENCE_C1_4, EVIDENCE_C1_5, 
     EVIDENCE_C2_1, EVIDENCE_C2_2, EVIDENCE_C2_3, EVIDENCE_C2_4, EVIDENCE_C2_5, 
     EVIDENCE_C3_1, EVIDENCE_C3_2, EVIDENCE_C3_3, EVIDENCE_C3_4, EVIDENCE_C3_5, 
     EVIDENCE_C4_1, EVIDENCE_C4_2, EVIDENCE_C4_3, EVIDENCE_C4_4, EVIDENCE_C4_5, 
     EVIDENCE_C5_1, EVIDENCE_C5_2, EVIDENCE_C5_3, EVIDENCE_C5_4, EVIDENCE_C5_5, 
-    PUZZLEFOUND,
+    ITEM_PUZZLE,
     CS1_DONE, CS2_DONE, CS3_DONE, CS4_DONE, CS5_DONE
 
 

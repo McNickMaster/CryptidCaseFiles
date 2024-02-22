@@ -111,7 +111,7 @@ public class DialogueLoader : MonoBehaviour
         Button btn = objInstance.GetComponent<Button>();
         btn.onClick.AddListener(NextPage);
 
-//        numPages = dialogueData.numPages;
+        numPages = simpleTextPages.Length;
 
         string milestoneID = "";
         if(simpleTextPages[0].Contains("[get"))
@@ -126,8 +126,9 @@ public class DialogueLoader : MonoBehaviour
             
         }
 
+        dialogueIndex = 0;
         title.text = "Inner Monolouge";
-        body.text = simpleTextPages[0];
+        body.text = simpleTextPages[dialogueIndex];
 
 
     }
@@ -137,11 +138,15 @@ public class DialogueLoader : MonoBehaviour
     {
         dialogueIndex++;
 
+
         if(dialogueIndex >= numPages)
         {
             Destroy(objInstance);
             PlayerInput.instance.enabled = true;
 
+        } else 
+        {
+            body.text = simpleTextPages[dialogueIndex];
         }
     }
     
@@ -193,11 +198,14 @@ public class DialogueLoader : MonoBehaviour
 
             if(currentBranch != null)
             {
-
+                
+                
+                
                 Path unlockPath = FindPath(currentPath.unlockPathID); 
+               
                 if(unlockPath != null)
-                {
-                    //Debug.Log("unlocking...");
+                { 
+                    //Debug.Log("unlocking " + unlockPath.firstSlide.ID);
                     unlockPath.locked = false;
                 }
 
