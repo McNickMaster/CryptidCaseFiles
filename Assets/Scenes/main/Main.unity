@@ -1971,9 +1971,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   textData: {fileID: 0}
@@ -2271,6 +2269,10 @@ PrefabInstance:
       propertyPath: travelCutscene
       value: 
       objectReference: {fileID: 516906522}
+    - target: {fileID: 6240413945760662915, guid: f148bdc39474138448c7deb7a7f89e46, type: 3}
+      propertyPath: destinationScene
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6249632680237355837, guid: f148bdc39474138448c7deb7a7f89e46, type: 3}
       propertyPath: m_Name
       value: btnBeachTravel
@@ -2783,6 +2785,7 @@ GameObject:
   - component: {fileID: 1480938464}
   - component: {fileID: 1480938463}
   - component: {fileID: 1480938462}
+  - component: {fileID: 1480938468}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2937,7 +2940,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4faa29287b9032640afd422edf0fa2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoad: {fileID: 1480938468}
   currentLocation: {fileID: 0}
+  currentScene:
+    m_Handle: 0
+  travelCutscene: {fileID: 516906522}
   currentView: {fileID: 0}
   views:
   - {fileID: 0}
@@ -2974,6 +2981,18 @@ Transform:
   - {fileID: 253658698}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1480938468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480938461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d132ce758f505e41a5cf0aeb7398684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1500266517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3871,6 +3890,10 @@ PrefabInstance:
       propertyPath: travelCutscene
       value: 
       objectReference: {fileID: 516906522}
+    - target: {fileID: 6240413945760662915, guid: f148bdc39474138448c7deb7a7f89e46, type: 3}
+      propertyPath: destinationScene
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6249632680237355837, guid: f148bdc39474138448c7deb7a7f89e46, type: 3}
       propertyPath: m_Name
       value: btnCampTravel
@@ -4484,6 +4507,10 @@ PrefabInstance:
       propertyPath: travelCutscene
       value: 
       objectReference: {fileID: 516906522}
+    - target: {fileID: 6240413945760662915, guid: f148bdc39474138448c7deb7a7f89e46, type: 3}
+      propertyPath: destinationScene
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6249632680237355837, guid: f148bdc39474138448c7deb7a7f89e46, type: 3}
       propertyPath: m_Name
       value: btnForestTravel
@@ -5022,9 +5049,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   textData: {fileID: 0}

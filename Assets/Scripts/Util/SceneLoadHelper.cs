@@ -7,10 +7,12 @@ public class SceneLoadHelper : MonoBehaviour
 {
     public static SceneLoadHelper instance;
 
-    Scene to, from;
+    string to, from;
+
+
     void Awake()
     {
-        instance = this;
+        //instance = this;
     }
     // Start is called before the first frame update
     void Start()
@@ -25,33 +27,44 @@ public class SceneLoadHelper : MonoBehaviour
     }
     public void LoadFirstScene(string s)
     {
-        this.from = from;
-        this.to = to;
+        to = s;
 
         StartCoroutine(LoadSceneA());
+
+        from = s;
     }
 
     public void LoadNewScene(Scene from, Scene to)
     {
-        this.from = from;
-        this.to = to;
+        this.from = from.name;
+        this.to = to.name;
 
         StartCoroutine(UnloadSceneA());
+    }
+
+    public void LoadNewScene(string s)
+    {
+        to = s;
+
+        StartCoroutine(UnloadSceneA());
+
+        from = s;
     }
 
     IEnumerator UnloadSceneA()
     {
         AsyncOperation op = SceneManager.UnloadSceneAsync(from);
-
+    
         while(!op.isDone)
         { 
-            StartCoroutine(LoadSceneA());
             yield return null;
         }
+        
+        StartCoroutine(LoadSceneA());
     }
     IEnumerator LoadSceneA()
     {
-        AsyncOperation op = SceneManager.LoadSceneAsync(to.name, LoadSceneMode.Additive);
+        AsyncOperation op = SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
 
         while(!op.isDone)
         {

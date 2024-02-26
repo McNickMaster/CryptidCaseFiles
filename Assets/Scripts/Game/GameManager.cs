@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
+    public SceneLoadHelper sceneLoad;
     public LocationManager currentLocation;
     public Scene currentScene;
+    public Cutscene travelCutscene;
     public View currentView;
     public View[] views;
     public GameObject lineDrawer;
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
 
         LoadSave();
 
-        SceneLoadHelper.instance.LoadFirstScene();
+        sceneLoad.LoadFirstScene("OFFICE");
 
         currentCase = cases[0];
 
@@ -109,10 +111,15 @@ public class GameManager : MonoBehaviour
     public void Travel(LocationManager destination)
     {
         
-        currentLocation.gameObject.SetActive(false);
-        currentLocation = destination;
+        //currentLocation.gameObject.SetActive(false);
+        //currentLocation = destination;
 
         SetView(currentLocation.defaultView);
+    }
+
+    public void Travel(e_Scene destination_enum)
+    {
+        sceneLoad.LoadNewScene(destination_enum.ToString());
     }
 
     public void TrySolveCase()

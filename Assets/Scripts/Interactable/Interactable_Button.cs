@@ -30,7 +30,7 @@ public class Interactable_Button : Interactable
     public LocationManager destination;
     public e_Scene destinationScene;
     //public LocationManager thisLocation;
-    public Cutscene travelCutscene;
+    
 
     [Header("Spawn Button Settings")]
     public GameObject noteToSpawn;
@@ -231,16 +231,16 @@ public class Interactable_Button : Interactable
 
             case ButtonType.TRAVEL:
             {
-
+                
                 /*
                 for(int i = 0; i < TempNode.instance.transform.childCount; i++)
                 {
                     Destroy(TempNode.instance.transform.GetChild(i).gameObject);
                 }
                 */
-
-                GameManager.instance.Travel(destination);
-                travelCutscene.StartCutscene(destination.gameObject);
+                
+                GameManager.instance.travelCutscene.StartCutscene();
+                GameManager.instance.Travel(destinationScene);
                 
                 break;
             }

@@ -10,7 +10,8 @@ public class LocationManager : MonoBehaviour
     
     void Awake()
     {
-        //GameManager.instance.SetNewLocation(this);
+        GameManager.instance.currentLocation = this;
+        GameManager.instance.SetNewView(defaultView);
         
     }
 

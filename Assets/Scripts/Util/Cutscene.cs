@@ -26,17 +26,17 @@ public class Cutscene : MonoBehaviour
     }
 
 
-    public void StartCutscene(GameObject destination)
+    public void StartCutscene()
     {
         cutscene.Play();
-        this.destination = destination;
     }
 
 
     private void EndCutscene()
     {
-        destination.SetActive(true);
+        //destination.SetActive(true);
         cutsceneObj.SetActive(false);
         PlayerInput.instance.UpdateBackplane();
+
     }
 }

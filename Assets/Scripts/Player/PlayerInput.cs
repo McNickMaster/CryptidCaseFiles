@@ -47,7 +47,7 @@ public class PlayerInput : MonoBehaviour
         if(inUI)
         {
 
-        } else 
+        } else if(GameManager.instance.currentView != null && GameManager.instance.travelCutscene.flag_cutscene_done)
         {
             HandleMouse();
         }
@@ -88,7 +88,7 @@ public class PlayerInput : MonoBehaviour
 
     void HandleMouse()
     {
-
+        
         if(Input.GetMouseButtonDown(0))
         {
             MouseClick();
