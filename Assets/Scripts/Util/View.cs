@@ -10,7 +10,10 @@ public class View : MonoBehaviour
 
     public Transform TL, BR;
 
-
+    void Awake()
+    {
+        GameManager.instance.SetNewView(this);
+    }
     // Start is called before the first frame update
     void Start()
     {

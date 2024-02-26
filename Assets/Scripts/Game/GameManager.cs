@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using System;
 
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     public LocationManager currentLocation;
+    public Scene currentScene;
     public View currentView;
     public View[] views;
     public GameObject lineDrawer;
@@ -36,7 +38,11 @@ public class GameManager : MonoBehaviour
 
         LoadSave();
 
+        SceneLoadHelper.instance.LoadFirstScene();
+
         currentCase = cases[0];
+
+
         
         //currentLocation = FindObjectOfType<LocationManager>();
        
@@ -63,7 +69,7 @@ public class GameManager : MonoBehaviour
         }
         
     }
-
+/*
     public void SetNewLocation(LocationManager location)
     {
         currentLocation = location;
@@ -76,6 +82,29 @@ public class GameManager : MonoBehaviour
 
         PlayerInput.instance.UpdateBackplane(currentView.myBackPlane);
     }
+    */
+
+    public void SetNewLocation(e_Scene newScene)
+    {
+        SceneLoadHelper.instance.LoadNewScene(currentScene, 
+            SceneManager.GetSceneByName(newScene.ToString()));
+
+
+    }
+
+    public void SetNewView(View view)
+    {
+        
+        if(currentView == null)
+        {
+            currentView = currentLocation.defaultView;
+        }
+
+        PlayerInput.instance.UpdateBackplane(currentView.myBackPlane);
+    }
+
+    
+    
 
     public void Travel(LocationManager destination)
     {

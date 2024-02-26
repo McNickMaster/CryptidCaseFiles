@@ -10,7 +10,7 @@ public class LocationManager : MonoBehaviour
     
     void Awake()
     {
-        GameManager.instance.SetNewLocation(this);
+        //GameManager.instance.SetNewLocation(this);
         
     }
 
