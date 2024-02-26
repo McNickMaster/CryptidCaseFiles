@@ -198,7 +198,11 @@ public class PlayerInput : MonoBehaviour
 
     public void UpdateBackplane()
     {
-        backPlane = GameObject.FindWithTag("Backplane").transform;
+       // backPlane = GameObject.FindWithTag("Backplane").transform;
+    }
+    public void UpdateBackplane(Transform plane)
+    {
+        backPlane = plane;
     }
 
     void ToggleNotebook()

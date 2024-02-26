@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using System;
 
 public class GameManager : MonoBehaviour
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
     [Header("Debug")]
     public List<Milestone> completedMilestones = new List<Milestone>();
 
+    public UnityEvent event_StartGameLoad = new UnityEvent();
+
     void OnEnable()
     {
         //instance = this;
@@ -29,18 +32,14 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
+        
+
         LoadSave();
 
-
-        currentLocation = FindObjectOfType<LocationManager>();
-
         currentCase = cases[0];
-
-        if(currentView == null)
-        {
-            currentView = currentLocation.defaultView;
-        }
-            
+        
+        //currentLocation = FindObjectOfType<LocationManager>();
+       
     }
 
     // Start is called before the first frame update
@@ -56,12 +55,26 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             ResetWinLoss();
-        }
+        }*/
         if(Input.GetKeyDown(KeyCode.F))
         {
-            SaveGame();
+           // SaveGame();
+           //Setup();
         }
-        */
+        
+    }
+
+    public void SetNewLocation(LocationManager location)
+    {
+        currentLocation = location;
+
+
+        if(currentView == null)
+        {
+            currentView = currentLocation.defaultView;
+        }
+
+        PlayerInput.instance.UpdateBackplane(currentView.myBackPlane);
     }
 
     public void Travel(LocationManager destination)
@@ -168,7 +181,7 @@ public class GameManager : MonoBehaviour
 
         } catch (Exception e)
         {
-            Debug.Log(e);
+            Debug.Log("save file not found");
         }
     }
 

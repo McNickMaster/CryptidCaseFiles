@@ -32,3 +32,8 @@ public class GameData : MonoBehaviour
 
 
 }
+
+public enum e_Scene
+{
+    OFFICE, CS1, CS2, CS3, CS4, CS5
+}

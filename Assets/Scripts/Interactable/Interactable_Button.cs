@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using System;
@@ -27,7 +28,8 @@ public class Interactable_Button : Interactable
 
     [Header("Travel Button Settings")]
     public LocationManager destination;
-    public LocationManager thisLocation;
+    public e_Scene destinationScene;
+    //public LocationManager thisLocation;
     public Cutscene travelCutscene;
 
     [Header("Spawn Button Settings")]

@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2613245250530645303
 Transform:
@@ -116,12 +116,14 @@ GameObject:
   - component: {fileID: 1891110892799989860}
   - component: {fileID: 7998675495443513792}
   - component: {fileID: 1532026260327892784}
+  - component: {fileID: 5649925318602307893}
+  - component: {fileID: 1299303133587464854}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1891110892799989860
 Transform:
@@ -135,7 +137,8 @@ Transform:
   m_LocalPosition: {x: 5.944, y: 0.77, z: -34.101}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1076300027457246901}
   m_Father: {fileID: 6867752308794441498}
   m_LocalEulerAnglesHint: {x: 11.516, y: -18.14, z: 0}
 --- !u!20 &7998675495443513792
@@ -197,6 +200,67 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788175773836316954}
   m_Enabled: 1
+--- !u!114 &5649925318602307893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788175773836316954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5422982fa1668c44ea8b7edd8bf8298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 7998675495443513792}
+  myBackPlane: {fileID: 1076300027457246901}
+  normal: {x: 0, y: 0, z: -1}
+  TL: {fileID: 0}
+  BR: {fileID: 0}
+--- !u!114 &1299303133587464854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788175773836316954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 2
+  m_AntialiasingQuality: 1
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &1554187447258127314
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +275,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7195616254664808623
 Transform:
@@ -292,12 +356,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1493917055314932613}
   - component: {fileID: 9010445175370764952}
+  - component: {fileID: 3516139490192125969}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1493917055314932613
 Transform:
@@ -307,13 +372,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3354003312611689070}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34315702, y: -0.2419354, z: 0.091948636, w: 0.9029153}
-  m_LocalPosition: {x: 4.9279265, y: -0.8084471, z: -23.190474}
+  m_LocalRotation: {x: 0.3546472, y: -0.055008784, z: 0.020906225, w: 0.9331465}
+  m_LocalPosition: {x: 4.9279175, y: 10.71, z: -23.190474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6867752308794441498}
-  m_LocalEulerAnglesHint: {x: 41.619, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 41.619, y: -6.747, z: 0}
 --- !u!108 &9010445175370764952
 Light:
   m_ObjectHideFlags: 0
@@ -326,7 +391,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.1
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -376,6 +441,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &3516139490192125969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354003312611689070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &3474289873731951262
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,13 +473,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6867752308794441498}
+  - component: {fileID: 6010306881592455709}
   m_Layer: 0
   m_Name: Location_CrimeScene3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 0
 --- !u!4 &6867752308794441498
 Transform:
   m_ObjectHideFlags: 0
@@ -406,6 +495,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1891110892799989860}
+  - {fileID: 1538294836446628512}
   - {fileID: 1493917055314932613}
   - {fileID: 2613245250530645303}
   - {fileID: 6037400011510808336}
@@ -426,6 +516,19 @@ Transform:
   - {fileID: 7837554957655274260}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6010306881592455709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474289873731951262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d413b3a49483c4f997f7e75ec3a663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultView: {fileID: 5649925318602307893}
 --- !u!1 &3658158179293769380
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +543,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7837554957655274260
 Transform:
@@ -493,7 +596,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6672686402171800132
 Transform:
@@ -571,6 +674,124 @@ Transform:
   - {fileID: 1900112638865405591}
   m_Father: {fileID: 6867752308794441498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4330416560845068824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1538294836446628512}
+  - component: {fileID: 2273820208282403293}
+  - component: {fileID: 8663706852383577047}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1538294836446628512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330416560845068824}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.27, y: 0, z: -5.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6867752308794441498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &2273820208282403293
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330416560845068824}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.58
+  m_Range: 23.53
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 4.06
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &8663706852383577047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330416560845068824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &5326684631781540996
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +828,112 @@ Transform:
   - {fileID: 5855185092058484065}
   m_Father: {fileID: 6867752308794441498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8026310237929553258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1076300027457246901}
+  - component: {fileID: 6788397036906768866}
+  - component: {fileID: 824837143553779302}
+  - component: {fileID: 8937930042126296350}
+  m_Layer: 0
+  m_Name: Backplane
+  m_TagString: Backplane
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1076300027457246901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8026310237929553258}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.790608, y: -0.0000000074505815, z: -0.000000023283066, w: 0.6123227}
+  m_LocalPosition: {x: -0.14, y: 3.46, z: 20.73}
+  m_LocalScale: {x: 6.76, y: 1, z: 3.8589}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1891110892799989860}
+  m_LocalEulerAnglesHint: {x: -104.485, y: 0, z: 0}
+--- !u!33 &6788397036906768866
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8026310237929553258}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &824837143553779302
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8026310237929553258}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8937930042126296350
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8026310237929553258}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &119147522206457588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -658,6 +985,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b78d52b9f58c8e44788149a7bb6d97ae, type: 3}
       propertyPath: m_Name
       value: Cooler
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b78d52b9f58c8e44788149a7bb6d97ae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: b78d52b9f58c8e44788149a7bb6d97ae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -726,6 +1061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -791,6 +1130,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -869,6 +1212,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
       propertyPath: m_Name
       value: Pine Tree (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -952,16 +1299,87 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evidence Marker 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3694526633194747968}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9164056125685595994}
   m_SourcePrefab: {fileID: 100100000, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
 --- !u!4 &326519124739907219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
   m_PrefabInstance: {fileID: 216944727403215224}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1135988773760140329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+  m_PrefabInstance: {fileID: 216944727403215224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3694526633194747968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135988773760140329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  thisEnabled: 1
+  btn_type: 9
+  is3D: 1
+  myClip: {fileID: 0}
+  isVisible: 1
+  normalTint: {r: 1, g: 1, b: 1, a: 1}
+  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hovering: 0
+  selected: 0
+  destination: {fileID: 0}
+  thisLocation: {fileID: 0}
+  travelCutscene: {fileID: 0}
+  noteToSpawn: {fileID: 0}
+  noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
+  pageButtonLeft: 0
+  dialogue: {fileID: 0}
+  monologue: {fileID: 11400000, guid: 4e70f6e0a40406e4c984b8322d3f82bb, type: 2}
+  objectToToggle: {fileID: 0}
+  state: 0
+  newView: {fileID: 0}
+--- !u!65 &9164056125685595994
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135988773760140329}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 111.82765, y: 100, z: 93.79156}
+  m_Center: {x: -0.00024414062, y: -0.00004005432, z: 0.00030517578}
 --- !u!1001 &322126616652861483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1033,6 +1451,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
       propertyPath: m_Name
       value: Pine Tree (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1111,6 +1533,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1f5439f3507fcb347b801d7009142cf9, type: 3}
       propertyPath: m_Name
       value: Rock_3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f5439f3507fcb347b801d7009142cf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1194,6 +1620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1259,6 +1689,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1334,6 +1768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear Trap
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38d26ca1990653847b5af013cd78ef5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1408,6 +1846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1473,6 +1915,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1547,6 +1993,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
       propertyPath: m_Name
       value: Campfire Log (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1626,6 +2076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41e1896204d234c499adab9edfe933dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1699,6 +2153,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
       propertyPath: m_Name
       value: Campfire Log (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1774,6 +2232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1792,6 +2254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalScale.x
       value: -1.135408
@@ -1844,9 +2310,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1913,6 +2387,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1992,6 +2470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f5439f3507fcb347b801d7009142cf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2065,6 +2547,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2143,6 +2629,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
       propertyPath: m_Name
       value: Pine Tree (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2226,6 +2716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2291,6 +2785,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2366,6 +2864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2384,6 +2886,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0707
@@ -2436,9 +2942,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2514,6 +3028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2580,6 +3098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2645,6 +3167,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2724,6 +3250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b9d4fbb84c6bc742b73107e751fab06, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2797,6 +3327,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2876,6 +3410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Top (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 092ddeb085714454682f08d3a73eacfc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2950,6 +3488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3015,6 +3557,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3090,6 +3636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3155,6 +3705,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3234,6 +3788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41e1896204d234c499adab9edfe933dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3252,6 +3810,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6751716
@@ -3304,9 +3866,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3390,6 +3960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3455,6 +4029,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3530,6 +4108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3604,6 +4186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3622,6 +4208,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.79787016
@@ -3674,9 +4264,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3755,6 +4353,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
       propertyPath: m_Name
       value: Pine Tree (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3838,6 +4440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3912,6 +4518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3977,6 +4587,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4051,6 +4665,18 @@ PrefabInstance:
     - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
       propertyPath: m_Name
       value: Tree_B (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324596123280791170, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593825851631169637, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4129,6 +4755,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41e1896204d234c499adab9edfe933dd, type: 3}
       propertyPath: m_Name
       value: Rock_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41e1896204d234c499adab9edfe933dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4212,6 +4842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4286,6 +4920,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_B (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324596123280791170, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593825851631169637, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4359,6 +5005,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4438,6 +5088,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clawed Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3cd69ef50211d545aeef39c1fe24523, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4511,6 +5165,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4590,6 +5248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clawed Tree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3cd69ef50211d545aeef39c1fe24523, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4668,6 +5330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clawed Tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3cd69ef50211d545aeef39c1fe24523, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4741,6 +5407,18 @@ PrefabInstance:
     - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
       propertyPath: m_Name
       value: Tree_B (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324596123280791170, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593825851631169637, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4819,6 +5497,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1f5439f3507fcb347b801d7009142cf9, type: 3}
       propertyPath: m_Name
       value: Rock_3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f5439f3507fcb347b801d7009142cf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4902,6 +5584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4967,6 +5653,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5046,6 +5736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41e1896204d234c499adab9edfe933dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5120,6 +5814,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Campfire Log (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5138,6 +5836,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.76659524
@@ -5190,9 +5892,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5260,6 +5970,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5325,6 +6039,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5400,6 +6118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5473,6 +6195,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5552,6 +6278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Top (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 092ddeb085714454682f08d3a73eacfc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5630,6 +6360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f5439f3507fcb347b801d7009142cf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5695,6 +6429,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5770,6 +6508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5843,6 +6585,18 @@ PrefabInstance:
     - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
       propertyPath: m_Name
       value: Tree_B (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324596123280791170, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593825851631169637, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5918,6 +6672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antler
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1439fd080b87e744db8fc06d6ecd6a87, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5991,6 +6749,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6070,6 +6832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41e1896204d234c499adab9edfe933dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6143,6 +6909,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
       propertyPath: m_Name
       value: Campfire Log (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6222,6 +6992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41e1896204d234c499adab9edfe933dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6240,6 +7014,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalScale.x
       value: -1.135408
@@ -6292,9 +7070,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6369,6 +7155,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6534,6 +7324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6600,6 +7394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6665,6 +7463,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6739,6 +7541,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6818,6 +7624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b9d4fbb84c6bc742b73107e751fab06, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6896,6 +7706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f5439f3507fcb347b801d7009142cf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6970,6 +7784,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_B
       objectReference: {fileID: 0}
+    - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324596123280791170, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593825851631169637, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7035,6 +7861,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7114,6 +7944,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7132,6 +7966,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.52
@@ -7172,9 +8010,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7250,6 +8096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Campfire Log (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7316,6 +8166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7334,6 +8188,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.6
@@ -7374,9 +8232,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7460,6 +8326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7533,6 +8403,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
       propertyPath: m_Name
       value: Campfire Log (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7616,6 +8490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7689,6 +8567,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7764,6 +8646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueTent
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bbb19d4bca466d64ebc324ac1c6db7e1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7837,6 +8723,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7916,6 +8806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7989,6 +8883,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8072,6 +8970,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8145,6 +9047,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8228,6 +9134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8306,6 +9216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clawed Tree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3cd69ef50211d545aeef39c1fe24523, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8324,6 +9238,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.70271665
@@ -8376,9 +9294,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8462,6 +9388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8543,6 +9473,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
       propertyPath: m_Name
       value: Pine Tree (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8626,11 +9560,82 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evidence Marker 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3631658210501397167}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8832278024366332652}
   m_SourcePrefab: {fileID: 100100000, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+--- !u!1 &5084942496675694904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+  m_PrefabInstance: {fileID: 5354834466884400233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3631658210501397167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084942496675694904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  thisEnabled: 1
+  btn_type: 9
+  is3D: 1
+  myClip: {fileID: 0}
+  isVisible: 1
+  normalTint: {r: 1, g: 1, b: 1, a: 1}
+  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hovering: 0
+  selected: 0
+  destination: {fileID: 0}
+  thisLocation: {fileID: 0}
+  travelCutscene: {fileID: 0}
+  noteToSpawn: {fileID: 0}
+  noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
+  pageButtonLeft: 0
+  dialogue: {fileID: 0}
+  monologue: {fileID: 11400000, guid: d64634185f81344459242e63f631b772, type: 2}
+  objectToToggle: {fileID: 0}
+  state: 0
+  newView: {fileID: 0}
+--- !u!65 &8832278024366332652
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084942496675694904}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 111.82762, y: 100, z: 93.79155}
+  m_Center: {x: 0, y: 0.000020980835, z: 0}
 --- !u!4 &5609946845570978690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
@@ -8699,6 +9704,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8778,6 +9787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b9d4fbb84c6bc742b73107e751fab06, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8852,9 +9865,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 560676064cdb4334296ea4030f2d889c, type: 2}
+    - target: {fileID: -7029948723529949830, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
       propertyPath: m_Name
       value: DeadBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849762623622064168, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7202271454713460447, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8925,6 +9954,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8999,6 +10032,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9077,6 +10114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
       propertyPath: m_Name
       value: Pine Tree (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9160,6 +10201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9233,6 +10278,18 @@ PrefabInstance:
     - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
       propertyPath: m_Name
       value: Tree_B (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324596123280791170, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593825851631169637, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9308,6 +10365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9382,9 +10443,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 560676064cdb4334296ea4030f2d889c, type: 2}
+    - target: {fileID: -7029948723529949830, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
       propertyPath: m_Name
       value: DeadBody (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849762623622064168, guid: 8ba61882d19df7a4ba0ea8428116b159, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9404,6 +10481,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalScale.x
       value: -1.1654963
@@ -9456,9 +10537,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9534,6 +10623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9599,6 +10692,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9674,6 +10771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Campfire Log (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9747,6 +10848,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 86f4785d372e09947a21c18948b4a930, type: 3}
       propertyPath: m_Name
       value: Bracelet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 86f4785d372e09947a21c18948b4a930, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9822,6 +10927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9895,6 +11004,18 @@ PrefabInstance:
     - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
       propertyPath: m_Name
       value: Tree_B (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324596123280791170, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593825851631169637, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9974,6 +11095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41e1896204d234c499adab9edfe933dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10048,6 +11173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedTent
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bbb19d4bca466d64ebc324ac1c6db7e1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10121,6 +11250,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10204,16 +11337,87 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evidence Marker 5
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5445313777527924782}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4811540213705433499}
   m_SourcePrefab: {fileID: 100100000, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
 --- !u!4 &5855185092058484065 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
   m_PrefabInstance: {fileID: 6254218594032446090}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6488028437553305563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+  m_PrefabInstance: {fileID: 6254218594032446090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5445313777527924782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488028437553305563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  thisEnabled: 1
+  btn_type: 9
+  is3D: 1
+  myClip: {fileID: 0}
+  isVisible: 1
+  normalTint: {r: 1, g: 1, b: 1, a: 1}
+  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hovering: 0
+  selected: 0
+  destination: {fileID: 0}
+  thisLocation: {fileID: 0}
+  travelCutscene: {fileID: 0}
+  noteToSpawn: {fileID: 0}
+  noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
+  pageButtonLeft: 0
+  dialogue: {fileID: 0}
+  monologue: {fileID: 11400000, guid: 585ee7064bfb9624f89aebf468666a10, type: 2}
+  objectToToggle: {fileID: 0}
+  state: 0
+  newView: {fileID: 0}
+--- !u!65 &4811540213705433499
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488028437553305563}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 111.827614, y: 100, z: 93.79155}
+  m_Center: {x: -0.00018310547, y: -0.0000019073486, z: 0}
 --- !u!1001 &6391829234547830606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10278,6 +11482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Campfire Log (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10296,6 +11504,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.2
@@ -10336,9 +11548,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10418,6 +11638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Top (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 092ddeb085714454682f08d3a73eacfc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10491,6 +11715,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
       propertyPath: m_Name
       value: Campfire Log (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10574,11 +11802,82 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evidence Marker 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2747854053500105423}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7234494221166928979}
   m_SourcePrefab: {fileID: 100100000, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+--- !u!1 &6257741578917267596 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+  m_PrefabInstance: {fileID: 6491550865298781661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2747854053500105423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6257741578917267596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  thisEnabled: 1
+  btn_type: 9
+  is3D: 1
+  myClip: {fileID: 0}
+  isVisible: 1
+  normalTint: {r: 1, g: 1, b: 1, a: 1}
+  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hovering: 0
+  selected: 0
+  destination: {fileID: 0}
+  thisLocation: {fileID: 0}
+  travelCutscene: {fileID: 0}
+  noteToSpawn: {fileID: 0}
+  noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
+  pageButtonLeft: 0
+  dialogue: {fileID: 0}
+  monologue: {fileID: 11400000, guid: 5416ca0847c613d48ad67bee4ca8c3de, type: 2}
+  objectToToggle: {fileID: 0}
+  state: 0
+  newView: {fileID: 0}
+--- !u!65 &7234494221166928979
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6257741578917267596}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 111.827644, y: 100, z: 93.79155}
+  m_Center: {x: 0.00024414062, y: 0.000005722046, z: 0}
 --- !u!4 &6745308549498147382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
@@ -10648,6 +11947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10713,6 +12016,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10788,6 +12095,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_B (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324596123280791170, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593825851631169637, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10806,6 +12125,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 727802894287050570, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.52
@@ -10861,6 +12184,10 @@ PrefabInstance:
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -10936,6 +12263,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11015,6 +12346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f5439f3507fcb347b801d7009142cf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11080,6 +12415,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11159,6 +12498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41e1896204d234c499adab9edfe933dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11224,6 +12567,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11303,6 +12650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11376,6 +12727,18 @@ PrefabInstance:
     - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
       propertyPath: m_Name
       value: Tree_B (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324596123280791170, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593825851631169637, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11455,6 +12818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Top
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 092ddeb085714454682f08d3a73eacfc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11528,6 +12895,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11603,6 +12974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Campfire Log (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11668,6 +13043,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11742,6 +13121,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11821,6 +13204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41e1896204d234c499adab9edfe933dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11887,6 +13274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11952,6 +13343,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12027,6 +13422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12092,6 +13491,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12167,6 +13570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12241,6 +13648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12314,6 +13725,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12431,6 +13846,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.955754
@@ -12471,9 +13890,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12553,6 +13980,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12627,6 +14058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12645,6 +14080,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6672686402171800132}
     m_Modifications:
+    - target: {fileID: 95275211456990704, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3608852020630936861, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_LocalScale.x
       value: -1.135408
@@ -12697,9 +14136,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3987339146832100775, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
       propertyPath: m_Name
       value: Tree_A (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661341011922716387, guid: 06f7a3efbe9a28549ae4c7c546a74ed9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12783,6 +14230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12857,6 +14308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Campfire Log
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12922,6 +14377,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13001,6 +14460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13079,6 +14542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b9d4fbb84c6bc742b73107e751fab06, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13152,6 +14619,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13231,6 +14702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13309,6 +14784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b9d4fbb84c6bc742b73107e751fab06, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13374,6 +14853,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13453,6 +14936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13526,6 +15013,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13605,6 +15096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13678,6 +15173,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13753,6 +15252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13826,6 +15329,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13901,6 +15408,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree_B (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4431292593722450763, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324596123280791170, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593825851631169637, guid: 5ffed99452ff0454e9b27ceb4bc9eec8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13919,6 +15438,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6867752308794441498}
     m_Modifications:
+    - target: {fileID: -8961359253771211100, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8144879f84600614281f84e7078fa49e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -13975,6 +15498,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -7146521406498821007, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -5894863403822994359, guid: 8144879f84600614281f84e7078fa49e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.041
@@ -14007,20 +15546,147 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -104.955
       objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5471901410102084090, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -3756473180518285571, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1018664272722485354, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -466329591000292508, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 50754954277266222, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8144879f84600614281f84e7078fa49e, type: 3}
       propertyPath: m_Name
       value: ReporterStand
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767400413853537203, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148817236446094103, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507901977716847365, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 638102276756236804}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4501413815102295205}
   m_SourcePrefab: {fileID: 100100000, guid: 8144879f84600614281f84e7078fa49e, type: 3}
 --- !u!4 &8167447381445242797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8144879f84600614281f84e7078fa49e, type: 3}
   m_PrefabInstance: {fileID: 8561944752545695814}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8796456626858800407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8144879f84600614281f84e7078fa49e, type: 3}
+  m_PrefabInstance: {fileID: 8561944752545695814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &638102276756236804
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8796456626858800407}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.96, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4501413815102295205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8796456626858800407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  thisEnabled: 1
+  btn_type: 4
+  is3D: 1
+  myClip: {fileID: 0}
+  isVisible: 1
+  normalTint: {r: 1, g: 1, b: 1, a: 1}
+  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hovering: 0
+  selected: 0
+  destination: {fileID: 0}
+  thisLocation: {fileID: 0}
+  travelCutscene: {fileID: 0}
+  noteToSpawn: {fileID: 0}
+  noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
+  pageButtonLeft: 0
+  dialogue: {fileID: 11400000, guid: 98ca1f7c0f182444fac4f1254bed5c2b, type: 2}
+  monologue: {fileID: 0}
+  objectToToggle: {fileID: 0}
+  state: 0
+  newView: {fileID: 0}
 --- !u!1001 &8571818619856438533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14089,6 +15755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_3 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f5439f3507fcb347b801d7009142cf9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14155,6 +15825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14220,6 +15894,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14295,6 +15973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14368,6 +16050,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14443,6 +16129,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14516,6 +16206,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
       propertyPath: m_Name
       value: Fire Pit Stone (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14599,6 +16293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14681,11 +16379,82 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evidence Marker 4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6112111458411100347}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2034715444285584635}
   m_SourcePrefab: {fileID: 100100000, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+--- !u!1 &8640242180722898393 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+  m_PrefabInstance: {fileID: 8874668167500695688}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6112111458411100347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8640242180722898393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  thisEnabled: 1
+  btn_type: 9
+  is3D: 1
+  myClip: {fileID: 0}
+  isVisible: 1
+  normalTint: {r: 1, g: 1, b: 1, a: 1}
+  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hovering: 0
+  selected: 0
+  destination: {fileID: 0}
+  thisLocation: {fileID: 0}
+  travelCutscene: {fileID: 0}
+  noteToSpawn: {fileID: 0}
+  noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
+  pageButtonLeft: 0
+  dialogue: {fileID: 0}
+  monologue: {fileID: 11400000, guid: 148eec85b1777c74c90a734fae7ee6cf, type: 2}
+  objectToToggle: {fileID: 0}
+  state: 0
+  newView: {fileID: 0}
+--- !u!65 &2034715444285584635
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8640242180722898393}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 111.82764, y: 100, z: 93.79156}
+  m_Center: {x: 0, y: -0.00004005432, z: 0.00018310547}
 --- !u!4 &8981196701753012067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
@@ -14763,6 +16532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pine Tree (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 92f3f8e9f19eb344eb4fcb6cdbbe83c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14837,6 +16610,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Pit Stone (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc03786ae8ed5a4429e48da53d700281, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14902,6 +16679,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14981,6 +16762,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b9d4fbb84c6bc742b73107e751fab06, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15059,6 +16844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b088ac73f037f34a83e100835154865, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15133,6 +16922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Campfire Log (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a421f5e2a971384983645f9930e7b04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15198,6 +16991,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
       propertyPath: m_Name
       value: Ground (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58ab954cdf9ece34d87e1a99df2917be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
