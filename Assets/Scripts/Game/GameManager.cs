@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
         LoadSave();
 
-        sceneLoad.LoadFirstScene("OFFICE");
+        //sceneLoad.LoadFirstScene("OFFICE");
 
         currentCase = cases[0];
 

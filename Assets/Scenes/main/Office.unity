@@ -123,6 +123,41 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &969842650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 969842651}
+  m_Layer: 0
+  m_Name: SpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!224 &969842651
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969842650}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 26.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 498890602838110302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 10.23, y: 14.91}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &26500828790985042
 Transform:
   m_ObjectHideFlags: 0
@@ -336,9 +371,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   textData: {fileID: 0}
@@ -508,6 +541,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3294727826962039738}
+  - {fileID: 969842651}
   - {fileID: 3850004708337202814}
   - {fileID: 2079351986226000400}
   - {fileID: 4374722466118500455}
@@ -544,9 +578,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 1233914839373039238, guid: 78b4bbf9cb0a0444d9542996240d11e7, type: 3}
   noteSpawnPoint: {fileID: 3294727826962039738}
   textData: {fileID: 11400000, guid: 53bf0770d491f11468da11080be74409, type: 2}
@@ -774,9 +806,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   textData: {fileID: 0}
@@ -922,7 +952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   thisEnabled: 1
-  btn_type: 0
+  btn_type: 10
   is3D: 1
   myClip: {fileID: 8300000, guid: 46545526fb181924591465cfb347afd0, type: 3}
   isVisible: 1
@@ -932,12 +962,10 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
-  noteToSpawn: {fileID: 1233914839373039238, guid: 78b4bbf9cb0a0444d9542996240d11e7, type: 3}
-  noteSpawnPoint: {fileID: 3294727826962039738}
-  textData: {fileID: 11400000, guid: 53bf0770d491f11468da11080be74409, type: 2}
+  destinationScene: 0
+  noteToSpawn: {fileID: 5054951989843858709, guid: 868d2f8a3548dd149b15c5d0b27cb648, type: 3}
+  noteSpawnPoint: {fileID: 969842651}
+  textData: {fileID: 0}
   pageButtonLeft: 0
   dialogue: {fileID: 0}
   monologue: {fileID: 0}
@@ -2130,9 +2158,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 1233914839373039238, guid: 0229508e753a44446a0ec93ce8c74b77, type: 3}
   noteSpawnPoint: {fileID: 3294727826962039738}
   textData: {fileID: 0}
@@ -4400,9 +4426,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 1233914839373039238, guid: 7be1a8684c85aee4e84788ac0fb16b66, type: 3}
   noteSpawnPoint: {fileID: 3294727826962039738}
   textData: {fileID: 11400000, guid: ae62f18906bc6e54697f89bbe533fc15, type: 2}
@@ -4621,9 +4645,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   textData: {fileID: 0}
@@ -6877,9 +6899,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 1233914839373039238, guid: 31ad05327d6c5424dafc6ec86f90e200, type: 3}
   noteSpawnPoint: {fileID: 3294727826962039738}
   textData: {fileID: 11400000, guid: 7ea3cdc1e0563cf489a3a7679f38a646, type: 2}
@@ -7030,6 +7050,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2929640277652407947, guid: b3c77df8cf006ed47b22f4121a8b3845, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 494726c392dabe844ab84028f6eef422, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -840777845830954692, guid: b3c77df8cf006ed47b22f4121a8b3845, type: 3}
@@ -7632,9 +7656,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   textData: {fileID: 0}
@@ -8749,9 +8771,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   textData: {fileID: 0}
@@ -9098,9 +9118,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  destinationScene:
-    m_Handle: 0
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   textData: {fileID: 0}

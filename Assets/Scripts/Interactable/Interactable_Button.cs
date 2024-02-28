@@ -205,6 +205,13 @@ public class Interactable_Button : Interactable
                 }
                 break;
             }
+
+            case ButtonType.SPAWN_STICKY:
+            {
+                GameObject obj = Instantiate(noteToSpawn, noteSpawnPoint.position + new Vector3(0,0, -0.1f), Quaternion.identity, GetComponentInParent<TempNode>().transform);
+                obj.GetComponentInChildren<Canvas>().worldCamera = GameManager.instance.currentView.myCamera;
+                break;
+            }
             
             case ButtonType.PAGE:
             {
@@ -267,7 +274,7 @@ public class Interactable_Button : Interactable
             {
                 lineDrawer = GameManager.instance.SpawnLineDrawer();
 
-                lineDrawer.SetPoint(0, PlayerInput.instance.GetConvertedMousePos());
+                lineDrawer.SetPoint(0, transform.position);
 
 
                 break;
@@ -348,5 +355,5 @@ public class Interactable_Button : Interactable
 
 public enum ButtonType
 {
-    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE, CHANGE_VIEW, MONOLOGUE
+    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE, CHANGE_VIEW, MONOLOGUE, SPAWN_STICKY
 }
