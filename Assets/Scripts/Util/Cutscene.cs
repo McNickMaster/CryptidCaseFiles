@@ -9,11 +9,12 @@ public class Cutscene : MonoBehaviour
     private GameObject destination;
     public Animation cutscene;
 
-    public bool flag_cutscene_done = false;
+    public bool flag_cutscene_done = true;
 
     // Start is called before the first frame update
     void Awake()
     {
+        flag_cutscene_done = true;
     }
 
     // Update is called once per frame

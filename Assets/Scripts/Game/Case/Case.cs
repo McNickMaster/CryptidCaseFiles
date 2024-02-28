@@ -7,6 +7,7 @@ public class Case : ScriptableObject
 {
     public Culprit culprit;
     public CauseOfDeath causeOfDeath;
+    public e_Scene crimeScene;
 
     public SimpleTextData correctResult, incorrectResult;
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CaseFile : MonoBehaviour
 {
-
+    public static CaseFile instance;
     public Culprit culpritGuess;
     public CauseOfDeath causeOfDeathGuess;
 
@@ -21,6 +21,8 @@ public class CaseFile : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
+        
         ResetCaseFile();
         
         

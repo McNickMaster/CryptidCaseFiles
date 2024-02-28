@@ -9,7 +9,10 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
+    [Header("Modules")]
+    public GameData gameData;
     public SceneLoadHelper sceneLoad;
+    public DialogueLoader dialogueLoader;
     public LocationManager currentLocation;
     public Scene currentScene;
     public Cutscene travelCutscene;
@@ -44,7 +47,7 @@ public class GameManager : MonoBehaviour
 
         currentCase = cases[0];
 
-
+        //Invoke("LoadStartingDialogue", 0.5f);
         
         //currentLocation = FindObjectOfType<LocationManager>();
        
@@ -68,6 +71,7 @@ public class GameManager : MonoBehaviour
         {
            // SaveGame();
            //Setup();
+           Travel(e_Scene.OFFICE);
         }
         
     }
@@ -122,15 +126,21 @@ public class GameManager : MonoBehaviour
         sceneLoad.LoadNewScene(destination_enum.ToString());
     }
 
+    public void TravelToDest()
+    {
+        sceneLoad.LoadNewScene(currentCase.crimeScene.ToString());
+    }
+
     public void TrySolveCase()
     {
-        currentGuess = caseFileObj.GetGuess();
+        currentGuess = CaseFile.instance.GetGuess();
 
         PhoneManager.instance.Trigger_CaseSolved(currentCase.SolveCase(currentGuess));
 
         NextCase();
 
     }
+
 
     void SetNewCase(Case newCase)
     {
@@ -148,11 +158,16 @@ public class GameManager : MonoBehaviour
         {
             
             SetNewCase(cases[caseIndex]);
-            caseFileObj.ResetCaseFile();
+            CaseFile.instance.ResetCaseFile();
         }
     }
 
     
+    public void LoadStartingDialogue()
+    {
+       dialogueLoader.LoadMonologue(""+gameData.startingPhonecall.order);
+       dialogueLoader.StartMonologue();
+    }
 
     public void ResetWinLoss()
     {

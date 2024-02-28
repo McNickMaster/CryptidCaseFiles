@@ -7,18 +7,24 @@ public class GameData : MonoBehaviour
 {
     public static GameData instance;
 
+[Header("Polaroid Prefabs")]
     public GameObject[] CULPRIT_MUGSHOTS;
 
     public GameObject[] CAUSE_MUGSHOTS;
 
+[Header("Audio")]
     public AudioClip pageTurn;
     public AudioClip puzzleDrop;
     public AudioClip evidenceFound;
-
+[Header("Config")]
     public float PUZZLE_AUTO_LOCK = 0.3f;
 
-    public const string EDITOR_FILE_PATH = "Assets/TextSRC/";
-    public const string BUILD_FILE_PATH = "data/";
+[Header("Dialogue Data")]
+    public SimpleTextData startingPhonecall;
+
+[Header("Filepaths")]
+    public string EDITOR_FILE_PATH = "Assets/TextSRC/";
+    public string BUILD_FILE_PATH = "data/";
 
     void Awake()
     {
