@@ -3157,12 +3157,14 @@ namespace TMPro
 
         protected void SendOnFocus()
         {
+            PlayerInput.instance.StartTyping();
             if (onSelect != null)
                 onSelect.Invoke(m_Text);
         }
 
         protected void SendOnFocusLost()
         {
+            PlayerInput.instance.StopTyping();
             if (onDeselect != null)
                 onDeselect.Invoke(m_Text);
         }
@@ -4114,6 +4116,7 @@ namespace TMPro
         {
             //Debug.Log("OnSelect()");
 
+
             base.OnSelect(eventData);
             SendOnFocus();
 
@@ -4124,7 +4127,7 @@ namespace TMPro
         {
             //Debug.Log("Pointer Click Event...");
 
-            if (eventData.button != PointerEventData.InputButton.Left)
+            if (eventData.button != PointerEventData.InputButton.Right)
                 return;
 
             ActivateInputField();
