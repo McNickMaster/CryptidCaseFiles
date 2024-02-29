@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public SceneLoadHelper sceneLoad;
     public DialogueLoader dialogueLoader;
     public LocationManager currentLocation;
+    public e_Scene startScene = e_Scene.OFFICE;
     public Scene currentScene;
     public Cutscene travelCutscene;
     public View currentView;
@@ -46,7 +47,7 @@ public class GameManager : MonoBehaviour
 
         if(loadFirstScene)
         {
-            sceneLoad.LoadFirstScene("OFFICE");
+            sceneLoad.LoadFirstScene(startScene.ToString());
         }
 
         currentCase = cases[0];
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour
         {
            // SaveGame();
            //Setup();
-           Travel(e_Scene.OFFICE);
+           //Travel(e_Scene.OFFICE);
         }
         
     }
@@ -114,7 +115,10 @@ public class GameManager : MonoBehaviour
     }
 
     
-    
+    public void TravelOffice()
+    {
+        Travel(e_Scene.OFFICE);
+    }
 
     public void Travel(LocationManager destination)
     {
