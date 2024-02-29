@@ -4118,9 +4118,9 @@ namespace TMPro
 
 
             base.OnSelect(eventData);
-            SendOnFocus();
+            //SendOnFocus();
 
-            ActivateInputField();
+            //ActivateInputField();
         }
 
         public virtual void OnPointerClick(PointerEventData eventData)
