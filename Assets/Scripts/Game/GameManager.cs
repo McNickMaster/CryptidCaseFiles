@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     public SceneLoadHelper sceneLoad;
     public DialogueLoader dialogueLoader;
     public LocationManager currentLocation;
-    public Scene currentScene;
+    public e_Scene startScene = e_Scene.OFFICE;
+    public e_Scene currentScene;
     public Cutscene travelCutscene;
     public View currentView;
     public View[] views;
@@ -46,7 +47,8 @@ public class GameManager : MonoBehaviour
 
         if(loadFirstScene)
         {
-            sceneLoad.LoadFirstScene("OFFICE");
+            sceneLoad.LoadFirstScene(startScene.ToString());
+            currentScene = startScene;
         }
 
         currentCase = cases[0];
@@ -75,7 +77,7 @@ public class GameManager : MonoBehaviour
         {
            // SaveGame();
            //Setup();
-           Travel(e_Scene.OFFICE);
+           //Travel(e_Scene.OFFICE);
         }
         
     }
@@ -96,9 +98,10 @@ public class GameManager : MonoBehaviour
 
     public void SetNewLocation(e_Scene newScene)
     {
-        SceneLoadHelper.instance.LoadNewScene(currentScene, 
+        SceneLoadHelper.instance.LoadNewScene(SceneManager.GetSceneByName(currentScene.ToString()), 
             SceneManager.GetSceneByName(newScene.ToString()));
-
+        
+        currentScene = newScene;
 
     }
 
@@ -114,7 +117,10 @@ public class GameManager : MonoBehaviour
     }
 
     
-    
+    public void TravelOffice()
+    {
+        Travel(e_Scene.OFFICE);
+    }
 
     public void Travel(LocationManager destination)
     {
@@ -128,11 +134,23 @@ public class GameManager : MonoBehaviour
     public void Travel(e_Scene destination_enum)
     {
         sceneLoad.LoadNewScene(destination_enum.ToString());
+        currentScene = destination_enum;
     }
 
     public void TravelToDest()
     {
-        sceneLoad.LoadNewScene(currentCase.crimeScene.ToString());
+        e_Scene destination;
+
+        if(currentScene.ToString().Equals("OFFICE"))
+        {
+            destination = currentCase.crimeScene;
+        } else 
+        {
+            destination = e_Scene.OFFICE;
+        }
+
+        sceneLoad.LoadNewScene(destination.ToString());
+        currentScene = destination;
     }
 
     public void TrySolveCase()

@@ -18,7 +18,7 @@ public class PlayerInput : MonoBehaviour
     public Vector3 mousePosition3D, objectOffset = Vector3.zero;
     private Vector3 lastMousePos;
 
-    private bool _dragging = false, inUI = false;
+    private bool _dragging = false, inUI = false, typing = false;
 
     private Vector3 mousePosOnClick = Vector3.zero;
     private Notes noteInteracted;
@@ -52,7 +52,14 @@ public class PlayerInput : MonoBehaviour
         {
             HandleMouse();
         }
-        HandleKeys();
+
+        if(typing)
+        {
+
+        } else 
+        {
+            HandleKeys();
+        }
     }
 
     void HandleKeys()
@@ -203,6 +210,15 @@ public class PlayerInput : MonoBehaviour
         {
             objectInteracted.transform.position = newPos;
         }
+    }
+
+    public void StartTyping()
+    {
+        typing = true;
+    }
+    public void StopTyping()
+    {
+        typing = false;
     }
 
     public void UpdateBackplane()
