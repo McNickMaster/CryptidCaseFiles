@@ -7,6 +7,9 @@ public class Case : ScriptableObject
 {
     public Culprit culprit;
     public CauseOfDeath causeOfDeath;
+    public e_Scene crimeScene;
+
+    public SimpleTextData correctResult, incorrectResult;
 
     public List<Culprit> culpritList = new List<Culprit>();
     public List<CauseOfDeath> causeOfDeathList = new List<CauseOfDeath>();

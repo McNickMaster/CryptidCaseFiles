@@ -59,6 +59,9 @@ public class Interactable_PuzzleObject : Draggable
                 Vector3 temp = new Vector3(transform.localPosition.x, lockPosition.y, transform.localPosition.z);
                 if(Vector3.Distance(temp, lockPosition) < GameData.instance.PUZZLE_AUTO_LOCK)
                 {
+                    
+                    SoundManager.instance.PlaySFX(GameData.instance.puzzleDrop);
+                    
                     locked = true;
                     transform.localPosition = new Vector3(lockPosition.x, -2.7f, lockPosition.z);
                 } else 

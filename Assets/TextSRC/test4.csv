@@ -3,23 +3,23 @@ ID,TITLE,BODY
 1,You,“Whatcha got there?”
 11,Edo,*Edo barks*
 111,You,“C’mere boy!”
-1111,Edo,"*Edo stares at you till you walk over. You see what he’s found, tiny gray flecks on the ground. Scales… or maybe feathers, hard to tell*[end]"
+1111,Edo,"*Edo stares at you till you walk over. You see what he’s found, tiny gray flecks on the ground. Scales… or maybe feathers, hard to tell*[getEVIDENCE_FEATHERS][end]"
 112,You,*Walk over*
-1121,You,"*You walk over to see what he’s found. Tiny gray flecks on the ground. Scales… or maybe feathers, hard to tell*"
+1121,You,"*You walk over to see what he’s found. Tiny gray flecks on the ground. Scales… or maybe feathers, hard to tell*[getEVIDENCE_FEATHERS]"
 11211,You,*Pet the dog*
-112111,Edo,*Edo’s tail wags* [end]
-11212,You,*Walk back* [end]
+112111,Edo,*Edo’s tail wags*[end]
+11212,You,*Walk back*[end]
 2,You,*Walk over*
-21,You,"*You walk over to see what he’s found. Tiny gray flecks on the ground. Scales… or maybe feathers, hard to tell*"
+21,You,"*You walk over to see what he’s found. Tiny gray flecks on the ground. Scales… or maybe feathers, hard to tell*[getEVIDENCE_FEATHERS]"
 211,You,*Pet the dog*
-2111,Edo,*Edo’s tail wags* [end]
-212,You,*Walk back* [end]
+2111,Edo,*Edo’s tail wags*[end]
+212,You,*Walk back*[end]
 3,You,*Wait*
 31,Technician,"*One of the technicians walks over to Edo, and bags up something from the ground. They walk over and hand it to you*"
 311,You,“Thanks”
-3111,Technician,"“No prob.” *Inside the bag, some small gray flecks. Looks like scales maybe… or feathers?* [end]"
+3111,Technician,"“No prob.” *Inside the bag, some small gray flecks. Looks like scales maybe… or feathers?*[getEVIDENCE_FEATHERS][end]"
 312,You,*Wordlessly accept it*
-3121,You,"*Looking inside the bag, you notice some small gray flecks. Looks like scales of some sort, or maybe feathers* [end]"
+3121,You,"*Looking inside the bag, you notice some small gray flecks. Looks like scales of some sort, or maybe feathers*[getEVIDENCE_FEATHERS][end]"
 @0,Eric Meng,"“Hey Detective, don’t mind me”"
 1,You,"“I do mind, so you better get out of my face”"
 11,Eric Meng,"“Duly noted, I’ll be outta here soon”[end]"
@@ -30,7 +30,7 @@ ID,TITLE,BODY
 212,You,“Anything strange stick out to you?”
 2121,Eric Meng,"“Those footprints do, they start and stop without warning. Maybe they jumped away.”[back21]"
 213,You,"“Not much, what’s up with you?”"
-2131,Eric Meng,“Doing my job I’m afraid” [end]
+2131,Eric Meng,“Doing my job I’m afraid”[end]
 214,You,[locked] “What do you know about the victim?”
 2141,Eric Meng,"“He liked to talk a big game about how he could take on many of the supernatural elements that live around here, always spoutin’ off his plans.”[back21]"
 3,You,“I got some questions for you”
@@ -40,7 +40,7 @@ ID,TITLE,BODY
 31111,Eric Meng,"“I notice his gun there too, but I wonder why he doesn’t have the rest of his equipment.”[back31]"
 312,You,“Anything strange stick out to you?”
 3121,Eric Meng,"“Those footprints do, they start and stop without warning, and they definitely don’t look human”"
-31211,Eric Meng,“Maybe it’s got other means of getting around.”[back31]
+31211,Eric Meng,"“Maybe it’s got other means of getting around.”[getEVIDENCE_FOOTPRINTS][back31]"
 313,You,"“Actually, I think I got all I need”[end]"
 @0,Officer Jameson,“Good evening Detective.”
 1,You,"“You were the first officer on scene, correct?”"
@@ -235,7 +235,7 @@ ID,TITLE,BODY
 212,You,“I was going to ask you.”
 2121,David Tsarot,“Hell I dunno! She could be anywhere.”[back1111]
 213,You,“Up your ass”
-2131,David Tsarot,“Wha- you-” *click* [end]
+2131,David Tsarot,“Wha- you-” *click*[end]
 3,You,“Do you have a minute?”
 31,David Tsarot,“I guess… why?”[back111]
 @0,Vivian DeTour,“Mrs. DeTour speaking”
@@ -261,13 +261,13 @@ ID,TITLE,BODY
 1131111,Vivian DeTour,“A fishing boat? Evan didn’t fish!”
 11311111,You,You: “Would Evan have gone out with a friend?”
 113111111,Vivian DeTour,“Evan hates being on the sea! This doesn’t make any sense.”
-1131111111,Vivian DeTour,“I can’t– this can’t be true.” *click* [end]
+1131111111,Vivian DeTour,“I can’t– this can’t be true.” *click*[end]
 11311112,You,You: “He could’ve been going to Pettiget Island.”
 113111121,Vivian DeTour,"“For what reason? We don’t know anyone there, he hated sailing.”"
-1131111211,Vivian DeTour,"“Who even are you, I’m calling the police.” *click* [end]"
+1131111211,Vivian DeTour,"“Who even are you, I’m calling the police.” *click*[end]"
 11312,You,"You: “He’s dead, killed at sea.”"
 113121,Vivian DeTour,“Killed at sea!? What was he doing out there?! He didn’t even like the sea!”
-1131211,Vivian DeTour,“Is this some sort of sick joke? Who are you!? I’m calling the police.” *click* [end]
+1131211,Vivian DeTour,“Is this some sort of sick joke? Who are you!? I’m calling the police.” *click*[end]
 2,You,"You: “I’m a detective with Abra PD, is this Evan Banks’ mother?”"
 21,Vivian DeTour,“yes it is… is there some update with the case?”
 211,You,"You: “Yes, I just need to ask you some questions.”"
@@ -283,9 +283,9 @@ ID,TITLE,BODY
 2115,You,"You: “I have everything I need, thank you”"
 21151,Vivian DeTour,"“Wait wait wait, what’s the update?”"
 211511,You,"You: “We found a body, I don’t believe it’s Evan’s however.”"
-2115111,Vivian DeTour,“I hope you’re right then. Good bye.” *click* [end]
+2115111,Vivian DeTour,“I hope you’re right then. Good bye.” *click*[end]
 211512,You,"You: “We found a body, it may be Evan.”"
-2115121,Vivian DeTour,"“I– I– I’m coming to the station, you need me to identify it right? I’ll– oh my– one second–” *click* [end]"
+2115121,Vivian DeTour,"“I– I– I’m coming to the station, you need me to identify it right? I’ll– oh my– one second–” *click*[end]"
 212,You,"You: “Possibly, can you tell me about Evan?”"
 2121,Vivian DeTour,"“Sure I suppose… he worked at the dock here in Abra, which he hated. He’s much more interested in hiking and camping, that sort of thing.”"
 21211,Vivian DeTour,“What else do you want to know?”
@@ -326,17 +326,17 @@ ID,TITLE,BODY
 1111111,Renee Bondopulos,"“April 5th. He seemed excited, but also busy, so I didn’t want to bother him with questions. Didn’t see him around much that day, then the next day when he wasn’t at home I reported him missing.” [back11111] [unlock111114]"
 111112,You,“Does he own a brown fishing jacket?”
 1111121,Renee Bondopulos,"“He definitely could’ve, he owned a lot of fishing gear.” [back11111]"
-111113,You,“No further questions.” [end]
+111113,You,“No further questions.”[end]
 111114,You,[locked] “What was he busy doing?”
 1111141,Renee Bondopulos,"“Oh I dunno, he was digging through his closet when I looked in.” [back11111]"
 112,You,“I’m curious what you can tell me about Eugene Bondopulos.”
-1121,Renee Bondopulos,“No thanks.” *click* [end]
+1121,Renee Bondopulos,“No thanks.” *click*[end]
 2,You,"“Hello, I just have a few questions about Eugene Bondopulos.”"
 21,Renee Bondopulos,“Why? Who are you?”
 211,You,"“I’m a detective, I just need to get some more information about your father.”"
 2111,Renee Bondopulos,“Very well I suppose.” [back11111]
 212,You,"“That’s not important, just answer my questions.”"
-2121,Renee Bondopulos,"“Mmmm. No, and don’t call back.” [end]"
+2121,Renee Bondopulos,"“Mmmm. No, and don’t call back.”[end]"
 3,You,"“This is the Abra Police Department, do you have a moment?”"
 31,Renee Bondopulos,“Why?”
 311,You,“I was hoping you could answer some questions about your father.”
@@ -347,7 +347,7 @@ ID,TITLE,BODY
 311121,Renee Bondopulos,"“Oh all the time. He was a fisher, and even when he wasn’t at work, all he wanted to do was fish.” [back3111]"
 31113,You,“Does your father own a brown fishing jacket?”
 311131,Renee Bondopulos,"“Probably. I don’t know for sure, but he had all sorts of fishing gear.” [back3111]"
-31114,You,"“That’s all, thanks for your help.” [end]"
+31114,You,"“That’s all, thanks for your help.”[end]"
 312,You,“I’m working a case and need to ID the victim.”
 3121,Renee Bondopulos,“You think it may be my father?”
 31211,Renee Bondopulos,“...what do you need to know?”
@@ -359,9 +359,9 @@ ID,TITLE,BODY
 3121131,Renee Bondopulos,"“Probably. I don’t know for sure, but he had all sorts of fishing gear.” [back31211]"
 312114,You,"“That’s all, thanks for your help.”"
 3121141,Renee Bondopulos,"“Wait, is that enough? Is it… did you find Dad?”"
-31211411,You,"“It’s not him, don’t worry.” [end]"
-31211412,You,"“Possibly, we’ll be in touch.” [end]"
-31211413,You,"“Unfortunately it’s likely, someone from the department will call you soon.” [end]"
+31211411,You,"“It’s not him, don’t worry.”[end]"
+31211412,You,"“Possibly, we’ll be in touch.”[end]"
+31211413,You,"“Unfortunately it’s likely, someone from the department will call you soon.”[end]"
 @0,Carter Plank,"“Hello, who is this?”"
 1,You,"You: “I’m just calling from the Abra Police Department, got a few questions.”"
 11,Carter Plank,“I’m not in trouble am I?”
@@ -377,7 +377,7 @@ ID,TITLE,BODY
 11114,You,You: “Does he own a boat?”
 111141,Carter Plank,"“I think so, yeah yeah he’s talked about it before.” [back1111]"
 11115,You,You: “I think I have everything”
-111151,Carter Plank,“Hope I was some help.” [end]
+111151,Carter Plank,“Hope I was some help.”[end]
 11116,You,[locked] You: “Do you think he might have any other jobs?”
 111161,Carter Plank,"“I mean, probably, guy’s gotta pay the bills right?” [back1111]"
 112,You,You: “Not unless you did something illegal.”
@@ -399,7 +399,7 @@ ID,TITLE,BODY
 11314,You,You: “Does he own a boat?”
 113141,Carter Plank,"“Sure does, dunno how he’d– y'know, be a fisherman without one.” [back1131]"
 11315,You,You: “I think that’s enough”
-113151,Carter Plank,"“I’m good, right?” [end]"
+113151,Carter Plank,"“I’m good, right?”[end]"
 2,You,"You: “I’m a detective, is this Carter Plank?”"
 21,Carter Plank,“Mmmmmmyyesss?”
 211,You,"You: “I’ve just got a few questions about your uncle, Timothy Plank.”"
@@ -420,7 +420,7 @@ ID,TITLE,BODY
 311131,Carter Plank,“I would assume so. He’s got all that sorta stuff.” [back3111]
 31114,You,You: “Does your uncle own a boat?”
 311141,Carter Plank,“Sure does. I don’t think it’s anything fancy though.” [back3111]
-31115,You,You: “That’s everything.” [end]
+31115,You,You: “That’s everything.”[end]
 312,You,You: “It’s about your uncle.”
 3121,Carter Plank,“Oh? Is there any news about him?”
 31211,You,"You: “Maybe, I just have a few questions.” [back1111]"
@@ -444,7 +444,7 @@ ID,TITLE,BODY
 111111141,Daisy Beebug,"“Mhm. It’s– kind of falling apart, but she loves it.” [back1111111]"
 11111115,You,"“That’s all, thanks for your help.”"
 111111151,Daisy Beebug,"“You’ll call me if you find her, right?”"
-1111111511,You,“You’ll be notified immediately” [end]
+1111111511,You,“You’ll be notified immediately”[end]
 11111116,You,[locked] “What sort of side gigs?”
 111111161,Daisy Beebug,"“Ohhh– tours occasionally, she sometimes takes people or packages to Pettiget.” [back1111111]"
 111112,You,"“We’re working on it, I’m sure she’s okay, I just have some questions for you.” [back1111111]"
@@ -468,7 +468,7 @@ ID,TITLE,BODY
 21113121,Daisy Beebug,"“Okayyy… well, no, she doesn’t have one.” [back2111]"
 21114,You,“Does Tara own a boat?”
 211141,Daisy Beebug,"“Mhm! Just a little thing, but it’s her pride and joy.” [back2111]"
-21115,You,"“That’s everything, thanks for your time.” [end]"
+21115,You,"“That’s everything, thanks for your time.”[end]"
 212,You,“I’m a detective.”
 2121,Daisy Beebug,“Oh! Have you found her? Do you have a lead?”
 21211,You,“We’re working on it.”

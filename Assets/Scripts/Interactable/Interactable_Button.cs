@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using System;
@@ -8,7 +9,8 @@ public class Interactable_Button : Interactable
 {
 
     public ButtonType btn_type = ButtonType.SPAWN;
-    public bool is3D = false;
+    public bool is3D = true;
+    public AudioClip myClip;
     private MeshRenderer[] meshes;
     //private Material mat;
     private Material[] mats;
@@ -26,8 +28,9 @@ public class Interactable_Button : Interactable
 
     [Header("Travel Button Settings")]
     public LocationManager destination;
-    public LocationManager thisLocation;
-    public Cutscene travelCutscene;
+    public e_Scene destinationScene;
+    //public LocationManager thisLocation;
+    
 
     [Header("Spawn Button Settings")]
     public GameObject noteToSpawn;
@@ -184,7 +187,7 @@ public class Interactable_Button : Interactable
 
     public override void Interact()
     {
-        //SoundManager.instance.PlaySound(mySound);
+        SoundManager.instance.PlaySFX(myClip);
 
         switch(btn_type)
         {
@@ -202,6 +205,13 @@ public class Interactable_Button : Interactable
                 }
                 break;
             }
+
+            case ButtonType.SPAWN_STICKY:
+            {
+                GameObject obj = Instantiate(noteToSpawn, noteSpawnPoint.position + new Vector3(0,0, -0.1f), Quaternion.identity, GetComponentInParent<TempNode>().transform);
+                obj.GetComponentInChildren<Canvas>().worldCamera = GameManager.instance.currentView.myCamera;
+                break;
+            }
             
             case ButtonType.PAGE:
             {
@@ -214,7 +224,7 @@ public class Interactable_Button : Interactable
                 {
                     note.PageTurn_Right();
                 }
-
+                SoundManager.instance.PlaySFX(GameData.instance.pageTurn);
 //                Debug.Log("turn page");
                 break;
             }
@@ -228,16 +238,16 @@ public class Interactable_Button : Interactable
 
             case ButtonType.TRAVEL:
             {
-
+                
                 /*
                 for(int i = 0; i < TempNode.instance.transform.childCount; i++)
                 {
                     Destroy(TempNode.instance.transform.GetChild(i).gameObject);
                 }
                 */
-
-                GameManager.instance.Travel(destination);
-                travelCutscene.StartCutscene(destination.gameObject);
+                
+                GameManager.instance.travelCutscene.StartCutscene();
+                GameManager.instance.Travel(destinationScene);
                 
                 break;
             }
@@ -264,7 +274,7 @@ public class Interactable_Button : Interactable
             {
                 lineDrawer = GameManager.instance.SpawnLineDrawer();
 
-                lineDrawer.SetPoint(0, PlayerInput.instance.GetConvertedMousePos());
+                lineDrawer.SetPoint(0, transform.position);
 
 
                 break;
@@ -345,5 +355,5 @@ public class Interactable_Button : Interactable
 
 public enum ButtonType
 {
-    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE, CHANGE_VIEW, MONOLOGUE
+    SPAWN, PAGE, DESTROY_NOTE, TRAVEL, DIALOGUE, TACK, TOGGLE, SOLVE_CASE, CHANGE_VIEW, MONOLOGUE, SPAWN_STICKY
 }
