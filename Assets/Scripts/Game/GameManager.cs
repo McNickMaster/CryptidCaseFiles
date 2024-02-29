@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public List<Milestone> completedMilestones = new List<Milestone>();
 
     public UnityEvent event_StartGameLoad = new UnityEvent();
+    public bool loadFirstScene = true;
 
     void OnEnable()
     {
@@ -43,7 +44,10 @@ public class GameManager : MonoBehaviour
 
         LoadSave();
 
-        //sceneLoad.LoadFirstScene("OFFICE");
+        if(loadFirstScene)
+        {
+            sceneLoad.LoadFirstScene("OFFICE");
+        }
 
         currentCase = cases[0];
 
