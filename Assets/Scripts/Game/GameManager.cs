@@ -1,25 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 using System;
 
 public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
+    [Header("Modules")]
+    public GameData gameData;
+    public SceneLoadHelper sceneLoad;
+    public DialogueLoader dialogueLoader;
     public LocationManager currentLocation;
+    public Scene currentScene;
+    public Cutscene travelCutscene;
     public View currentView;
     public View[] views;
     public GameObject lineDrawer;
     public GameObject winScreen, loseScreen;
     public CaseFile caseFileObj;
     public Case[] cases;
-    private Case currentCase;
+    public Case currentCase;
     private Case currentGuess;
     private int caseIndex;
 
     [Header("Debug")]
     public List<Milestone> completedMilestones = new List<Milestone>();
+
+    public UnityEvent event_StartGameLoad = new UnityEvent();
+    public bool loadFirstScene = true;
 
     void OnEnable()
     {
@@ -29,18 +40,21 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
+        
+
         LoadSave();
 
-
-        currentLocation = FindObjectOfType<LocationManager>();
+        if(loadFirstScene)
+        {
+            sceneLoad.LoadFirstScene("OFFICE");
+        }
 
         currentCase = cases[0];
 
-        if(currentView == null)
-        {
-            currentView = currentLocation.defaultView;
-        }
-            
+        //Invoke("LoadStartingDialogue", 0.5f);
+        
+        //currentLocation = FindObjectOfType<LocationManager>();
+       
     }
 
     // Start is called before the first frame update
@@ -52,41 +66,85 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /*
         if(Input.GetKeyDown(KeyCode.R))
         {
             ResetWinLoss();
-        }
+        }*/
         if(Input.GetKeyDown(KeyCode.F))
         {
-            SaveGame();
+           // SaveGame();
+           //Setup();
+           Travel(e_Scene.OFFICE);
         }
+        
     }
+/*
+    public void SetNewLocation(LocationManager location)
+    {
+        currentLocation = location;
+
+
+        if(currentView == null)
+        {
+            currentView = currentLocation.defaultView;
+        }
+
+        PlayerInput.instance.UpdateBackplane(currentView.myBackPlane);
+    }
+    */
+
+    public void SetNewLocation(e_Scene newScene)
+    {
+        SceneLoadHelper.instance.LoadNewScene(currentScene, 
+            SceneManager.GetSceneByName(newScene.ToString()));
+
+
+    }
+
+    public void SetNewView(View view)
+    {
+        
+        if(currentView == null)
+        {
+            currentView = currentLocation.defaultView;
+        }
+
+        PlayerInput.instance.UpdateBackplane(currentView.myBackPlane);
+    }
+
+    
+    
 
     public void Travel(LocationManager destination)
     {
         
-        currentLocation.gameObject.SetActive(false);
-        currentLocation = destination;
+        //currentLocation.gameObject.SetActive(false);
+        //currentLocation = destination;
 
         SetView(currentLocation.defaultView);
     }
 
+    public void Travel(e_Scene destination_enum)
+    {
+        sceneLoad.LoadNewScene(destination_enum.ToString());
+    }
+
+    public void TravelToDest()
+    {
+        sceneLoad.LoadNewScene(currentCase.crimeScene.ToString());
+    }
+
     public void TrySolveCase()
     {
-        currentGuess = caseFileObj.GetGuess();
+        currentGuess = CaseFile.instance.GetGuess();
 
-        if (currentCase.SolveCase(currentGuess))
-        {
-            //NextCase();
-            Win();
-        }
-        else
-        {
-            Lose();
-        }
+        PhoneManager.instance.Trigger_CaseSolved(currentCase.SolveCase(currentGuess));
+
+        NextCase();
 
     }
+
 
     void SetNewCase(Case newCase)
     {
@@ -96,17 +154,23 @@ public class GameManager : MonoBehaviour
     void NextCase()
     {
         caseIndex++;
-//        SetNewCase(cases[caseIndex]);
+
+        if(caseIndex>=cases.Length)
+        {
+
+        } else 
+        {
+            
+            SetNewCase(cases[caseIndex]);
+            CaseFile.instance.ResetCaseFile();
+        }
     }
 
-    public void Win()
+    
+    public void LoadStartingDialogue()
     {
-        winScreen.SetActive(true);
-    }
-
-    public void Lose()
-    {
-        loseScreen.SetActive(true);
+       dialogueLoader.LoadMonologue(""+gameData.startingPhonecall.order);
+       dialogueLoader.StartMonologue();
     }
 
     public void ResetWinLoss()
@@ -145,7 +209,12 @@ public class GameManager : MonoBehaviour
 
         } else 
         {
+            
             completedMilestones.Add(m);
+            string[] temp = m.ToString().Split('_');
+            string title = temp[0], id = temp[1];
+            
+            EvidencePopup.instance.Spawn(title, id);
         }
     }
     public void AddMilestone(string milestoneID)
@@ -167,7 +236,7 @@ public class GameManager : MonoBehaviour
 
         } catch (Exception e)
         {
-            Debug.Log(e);
+            Debug.Log("save file not found");
         }
     }
 
@@ -188,12 +257,12 @@ public enum CauseOfDeath
 public enum Milestone
 {
 
-    EVIDENCE_C1_1, EVIDENCE_C1_2, EVIDENCE_C1_3, EVIDENCE_C1_4, EVIDENCE_C1_5, 
+    EVIDENCE_FOOTPRINTS, EVIDENCE_FEATHERS, EVIDENCE_C1_3, EVIDENCE_C1_4, EVIDENCE_C1_5, 
     EVIDENCE_C2_1, EVIDENCE_C2_2, EVIDENCE_C2_3, EVIDENCE_C2_4, EVIDENCE_C2_5, 
     EVIDENCE_C3_1, EVIDENCE_C3_2, EVIDENCE_C3_3, EVIDENCE_C3_4, EVIDENCE_C3_5, 
     EVIDENCE_C4_1, EVIDENCE_C4_2, EVIDENCE_C4_3, EVIDENCE_C4_4, EVIDENCE_C4_5, 
     EVIDENCE_C5_1, EVIDENCE_C5_2, EVIDENCE_C5_3, EVIDENCE_C5_4, EVIDENCE_C5_5, 
-    PUZZLEFOUND,
+    ITEM_PUZZLE,
     CS1_DONE, CS2_DONE, CS3_DONE, CS4_DONE, CS5_DONE
 
 

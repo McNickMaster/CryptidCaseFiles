@@ -9,11 +9,12 @@ public class Cutscene : MonoBehaviour
     private GameObject destination;
     public Animation cutscene;
 
-    public bool flag_cutscene_done = false;
+    public bool flag_cutscene_done = true;
 
     // Start is called before the first frame update
     void Awake()
     {
+        flag_cutscene_done = true;
     }
 
     // Update is called once per frame
@@ -26,17 +27,17 @@ public class Cutscene : MonoBehaviour
     }
 
 
-    public void StartCutscene(GameObject destination)
+    public void StartCutscene()
     {
         cutscene.Play();
-        this.destination = destination;
     }
 
 
     private void EndCutscene()
     {
-        destination.SetActive(true);
+        //destination.SetActive(true);
         cutsceneObj.SetActive(false);
         PlayerInput.instance.UpdateBackplane();
+
     }
 }

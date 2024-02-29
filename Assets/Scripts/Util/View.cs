@@ -10,7 +10,6 @@ public class View : MonoBehaviour
 
     public Transform TL, BR;
 
-
     // Start is called before the first frame update
     void Start()
     {

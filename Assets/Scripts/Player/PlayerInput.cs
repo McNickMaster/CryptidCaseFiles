@@ -23,6 +23,7 @@ public class PlayerInput : MonoBehaviour
     private Vector3 mousePosOnClick = Vector3.zero;
     private Notes noteInteracted;
     private Interactable_PuzzleObject puzzleInteracted;
+    private Interactable_StickyNote stickyInteracted;
 
     public LayerMask defaultMask, interactMask;
 
@@ -47,7 +48,7 @@ public class PlayerInput : MonoBehaviour
         if(inUI)
         {
 
-        } else 
+        } else if(GameManager.instance.currentView != null && GameManager.instance.travelCutscene.flag_cutscene_done)
         {
             HandleMouse();
         }
@@ -88,7 +89,7 @@ public class PlayerInput : MonoBehaviour
 
     void HandleMouse()
     {
-
+        
         if(Input.GetMouseButtonDown(0))
         {
             MouseClick();
@@ -154,6 +155,10 @@ public class PlayerInput : MonoBehaviour
             {
                 puzzleInteracted.Disable();
             }
+            if(stickyInteracted!=null)
+            {
+                stickyInteracted.Disable();
+            }
 
             objectInteracted.GetComponentInChildren<Collider>().enabled = false;
 
@@ -174,6 +179,10 @@ public class PlayerInput : MonoBehaviour
         if(puzzleInteracted!=null)
         {
             puzzleInteracted.Enable();
+        }
+        if(stickyInteracted!=null)
+        {
+            stickyInteracted.Enable();
         }
         //objectInteracted.layer = LayerMask.GetMask("IgnoreRaycast");
         objectInteracted = null;
@@ -198,7 +207,11 @@ public class PlayerInput : MonoBehaviour
 
     public void UpdateBackplane()
     {
-        backPlane = GameObject.FindWithTag("Backplane").transform;
+       // backPlane = GameObject.FindWithTag("Backplane").transform;
+    }
+    public void UpdateBackplane(Transform plane)
+    {
+        backPlane = plane;
     }
 
     void ToggleNotebook()
@@ -233,6 +246,7 @@ public class PlayerInput : MonoBehaviour
                         objectInteracted = interacted.gameObject.gameObject;
                         noteInteracted = interacted.GetComponent<Notes>();
                         puzzleInteracted = interacted.GetComponent<Interactable_PuzzleObject>();
+                        stickyInteracted = interacted.GetComponent<Interactable_StickyNote>();
                         if(puzzleInteracted != null)
                         {
                             

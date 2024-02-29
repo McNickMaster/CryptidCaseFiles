@@ -86,7 +86,7 @@ public static class SaveLoadData
             return data;
         } else
         {
-            Debug.LogError("Error: Save file not found in " + path);
+            Debug.LogError("Error: Text data file not found in " + path);
             return null;
         }
     }

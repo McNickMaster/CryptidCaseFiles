@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class LocationManager : MonoBehaviour
 {
+    public static LocationManager instance;
     public View defaultView;
     //public Light myDirectional;
     
+    void Awake()
+    {
+        GameManager.instance.currentLocation = this;
+        GameManager.instance.SetNewView(defaultView);
+        
+    }
+
+    void Load()
+    {
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
