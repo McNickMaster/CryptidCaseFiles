@@ -2993,6 +2993,7 @@ GameObject:
   - component: {fileID: 1480938467}
   - component: {fileID: 1480938466}
   - component: {fileID: 1480938465}
+  - component: {fileID: 1480938469}
   - component: {fileID: 1480938464}
   - component: {fileID: 1480938463}
   - component: {fileID: 1480938462}
@@ -3075,6 +3076,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileName: test4
   simpleTextData:
+  - {fileID: 11400000, guid: b5087c13ae5d4a649848f78e772790ad, type: 2}
+  - {fileID: 11400000, guid: e4639262481948b4396d1fa59a93246c, type: 2}
   - {fileID: 11400000, guid: 53bf0770d491f11468da11080be74409, type: 2}
   - {fileID: 11400000, guid: 3cb5ea1fdfdc8334eafb6e2072de9302, type: 2}
   - {fileID: 11400000, guid: 80d8cdcdc5f7f4543ac459730b1b4192, type: 2}
@@ -3158,8 +3161,8 @@ MonoBehaviour:
   sceneLoad: {fileID: 1480938468}
   dialogueLoader: {fileID: 1480938463}
   currentLocation: {fileID: 0}
-  currentScene:
-    m_Handle: 0
+  startScene: 0
+  currentScene: 0
   travelCutscene: {fileID: 516906522}
   currentView: {fileID: 0}
   views:
@@ -3211,6 +3214,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d132ce758f505e41a5cf0aeb7398684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1480938469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480938461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03347492e92cb74c886fb7a612ca2a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event_FirstEvidence:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_FirstNPC:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_EnterCrimeScene1:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1480938463}
+        m_TargetAssemblyTypeName: DialogueLoader, Assembly-CSharp
+        m_MethodName: LoadMonologue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1480938463}
+        m_TargetAssemblyTypeName: DialogueLoader, Assembly-CSharp
+        m_MethodName: StartMonologue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Event_EnterOffice:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1480938463}
+        m_TargetAssemblyTypeName: DialogueLoader, Assembly-CSharp
+        m_MethodName: LoadMonologue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 0
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1480938463}
+        m_TargetAssemblyTypeName: DialogueLoader, Assembly-CSharp
+        m_MethodName: StartMonologue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  scenesLoadedBefore: []
 --- !u!1 &1500266517
 GameObject:
   m_ObjectHideFlags: 0

@@ -344,7 +344,10 @@ public class DialogueLoader : MonoBehaviour
     }
 
 
-
+    void OnDisable()
+    {
+        EndConversation();
+    }
 
 
 
