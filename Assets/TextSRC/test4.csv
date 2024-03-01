@@ -40,7 +40,7 @@ ID,TITLE,BODY
 31111,Eric Meng,"“I notice his gun there too, but I wonder why he doesn’t have the rest of his equipment.”[back31]"
 312,You,“Anything strange stick out to you?”
 3121,Eric Meng,"“Those footprints do, they start and stop without warning, and they definitely don’t look human”"
-31211,Eric Meng,"“Maybe it’s got other means of getting around.”[getEVIDENCE_FOOTPRINTS][back31]"
+31211,Eric Meng,“Maybe it’s got other means of getting around.”[getEVIDENCE_FOOTPRINTS][back31]
 313,You,"“Actually, I think I got all I need”[end]"
 @0,Officer Jameson,“Good evening Detective.”
 1,You,"“You were the first officer on scene, correct?”"
@@ -66,7 +66,7 @@ ID,TITLE,BODY
 21311,You,“Who called it in?”
 213111,Officer Jameson,"“Oh I dunno, some local driver. Doubt he stuck around”[back2131]"
 21312,You,“What’d you see when you got here?”
-213121,Officer Jameson,"“All this, just darker. Oh, and the driver was alive I suppose.”[back2131][unlock2135]"
+213121,Officer Jameson,"“All this, just darker. Oh, and the driver was alive I suppose.”[back2131][unlock21315]"
 21313,You,“When did you get here?”
 213131,Officer Jameson,“Sometime around 1:30”[back2131]
 21314,You,"“That’s all for now, thanks”[end]"
@@ -175,7 +175,7 @@ ID,TITLE,BODY
 311311,Old Sailor,“The trip across the lake ain’t really viable.”[back311]
 312,You,“I was wondering if you had any insights?”
 3121,Old Sailor,“Insights into what? The wreck? Oh jeez I dunno”
-31211,You,“Just– tell me if you know anything useful”
+31211,You,“Just tell me if you know anything useful”
 312111,Old Sailor,"“Ah heck, I dunno what you’d think is useful. That’s a gillnetter there, doesn’t go far, so I dunno what could’ve wrecked it. Nothin’ between here and Pettiget ever really attacks us sailors”[back3121][unlock31214]"
 31212,You,"""Any clue what caused the wreck?”"
 312121,Old Sailor,"“I mean that’s some nasty damage to the hull, no ordinary crash I can tell you that!”[back3121]"
