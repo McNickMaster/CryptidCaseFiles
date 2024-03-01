@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
 
     public void SetNewLocation(e_Scene newScene)
     {
+        
         SceneLoadHelper.instance.LoadNewScene(SceneManager.GetSceneByName(currentScene.ToString()), 
             SceneManager.GetSceneByName(newScene.ToString()));
         
@@ -120,6 +121,7 @@ public class GameManager : MonoBehaviour
     
     public void TravelOffice()
     {
+        
         Travel(e_Scene.OFFICE); 
     }
 
@@ -134,12 +136,14 @@ public class GameManager : MonoBehaviour
 
     public void Travel(e_Scene destination_enum)
     {
+        travelCutscene.StartCutscene();
         sceneLoad.LoadNewScene(destination_enum.ToString());
         currentScene = destination_enum;
     }
 
     public void TravelToDest()
     {
+        travelCutscene.StartCutscene();
         e_Scene destination;
 
         if(currentScene.ToString().Equals("OFFICE"))
@@ -180,9 +184,10 @@ public class GameManager : MonoBehaviour
         } else 
         {
             
-            SetNewCase(cases[caseIndex]);
-            CaseFile.instance.ResetCaseFile();
-            currentCase.Setup();
+            //SetNewCase(cases[caseIndex]);
+            //CaseFile.instance.ResetCaseFile();
+            //currentCase.Setup();
+            //CaseFile.instance.SetCase(currentCase);
         }
     }
 
@@ -289,12 +294,12 @@ public class GameManager : MonoBehaviour
 [Serializable]
 public enum Culprit
 {
-    NONSUPERNATURAL, MOTHMAN, WEREWOLF
+    NONSUPERNATURAL, MOTHMAN, WEREWOLF, KRAKEN, MAHAMBA, SKEL
 }
 [Serializable]
 public enum CauseOfDeath
 {
-    HEARTATTACK, BLEED, POISONED
+    HEARTATTACK, BLEED, POISONED, NPC1, NPC2, NPC3, NPC4, NPC5
 }
 
 [Serializable]
@@ -308,7 +313,9 @@ public enum Milestone
     EVIDENCE_C5_1, EVIDENCE_C5_2, EVIDENCE_C5_3, EVIDENCE_C5_4, EVIDENCE_C5_5, 
     CAUSE_BLEED, CAUSE_HEARTATTACK, CULP_MOTHMAN, CULP_WEREWOLF,
     ITEM_PUZZLE,
-    CS1_DONE, CS2_DONE, CS3_DONE, CS4_DONE, CS5_DONE
+    CS1_DONE, CS2_DONE, CS3_DONE, CS4_DONE, CS5_DONE,
+    CULP_KRAKEN, CULP_MAHAMBA, CULP_SKEL, 
+    CAUSE_NPC1, CAUSE_NPC2, CAUSE_NPC3, CAUSE_NPC4, CAUSE_NPC5
 
 
 

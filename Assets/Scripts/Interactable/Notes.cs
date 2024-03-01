@@ -20,7 +20,7 @@ public class Notes : Interactable
     private int currentTextIndex = 0;
     private Rigidbody rb;
 
-    string milestoneID;
+    string milestoneID = "";
     
 
     // Start is called before the first frame update
@@ -116,7 +116,7 @@ public class Notes : Interactable
         //if at end
         if(currentTextIndex == textSlides.Length - 1)
         {
-            if(milestoneID != "")
+            if(milestoneID != "" || milestoneID != " ")
             {
                 GameManager.instance.AddMilestone(milestoneID);
             

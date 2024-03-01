@@ -57,9 +57,10 @@ public class CaseFile : MonoBehaviour
         return caseGuess;
     }
 
-    public void SetCase()
+    public void SetCase(Case newCase)
     {
-
+        thisCase = newCase;
+        ResetCaseFile();
     }
 
     public void ResetCaseFile()

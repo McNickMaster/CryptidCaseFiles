@@ -18,7 +18,14 @@ public class Case : ScriptableObject
     {
         
         //culpritList = new List<Culprit>();
-        causeOfDeathList = new List<CauseOfDeath>();
+        if(causeOfDeathList.Contains(CauseOfDeath.NPC4))
+        {
+
+        } else 
+        {
+            causeOfDeathList = new List<CauseOfDeath>();
+
+        }
     }
     public void Init(Culprit culp, CauseOfDeath cause)
     {

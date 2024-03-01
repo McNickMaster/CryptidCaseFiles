@@ -96,7 +96,7 @@ public class PlayerInput : MonoBehaviour
 
     void HandleMouse()
     {
-
+        interacted = null;
 
         SendCastForHover();
         
