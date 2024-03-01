@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         }
 
         currentCase = cases[0];
+        currentCase.Setup();
 
         //Invoke("LoadStartingDialogue", 0.5f);
         
@@ -98,6 +99,7 @@ public class GameManager : MonoBehaviour
 
     public void SetNewLocation(e_Scene newScene)
     {
+        
         SceneLoadHelper.instance.LoadNewScene(SceneManager.GetSceneByName(currentScene.ToString()), 
             SceneManager.GetSceneByName(newScene.ToString()));
         
@@ -119,7 +121,8 @@ public class GameManager : MonoBehaviour
     
     public void TravelOffice()
     {
-        Travel(e_Scene.OFFICE);
+        
+        Travel(e_Scene.OFFICE); 
     }
 
     public void Travel(LocationManager destination)
@@ -133,12 +136,14 @@ public class GameManager : MonoBehaviour
 
     public void Travel(e_Scene destination_enum)
     {
+        travelCutscene.StartCutscene();
         sceneLoad.LoadNewScene(destination_enum.ToString());
         currentScene = destination_enum;
     }
 
     public void TravelToDest()
     {
+        travelCutscene.StartCutscene();
         e_Scene destination;
 
         if(currentScene.ToString().Equals("OFFICE"))
@@ -179,8 +184,10 @@ public class GameManager : MonoBehaviour
         } else 
         {
             
-            SetNewCase(cases[caseIndex]);
-            CaseFile.instance.ResetCaseFile();
+            //SetNewCase(cases[caseIndex]);
+            //CaseFile.instance.ResetCaseFile();
+            //currentCase.Setup();
+            //CaseFile.instance.SetCase(currentCase);
         }
     }
 
@@ -232,11 +239,35 @@ public class GameManager : MonoBehaviour
             string[] temp = m.ToString().Split('_');
             string title = temp[0], id = temp[1];
             
+            switch(title)
+            {
+                case "EVIDENCE":
+                {
+                    
+                    title = "Evidence";
+                    break;
+                }
+
+                case "CAUSE":
+                {
+                    currentCase.causeOfDeathList.Add(Enum.Parse<CauseOfDeath>(id));
+                    Debug.Log("parsing: " +id);
+                    title = "Cause Of Death";
+                    break;
+                }
+                case "CULP":
+                {
+
+                    title = "Culprit";
+                    break;
+                }
+            }
             EvidencePopup.instance.Spawn(title, id);
         }
     }
     public void AddMilestone(string milestoneID)
     {
+        Debug.Log("adding milestone: " + milestoneID);
         AddMilestone(Enum.Parse<Milestone>(milestoneID));
     }
     
@@ -263,12 +294,12 @@ public class GameManager : MonoBehaviour
 [Serializable]
 public enum Culprit
 {
-    NON_SUPERNATURAL, MOTHMAN, WEREWOLF
+    NONSUPERNATURAL, MOTHMAN, WEREWOLF, KRAKEN, MAHAMBA, SKEL
 }
 [Serializable]
 public enum CauseOfDeath
 {
-    HEART_ATTACK, BLED_OUT, POISONED
+    HEARTATTACK, BLEED, POISONED, NPC1, NPC2, NPC3, NPC4, NPC5
 }
 
 [Serializable]
@@ -280,8 +311,11 @@ public enum Milestone
     EVIDENCE_C3_1, EVIDENCE_C3_2, EVIDENCE_C3_3, EVIDENCE_C3_4, EVIDENCE_C3_5, 
     EVIDENCE_C4_1, EVIDENCE_C4_2, EVIDENCE_C4_3, EVIDENCE_C4_4, EVIDENCE_C4_5, 
     EVIDENCE_C5_1, EVIDENCE_C5_2, EVIDENCE_C5_3, EVIDENCE_C5_4, EVIDENCE_C5_5, 
+    CAUSE_BLEED, CAUSE_HEARTATTACK, CULP_MOTHMAN, CULP_WEREWOLF,
     ITEM_PUZZLE,
-    CS1_DONE, CS2_DONE, CS3_DONE, CS4_DONE, CS5_DONE
+    CS1_DONE, CS2_DONE, CS3_DONE, CS4_DONE, CS5_DONE,
+    CULP_KRAKEN, CULP_MAHAMBA, CULP_SKEL, 
+    CAUSE_NPC1, CAUSE_NPC2, CAUSE_NPC3, CAUSE_NPC4, CAUSE_NPC5
 
 
 
