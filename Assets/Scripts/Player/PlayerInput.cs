@@ -96,6 +96,9 @@ public class PlayerInput : MonoBehaviour
 
     void HandleMouse()
     {
+
+
+        SendCastForHover();
         
         if(Input.GetMouseButtonDown(0))
         {
@@ -126,9 +129,6 @@ public class PlayerInput : MonoBehaviour
             MouseDrag();
         }
 
-
-
-        SendCastForHover();
     }
 
 
@@ -316,6 +316,7 @@ public class PlayerInput : MonoBehaviour
         if(hit.transform != null && !_dragging)
         {
             interacted = hit.transform.GetComponent<Interactable>();
+            //Debug.Log("setting interacted");
 
             if(interacted != null)
             {
@@ -344,7 +345,10 @@ public class PlayerInput : MonoBehaviour
                         break;
                     }
                 }
-            } 
+            } else 
+            {
+                
+            }
             
             if((interacted == null && hoveredObject != null) || (interacted != null && hoveredObject != null && !interacted.gameObject.name.Equals(hoveredObject.name)))
             {  
@@ -354,6 +358,9 @@ public class PlayerInput : MonoBehaviour
             }
             
 
+        } else if(interacted != null)
+        {
+            //interacted = null;
         }
         
 

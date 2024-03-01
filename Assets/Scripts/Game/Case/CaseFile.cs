@@ -23,9 +23,14 @@ public class CaseFile : MonoBehaviour
     {
         instance = this;
         
+        
+        
+    }
+
+    void OnEnable()
+    {
+        
         ResetCaseFile();
-        
-        
     }
 
     // Start is called before the first frame update
@@ -62,7 +67,7 @@ public class CaseFile : MonoBehaviour
         Destroy(objectParent);
         objectParent = new GameObject("PolaroidParent");
         objectParent.transform.parent = GetComponentInParent<TempNode>().transform;
-        PopulateCulprits();
+        PopulateCulprits(); 
         PopulateCauses();
     }
 

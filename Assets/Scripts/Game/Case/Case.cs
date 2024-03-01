@@ -14,6 +14,12 @@ public class Case : ScriptableObject
     public List<Culprit> culpritList = new List<Culprit>();
     public List<CauseOfDeath> causeOfDeathList = new List<CauseOfDeath>();
     
+    public void Setup()
+    {
+        
+        //culpritList = new List<Culprit>();
+        causeOfDeathList = new List<CauseOfDeath>();
+    }
     public void Init(Culprit culp, CauseOfDeath cause)
     {
         culprit = culp;

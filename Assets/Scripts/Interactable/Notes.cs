@@ -20,7 +20,7 @@ public class Notes : Interactable
     private int currentTextIndex = 0;
     private Rigidbody rb;
 
-
+    string milestoneID;
     
 
     // Start is called before the first frame update
@@ -74,6 +74,17 @@ public class Notes : Interactable
         {
             DisablePageButtons();
         }
+
+        for(int i = 0; i < textSlides.Length; i++)
+        {
+            if(textSlides[i].Contains("[get"))
+            {
+                int index = textSlides[i].IndexOf("[get")+4;
+                milestoneID = textSlides[i].Substring(index, textSlides[i].Length - index - 1);
+                textSlides[i] = textSlides[i].Substring(0, textSlides[i].Length - milestoneID.Length - 5);
+            }
+        }   
+        
     }
 
     public void SetBodyTextToIndex(int i)
@@ -96,6 +107,20 @@ public class Notes : Interactable
         {
             currentTextIndex++;
             textBody.text = textSlides[currentTextIndex];
+        } else 
+        {
+            
+            
+        }
+
+        //if at end
+        if(currentTextIndex == textSlides.Length - 1)
+        {
+            if(milestoneID != "")
+            {
+                GameManager.instance.AddMilestone(milestoneID);
+            
+            }
         }
     }
 
