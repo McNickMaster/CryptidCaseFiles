@@ -1164,6 +1164,9 @@ MonoBehaviour:
   interacted: {fileID: 0}
   mousePosition3D: {x: 0, y: 0, z: 0}
   objectOffset: {x: 0, y: 0, z: 0}
+  _dragging: 0
+  inUI: 0
+  typing: 0
   defaultMask:
     serializedVersion: 2
     m_Bits: 3059
@@ -3161,8 +3164,8 @@ MonoBehaviour:
   sceneLoad: {fileID: 1480938468}
   dialogueLoader: {fileID: 1480938463}
   currentLocation: {fileID: 0}
-  startScene: 0
-  currentScene: 0
+  startScene: 2
+  currentScene: 2
   travelCutscene: {fileID: 516906522}
   currentView: {fileID: 0}
   views:
@@ -3226,6 +3229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03347492e92cb74c886fb7a612ca2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnableTutorialDialogue: 0
   Event_FirstEvidence:
     m_PersistentCalls:
       m_Calls: []

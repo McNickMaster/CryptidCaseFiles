@@ -27,18 +27,19 @@ ID,TITLE,BODY
 3,You,"“Hello, you have a minute?”"
 31,Old Sailor,"“Oh sure thing, d’ya need me for something?”"
 311,You,"""Just need you to answer some questions.”"
-3111,You,“What could’ve done this to a ship?”
-31111,Old Sailor,"“Oh there’s plenty that could’ve, but I dunno many that would’ve. No real reason for our beasties to attack us, we’re hardly worth the trouble to eat.”[back311]"
-3112,You,“What was this ship doing out there?”
-31121,Old Sailor,"“Coulda been just out fishing, but I don’t see any big nets prepared. They might have been doin’ some errands, lotta sailors get hired to transport things to and from Pettiget.”[back311]"
-3113,You,“Where would this ship have been sailing?”
-31131,Old Sailor,"“Either sittin’ out in the open water, or to Pettiget Island.”"
-311311,Old Sailor,“The trip across the lake ain’t really viable.”[back311]
+3111,Fred,"bug fix"
+31111,You,“What could’ve done this to a ship?”
+311111,Old Sailor,"“Oh there’s plenty that could’ve, but I dunno many that would’ve. No real reason for our beasties to attack us, we’re hardly worth the trouble to eat.”[back311]"
+31112,You,“What was this ship doing out there?”
+311121,Old Sailor,"“Coulda been just out fishing, but I don’t see any big nets prepared. They might have been doin’ some errands, lotta sailors get hired to transport things to and from Pettiget.”[back311]"
+31113,You,“Where would this ship have been sailing?”
+311131,Old Sailor,"“Either sittin’ out in the open water, or to Pettiget Island.”"
+3111311,Old Sailor,“The trip across the lake ain’t really viable.”[back311]
 312,You,“I was wondering if you had any insights?”
-3121,Old Sailor,“Insights into what? The wreck? Oh jeez I dunno”
+3121,Old Sailor,“Insights into what? The wreck? Oh jeez I dunno.”
 31211,You,“Just tell me if you know anything useful”
 312111,Old Sailor,"“Ah heck, I dunno what you’d think is useful. That’s a gillnetter there, doesn’t go far, so I dunno what could’ve wrecked it. Nothin’ between here and Pettiget ever really attacks us sailors”[back3121][unlock31214]"
-31212,You,"""Any clue what caused the wreck?”"
+31212,You,""Any clue what caused the wreck?""
 312121,Old Sailor,"“I mean that’s some nasty damage to the hull, no ordinary crash I can tell you that!”[back3121]"
 31213,You,“Nevermind.”[end]
 31214,You,[locked] “What sorts of things live between here and Pettiget?”

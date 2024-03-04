@@ -321,7 +321,7 @@ public class DialogueLoader : MonoBehaviour
     Branch FindBranch(string id)
     {
         Branch b = myBranches.Find(x => x.myPathOptions[0].firstSlide.ID == id);
-        Debug.Log("is branch found: " + (b != null));
+//        Debug.Log("is branch found: " + (b != null));
         return b;
 
     }
@@ -329,7 +329,7 @@ public class DialogueLoader : MonoBehaviour
     Path FindPath(string id)
     {
 
-        Debug.Log("looking for path with firstSlide id: " + id);
+//        Debug.Log("looking for path with firstSlide id: " + id);
         Path p = null;
 
             
