@@ -3095,6 +3095,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8c846c746f6023c4a84a80fb5014c868, type: 2}
   - {fileID: 11400000, guid: c8c3ac1b2e895cc479fec901d9e6cb6b, type: 2}
   - {fileID: 11400000, guid: 249eeddaf32b42e4faed942a4e2ab042, type: 2}
+  - {fileID: 11400000, guid: 43bce153359f55a45acb508ca6f88573, type: 2}
   data: []
   slides: []
   branches: []
@@ -3162,8 +3163,8 @@ MonoBehaviour:
   sceneLoad: {fileID: 1480938468}
   dialogueLoader: {fileID: 1480938463}
   currentLocation: {fileID: 0}
-  startScene: 0
-  currentScene: 0
+  startScene: 1
+  currentScene: 1
   travelCutscene: {fileID: 516906522}
   currentView: {fileID: 0}
   views:
@@ -3227,6 +3228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03347492e92cb74c886fb7a612ca2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnableTutorialDialogue: 0
   Event_FirstEvidence:
     m_PersistentCalls:
       m_Calls: []
