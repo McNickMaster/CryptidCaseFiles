@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameEvents : MonoBehaviour
 {
-
+    public bool EnableTutorialDialogue = false;
     public UnityEvent Event_FirstEvidence;
     public UnityEvent Event_FirstNPC;
     public UnityEvent Event_EnterCrimeScene1;
     public UnityEvent Event_EnterOffice;
+    
 
     [SerializeField]
     private List<string> scenesLoadedBefore = new List<string>();
@@ -34,7 +35,7 @@ public class GameEvents : MonoBehaviour
         if(scenesLoadedBefore.Contains(scene.name))
         {
 
-        } else 
+        } else if(EnableTutorialDialogue)
         {
             scenesLoadedBefore.Add(scene.name);
 

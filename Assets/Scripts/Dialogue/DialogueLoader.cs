@@ -336,10 +336,6 @@ public class DialogueLoader : MonoBehaviour
         p = currentBranch.myPathOptions.Find(p => p.firstSlide.ID == id);
     
         
-
-
-
-
         return p;
     }
 
