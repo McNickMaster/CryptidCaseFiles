@@ -4129,7 +4129,8 @@ namespace TMPro
 
             if (eventData.button != PointerEventData.InputButton.Right)
                 return;
-
+            
+            SendOnFocus();
             ActivateInputField();
         }
 

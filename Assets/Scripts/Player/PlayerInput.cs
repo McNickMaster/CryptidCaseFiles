@@ -18,6 +18,7 @@ public class PlayerInput : MonoBehaviour
     public Vector3 mousePosition3D, objectOffset = Vector3.zero;
     private Vector3 lastMousePos;
 
+    [SerializeField]
     private bool _dragging = false, inUI = false, typing = false;
 
     private Vector3 mousePosOnClick = Vector3.zero;
@@ -115,12 +116,12 @@ public class PlayerInput : MonoBehaviour
 
         if(Input.GetMouseButtonUp(0))
         {
-            _dragging = false;
             if(objectInteracted != null)
             {
                 StopDrag();
             }
             
+            _dragging = false;
             interacted = null;
         }
         
@@ -193,6 +194,7 @@ public class PlayerInput : MonoBehaviour
         }
         //objectInteracted.layer = LayerMask.GetMask("IgnoreRaycast");
         objectInteracted = null;
+        _dragging = false;
     }
 
     void SetObjectToBounds()
@@ -477,6 +479,11 @@ public class PlayerInput : MonoBehaviour
        // mousePosition3D = pos;
 
         return mousePosition3D;
+    }
+
+    void OnEnable()
+    {
+        _dragging = false;
     }
 
 }
