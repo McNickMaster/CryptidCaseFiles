@@ -1526,8 +1526,8 @@ MonoBehaviour:
   myClip: {fileID: 8300000, guid: 46545526fb181924591465cfb347afd0, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
-  hoverTint: {r: 0.9137255, g: 0.82966274, b: 0.82966274, a: 1}
-  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hoverTint: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
+  selectTint: {r: 0.6117647, g: 0.6117647, b: 0.6117647, a: 1}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -1910,8 +1910,8 @@ MonoBehaviour:
   myClip: {fileID: 8300000, guid: 46545526fb181924591465cfb347afd0, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
-  hoverTint: {r: 0.9137255, g: 0.82966274, b: 0.82966274, a: 1}
-  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hoverTint: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
+  selectTint: {r: 0.6117647, g: 0.6117647, b: 0.6117647, a: 1}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -3097,7 +3097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2a033b4f94d491447bc98154f8c959d1, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2a033b4f94d491447bc98154f8c959d1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3109,13 +3109,79 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2a033b4f94d491447bc98154f8c959d1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4219241086511883871}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a033b4f94d491447bc98154f8c959d1, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 2427076673556735024}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a033b4f94d491447bc98154f8c959d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2427076673556735025}
   m_SourcePrefab: {fileID: 100100000, guid: 2a033b4f94d491447bc98154f8c959d1, type: 3}
 --- !u!4 &2427076673556735022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2a033b4f94d491447bc98154f8c959d1, type: 3}
   m_PrefabInstance: {fileID: 2427076673556735021}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2427076673556735023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a033b4f94d491447bc98154f8c959d1, type: 3}
+  m_PrefabInstance: {fileID: 2427076673556735021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2427076673556735024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427076673556735023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  thisEnabled: 1
+  btn_type: 9
+  is3D: 1
+  myClip: {fileID: 0}
+  isVisible: 1
+  normalTint: {r: 1, g: 1, b: 1, a: 1}
+  hoverTint: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  selectTint: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+  hovering: 0
+  selected: 0
+  destination: {fileID: 0}
+  destinationScene: 0
+  noteToSpawn: {fileID: 0}
+  noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
+  pageButtonLeft: 0
+  dialogue: {fileID: 11400000, guid: d33d5cb125de12d4bac07cfcf00c8528, type: 2}
+  monologue: {fileID: 11400000, guid: 43bce153359f55a45acb508ca6f88573, type: 2}
+  objectToToggle: {fileID: 0}
+  state: 0
+  newView: {fileID: 0}
+--- !u!65 &2427076673556735025
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427076673556735023}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01780253, y: 0.02, z: 0.018302407}
+  m_Center: {x: -0.0010987321, y: 0.0005359058, z: -0.00035930876}
 --- !u!114 &2505174938607589523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3237,7 +3303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.764
+      value: 2.791
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3245,7 +3311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.121
+      value: 0.098
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4945,7 +5011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6453ed66b5d43034db377d180c8ddde2, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6453ed66b5d43034db377d180c8ddde2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5405,8 +5471,8 @@ MonoBehaviour:
   myClip: {fileID: 8300000, guid: 46545526fb181924591465cfb347afd0, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
-  hoverTint: {r: 0.9137255, g: 0.82966274, b: 0.82966274, a: 1}
-  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hoverTint: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
+  selectTint: {r: 0.6117647, g: 0.6117647, b: 0.6117647, a: 1}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -6588,7 +6654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3907263
+      value: 3.378
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6596,11 +6662,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.35355213
+      value: 0.378
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.32158828
+      value: 0.27366838
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6608,7 +6674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9468796
+      value: -0.9618241
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalRotation.z
@@ -6620,7 +6686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -142.482
+      value: -148.235
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -7891,8 +7957,8 @@ MonoBehaviour:
   myClip: {fileID: 8300000, guid: 46545526fb181924591465cfb347afd0, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
-  hoverTint: {r: 0.9137255, g: 0.82966274, b: 0.82966274, a: 1}
-  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hoverTint: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
+  selectTint: {r: 0.6117647, g: 0.6117647, b: 0.6117647, a: 1}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -8373,15 +8439,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.55
+      value: 1.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.09
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.4
+      value: 4.24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8719,7 +8785,7 @@ Transform:
   m_GameObject: {fileID: 1758704727005982773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.7, z: -0.16}
+  m_LocalPosition: {x: 0, y: -4.84, z: -0.16}
   m_LocalScale: {x: 9.212479, y: 1, z: 3.1752}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9328,43 +9394,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.764
+      value: 2.811
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.121
+      value: 0.066
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99977463
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.0135675175
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.0050177034
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.01553758
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 1.563
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -0.551
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 1.773
       objectReference: {fileID: 0}
     - target: {fileID: -4795165560744122111, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10119,8 +10185,8 @@ MonoBehaviour:
   myClip: {fileID: 8300000, guid: 800861ed37d09634e9924a0f8084cd90, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
-  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
-  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  hoverTint: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
+  selectTint: {r: 0.6117647, g: 0.6117647, b: 0.6117647, a: 1}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
