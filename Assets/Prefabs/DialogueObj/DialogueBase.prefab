@@ -67,15 +67,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: subject name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
-  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fdf59657a74fa0548bbc468ac0ec8662, type: 2}
+  m_sharedMaterial: {fileID: -7523512870174115772, guid: fdf59657a74fa0548bbc468ac0ec8662, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -227,6 +227,7 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 2
   is3D: 0
+  myClip: {fileID: 0}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
@@ -234,8 +235,7 @@ MonoBehaviour:
   hovering: 0
   selected: 0
   destination: {fileID: 0}
-  thisLocation: {fileID: 0}
-  travelCutscene: {fileID: 0}
+  destinationScene: 0
   noteToSpawn: {fileID: 0}
   noteSpawnPoint: {fileID: 0}
   textData: {fileID: 0}
@@ -435,8 +435,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: X
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ee032ab7ec4db444a5ae493f98abafd, type: 2}
+  m_sharedMaterial: {fileID: 1050345159512483225, guid: 4ee032ab7ec4db444a5ae493f98abafd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -569,8 +569,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: dialogue body :)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ee032ab7ec4db444a5ae493f98abafd, type: 2}
+  m_sharedMaterial: {fileID: 1050345159512483225, guid: 4ee032ab7ec4db444a5ae493f98abafd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
