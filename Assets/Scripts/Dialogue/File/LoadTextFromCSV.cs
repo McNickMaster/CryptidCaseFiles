@@ -128,8 +128,9 @@ public class LoadTextFromCSV : MonoBehaviour
         Debug.Log("end branches");
   
         //Debug.Log("size of tree: " + tree.Count);
+ 
+    
 
-/*
         Debug.Log("start branches");  
         foreach(Branch branch in branches)
         {
@@ -138,15 +139,15 @@ public class LoadTextFromCSV : MonoBehaviour
             {
                 if(path != null)
                 {
-                    Debug.Log("     " + path.firstSlide.ID + " " + path.firstSlide.Body);
+                    Debug.Log("     " + path.firstSlide.ID + " " + path.firstSlide.Body + " depth: " + path.slides.Length);
 
                 }
             }
             Debug.Log("end paths");
         }
         Debug.Log("end branches");
- */ 
 
+*/ 
 
 
 
@@ -326,25 +327,18 @@ okay so this function is just incorrect. it does not look at the rest of the str
     public List<List<KeyValuePair<int,int>>> FindAllBranches()
     {
         tree = new List<List<KeyValuePair<int,int>>>();
-        List<KeyValuePair<int,int>> root = FindBranchAt(0,0,data.Count,"");
+        List<KeyValuePair<int,int>> root = FindBranchAt(0,0,data.Count);
         tree.Add(root);
         List<KeyValuePair<int,int>> temp = new List<KeyValuePair<int,int>>();
 
         int startLine, endLine;
         
-        for(int j = 0; j < 8; j++)
+        //go by digit
+        for(int j = 0; j < 10; j++)
         {
+            //for each root branch we found
             for(int i = 0; i < root.Count; i++)
             {
-                
-                string s = "";
-                if(tree.Count > 1)
-                {
-                    s=root[i]+"";
-                } else 
-                {
-                    s=root[0].Value + "";
-                }
 
                 startLine = root[i].Key;
                 if(i+1 < root.Count)
@@ -355,40 +349,80 @@ okay so this function is just incorrect. it does not look at the rest of the str
                     endLine = data.Count;
                 }
 
-                temp = FindBranchAt(j, startLine, endLine, "" + s);
-//                Debug.Log("finding branches: " + root[i].Value + " " + s);
+                //Debug.Log("finding branches with substring: " + s);
+                //get a branch
+                temp = FindBranchAt(j, startLine, endLine);
 
                 if(temp == null)
                 {
 
                 } else 
                 {
-                    if(tree.Contains(temp) || IsTempElementInTree(tree, temp))
-                    {
-//                        Debug.Log("temp was already in tree: " + temp[0].Value);
-                    } else 
-                    {
-                        //tree.Add(temp);
-                    }
-
                     tree.Add(temp);
-                    
                 }
             }
         }
 
+        List<List<KeyValuePair<int,int>>> tempTree = new List<List<KeyValuePair<int,int>>>();
+
+        //k = depth
+        for(int depth = 0; depth < 5; depth++)
+        {
+            for(int j = 0; j < 10; j++)
+            {
+                foreach(List<KeyValuePair<int,int>> branch in tree)
+                {
+                    for(int i = 0; i < branch.Count; i++)
+                    {
+                        startLine = branch[i].Key;
+                        if(i+1 < branch.Count)
+                        { 
+                            endLine = branch[i+1].Key;
+                        } else 
+                        {
+                            endLine = data.Count;
+                        }
+
+                        temp = FindBranchAt(j, startLine, endLine);
+
+                        if(temp == null)
+                        {
+                            
+                        } else 
+                        {
+                            tempTree.Add(temp);
+                        }
+                        }
+                    
+                }
+
+            }
+        }
+
+        foreach(List<KeyValuePair<int,int>> branch in tempTree)
+        {
+            if(tree.Contains(branch))
+            {
+
+            } else 
+            {
+                tree.Add(branch);
+            }
+            
+        }
+
+        
 
         return tree;
     }
 
-    List<KeyValuePair<int,int>> FindBranchAt(int startDigit, int startLine, int endLine, string subString)
+    List<KeyValuePair<int,int>> FindBranchAt(int startDigit, int startLine, int endLine)
     { 
         List<KeyValuePair<int,int>> branch1 = new List<KeyValuePair<int,int>>();
         
         int max = -999;
         int pathAtI = 0;
         int pathsFoundInThisBranch = 0;
-
 
         //get digits line by line    
         for(int j = startLine; j < endLine; j++)
@@ -399,33 +433,49 @@ okay so this function is just incorrect. it does not look at the rest of the str
             {
                 //Debug.Log("too small");
             } else {
-                int x = Int32.Parse(id.Substring(startDigit, 1));
-                if(x > max)
+
+                int digit = Int32.Parse(id.Substring(startDigit, 1));
+
+
+                if(digit > max)
                 {
-                    max = x;
+                    max = digit;
                     pathAtI = startDigit;
                     //Debug.Log("start digit: " + startDigit + " id: " + id);
                     pathsFoundInThisBranch++;
+                    KeyValuePair<int, int> slide = new KeyValuePair<int, int>(j, Int32.Parse(id));
                     if(Int32.Parse(id) == 0)
                     {
 //                        Debug.Log("zero found");
-                    } else 
+                    } else if(branch1.Count < 1)
                     {
-                        KeyValuePair<int, int> pair = new KeyValuePair<int, int>(j, Int32.Parse(id));
                         
-                        bool check = true;
-                        if(GetAllButLastStr(id).Equals(subString))
-                        {
+                        branch1.Add(slide);  
+                    } else {
 
-                        } else if(id.Length > 1)
+                        bool check = false;
+                        foreach(KeyValuePair<int,int> b in branch1)
                         {
-                            //check = false;
+                            string s = b.Value + "";
+                            string stem = s.Substring(0, s.Length-1);
+                            string stem2 = id.Substring(0, id.Length-1);
+
+//                            Debug.Log("checking stems: " + stem + " " + stem2 + " result: " + stem.Equals(stem2));
+                            if(stem.Equals(stem2))
+                            {
+                                check = true;
+                            } else 
+                            {
+                                check = false;
+                            }
                         }
 
                         if(check)
                         {
-                          branch1.Add(pair);
+                            branch1.Add(slide); 
                         }
+                            
+                        
 
                         //Debug.Log("pair to add: " + pair.Key + " " + pair.Value);
                     }

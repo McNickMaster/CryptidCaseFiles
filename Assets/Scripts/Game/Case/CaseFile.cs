@@ -7,9 +7,11 @@ public class CaseFile : MonoBehaviour
     public static CaseFile instance;
     public Culprit culpritGuess;
     public CauseOfDeath causeOfDeathGuess;
+    public Victim victimGuess;
 
     public GameObject culpritPicture;
     public GameObject causePicture;
+    public GameObject victimPicture;
 
     public Case thisCase;
 
@@ -53,7 +55,7 @@ public class CaseFile : MonoBehaviour
     public Case GetGuess()
     {
         Case caseGuess = ScriptableObject.CreateInstance<Case>();
-        caseGuess.Init(culpritGuess, causeOfDeathGuess);
+        caseGuess.InitGuess(culpritGuess, causeOfDeathGuess, victimGuess);
         return caseGuess;
     }
 
@@ -70,6 +72,7 @@ public class CaseFile : MonoBehaviour
         objectParent.transform.parent = GetComponentInParent<TempNode>().transform;
         PopulateCulprits(); 
         PopulateCauses();
+        PopulateVictims();
     }
 
     public void PopulateCulprits()
@@ -84,6 +87,7 @@ public class CaseFile : MonoBehaviour
             string objName = ConvertPhotoEnumToObj(thisCase.culpritList[i].ToString());
             for(int j = 0; j < GameData.instance.CULPRIT_MUGSHOTS.Length; j++)
             {
+                Debug.Log("looking for: " + objName + " from: " + GameData.instance.CULPRIT_MUGSHOTS[j].name);
                 if(GameData.instance.CULPRIT_MUGSHOTS[j].name.Equals(objName))
                 {
                     
@@ -103,10 +107,30 @@ public class CaseFile : MonoBehaviour
             string objName = ConvertPhotoEnumToObj(thisCase.causeOfDeathList[i].ToString());
             for(int j = 0; j < GameData.instance.CAUSE_MUGSHOTS.Length; j++)
             {
+                Debug.Log("looking for: " + objName);
                 if(GameData.instance.CAUSE_MUGSHOTS[j].name.Equals(objName))
                 {
                     
                     Instantiate(GameData.instance.CAUSE_MUGSHOTS[j], GetRandomPointWithinSpawn(), Quaternion.identity, objectParent.transform);
+                }
+            }
+        }
+    }
+
+    public void PopulateVictims()
+    {
+        int victAmount = thisCase.victimList.Count;
+        
+        for(int i = 0; i < victAmount; i++)
+        {
+            string objName = ConvertPhotoEnumToObj(thisCase.victimList[i].ToString());
+            for(int j = 0; j < GameData.instance.VICTIM_MUGSHOTS.Length; j++)
+            {
+                Debug.Log("looking for: " + objName);
+                if(GameData.instance.VICTIM_MUGSHOTS[j].name.Equals(objName))
+                {
+                    
+                    Instantiate(GameData.instance.VICTIM_MUGSHOTS[j], GetRandomPointWithinSpawn(), Quaternion.identity, objectParent.transform);
                 }
             }
         }
@@ -162,6 +186,18 @@ public class CaseFile : MonoBehaviour
                 causeOfDeathGuess = interactable.myCauseOfDeath;
                 causePicture = interactable.gameObject;
             }
+
+            if(interactable.victimPhoto)
+            {
+                if(victimPicture != null && victimPicture != parentObj)
+                {
+                    victimPicture.transform.position = GetRandomPointWithinSpawn();
+                }
+
+
+                victimGuess = interactable.myVictim;
+                victimPicture = interactable.gameObject;
+            }
         }
     }
 
@@ -183,13 +219,22 @@ public class CaseFile : MonoBehaviour
 
                 //causePicture = null;
             }
+            
+            if(interactable.victimPhoto)
+            {
+
+                //causePicture = null;
+            }
         }
 
     }
 
 
 
-    
+    void OnDisable()
+    {
+        thisCase = null;
+    }
 
 
 }

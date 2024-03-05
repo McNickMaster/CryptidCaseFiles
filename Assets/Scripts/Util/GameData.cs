@@ -11,6 +11,7 @@ public class GameData : MonoBehaviour
     public GameObject[] CULPRIT_MUGSHOTS;
 
     public GameObject[] CAUSE_MUGSHOTS;
+    public GameObject[] VICTIM_MUGSHOTS;
 
 [Header("Audio")]
     public AudioClip pageTurn;
@@ -18,9 +19,6 @@ public class GameData : MonoBehaviour
     public AudioClip evidenceFound;
 [Header("Config")]
     public float PUZZLE_AUTO_LOCK = 0.3f;
-
-[Header("Dialogue Data")]
-    public SimpleTextData startingPhonecall;
 
 [Header("Filepaths")]
     public string EDITOR_FILE_PATH = "Assets/TextSRC/";

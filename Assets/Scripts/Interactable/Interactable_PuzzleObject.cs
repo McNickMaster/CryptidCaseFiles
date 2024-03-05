@@ -35,7 +35,10 @@ public class Interactable_PuzzleObject : Draggable
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            Solve();
+        }
     }
 
     void FixedUpdate()
@@ -61,9 +64,10 @@ public class Interactable_PuzzleObject : Draggable
                 {
                     
                     SoundManager.instance.PlaySFX(GameData.instance.puzzleDrop);
-                    
                     locked = true;
                     transform.localPosition = new Vector3(lockPosition.x, -2.7f, lockPosition.z);
+                    
+                    JigsawManager.instance.CheckPuzzle();
                 } else 
                 {
                     locked = false;
@@ -74,6 +78,15 @@ public class Interactable_PuzzleObject : Draggable
        
         
        
+    }
+
+    public void Solve()
+    {
+        SoundManager.instance.PlaySFX(GameData.instance.puzzleDrop);
+        locked = true;
+        transform.localPosition = new Vector3(lockPosition.x, -2.7f, lockPosition.z);
+        
+        JigsawManager.instance.CheckPuzzle();
     }
 
     public override void Grab()
