@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4020818537763092565, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: m_Name
-      value: photo_bled_out
+      value: photo_bleed
       objectReference: {fileID: 0}
     - target: {fileID: 5040449770936109322, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: myCauseOfDeath
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: causeOfDeathPhoto

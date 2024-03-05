@@ -37,8 +37,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: ceb95e452d89f124ba930fdda59ad2e1, type: 2}
     - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
+      propertyPath: myVictim
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: myCulprit
-      value: 5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
+      propertyPath: victimPhoto
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: culpritPhoto
@@ -46,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: myCauseOfDeath
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5470264065598192749, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: causeOfDeathPhoto
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6044363245983303018, guid: e987e731c7750264d903a86439f11b72, type: 3}
       propertyPath: m_LocalPosition.x

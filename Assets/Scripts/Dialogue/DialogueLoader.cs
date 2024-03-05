@@ -22,6 +22,7 @@ public class DialogueLoader : MonoBehaviour
 
     public Transform dialogueParent;
     public GameObject slidePrefab, branchPrefab;
+    public GameObject monologuePrefab, phoneCallPrefab;
 
     private GameObject currentUIObject;
     public Path currentPath;
@@ -103,7 +104,7 @@ public class DialogueLoader : MonoBehaviour
         PlayerInput.instance.enabled = false;
 
 
-        objInstance = Instantiate(slidePrefab, Vector3.zero, Quaternion.identity, dialogueParent);
+        objInstance = Instantiate(monologuePrefab, Vector3.zero, Quaternion.identity, dialogueParent);
         objInstance.transform.localPosition = Vector3.zero;
         title = objInstance.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         body = objInstance.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
@@ -122,7 +123,7 @@ public class DialogueLoader : MonoBehaviour
         }
         if(milestoneID != "")
         {
-            GameManager.instance.AddMilestone(milestoneID);
+            GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
             
         }
 
@@ -219,7 +220,7 @@ public class DialogueLoader : MonoBehaviour
                 
                 if(currentPath.milestoneID != "")
                 {
-                    GameManager.instance.AddMilestone(currentPath.milestoneID);
+                    GameManager.instance.AddMilestone(Enum.Parse<Milestone>(currentPath.milestoneID));
                     
                 }
             }

@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public List<Milestone> completedMilestones = new List<Milestone>();
 
     public UnityEvent event_StartGameLoad = new UnityEvent();
+    public bool loadSave = false;
     public bool loadFirstScene = true;
 
     void OnEnable()
@@ -42,8 +43,11 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         
-
-        LoadSave();
+        if(loadSave)
+        {
+            LoadSave();
+        }
+        
 
         if(loadFirstScene)
         {
@@ -54,7 +58,6 @@ public class GameManager : MonoBehaviour
         currentCase = cases[0];
         currentCase.Setup();
 
-        //Invoke("LoadStartingDialogue", 0.5f);
         
         //currentLocation = FindObjectOfType<LocationManager>();
        
@@ -191,13 +194,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
-    public void LoadStartingDialogue()
-    {
-       dialogueLoader.LoadMonologue(""+gameData.startingPhonecall.order);
-       dialogueLoader.StartMonologue();
-    }
-
     public void ResetWinLoss()
     {
         winScreen.SetActive(false);
@@ -238,6 +234,8 @@ public class GameManager : MonoBehaviour
             completedMilestones.Add(m);
             string[] temp = m.ToString().Split('_');
             string title = temp[0], id = temp[1];
+
+            
             
             switch(title)
             {
@@ -262,14 +260,24 @@ public class GameManager : MonoBehaviour
                     break;
                 }
             }
+
+            if(id.Contains('x'))
+            {
+                Debug.Log("found the x in: " + id);
+                id = id.Replace('x', ' ');
+                Debug.Log("id after replacing: " + id);
+            }
+
             EvidencePopup.instance.Spawn(title, id);
         }
     }
+    
     public void AddMilestone(string milestoneID)
     {
         Debug.Log("adding milestone: " + milestoneID);
         AddMilestone(Enum.Parse<Milestone>(milestoneID));
     }
+    
     
     void SaveGame()
     {
@@ -289,17 +297,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void OnDisable()
+    {
+        //SaveGame();
+        completedMilestones = null;
+    }
+
 }
 
 [Serializable]
 public enum Culprit
 {
-    NONSUPERNATURAL, MOTHMAN, WEREWOLF, KRAKEN, MAHAMBA, SKEL
+    NULL, MOTHMAN, WEREWOLF, KRAKEN, MAHAMBA, SKEL
 }
 [Serializable]
 public enum CauseOfDeath
 {
-    HEARTATTACK, BLEED, POISONED, NPC1, NPC2, NPC3, NPC4, NPC5
+    NULL, HEARTATTACK, BLEED, POISONED
+}
+[Serializable]
+public enum Victim
+{
+    NULL, NPC1, NPC2, NPC3, NPC4, NPC5
 }
 
 [Serializable]
@@ -307,7 +326,7 @@ public enum Milestone
 {
 
     EVIDENCE_FOOTPRINTS, EVIDENCE_FEATHERS, EVIDENCE_C1_3, EVIDENCE_C1_4, EVIDENCE_C1_5, 
-    EVIDENCE_C2_1, EVIDENCE_C2_2, EVIDENCE_C2_3, EVIDENCE_C2_4, EVIDENCE_C2_5, 
+    EVIDENCE_PUZZLExCYPHER, EVIDENCE_C2_2, EVIDENCE_C2_3, EVIDENCE_C2_4, EVIDENCE_C2_5, 
     EVIDENCE_C3_1, EVIDENCE_C3_2, EVIDENCE_C3_3, EVIDENCE_C3_4, EVIDENCE_C3_5, 
     EVIDENCE_C4_1, EVIDENCE_C4_2, EVIDENCE_C4_3, EVIDENCE_C4_4, EVIDENCE_C4_5, 
     EVIDENCE_C5_1, EVIDENCE_C5_2, EVIDENCE_C5_3, EVIDENCE_C5_4, EVIDENCE_C5_5, 
@@ -315,7 +334,10 @@ public enum Milestone
     ITEM_PUZZLE,
     CS1_DONE, CS2_DONE, CS3_DONE, CS4_DONE, CS5_DONE,
     CULP_KRAKEN, CULP_MAHAMBA, CULP_SKEL, 
-    CAUSE_NPC1, CAUSE_NPC2, CAUSE_NPC3, CAUSE_NPC4, CAUSE_NPC5
+    CAUSE_NPC1, CAUSE_NPC2, CAUSE_NPC3, CAUSE_NPC4, CAUSE_NPC5,
+
+    ITEM_CARGO, ITEM_5, ITEM_6, ITEM_7, ITEM_8, ITEM_9, ITEM_10, ITEM_11,
+    PUZZLE2_DONE, PUZZLE3_DONE, PUZZLE4_DONE, PUZZLE5_DONE
 
 
 

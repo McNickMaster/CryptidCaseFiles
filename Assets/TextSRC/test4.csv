@@ -114,9 +114,9 @@ ID,TITLE,BODY
 211,You,“Notice anything off?”
 2111,Eric Meng,“The only thing off is this whole ordeal.”
 21111,Eric Meng,"“These sorts of attacks almost never happen, Abra’s sea creatures don’t bother us lest we bother them.”[back21][unlock215]"
-212,You,“Know anything about the victim?”
+212,You,"“Know anything about the victim?”"
 2121,Eric Meng,"“It’s just a hand, so– no. The most I can surmise is they were a fisher.”[back21]"
-213,You,“Know anything about the ship?”
+213,You,"“Know anything about the ship?”"
 2131,Eric Meng,"“Seems like a standard gillnetter, fishing ship, though they could’ve been using it for anything. A lot of sailors in Oldport have side-gigs.”[back21]"
 214,You,"“Thanks for your help, that’s all”[end]"
 215,You,[locked] “What could the victim have done to provoke something?”
@@ -150,14 +150,14 @@ ID,TITLE,BODY
 114,You,“No further questions.”[end]
 115,You,"[locked] ""Do a lot of people here have odd jobs?”"
 1151,Old Sailor,"“Oh for sure, most people I know got a side gig or two. Most commonly quick trips to Pettiget, sometimes passengers, sometimes cargo.”[back11]"
-2,You,"""Hello, you are?”"
+2,You,"”Hello, you are?”"
 21,Fred Fiegel,“Fred Fiegel! Captain of the Betty Blue.”
 211,You,“Can you tell me what kind of ship that is?”
 2111,Fred Fiegel,"“That there’s a gillnetter, fishin’ ship mostly, though some just use ‘em to sail around, maybe back and forth between Pettiget.”[back21]"
 212,You,“Do you recognize that ship?”
 2121,Fred Fiegel,"“The specific one? Nah, can’t say I do. I’m sure I’ve probably seen it around here before, but my memory’s not what it used to be.”[back21]"
 213,You,“Do you know the area well?”
-2131,Fred Fiegel,“Like the back of my hand!”[back21 [unlock215][unlock216]
+2131,Fred Fiegel,“Like the back of my hand!”[back21][unlock215][unlock216]
 214,You,"“Thanks for your help, that’ll be all”[end]"
 215,You,[locked] “What can you tell me about the route to Pettiget from here?”
 2151,Fred Fiegel,"“The water’s not too treacherous on its own, but the visibility is often pretty shit. Were someone to sail on their own they’d need to be fairly experienced.”[back21]"
@@ -166,14 +166,13 @@ ID,TITLE,BODY
 3,You,"“Hello, you have a minute?”"
 31,Old Sailor,"“Oh sure thing, d’ya need me for something?”"
 311,You,"""Just need you to answer some questions.”"
-3111,Fred,"bug fix"
-31111,You,“What could’ve done this to a ship?”
-311111,Old Sailor,"“Oh there’s plenty that could’ve, but I dunno many that would’ve. No real reason for our beasties to attack us, we’re hardly worth the trouble to eat.”[back311]"
-31112,You,“What was this ship doing out there?”
-311121,Old Sailor,"“Coulda been just out fishing, but I don’t see any big nets prepared. They might have been doin’ some errands, lotta sailors get hired to transport things to and from Pettiget.”[back311]"
-31113,You,“Where would this ship have been sailing?”
-311131,Old Sailor,"“Either sittin’ out in the open water, or to Pettiget Island.”"
-3111311,Old Sailor,“The trip across the lake ain’t really viable.”[back311]
+3111,You,“What could’ve done this to a ship?”
+31111,Old Sailor,"“Oh there’s plenty that could’ve, but I dunno many that would’ve. No real reason for our beasties to attack us, we’re hardly worth the trouble to eat.”[back311]"
+3112,You,“What was this ship doing out there?”
+31121,Old Sailor,"“Coulda been just out fishing, but I don’t see any big nets prepared. They might have been doin’ some errands, lotta sailors get hired to transport things to and from Pettiget.”[back311]"
+3113,You,“Where would this ship have been sailing?”
+31131,Old Sailor,"“Either sittin’ out in the open water, or to Pettiget Island.”"
+311311,Old Sailor,“The trip across the lake ain’t really viable.”[back311]
 312,You,“I was wondering if you had any insights?”
 3121,Old Sailor,“Insights into what? The wreck? Oh jeez I dunno.”
 31211,You,“Just tell me if you know anything useful”

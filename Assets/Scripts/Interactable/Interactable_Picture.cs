@@ -6,15 +6,27 @@ public class Interactable_Picture : Interactable
 {
     public Culprit myCulprit;
     public CauseOfDeath myCauseOfDeath;
+    public Victim myVictim;
     public Vector3 normal = Vector3.up;
 
-    public bool culpritPhoto = true, causeOfDeathPhoto = false;
+//    [HideInInspector]
+    public bool culpritPhoto = false, causeOfDeathPhoto = false, victimPhoto = false;
 
     private Rigidbody rb;
+
+    [ExecuteInEditMode]
+    void SetBools()
+    {
+        
+        culpritPhoto = (myCulprit != Culprit.NULL);
+        causeOfDeathPhoto = (myCauseOfDeath != CauseOfDeath.NULL);
+        victimPhoto = (myVictim != Victim.NULL);
+    }
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame

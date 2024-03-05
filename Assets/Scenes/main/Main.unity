@@ -3040,6 +3040,8 @@ MonoBehaviour:
   dialogueParent: {fileID: 1006527000}
   slidePrefab: {fileID: 7232690847493515766, guid: 08c07c747650b8d43bea7d07ce714fed, type: 3}
   branchPrefab: {fileID: 4617611816227279890, guid: 6b37361f32c8b6b4f822cc2f811ef305, type: 3}
+  monologuePrefab: {fileID: 5247174469749821810, guid: cb4af30bb25f4a242bee2d98dc167526, type: 3}
+  phoneCallPrefab: {fileID: 0}
   currentPath:
     slides: []
     firstSlide:
@@ -3138,14 +3140,22 @@ MonoBehaviour:
   CULPRIT_MUGSHOTS:
   - {fileID: 6713465582725188272, guid: 36dcfd97abbcc8545bc0a12f8b6c02b2, type: 3}
   - {fileID: 7866287525977361318, guid: 1c18a8afce51a9a41849b69753af68fa, type: 3}
+  - {fileID: 1302628610636805732, guid: 9ef95016e50e3c742a972576d3f1f6fc, type: 3}
+  - {fileID: 4531517886787472954, guid: 18347fc76c8b18d4cbe96c79ae187c88, type: 3}
+  - {fileID: 5359451526532245724, guid: df21daf386c1726428f1524c5d564fc4, type: 3}
   CAUSE_MUGSHOTS:
   - {fileID: 3814066085249028617, guid: ca4810df17c40e341bdfe492d25928d4, type: 3}
   - {fileID: 7055814892817486851, guid: 19f88e71599d3cb489065d245c406018, type: 3}
+  VICTIM_MUGSHOTS:
+  - {fileID: 7790075610776966773, guid: 9ccaa892fdf8ba74bacf883a81e72981, type: 3}
+  - {fileID: 7790075610776966773, guid: 64e1827e513b946489f6808202223fe9, type: 3}
+  - {fileID: 7790075610776966773, guid: 24f008f94abe66f42b6c0116a3d482fc, type: 3}
+  - {fileID: 7790075610776966773, guid: 6371b2f15d8a9554aa40ad700bdd091d, type: 3}
+  - {fileID: 7790075610776966773, guid: b12c53fbe8a5d994db34763fc7fd77c1, type: 3}
   pageTurn: {fileID: 8300000, guid: a696ab9247beb3f4b8a79f730b6d20a9, type: 3}
   puzzleDrop: {fileID: 8300000, guid: 6d589674f63e69e498620f6dc1e1c44e, type: 3}
   evidenceFound: {fileID: 8300000, guid: 42830562f3e02824d95e717a314c3137, type: 3}
   PUZZLE_AUTO_LOCK: 0.25
-  startingPhonecall: {fileID: 11400000, guid: aee97ac3da060d04ab6cfa64c5fa7598, type: 2}
   EDITOR_FILE_PATH: Assets/TextSRC/
   BUILD_FILE_PATH: data/
 --- !u!114 &1480938466
@@ -3164,8 +3174,8 @@ MonoBehaviour:
   sceneLoad: {fileID: 1480938468}
   dialogueLoader: {fileID: 1480938463}
   currentLocation: {fileID: 0}
-  startScene: 2
-  currentScene: 2
+  startScene: 0
+  currentScene: 1
   travelCutscene: {fileID: 516906522}
   currentView: {fileID: 0}
   views:
@@ -3180,10 +3190,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c42b497838b49644eb7fa09f54038924, type: 2}
   - {fileID: 11400000, guid: fec463ac3ff5ea9458ac758e087de82c, type: 2}
   currentCase: {fileID: 0}
-  completedMilestones: 
+  completedMilestones: 1d000000
   event_StartGameLoad:
     m_PersistentCalls:
       m_Calls: []
+  loadSave: 0
   loadFirstScene: 1
 --- !u!4 &1480938467
 Transform:
@@ -3288,6 +3299,45 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Event_Puzzle2_Done:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1480938463}
+        m_TargetAssemblyTypeName: DialogueLoader, Assembly-CSharp
+        m_MethodName: LoadMonologue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 6
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1480938463}
+        m_TargetAssemblyTypeName: DialogueLoader, Assembly-CSharp
+        m_MethodName: StartMonologue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 6
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1480938466}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddMilestone
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: EVIDENCE_PUZZLExCYPHER
           m_BoolArgument: 0
         m_CallState: 2
   scenesLoadedBefore: []
