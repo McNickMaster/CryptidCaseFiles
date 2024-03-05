@@ -1164,6 +1164,9 @@ MonoBehaviour:
   interacted: {fileID: 0}
   mousePosition3D: {x: 0, y: 0, z: 0}
   objectOffset: {x: 0, y: 0, z: 0}
+  _dragging: 0
+  inUI: 0
+  typing: 0
   defaultMask:
     serializedVersion: 2
     m_Bits: 3059
