@@ -58,7 +58,7 @@ public class Notes : Interactable
 
     public void Init()
     {
-        SimpleTextFileData data = SaveLoadData.LoadText(""+textData.order);
+        SimpleTextFileData data = SaveLoadData.LoadText(""+textData.name);
 
         string[] temp = data.GetFilePages();
         textSlides = new string[temp.Length];

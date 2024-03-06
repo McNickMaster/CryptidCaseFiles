@@ -33,7 +33,7 @@ public class PhoneManager : MonoBehaviour
 
     void SpawnPhoneCall(SimpleTextData textData)
     {
-        DialogueLoader.instance.LoadPhonecall(""+textData.order);
+        DialogueLoader.instance.LoadPhonecall(""+textData.name);
         
     }
 

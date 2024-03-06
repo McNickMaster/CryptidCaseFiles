@@ -54,17 +54,21 @@ public class LoadTextFromCSV : MonoBehaviour
                     output = "ID,TITLE,BODY\n" + output;
                 }
                 outputFile.Write(output);
+                outputFile.Close();
+
+                LoadDialogueCSV("output" + i);
+                SaveLoadData.SaveDialogueData(branches, slides, ""+i);
             }
         }
         numFiles = splits.Length;
 
-        ConvertAllCSVToBin();
+       // ConvertAllCSVToBin();
 
         string[] tempText; //go through each textData
         for(int i = 0; i < simpleTextData.Length; i++)
         {
-            List<SimpleLine> tempFile = Sinbad.CsvUtil.LoadObjects<SimpleLine>(FILE_PATH + simpleTextData[i].file + ".csv");
-            simpleTextData[i].order = i;
+            List<SimpleLine> tempFile = Sinbad.CsvUtil.LoadObjects<SimpleLine>(FILE_PATH + simpleTextData[i].name + ".csv");
+            //simpleTextData[i].order = i;
 
             tempText = new string[tempFile.Count];
             //set temp to be temp
@@ -75,7 +79,7 @@ public class LoadTextFromCSV : MonoBehaviour
                 tempText[j] = s;
             }
 
-            SaveLoadData.SaveSimpleTextData(tempText, ""+i);
+            SaveLoadData.SaveSimpleTextData(tempText, ""+ simpleTextData[i].name);
         }
         
     }
@@ -91,8 +95,7 @@ public class LoadTextFromCSV : MonoBehaviour
     {
         for(int i = 0; i < numFiles; i++)
         {
-            LoadDialogueCSV("output" + i);
-            SaveLoadData.SaveDialogueData(branches, slides, i);
+            
         }
         
     }

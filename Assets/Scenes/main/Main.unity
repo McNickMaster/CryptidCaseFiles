@@ -3176,29 +3176,30 @@ MonoBehaviour:
   gameData: {fileID: 1480938465}
   sceneLoad: {fileID: 1480938468}
   dialogueLoader: {fileID: 1480938463}
-  currentLocation: {fileID: 0}
-  startScene: 0
-  currentScene: 1
+  phonecallManager: {fileID: 0}
   travelCutscene: {fileID: 516906522}
-  currentView: {fileID: 0}
-  views:
-  - {fileID: 0}
-  - {fileID: 0}
   lineDrawer: {fileID: 4221701233302851193, guid: dfaf92cfdac5c034fa577d3e7f8ef2df, type: 3}
   winScreen: {fileID: 814441101}
   loseScreen: {fileID: 904603700}
   caseFileObj: {fileID: 0}
+  startScene: 0
+  currentScene: 1
+  currentView: {fileID: 0}
+  views:
+  - {fileID: 0}
+  - {fileID: 0}
   cases:
   - {fileID: 11400000, guid: e25036c690f860441ab4ce21e12022e6, type: 2}
   - {fileID: 11400000, guid: c42b497838b49644eb7fa09f54038924, type: 2}
   - {fileID: 11400000, guid: fec463ac3ff5ea9458ac758e087de82c, type: 2}
   currentCase: {fileID: 0}
+  currentLocation: {fileID: 0}
   completedMilestones: 1d000000
   event_StartGameLoad:
     m_PersistentCalls:
       m_Calls: []
   loadSave: 0
-  loadFirstScene: 1
+  loadFirstScene: 0
 --- !u!4 &1480938467
 Transform:
   m_ObjectHideFlags: 0

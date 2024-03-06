@@ -13,17 +13,22 @@ public class GameManager : MonoBehaviour
     public GameData gameData;
     public SceneLoadHelper sceneLoad;
     public DialogueLoader dialogueLoader;
-    public LocationManager currentLocation;
-    public e_Scene startScene = e_Scene.OFFICE;
-    public e_Scene currentScene;
+    public PhonecallManager phonecallManager;
     public Cutscene travelCutscene;
-    public View currentView;
-    public View[] views;
     public GameObject lineDrawer;
     public GameObject winScreen, loseScreen;
     public CaseFile caseFileObj;
+
+    [Header("Data")]
+    public e_Scene startScene = e_Scene.OFFICE;
+    public e_Scene currentScene;
+    public View currentView;
+    public View[] views;
     public Case[] cases;
+
+    [Header("Instances")]
     public Case currentCase;
+    public LocationManager currentLocation;
     private Case currentGuess;
     private int caseIndex;
 
@@ -34,15 +39,21 @@ public class GameManager : MonoBehaviour
     public bool loadSave = false;
     public bool loadFirstScene = true;
 
-    void OnEnable()
-    {
-        //instance = this;
-    }
     void Awake()
     {
         instance = this;
 
         
+        
+        
+        //currentLocation = FindObjectOfType<LocationManager>();
+       
+    }
+    
+    void OnEnable()
+    {
+        //instance = this;
+
         if(loadSave)
         {
             LoadSave();
@@ -55,12 +66,9 @@ public class GameManager : MonoBehaviour
             currentScene = startScene;
         }
 
-        currentCase = cases[0];
+        SetNewCase(cases[0]);
         currentCase.Setup();
 
-        
-        //currentLocation = FindObjectOfType<LocationManager>();
-       
     }
 
     // Start is called before the first frame update
@@ -187,10 +195,12 @@ public class GameManager : MonoBehaviour
         } else 
         {
             
-            //SetNewCase(cases[caseIndex]);
-            //CaseFile.instance.ResetCaseFile();
-            //currentCase.Setup();
-            //CaseFile.instance.SetCase(currentCase);
+            SetNewCase(cases[caseIndex]);
+            CaseFile.instance.ResetCaseFile();
+            currentCase.Setup();
+            CaseFile.instance.SetCase(currentCase);
+
+
         }
     }
 
