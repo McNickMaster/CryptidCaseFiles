@@ -65,46 +65,52 @@ public class Interactable_Button : Interactable
     void Awake()
     {
         
-        if(isVisible)
-        {
-            if(is3D)
-            {            
-                GetMaterialInstance();
-            } else 
-            {
-                btn_image = GetComponent<Image>();
-            }
-
-            if(showNameOnHover)
-            {
-                GameObject obj = Instantiate(new GameObject(), this.transform, false);
-                obj.transform.localPosition = new Vector3(0,1,0);
-                nameText = obj.AddComponent<TextMeshProUGUI>();
-                
-                obj.SetActive(false);
-            }
-        }
-
-
-        switch(btn_type)
-        {
-            case ButtonType.DIALOGUE:
-            {
-                dialogue.Init();
-                
-                break;
-            }
-
-            case ButtonType.TOGGLE:
-            {
-                objectToToggle.SetActive(state);
-                break;
-            }
-        }
         
+    }
+
+    void OnEnable()
+    {
+        if(isVisible)
+                {
+                    if(is3D)
+                    {            
+                        GetMaterialInstance();
+                    } else 
+                    {
+                        btn_image = GetComponent<Image>();
+                    }
+
+                    if(showNameOnHover)
+                    {
+                        GameObject obj = Instantiate(GameData.instance.interactableNamePrefab, transform.position + new Vector3(0,2.85f,0), Quaternion.identity, null);
+                        
+                        
+                        nameText = obj.GetComponentInChildren<TextMeshProUGUI>();
+                        
+                        nameText.gameObject.SetActive(false);
+                    }
+                }
 
 
-        ResetButtonTint();
+                switch(btn_type)
+                {
+                    case ButtonType.DIALOGUE:
+                    {
+                        dialogue.Init();
+                        
+                        break;
+                    }
+
+                    case ButtonType.TOGGLE:
+                    {
+                        objectToToggle.SetActive(state);
+                        break;
+                    }
+                }
+                
+
+
+                ResetButtonTint();
     }
 
     // Update is called once per frame
@@ -169,6 +175,7 @@ public class Interactable_Button : Interactable
 
             if(showNameOnHover)
             {
+                nameText.transform.LookAt(GameManager.instance.currentView.myCamera.transform);
                 nameText.gameObject.SetActive(true);
                 nameText.text = interactableName;
             }

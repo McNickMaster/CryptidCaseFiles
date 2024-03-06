@@ -1167,6 +1167,7 @@ MonoBehaviour:
   _dragging: 0
   inUI: 0
   typing: 0
+  phoneCallUIActive: 0
   defaultMask:
     serializedVersion: 2
     m_Bits: 3059
@@ -2106,6 +2107,8 @@ MonoBehaviour:
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: 
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -3140,6 +3143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceba5c472e830e94d95e1155ef954e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactableNamePrefab: {fileID: 9093418020093261646, guid: e72eb56061a4862459d582a596092620, type: 3}
   CULPRIT_MUGSHOTS:
   - {fileID: 6713465582725188272, guid: 36dcfd97abbcc8545bc0a12f8b6c02b2, type: 3}
   - {fileID: 7866287525977361318, guid: 1c18a8afce51a9a41849b69753af68fa, type: 3}
@@ -5507,6 +5511,8 @@ MonoBehaviour:
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: 
   hovering: 0
   selected: 0
   destination: {fileID: 0}

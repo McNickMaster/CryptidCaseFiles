@@ -7,6 +7,9 @@ public class GameData : MonoBehaviour
 {
     public static GameData instance;
 
+[Header("Prefab")]
+    public GameObject interactableNamePrefab;
+
 [Header("Polaroid Prefabs")]
     public GameObject[] CULPRIT_MUGSHOTS;
 
