@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Case2
   m_EditorClassIdentifier: 
   culprit: 4
-  causeOfDeath: 6
+  causeOfDeath: 0
+  victim: 4
   crimeScene: 2
   correctResult: {fileID: 11400000, guid: c8c3ac1b2e895cc479fec901d9e6cb6b, type: 2}
   incorrectResult: {fileID: 11400000, guid: 8c846c746f6023c4a84a80fb5014c868, type: 2}
   culpritList: 030000000400000005000000
-  causeOfDeathList: 0300000004000000050000000600000007000000
+  causeOfDeathList: 
+  victimList: 0100000002000000030000000400000005000000

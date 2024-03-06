@@ -47,5 +47,9 @@ public class EvidencePopup : MonoBehaviour
         
         transform.GetChild(0).gameObject.SetActive(false);
     }
+
+    void OnDisable()
+    {
+    }
     
 }

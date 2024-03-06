@@ -118,7 +118,7 @@ public class Notes : Interactable
         {
             if(milestoneID != "" || milestoneID != " ")
             {
-                GameManager.instance.AddMilestone(milestoneID);
+                GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
             
             }
         }

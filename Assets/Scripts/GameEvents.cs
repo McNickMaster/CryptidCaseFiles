@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameEvents : MonoBehaviour
 {
+    public static GameEvents instance;
     public bool EnableTutorialDialogue = false;
     public UnityEvent Event_FirstEvidence;
     public UnityEvent Event_FirstNPC;
     public UnityEvent Event_EnterCrimeScene1;
     public UnityEvent Event_EnterOffice;
+
+    public UnityEvent Event_Puzzle2_Done;
     
 
     [SerializeField]
@@ -18,12 +21,15 @@ public class GameEvents : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
 
         if (Event_EnterCrimeScene1 == null)
             Event_EnterCrimeScene1 = new UnityEvent();
 
         if (Event_EnterOffice == null)
             Event_EnterOffice = new UnityEvent();
+
+    
 
 
         SceneManager.sceneLoaded += OnSceneLoaded;

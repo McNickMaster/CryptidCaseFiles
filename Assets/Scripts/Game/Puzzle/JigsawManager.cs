@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class JigsawManager : MonoBehaviour
 {
-
+    public static JigsawManager instance;
     public GameObject jigsawParent;
     public Interactable_PuzzleObject[] jigsaw_pieces;
     //public Transform[] spawnBounds;
 
     void Awake()
     {
+        instance = this;
         //jigsawParent.SetActive(false);
 /*
         Vector3 TR, BL;
@@ -41,9 +42,35 @@ public class JigsawManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
+    }
+
+    public void CheckPuzzle()
+    {
+        if(IsPuzzleSolved())
+        {
+            Debug.Log("yeowwwwww i solved the puzzle");
+            GameEvents.instance.Event_Puzzle2_Done.Invoke();
+        }
+    }
+
+    bool IsPuzzleSolved()
+    {
+        bool flag = true;
+        foreach(Interactable_PuzzleObject puzz in jigsaw_pieces)
+        {
+            if(puzz.locked)
+            {
+
+            } else 
+            {
+                flag = false;
+            }
+        }
+
+        return flag;
     }
 
 
