@@ -1167,6 +1167,7 @@ MonoBehaviour:
   _dragging: 0
   inUI: 0
   typing: 0
+  phoneCallUIActive: 0
   defaultMask:
     serializedVersion: 2
     m_Bits: 3059
@@ -3199,7 +3200,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   loadSave: 0
-  loadFirstScene: 0
+  loadFirstScene: 1
 --- !u!4 &1480938467
 Transform:
   m_ObjectHideFlags: 0
