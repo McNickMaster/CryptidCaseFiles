@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -107, y: 147}
+  m_AnchoredPosition: {x: -89.9, y: 144.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8965886230106677144
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -14.520325, z: 300.55017, w: -147.9118}
+  m_margin: {x: 0, y: -14.520325, z: -4.736267, w: -0.5694885}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -223,9 +223,9 @@ GameObject:
   - component: {fileID: 5284612093762546890}
   - component: {fileID: 939190474579857187}
   - component: {fileID: 5286262816394765467}
-  - component: {fileID: 6878659670856621007}
+  - component: {fileID: 9118398041811405711}
   m_Layer: 5
-  m_Name: MonologueSlide
+  m_Name: PhoneCallSlide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b658993e4d343514bba10c0932ecf696, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7e733d499773df43b0e322fd60c724b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -375,7 +375,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6878659670856621007
+--- !u!114 &9118398041811405711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -424,8 +424,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.7}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 226, y: -53}
-  m_SizeDelta: {x: -1532.5741, y: 130.8789}
+  m_AnchoredPosition: {x: 206.56403, y: -67.946594}
+  m_SizeDelta: {x: -1523.5938, y: 59.943}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &2605635831615445521
 CanvasRenderer:
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -14.520325, z: 489.83716, w: 51.22647}
+  m_margin: {x: 0, y: 0.004670143, z: -3.8245697, w: 0.04208374}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
