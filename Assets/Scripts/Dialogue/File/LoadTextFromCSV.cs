@@ -26,6 +26,8 @@ public class LoadTextFromCSV : MonoBehaviour
     [HideInInspector]
     public Path path;
 
+    public bool editor = true;
+
     int numFiles = 0;
 
 
@@ -36,7 +38,7 @@ public class LoadTextFromCSV : MonoBehaviour
 
         
         //Sinbad.CsvUtil.SaveObjects<Line>();
-
+        
         StreamReader sr = new StreamReader(FILE_PATH+fileName+".csv");
         string bigInput = sr.ReadToEnd();
 
