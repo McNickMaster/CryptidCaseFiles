@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.7}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 51.3456, y: -296.2316}
+  m_AnchoredPosition: {x: 96, y: -301}
   m_SizeDelta: {x: -428.9514, y: 232.4542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &999055242449873185
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: test text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ee032ab7ec4db444a5ae493f98abafd, type: 2}
-  m_sharedMaterial: {fileID: -8934753868031046465, guid: 4ee032ab7ec4db444a5ae493f98abafd, type: 2}
+  m_sharedMaterial: {fileID: 1050345159512483225, guid: 4ee032ab7ec4db444a5ae493f98abafd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -14.520325, z: 300.55017, w: -147.9118}
+  m_margin: {x: 0, y: -14.520325, z: 185.05722, w: 23.010529}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b658993e4d343514bba10c0932ecf696, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab6798cd68c8a0c4988f680ae7acd49f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -332,7 +332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.7}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 226, y: -53}
+  m_AnchoredPosition: {x: 316, y: -97}
   m_SizeDelta: {x: -1532.5741, y: 130.8789}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &2605635831615445521
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Inner Monologue
+  m_text: Monologue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fdf59657a74fa0548bbc468ac0ec8662, type: 2}
   m_sharedMaterial: {fileID: -7523512870174115772, guid: fdf59657a74fa0548bbc468ac0ec8662, type: 2}
