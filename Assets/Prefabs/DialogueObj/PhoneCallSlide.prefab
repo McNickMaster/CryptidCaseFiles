@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 8234829964180523329}
   - component: {fileID: 5284612093762546890}
   - component: {fileID: 939190474579857187}
-  - component: {fileID: 5286262816394765467}
   - component: {fileID: 9118398041811405711}
   m_Layer: 5
   m_Name: PhoneCallSlide
@@ -354,27 +353,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!95 &5286262816394765467
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5247174469749821810}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3f977ee3b11818240b38798deb3e0a5e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &9118398041811405711
 MonoBehaviour:
   m_ObjectHideFlags: 0

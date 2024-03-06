@@ -265,7 +265,6 @@ public class Interactable_Button : Interactable
             case ButtonType.MONOLOGUE:
             {
                 DialogueLoader.instance.LoadMonologue(""+monologue.order);
-                DialogueLoader.instance.StartMonologue();
 
                 break;
             }

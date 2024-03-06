@@ -84,6 +84,21 @@ public class DialogueLoader : MonoBehaviour
         }
     }
 */
+    public void LoadPhonecall(string file)
+    {
+        if(file == "-1")
+        {
+            
+        } else 
+        {
+            Debug.Log("loading mono with id: " + file);
+            SimpleTextFileData dataFile = SaveLoadData.LoadText(file);
+            simpleTextPages = dataFile.GetFilePages();
+
+        }
+
+        StartMonologue(phoneCallPrefab);
+    }
 
     public void LoadMonologue(string file)
     {
@@ -97,14 +112,16 @@ public class DialogueLoader : MonoBehaviour
             simpleTextPages = dataFile.GetFilePages();
 
         }
+
+        StartMonologue(monologuePrefab);
     }
-    public void StartMonologue()
+    private void StartMonologue(GameObject prefab)
     {
         dialogueIndex = 0;
         PlayerInput.instance.enabled = false;
 
 
-        objInstance = Instantiate(monologuePrefab, Vector3.zero, Quaternion.identity, dialogueParent);
+        objInstance = Instantiate(prefab, Vector3.zero, Quaternion.identity, dialogueParent);
         objInstance.transform.localPosition = Vector3.zero;
         title = objInstance.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         body = objInstance.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
