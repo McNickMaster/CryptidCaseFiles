@@ -22,6 +22,7 @@ public class DialogueLoader : MonoBehaviour
 
     public Transform dialogueParent;
     public GameObject slidePrefab, branchPrefab;
+    public GameObject monologuePrefab, phoneCallPrefab;
 
     private GameObject currentUIObject;
     public Path currentPath;
@@ -103,7 +104,7 @@ public class DialogueLoader : MonoBehaviour
         PlayerInput.instance.enabled = false;
 
 
-        objInstance = Instantiate(slidePrefab, Vector3.zero, Quaternion.identity, transform.GetChild(0).transform);
+        objInstance = Instantiate(monologuePrefab, Vector3.zero, Quaternion.identity, dialogueParent);
         objInstance.transform.localPosition = Vector3.zero;
         title = objInstance.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         body = objInstance.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
@@ -111,17 +112,33 @@ public class DialogueLoader : MonoBehaviour
         Button btn = objInstance.GetComponent<Button>();
         btn.onClick.AddListener(NextPage);
 
-//        numPages = dialogueData.numPages;
+        numPages = simpleTextPages.Length;
 
+        string milestoneID = "";
+        if(simpleTextPages[0].Contains("[get"))
+        {
+            int index = simpleTextPages[0].IndexOf("[get")+4;
+            milestoneID = simpleTextPages[0].Substring(index, simpleTextPages[0].Length - index - 1);
+            simpleTextPages[0] = simpleTextPages[0].Substring(0, simpleTextPages[0].Length - milestoneID.Length - 5);
+        }
+        if(milestoneID != "")
+        {
+            GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
+            
+        }
+
+        dialogueIndex = 0;
         title.text = "Inner Monolouge";
-        body.text = simpleTextPages[0];
+        body.text = simpleTextPages[dialogueIndex];
 
 
     }
 
+
     public void NextPage()
     {
         dialogueIndex++;
+
 
         if(dialogueIndex >= numPages)
         {
@@ -130,14 +147,11 @@ public class DialogueLoader : MonoBehaviour
 
         } else 
         {
-            
-            jsonLoader.LoadJson(dialogueData.GetDialoguePage(dialogueIndex));
-
-            title.text = jsonLoader.GetNotePages()[0];
-            body.text = jsonLoader.GetNotePages()[1];
-
+            body.text = simpleTextPages[dialogueIndex];
         }
     }
+    
+    
     public void LoadConversation(string id)
     {
         DialogueFileData dialogueFile = SaveLoadData.LoadDialogue(Int32.Parse(id));       
@@ -185,11 +199,14 @@ public class DialogueLoader : MonoBehaviour
 
             if(currentBranch != null)
             {
-
+                
+                
+                
                 Path unlockPath = FindPath(currentPath.unlockPathID); 
+               
                 if(unlockPath != null)
-                {
-                    //Debug.Log("unlocking...");
+                { 
+                    //Debug.Log("unlocking " + unlockPath.firstSlide.ID);
                     unlockPath.locked = false;
                 }
 
@@ -200,9 +217,10 @@ public class DialogueLoader : MonoBehaviour
                     lockPath.locked = true;
                 }
 
+                
                 if(currentPath.milestoneID != "")
                 {
-                    GameManager.instance.AddMilestone(currentPath.milestoneID);
+                    GameManager.instance.AddMilestone(Enum.Parse<Milestone>(currentPath.milestoneID));
                     
                 }
             }
@@ -304,7 +322,7 @@ public class DialogueLoader : MonoBehaviour
     Branch FindBranch(string id)
     {
         Branch b = myBranches.Find(x => x.myPathOptions[0].firstSlide.ID == id);
-        Debug.Log("is branch found: " + (b != null));
+//        Debug.Log("is branch found: " + (b != null));
         return b;
 
     }
@@ -312,22 +330,21 @@ public class DialogueLoader : MonoBehaviour
     Path FindPath(string id)
     {
 
-        Debug.Log("looking for path with firstSlide id: " + id);
+//        Debug.Log("looking for path with firstSlide id: " + id);
         Path p = null;
 
             
         p = currentBranch.myPathOptions.Find(p => p.firstSlide.ID == id);
     
         
-
-
-
-
         return p;
     }
 
 
-
+    void OnDisable()
+    {
+        EndConversation();
+    }
 
 
 

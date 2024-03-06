@@ -20,8 +20,8 @@ public class Notes : Interactable
     private int currentTextIndex = 0;
     private Rigidbody rb;
 
-
-
+    string milestoneID = "";
+    
 
     // Start is called before the first frame update
     void Awake()
@@ -30,7 +30,6 @@ public class Notes : Interactable
 
         rb = GetComponent<Rigidbody>();
 
-        
     }
 
     // Update is called once per frame
@@ -41,17 +40,20 @@ public class Notes : Interactable
 
     void FixedUpdate()
     {
-        rb.AddForce(25*normal);
+        if(thisEnabled)
+        {
+            rb.AddForce(25*normal);
+        }
     }
 
     public void Enable()
     {
-
+        thisEnabled = true;
     }
 
     public void Disable()
     {
-
+        thisEnabled = false;
     }
 
     public void Init()
@@ -72,6 +74,17 @@ public class Notes : Interactable
         {
             DisablePageButtons();
         }
+
+        for(int i = 0; i < textSlides.Length; i++)
+        {
+            if(textSlides[i].Contains("[get"))
+            {
+                int index = textSlides[i].IndexOf("[get")+4;
+                milestoneID = textSlides[i].Substring(index, textSlides[i].Length - index - 1);
+                textSlides[i] = textSlides[i].Substring(0, textSlides[i].Length - milestoneID.Length - 5);
+            }
+        }   
+        
     }
 
     public void SetBodyTextToIndex(int i)
@@ -94,6 +107,20 @@ public class Notes : Interactable
         {
             currentTextIndex++;
             textBody.text = textSlides[currentTextIndex];
+        } else 
+        {
+            
+            
+        }
+
+        //if at end
+        if(currentTextIndex == textSlides.Length - 1)
+        {
+            if(milestoneID != "" || milestoneID != " ")
+            {
+                GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
+            
+            }
         }
     }
 

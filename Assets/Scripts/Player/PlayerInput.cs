@@ -18,10 +18,15 @@ public class PlayerInput : MonoBehaviour
     public Vector3 mousePosition3D, objectOffset = Vector3.zero;
     private Vector3 lastMousePos;
 
-    private bool _dragging = false, inUI = false;
+    [SerializeField]
+    private bool _dragging = false, inUI = false, typing = false;
 
     private Vector3 mousePosOnClick = Vector3.zero;
     private Notes noteInteracted;
+    private Interactable_PuzzleObject puzzleInteracted;
+    private Interactable_StickyNote stickyInteracted;
+
+    public LayerMask defaultMask, interactMask;
 
 
     [Header("Controls Config")]
@@ -44,11 +49,18 @@ public class PlayerInput : MonoBehaviour
         if(inUI)
         {
 
-        } else 
+        } else if(GameManager.instance.currentView != null && GameManager.instance.travelCutscene.flag_cutscene_done)
         {
             HandleMouse();
         }
-        HandleKeys();
+
+        if(typing)
+        {
+
+        } else 
+        {
+            HandleKeys();
+        }
     }
 
     void HandleKeys()
@@ -85,7 +97,10 @@ public class PlayerInput : MonoBehaviour
 
     void HandleMouse()
     {
+        interacted = null;
 
+        SendCastForHover();
+        
         if(Input.GetMouseButtonDown(0))
         {
             MouseClick();
@@ -101,12 +116,12 @@ public class PlayerInput : MonoBehaviour
 
         if(Input.GetMouseButtonUp(0))
         {
-            _dragging = false;
             if(objectInteracted != null)
             {
                 StopDrag();
             }
             
+            _dragging = false;
             interacted = null;
         }
         
@@ -115,9 +130,6 @@ public class PlayerInput : MonoBehaviour
             MouseDrag();
         }
 
-
-
-        SendCastForHover();
     }
 
 
@@ -147,6 +159,14 @@ public class PlayerInput : MonoBehaviour
             {
                 noteInteracted.Disable();
             }
+            if(puzzleInteracted!=null)
+            {
+                puzzleInteracted.Disable();
+            }
+            if(stickyInteracted!=null)
+            {
+                stickyInteracted.Disable();
+            }
 
             objectInteracted.GetComponentInChildren<Collider>().enabled = false;
 
@@ -158,27 +178,58 @@ public class PlayerInput : MonoBehaviour
     {
         SetObjectToBounds();
 
-        objectInteracted.GetComponent<Rigidbody>().AddForce(100*Vector3.forward);
+        //objectInteracted.GetComponent<Rigidbody>().AddForce(100*Vector3.forward);
         objectInteracted.GetComponentInChildren<Collider>().enabled = true;
         if(noteInteracted!=null)
         {
             noteInteracted.Enable();
         }
+        if(puzzleInteracted!=null)
+        {
+            puzzleInteracted.Enable();
+        }
+        if(stickyInteracted!=null)
+        {
+            stickyInteracted.Enable();
+        }
+        //objectInteracted.layer = LayerMask.GetMask("IgnoreRaycast");
         objectInteracted = null;
+        _dragging = false;
     }
 
     void SetObjectToBounds()
     {
-        Vector3 newPos = GameManager.instance.currentView.InBounds(objectInteracted.transform.position);
+        Vector3 newPos;
+        if(GameManager.instance.currentView.normal == Vector3.up)
+        {
+            newPos = GameManager.instance.currentView.InBoundsTop(objectInteracted.transform.position);
+        } else 
+        {
+            newPos = GameManager.instance.currentView.InBounds(objectInteracted.transform.position);
+        }
+        
         if(newPos != Vector3.forward * 7571)
         {
             objectInteracted.transform.position = newPos;
         }
     }
 
+    public void StartTyping()
+    {
+        typing = true;
+    }
+    public void StopTyping()
+    {
+        typing = false;
+    }
+
     public void UpdateBackplane()
     {
-        backPlane = GameObject.FindWithTag("Backplane").transform;
+       // backPlane = GameObject.FindWithTag("Backplane").transform;
+    }
+    public void UpdateBackplane(Transform plane)
+    {
+        backPlane = plane;
     }
 
     void ToggleNotebook()
@@ -212,6 +263,13 @@ public class PlayerInput : MonoBehaviour
                     {
                         objectInteracted = interacted.gameObject.gameObject;
                         noteInteracted = interacted.GetComponent<Notes>();
+                        puzzleInteracted = interacted.GetComponent<Interactable_PuzzleObject>();
+                        stickyInteracted = interacted.GetComponent<Interactable_StickyNote>();
+                        if(puzzleInteracted != null)
+                        {
+                            
+                            puzzleInteracted.Grab();
+                        }
                         objectOffset = CalcOffset();
 
                         break;
@@ -260,6 +318,7 @@ public class PlayerInput : MonoBehaviour
         if(hit.transform != null && !_dragging)
         {
             interacted = hit.transform.GetComponent<Interactable>();
+            //Debug.Log("setting interacted");
 
             if(interacted != null)
             {
@@ -288,7 +347,10 @@ public class PlayerInput : MonoBehaviour
                         break;
                     }
                 }
-            } 
+            } else 
+            {
+                
+            }
             
             if((interacted == null && hoveredObject != null) || (interacted != null && hoveredObject != null && !interacted.gameObject.name.Equals(hoveredObject.name)))
             {  
@@ -298,6 +360,9 @@ public class PlayerInput : MonoBehaviour
             }
             
 
+        } else if(interacted != null)
+        {
+            //interacted = null;
         }
         
 
@@ -313,17 +378,29 @@ public class PlayerInput : MonoBehaviour
 
         Ray ray = GameManager.instance.currentView.myCamera.ScreenPointToRay(Input.mousePosition);
         //Vector3 clampedPoint;
-        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
-
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.green);
+        //this occludes drawing a line with the linedraw. it should include it
+        bool isNotInteracting = (objectInteracted == null);
+        LayerMask mask = isNotInteracting ? defaultMask : interactMask;
         RaycastHit hitData;
-        if(Physics.Raycast(ray, out hitData, 1000))
+        if(Physics.Raycast(ray, out hitData, 1000, mask))
         {
-            mousePosition3D = GameManager.instance.currentView.InBounds(hitData.point);
-            
+//            Debug.Log(hitData.transform.gameObject.name);
+//if we are looking down, how do we calc this
+            if(GameManager.instance.currentView.normal == Vector3.up)
+            {
+                //mousePosition3D = hitData.point;
+                
+                mousePosition3D = GameManager.instance.currentView.InBoundsTop(hitData.point);
+            } else 
+            {   
+                
+                mousePosition3D = GameManager.instance.currentView.InBounds(hitData.point);
+            }
             
              
             /*
-            mousePosition3D = hitData.point;
+            
             */
             lastMousePos = mousePosition3D;
             
@@ -402,6 +479,11 @@ public class PlayerInput : MonoBehaviour
        // mousePosition3D = pos;
 
         return mousePosition3D;
+    }
+
+    void OnEnable()
+    {
+        _dragging = false;
     }
 
 }

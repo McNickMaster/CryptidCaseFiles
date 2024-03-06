@@ -32,7 +32,8 @@ public class Path
 
     public void DetectPathEnd()
     {
-        
+        //Debug.Log(endSlide.Body);
+
         locked = firstSlide.Body.Contains("[locked]");
         if(locked)
         {
@@ -45,23 +46,27 @@ public class Path
             int index = endSlide.Body.IndexOf("[unlock")+7;
             unlockPathID = endSlide.Body.Substring(index, endSlide.Body.Length - index - 1);
             endSlide.Body = endSlide.Body.Substring(0, endSlide.Body.Length - unlockPathID.Length - 8);
+ //           Debug.Log(unlockPathID);
 //            Debug.Log("endSlide after unlock removal: " + endSlide.Body);
         }
-
+       
 
         if(endSlide.Body.Contains("[lock"))
         {
             int index = endSlide.Body.IndexOf("[lock")+5;
             lockPathID = endSlide.Body.Substring(index, endSlide.Body.Length - index - 1);
             endSlide.Body = endSlide.Body.Substring(0, endSlide.Body.Length - unlockPathID.Length - 5);
+            //Debug.Log(endSlide.Body);
         }
+        
 
         if(endSlide.Body.Contains("[end]"))
         {
             pathEndBehaviour = PathEndBehaviour.END;
 
             int index = endSlide.Body.IndexOf("[end]");
-            endSlide.Body = endSlide.Body.Substring(0, index-1);
+            endSlide.Body = endSlide.Body.Substring(0, index);
+            //Debug.Log(endSlide.Body);
         } else if(endSlide.Body.Contains("[back"))
         {
             pathEndBehaviour = PathEndBehaviour.GOTO;
@@ -70,6 +75,7 @@ public class Path
             gotoID = endSlide.Body.Substring(index, endSlide.Body.Length - index - 1) + "1";
 //            Debug.Log("gotoID: " + gotoID);
             endSlide.Body = endSlide.Body.Substring(0, endSlide.Body.Length - gotoID.Length - 5);
+            //Debug.Log(endSlide.Body);
         } else 
         {
 //            Debug.Log("back not found in " + endSlide.ID);
@@ -81,12 +87,14 @@ public class Path
         if(endSlide.Body.Contains("[get"))
         {
             int index = endSlide.Body.IndexOf("[get")+4;
-            milestoneID = endSlide.Body.Substring(index, endSlide.Body.Length - index);
-            endSlide.Body = endSlide.Body.Substring(0, endSlide.Body.Length - milestoneID.Length - 4);
+            milestoneID = endSlide.Body.Substring(index, endSlide.Body.Length - index -1);
+            endSlide.Body = endSlide.Body.Substring(0, endSlide.Body.Length - milestoneID.Length - 5);
+            //Debug.Log(endSlide.Body);
         }
 
 
-        
+        endSlide.Body.Replace("[","");
+        endSlide.Body.Replace("]","");
 
     }
     
