@@ -34,7 +34,7 @@ public static class SaveLoadData
         }
     }
 
-    public static void SaveDialogueData(List<Branch> branches, List<Slide> slides, int id)
+    public static void SaveDialogueData(List<Branch> branches, List<Slide> slides, string id)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = "Data/Dialogue"+id+".cryptid";
@@ -45,7 +45,7 @@ public static class SaveLoadData
         stream.Close();
     }
 
-    public static DialogueFileData LoadDialogue(int id)
+    public static DialogueFileData LoadDialogue(string id)
     {
         string path = "Data/Dialogue"+id+".cryptid";
         if(File.Exists(path))
@@ -57,7 +57,7 @@ public static class SaveLoadData
             return data;
         } else
         {
-            //Debug.LogError("Error: Save file not found in " + path);
+            Debug.LogError("Error: Dialogue file " + id + " not found in " + path);
             return null;
         }
     }

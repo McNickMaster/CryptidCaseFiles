@@ -171,10 +171,13 @@ public class DialogueLoader : MonoBehaviour
     
     public void LoadConversation(string id)
     {
-        DialogueFileData dialogueFile = SaveLoadData.LoadDialogue(Int32.Parse(id));       
+        //Debug.Log("loading convo with id: " + id);
+        DialogueFileData dialogueFile = SaveLoadData.LoadDialogue(id);       
 
         myBranches = dialogueFile.GetBranches();
         mySlides = dialogueFile.GetSlides();
+
+        StartConversation();
     }
 
     public void StartConversation()

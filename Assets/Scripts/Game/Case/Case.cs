@@ -17,6 +17,8 @@ public class Case : ScriptableObject
     public List<CauseOfDeath> causeOfDeathList = new List<CauseOfDeath>();
     public List<Victim> victimList = new List<Victim>();
 
+    public List<DialogueData> phoneCallList;
+
     private bool culpSolved, victSolved, causeSolved;
     
     public void Setup()
