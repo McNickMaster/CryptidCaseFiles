@@ -18,6 +18,9 @@ public class Interactable_Button : Interactable
     public Color normalTint = Color.white;
     public Color hoverTint = new Color(0.9f, 0.9f, 0.9f);
     public Color selectTint = new Color(0.8f, 0.8f, 0.8f);
+    public bool showNameOnHover = true;
+    public string interactableName = "";
+    private TextMeshProUGUI nameText;
     private Image btn_image;
     
     [HideInInspector]
@@ -71,6 +74,15 @@ public class Interactable_Button : Interactable
             {
                 btn_image = GetComponent<Image>();
             }
+
+            if(showNameOnHover)
+            {
+                GameObject obj = Instantiate(new GameObject(), this.transform, false);
+                obj.transform.localPosition = new Vector3(0,1,0);
+                nameText = obj.AddComponent<TextMeshProUGUI>();
+                
+                obj.SetActive(false);
+            }
         }
 
 
@@ -115,6 +127,11 @@ public class Interactable_Button : Interactable
         } else 
         {
             ResetButtonTint();
+
+            if(showNameOnHover)
+            {
+                nameText.gameObject.SetActive(false);
+            }
         }
         
         selected = false;
@@ -136,8 +153,6 @@ public class Interactable_Button : Interactable
     }
 
    
-
-//this sucks to implemenet, think about it for a bit before trying
     public void HoverButton()
     {
         if(isVisible)
@@ -150,6 +165,12 @@ public class Interactable_Button : Interactable
             {
                 btn_image.color = hoverTint;
                 
+            }
+
+            if(showNameOnHover)
+            {
+                nameText.gameObject.SetActive(true);
+                nameText.text = interactableName;
             }
         }
     }
