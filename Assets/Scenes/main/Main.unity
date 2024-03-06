@@ -3041,7 +3041,7 @@ MonoBehaviour:
   slidePrefab: {fileID: 7232690847493515766, guid: 08c07c747650b8d43bea7d07ce714fed, type: 3}
   branchPrefab: {fileID: 4617611816227279890, guid: 6b37361f32c8b6b4f822cc2f811ef305, type: 3}
   monologuePrefab: {fileID: 5247174469749821810, guid: cb4af30bb25f4a242bee2d98dc167526, type: 3}
-  phoneCallPrefab: {fileID: 0}
+  phoneCallPrefab: {fileID: 5247174469749821810, guid: efe3d4e4b02136d458913aadacef9a46, type: 3}
   currentPath:
     slides: []
     firstSlide:
@@ -3127,6 +3127,7 @@ MonoBehaviour:
     unlockPathID: 
     lockPathID: 
     milestoneID: 
+  editor: 1
 --- !u!114 &1480938465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3264,18 +3265,6 @@ MonoBehaviour:
           m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1480938463}
-        m_TargetAssemblyTypeName: DialogueLoader, Assembly-CSharp
-        m_MethodName: StartMonologue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   Event_EnterOffice:
     m_PersistentCalls:
       m_Calls:
@@ -3291,18 +3280,6 @@ MonoBehaviour:
           m_StringArgument: 0
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1480938463}
-        m_TargetAssemblyTypeName: DialogueLoader, Assembly-CSharp
-        m_MethodName: StartMonologue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   Event_Puzzle2_Done:
     m_PersistentCalls:
       m_Calls:
@@ -3310,18 +3287,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: DialogueLoader, Assembly-CSharp
         m_MethodName: LoadMonologue
         m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 6
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1480938463}
-        m_TargetAssemblyTypeName: DialogueLoader, Assembly-CSharp
-        m_MethodName: StartMonologue
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
