@@ -233,7 +233,7 @@ public class CaseFile : MonoBehaviour
 
     void OnDisable()
     {
-        thisCase = null;
+        
     }
 
 
