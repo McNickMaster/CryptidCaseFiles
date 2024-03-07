@@ -28,7 +28,7 @@ ID,TITLE,BODY
 211,You,“Do you recognize anything here?”
 2111,Eric Meng,"“Believe it or not I do, the driver was a frequent hunter around these parts. Member of the Abra Hunting Club.”[back21][unlock214]"
 212,You,“Anything strange stick out to you?”
-2121,Eric Meng,"“Those footprints do, they start and stop without warning. Maybe they jumped away.”[getEVIDENCE_FOOTPRINTS][back21]"
+2121,Eric Meng,"“Those footprints do, they start and stop without warning. Maybe they jumped away.�[back21]"
 213,You,"“Not much, what’s up with you?”"
 2131,Eric Meng,“Doing my job I’m afraid”[end]
 214,You,[locked]“What do you know about the victim?”
@@ -40,7 +40,7 @@ ID,TITLE,BODY
 31111,Eric Meng,"“I notice his gun there too, but I wonder why he doesn’t have the rest of his equipment.”[back31]"
 312,You,“Anything strange stick out to you?”
 3121,Eric Meng,"“Those footprints do, they start and stop without warning, and they definitely don’t look human”"
-31211,Eric Meng,“Maybe it’s got other means of getting around.”[getEVIDENCE_FOOTPRINTS][back31]
+31211,Eric Meng,“Maybe it’s got other means of getting around.�[back31]
 313,You,"“Actually, I think I got all I need”[end]"
 @0,Officer Jameson,“Good evening Detective.”
 1,You,"“You were the first officer on scene, correct?”"
@@ -114,9 +114,9 @@ ID,TITLE,BODY
 211,You,“Notice anything off?”
 2111,Eric Meng,“The only thing off is this whole ordeal.”
 21111,Eric Meng,"“These sorts of attacks almost never happen, Abra’s sea creatures don’t bother us lest we bother them.”[back21][unlock215]"
-212,You,"“Know anything about the victim?”"
+212,You,“Know anything about the victim?”
 2121,Eric Meng,"“It’s just a hand, so– no. The most I can surmise is they were a fisher.”[back21]"
-213,You,"“Know anything about the ship?”"
+213,You,“Know anything about the ship?”
 2131,Eric Meng,"“Seems like a standard gillnetter, fishing ship, though they could’ve been using it for anything. A lot of sailors in Oldport have side-gigs.”[back21]"
 214,You,"“Thanks for your help, that’s all”[end]"
 215,You,[locked] “What could the victim have done to provoke something?”
@@ -177,7 +177,7 @@ ID,TITLE,BODY
 3121,Old Sailor,“Insights into what? The wreck? Oh jeez I dunno.”
 31211,You,“Just tell me if you know anything useful”
 312111,Old Sailor,"“Ah heck, I dunno what you’d think is useful. That’s a gillnetter there, doesn’t go far, so I dunno what could’ve wrecked it. Nothin’ between here and Pettiget ever really attacks us sailors”[back3121][unlock31214]"
-31212,You,""Any clue what caused the wreck?""
+31212,You,"Any clue what caused the wreck?"""""
 312121,Old Sailor,"“I mean that’s some nasty damage to the hull, no ordinary crash I can tell you that!”[back3121]"
 31213,You,“Nevermind.”[end]
 31214,You,[locked] “What sorts of things live between here and Pettiget?”
@@ -289,13 +289,13 @@ ID,TITLE,BODY
 212,You,"You: “Possibly, can you tell me about Evan?”"
 2121,Vivian DeTour,"“Sure I suppose… he worked at the dock here in Abra, which he hated. He’s much more interested in hiking and camping, that sort of thing.”"
 21211,Vivian DeTour,“What else do you want to know?”
-21221,You,You: “Why’d he hate his work?”
-212211,Vivian DeTour,"“He hates the water, really, always hated boats. I think he only works at the dock cause… well… it’s all he could get.”[back2122]"
-21222,You,You: “When did you last see him?”
-212221,Vivian DeTour,"“April 9th, he left in the morning, when he didn’t come home, and no one knew where he was, that's when I called the police.”[back2122]"
-21223,You,You: “Did he own a brown fishing jacket?”
-212231,Vivian DeTour,“You sure it wasn’t some survival gear? Cause he didn’t fish.”[back2122]
-21224,You,You: “I think I know all I need to now”[end]
+212111,You,You: “Why’d he hate his work?”
+2121111,Vivian DeTour,"“He hates the water, really, always hated boats. I think he only works at the dock cause… well… it’s all he could get.”[back21211]"
+212112,You,You: “When did you last see him?”
+2121121,Vivian DeTour,"“April 9th, he left in the morning, when he didn’t come home, and no one knew where he was, that's when I called the police.”[back21211]"
+212113,You,You: “Did he own a brown fishing jacket?”
+2121131,Vivian DeTour,“You sure it wasn’t some survival gear? Cause he didn’t fish.”[back21211]
+212114,You,You: “I think I know all I need to now”[end]
 213,You,"You: “No, I’m calling for a different case.”"
 2131,Vivian DeTour,“Why’re you calling me then?”
 21311,You,You: “I need you to tell me when you last saw Evan.”

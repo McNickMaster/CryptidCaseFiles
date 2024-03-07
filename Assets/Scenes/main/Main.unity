@@ -1351,10 +1351,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TRAVEL
+  m_text: Travel
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4ee032ab7ec4db444a5ae493f98abafd, type: 2}
+  m_sharedMaterial: {fileID: 1050345159512483225, guid: 4ee032ab7ec4db444a5ae493f98abafd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2109,6 +2109,7 @@ MonoBehaviour:
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   showNameOnHover: 1
   interactableName: 
+  nameSpawnPoint: {fileID: 0}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -2970,7 +2971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 599ca3a087fe23443ae2de3c7a7a0742, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f75f2042f4c116439f90421e42f3abf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3104,6 +3105,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c8c3ac1b2e895cc479fec901d9e6cb6b, type: 2}
   - {fileID: 11400000, guid: 249eeddaf32b42e4faed942a4e2ab042, type: 2}
   - {fileID: 11400000, guid: 43bce153359f55a45acb508ca6f88573, type: 2}
+  - {fileID: 11400000, guid: 52af8e16d14829e418080d4ca874cd31, type: 2}
+  - {fileID: 11400000, guid: cd1c564d908482641976c991055b050e, type: 2}
   data: []
   slides: []
   branches: []
@@ -3249,12 +3252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnableTutorialDialogue: 0
-  Event_FirstEvidence:
-    m_PersistentCalls:
-      m_Calls: []
-  Event_FirstNPC:
-    m_PersistentCalls:
-      m_Calls: []
   Event_EnterCrimeScene1:
     m_PersistentCalls:
       m_Calls:
@@ -3270,6 +3267,12 @@ MonoBehaviour:
           m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
+  Event_Evidence:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_NPC:
+    m_PersistentCalls:
+      m_Calls: []
   Event_EnterOffice:
     m_PersistentCalls:
       m_Calls:
@@ -3285,6 +3288,12 @@ MonoBehaviour:
           m_StringArgument: 0
           m_BoolArgument: 0
         m_CallState: 2
+  Event_FirstNote:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_FirstCaseFile:
+    m_PersistentCalls:
+      m_Calls: []
   Event_Puzzle2_Done:
     m_PersistentCalls:
       m_Calls:
@@ -4130,7 +4139,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 721.8247, y: -399.33615}
+  m_AnchoredPosition: {x: 603.4, y: -383}
   m_SizeDelta: {x: 431.0196, y: 173.4231}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619758578
@@ -4214,7 +4223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.882353, g: 0.24313727, b: 0.26666668, a: 1}
+  m_Color: {r: 0.88235295, g: 0.5605289, b: 0.24313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5513,6 +5522,7 @@ MonoBehaviour:
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   showNameOnHover: 1
   interactableName: 
+  nameSpawnPoint: {fileID: 0}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
