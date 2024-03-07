@@ -18,6 +18,10 @@ public class Interactable_Button : Interactable
     public Color normalTint = Color.white;
     public Color hoverTint = new Color(0.9f, 0.9f, 0.9f);
     public Color selectTint = new Color(0.8f, 0.8f, 0.8f);
+    public bool showNameOnHover = true;
+    public string interactableName = "";
+    private TextMeshProUGUI nameText;
+    public Transform nameSpawnPoint;
     private Image btn_image;
     
     [HideInInspector]
@@ -62,37 +66,61 @@ public class Interactable_Button : Interactable
     void Awake()
     {
         
-        if(isVisible)
-        {
-            if(is3D)
-            {            
-                GetMaterialInstance();
-            } else 
-            {
-                btn_image = GetComponent<Image>();
-            }
-        }
-
-
-        switch(btn_type)
-        {
-            case ButtonType.DIALOGUE:
-            {
-                dialogue.Init();
-                
-                break;
-            }
-
-            case ButtonType.TOGGLE:
-            {
-                objectToToggle.SetActive(state);
-                break;
-            }
-        }
         
+    }
+
+    void OnEnable()
+    {
+        if(isVisible)
+                {
+                    if(is3D)
+                    {            
+                        GetMaterialInstance();
+                    } else 
+                    {
+                        btn_image = GetComponent<Image>();
+                    }
+
+                    if(showNameOnHover)
+                    {
+                        Vector3 nameSpawn;
+                        if(nameSpawnPoint!=null)
+                        {
+                            nameSpawn = nameSpawnPoint.position;
+                        } else 
+                        {
+                            nameSpawn = transform.position + new Vector3(0,2.85f,0);
+                        }
+                         
+                        GameObject obj = Instantiate(GameData.instance.interactableNamePrefab, nameSpawn, Quaternion.identity, null);
+                        
+                        
+                        nameText = obj.GetComponentInChildren<TextMeshProUGUI>();
+                        
+                        nameText.gameObject.SetActive(false);
+                    }
+                }
 
 
-        ResetButtonTint();
+                switch(btn_type)
+                {
+                    case ButtonType.DIALOGUE:
+                    {
+                        dialogue.Init();
+                        
+                        break;
+                    }
+
+                    case ButtonType.TOGGLE:
+                    {
+                        objectToToggle.SetActive(state);
+                        break;
+                    }
+                }
+                
+
+
+                ResetButtonTint();
     }
 
     // Update is called once per frame
@@ -115,6 +143,11 @@ public class Interactable_Button : Interactable
         } else 
         {
             ResetButtonTint();
+
+            if(showNameOnHover)
+            {
+                nameText.gameObject.SetActive(false);
+            }
         }
         
         selected = false;
@@ -136,8 +169,6 @@ public class Interactable_Button : Interactable
     }
 
    
-
-//this sucks to implemenet, think about it for a bit before trying
     public void HoverButton()
     {
         if(isVisible)
@@ -150,6 +181,13 @@ public class Interactable_Button : Interactable
             {
                 btn_image.color = hoverTint;
                 
+            }
+
+            if(showNameOnHover)
+            {
+                //nameText.transform.LookAt(GameManager.instance.currentView.myCamera.transform);
+                nameText.gameObject.SetActive(true);
+                nameText.text = interactableName;
             }
         }
     }

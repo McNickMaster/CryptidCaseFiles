@@ -116,7 +116,8 @@ public class Notes : Interactable
         //if at end
         if(currentTextIndex == textSlides.Length - 1)
         {
-            if(milestoneID != "" || milestoneID != " ")
+            //Debug.Log("milestone:"+ milestoneID + " length:" + milestoneID.Length);
+            if(milestoneID.Length > 0)
             {
                 GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
             
