@@ -2109,6 +2109,7 @@ MonoBehaviour:
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   showNameOnHover: 1
   interactableName: 
+  nameSpawnPoint: {fileID: 0}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -3104,6 +3105,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c8c3ac1b2e895cc479fec901d9e6cb6b, type: 2}
   - {fileID: 11400000, guid: 249eeddaf32b42e4faed942a4e2ab042, type: 2}
   - {fileID: 11400000, guid: 43bce153359f55a45acb508ca6f88573, type: 2}
+  - {fileID: 11400000, guid: 52af8e16d14829e418080d4ca874cd31, type: 2}
+  - {fileID: 11400000, guid: cd1c564d908482641976c991055b050e, type: 2}
   data: []
   slides: []
   branches: []
@@ -3249,12 +3252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnableTutorialDialogue: 0
-  Event_FirstEvidence:
-    m_PersistentCalls:
-      m_Calls: []
-  Event_FirstNPC:
-    m_PersistentCalls:
-      m_Calls: []
   Event_EnterCrimeScene1:
     m_PersistentCalls:
       m_Calls:
@@ -3270,6 +3267,12 @@ MonoBehaviour:
           m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
+  Event_Evidence:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_NPC:
+    m_PersistentCalls:
+      m_Calls: []
   Event_EnterOffice:
     m_PersistentCalls:
       m_Calls:
@@ -3285,6 +3288,12 @@ MonoBehaviour:
           m_StringArgument: 0
           m_BoolArgument: 0
         m_CallState: 2
+  Event_FirstNote:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_FirstCaseFile:
+    m_PersistentCalls:
+      m_Calls: []
   Event_Puzzle2_Done:
     m_PersistentCalls:
       m_Calls:
@@ -5513,6 +5522,7 @@ MonoBehaviour:
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   showNameOnHover: 1
   interactableName: 
+  nameSpawnPoint: {fileID: 0}
   hovering: 0
   selected: 0
   destination: {fileID: 0}

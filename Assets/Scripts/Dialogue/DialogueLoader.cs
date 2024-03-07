@@ -38,6 +38,7 @@ public class DialogueLoader : MonoBehaviour
     private GameObject objInstance;
 
     private int dialogueIndex = 0, numPages = 0;
+    private bool evidence = false;
 
     void Awake()
     {
@@ -107,6 +108,10 @@ public class DialogueLoader : MonoBehaviour
             
         } else 
         {
+            if(file.Contains("Evidence_"))
+            {
+                evidence = true;
+            }
             Debug.Log("loading mono with id: " + file);
             SimpleTextFileData dataFile = SaveLoadData.LoadText(file);
             simpleTextPages = dataFile.GetFilePages();
@@ -149,7 +154,7 @@ public class DialogueLoader : MonoBehaviour
         title.text = "Monologue";
         body.text = simpleTextPages[dialogueIndex];
 
-
+        
     }
 
 
@@ -160,8 +165,15 @@ public class DialogueLoader : MonoBehaviour
 
         if(dialogueIndex >= numPages)
         {
+
             Destroy(objInstance);
             PlayerInput.instance.enabled = true;
+            
+            if(evidence)
+            {
+                GameEvents.instance.Event_Evidence.Invoke();
+            }
+            evidence = false;
 
         } else 
         {
@@ -200,6 +212,7 @@ public class DialogueLoader : MonoBehaviour
 
     public void EndConversation()
     {
+        GameEvents.instance.Event_NPC.Invoke();
         Destroy(currentUIObject);
         currentUIObject = null;
     }
