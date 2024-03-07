@@ -12,6 +12,7 @@ public class PhonecallManager : MonoBehaviour
 
     public GameObject[] buttons;
 
+
     void OnEnable()
     {
         SetPhoneCallList(GameManager.instance.currentCase.phoneCallList);
@@ -49,15 +50,12 @@ public class PhonecallManager : MonoBehaviour
         {
             tempButton = buttons[i].GetComponent<Button>();
             tempPhoneCall = phoneCalls[i];
-            tempButton.onClick.AddListener(delegate {DialogueLoader.instance.LoadConversation(tempPhoneCall.fileName);});
-            //tempButton.onClick.AddListener(Ow);
+            Debug.Log(tempPhoneCall.name + "  " + tempPhoneCall.fileName);
+            tempButton.GetComponent<PhonecallData>().id = tempPhoneCall.fileName;
+            //tempButton.onClick.AddListener(() => DialogueLoader.instance.LoadConversation(tempPhoneCall.fileName));
             buttons[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = tempPhoneCall.name;
         }
     }
 
-    void Ow()
-    {
-        Debug.Log("owwwwwww");
-    }
 
 }

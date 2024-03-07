@@ -253,6 +253,7 @@ public class GameManager : MonoBehaviour
                 {
                     
                     title = "Evidence";
+                    currentCase.evidenceList.Add(m);
                     break;
                 }
 
@@ -265,8 +266,14 @@ public class GameManager : MonoBehaviour
                 }
                 case "CULP":
                 {
-
+                    currentCase.culpritList.Add(Enum.Parse<Culprit>(id));
                     title = "Culprit";
+                    break;
+                }
+                case "VICTIM":
+                {
+                    currentCase.victimList.Add(Enum.Parse<Victim>(id));
+                    title = "Victim";
                     break;
                 }
             }
@@ -335,7 +342,7 @@ public enum Victim
 public enum Milestone
 {
 
-    EVIDENCE_FOOTPRINTS, EVIDENCE_FEATHERS, EVIDENCE_C1_3, EVIDENCE_C1_4, EVIDENCE_C1_5, 
+    EVIDENCE_FOOTPRINTS, EVIDENCE_FLECKS, EVIDENCE_C1_3, EVIDENCE_C1_4, EVIDENCE_C1_5, 
     EVIDENCE_PUZZLExCYPHER, EVIDENCE_C2_2, EVIDENCE_C2_3, EVIDENCE_C2_4, EVIDENCE_C2_5, 
     EVIDENCE_C3_1, EVIDENCE_C3_2, EVIDENCE_C3_3, EVIDENCE_C3_4, EVIDENCE_C3_5, 
     EVIDENCE_C4_1, EVIDENCE_C4_2, EVIDENCE_C4_3, EVIDENCE_C4_4, EVIDENCE_C4_5, 
@@ -344,7 +351,7 @@ public enum Milestone
     ITEM_PUZZLE,
     CS1_DONE, CS2_DONE, CS3_DONE, CS4_DONE, CS5_DONE,
     CULP_KRAKEN, CULP_MAHAMBA, CULP_SKEL, 
-    CAUSE_NPC1, CAUSE_NPC2, CAUSE_NPC3, CAUSE_NPC4, CAUSE_NPC5,
+    VICTIM_NPC1, VICTIM_NPC2, VICTIM_NPC3, VICTIM_NPC4, VICTIM_NPC5,
 
     ITEM_CARGO, ITEM_5, ITEM_6, ITEM_7, ITEM_8, ITEM_9, ITEM_10, ITEM_11,
     PUZZLE2_DONE, PUZZLE3_DONE, PUZZLE4_DONE, PUZZLE5_DONE

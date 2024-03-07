@@ -15,6 +15,7 @@ public class GameData : MonoBehaviour
 
     public GameObject[] CAUSE_MUGSHOTS;
     public GameObject[] VICTIM_MUGSHOTS;
+    public GameObject[] EVIDENCE_MUGSHOTS;
 
 [Header("Audio")]
     public AudioClip pageTurn;

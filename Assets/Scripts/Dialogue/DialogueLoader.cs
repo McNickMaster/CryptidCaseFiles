@@ -143,7 +143,7 @@ public class DialogueLoader : MonoBehaviour
             milestoneID = simpleTextPages[0].Substring(index, simpleTextPages[0].Length - index - 1);
             simpleTextPages[0] = simpleTextPages[0].Substring(0, simpleTextPages[0].Length - milestoneID.Length - 5);
         }
-//        Debug.Log(milestoneID + " " + milestoneID.Length);
+        //Debug.Log(milestoneID + " " + milestoneID.Length);
         if(milestoneID != "")
         {
             GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
@@ -184,7 +184,7 @@ public class DialogueLoader : MonoBehaviour
     
     public void LoadConversation(string id)
     {
-        //Debug.Log("loading convo with id: " + id);
+        Debug.Log("loading convo with id: " + id);
         DialogueFileData dialogueFile = SaveLoadData.LoadDialogue(id);       
 
         myBranches = dialogueFile.GetBranches();
@@ -377,7 +377,7 @@ public class DialogueLoader : MonoBehaviour
 
     void OnDisable()
     {
-        EndConversation();
+        //EndConversation();
     }
 
 
