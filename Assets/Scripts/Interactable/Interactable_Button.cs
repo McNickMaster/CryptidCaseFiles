@@ -21,6 +21,7 @@ public class Interactable_Button : Interactable
     public bool showNameOnHover = true;
     public string interactableName = "";
     private TextMeshProUGUI nameText;
+    public Transform nameSpawnPoint;
     private Image btn_image;
     
     [HideInInspector]
@@ -82,7 +83,16 @@ public class Interactable_Button : Interactable
 
                     if(showNameOnHover)
                     {
-                        GameObject obj = Instantiate(GameData.instance.interactableNamePrefab, transform.position + new Vector3(0,2.85f,0), Quaternion.identity, null);
+                        Vector3 nameSpawn;
+                        if(nameSpawnPoint!=null)
+                        {
+                            nameSpawn = nameSpawnPoint.position;
+                        } else 
+                        {
+                            nameSpawn = transform.position + new Vector3(0,2.85f,0);
+                        }
+                         
+                        GameObject obj = Instantiate(GameData.instance.interactableNamePrefab, nameSpawn, Quaternion.identity, null);
                         
                         
                         nameText = obj.GetComponentInChildren<TextMeshProUGUI>();
@@ -175,7 +185,7 @@ public class Interactable_Button : Interactable
 
             if(showNameOnHover)
             {
-                nameText.transform.LookAt(GameManager.instance.currentView.myCamera.transform);
+                //nameText.transform.LookAt(GameManager.instance.currentView.myCamera.transform);
                 nameText.gameObject.SetActive(true);
                 nameText.text = interactableName;
             }
