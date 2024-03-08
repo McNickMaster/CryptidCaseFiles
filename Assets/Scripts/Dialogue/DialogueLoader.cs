@@ -128,7 +128,7 @@ public class DialogueLoader : MonoBehaviour
         }
 
         dialogueIndex = 0;
-        title.text = "Inner Monolouge";
+        title.text = "Monologue";
         body.text = simpleTextPages[dialogueIndex];
 
 
