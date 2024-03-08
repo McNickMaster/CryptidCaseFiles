@@ -21,6 +21,10 @@ public class GameData : MonoBehaviour
     public AudioClip pageTurn;
     public AudioClip puzzleDrop;
     public AudioClip evidenceFound;
+
+    public AudioClip[] OFFICE_SFX;
+
+    public AudioClip[] CRIME_SFX;
 [Header("Config")]
     public float PUZZLE_AUTO_LOCK = 0.3f;
 
