@@ -3637,7 +3637,7 @@ MonoBehaviour:
   winScreen: {fileID: 814441101}
   loseScreen: {fileID: 904603700}
   caseFileObj: {fileID: 0}
-  startScene: 0
+  startScene: 1
   currentScene: 0
   currentView: {fileID: 0}
   views:
@@ -3654,7 +3654,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   loadSave: 0
-  loadFirstScene: 0
+  loadFirstScene: 1
 --- !u!4 &1480938467
 Transform:
   m_ObjectHideFlags: 0
