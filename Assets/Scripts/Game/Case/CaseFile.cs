@@ -87,7 +87,7 @@ public class CaseFile : MonoBehaviour
             string objName = ConvertPhotoEnumToObj(thisCase.culpritList[i].ToString());
             for(int j = 0; j < GameData.instance.CULPRIT_MUGSHOTS.Length; j++)
             {
-                Debug.Log("looking for: " + objName + " from: " + GameData.instance.CULPRIT_MUGSHOTS[j].name);
+                //Debug.Log("looking for: " + objName + " from: " + GameData.instance.CULPRIT_MUGSHOTS[j].name);
                 if(GameData.instance.CULPRIT_MUGSHOTS[j].name.Equals(objName))
                 {
                     
@@ -107,7 +107,7 @@ public class CaseFile : MonoBehaviour
             string objName = ConvertPhotoEnumToObj(thisCase.causeOfDeathList[i].ToString());
             for(int j = 0; j < GameData.instance.CAUSE_MUGSHOTS.Length; j++)
             {
-                Debug.Log("looking for: " + objName);
+                //Debug.Log("looking for: " + objName);
                 if(GameData.instance.CAUSE_MUGSHOTS[j].name.Equals(objName))
                 {
                     
@@ -126,7 +126,7 @@ public class CaseFile : MonoBehaviour
             string objName = ConvertPhotoEnumToObj(thisCase.victimList[i].ToString());
             for(int j = 0; j < GameData.instance.VICTIM_MUGSHOTS.Length; j++)
             {
-                Debug.Log("looking for: " + objName);
+                //Debug.Log("looking for: " + objName);
                 if(GameData.instance.VICTIM_MUGSHOTS[j].name.Equals(objName))
                 {
                     
@@ -233,7 +233,7 @@ public class CaseFile : MonoBehaviour
 
     void OnDisable()
     {
-        thisCase = null;
+        
     }
 
 

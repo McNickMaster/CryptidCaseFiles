@@ -20,6 +20,8 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField]
     private bool _dragging = false, inUI = false, typing = false;
+    [HideInInspector]
+    public bool phoneCallUIActive = false;
 
     private Vector3 mousePosOnClick = Vector3.zero;
     private Notes noteInteracted;

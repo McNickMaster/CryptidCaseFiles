@@ -58,7 +58,7 @@ public class Notes : Interactable
 
     public void Init()
     {
-        SimpleTextFileData data = SaveLoadData.LoadText(""+textData.order);
+        SimpleTextFileData data = SaveLoadData.LoadText(""+textData.name);
 
         string[] temp = data.GetFilePages();
         textSlides = new string[temp.Length];
@@ -75,15 +75,7 @@ public class Notes : Interactable
             DisablePageButtons();
         }
 
-        for(int i = 0; i < textSlides.Length; i++)
-        {
-            if(textSlides[i].Contains("[get"))
-            {
-                int index = textSlides[i].IndexOf("[get")+4;
-                milestoneID = textSlides[i].Substring(index, textSlides[i].Length - index - 1);
-                textSlides[i] = textSlides[i].Substring(0, textSlides[i].Length - milestoneID.Length - 5);
-            }
-        }   
+        
         
     }
 
@@ -106,7 +98,22 @@ public class Notes : Interactable
         if(currentTextIndex < textSlides.Length - 1)
         {
             currentTextIndex++;
+
+            if(textSlides[currentTextIndex].Contains("[get"))
+            {
+                int index = textSlides[currentTextIndex].IndexOf("[get")+4;
+                milestoneID = textSlides[currentTextIndex].Substring(index, textSlides[currentTextIndex].Length - index - 1);
+                textSlides[currentTextIndex] = textSlides[currentTextIndex].Substring(0, textSlides[currentTextIndex].Length - milestoneID.Length - 5);
+                Debug.Log("milestone: " + milestoneID);
+                if(milestoneID.Length > 0)
+                {
+                    GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
+            
+                }
+            }
+
             textBody.text = textSlides[currentTextIndex];
+
         } else 
         {
             
@@ -116,12 +123,15 @@ public class Notes : Interactable
         //if at end
         if(currentTextIndex == textSlides.Length - 1)
         {
-            if(milestoneID != "" || milestoneID != " ")
+            //Debug.Log("milestone:"+ milestoneID + " length:" + milestoneID.Length);
+            if(milestoneID.Length > 0)
             {
-                GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
+                //GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
             
             }
         }
+
+        
     }
 
     public void DisablePageButtons()

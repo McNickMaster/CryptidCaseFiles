@@ -38,4 +38,9 @@ public class Interactable_StickyNote : Interactable
     {
         inputField.enabled = true;
     }
+
+    public void DestroyMe()
+    {
+        Destroy(this.gameObject);
+    }
 }

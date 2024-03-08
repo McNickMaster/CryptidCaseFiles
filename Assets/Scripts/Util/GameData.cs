@@ -7,11 +7,15 @@ public class GameData : MonoBehaviour
 {
     public static GameData instance;
 
+[Header("Prefab")]
+    public GameObject interactableNamePrefab;
+
 [Header("Polaroid Prefabs")]
     public GameObject[] CULPRIT_MUGSHOTS;
 
     public GameObject[] CAUSE_MUGSHOTS;
     public GameObject[] VICTIM_MUGSHOTS;
+    public GameObject[] EVIDENCE_MUGSHOTS;
 
 [Header("Audio")]
     public AudioClip pageTurn;

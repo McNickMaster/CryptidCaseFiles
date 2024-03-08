@@ -19,5 +19,10 @@ MonoBehaviour:
   correctResult: {fileID: 11400000, guid: c8c3ac1b2e895cc479fec901d9e6cb6b, type: 2}
   incorrectResult: {fileID: 11400000, guid: 8c846c746f6023c4a84a80fb5014c868, type: 2}
   culpritList: 0100000002000000
-  causeOfDeathList: 0200000001000000
+  causeOfDeathList: 020000000100000001000000
   victimList: 
+  evidenceList: 0000000001000000
+  phoneCallList:
+  - {fileID: 11400000, guid: 112af563afa3907419baf87afeb73093, type: 2}
+  - {fileID: 11400000, guid: d26b134e32bacc144963b60c9d7a3874, type: 2}
+  - {fileID: 11400000, guid: fb9f18331a8d6ce45b37b6d3d87a5dd6, type: 2}
