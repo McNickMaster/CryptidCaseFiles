@@ -846,16 +846,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361709385}
-  m_LocalRotation: {x: -0.035581797, y: 0.035830665, z: 0.0037872992, w: -0.99871707}
-  m_LocalPosition: {x: 0, y: 0, z: -1.5293458}
+  m_LocalRotation: {x: 0.031453043, y: -0.6572623, z: 0.7517279, w: -0.04384294}
+  m_LocalPosition: {x: 0, y: 0, z: -0.067}
   m_LocalScale: {x: 0.28464234, y: 0.2846421, z: 0.28464213}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4374722466118500455}
-  m_LocalEulerAnglesHint: {x: 81.87, y: 90, z: 270}
+  m_LocalEulerAnglesHint: {x: 80.2, y: 38.054, z: 219.061}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.1831818, y: -0.116550446}
+  m_AnchoredPosition: {x: -0.14, y: 0.102}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &361709387
@@ -11589,7 +11589,7 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 0
   is3D: 1
-  myClip: {fileID: 8300000, guid: 46545526fb181924591465cfb347afd0, type: 3}
+  myClip: {fileID: 8300000, guid: 576cd4ee0568624469edc2c7d6c60191, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
@@ -13978,7 +13978,7 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 0
   is3D: 1
-  myClip: {fileID: 8300000, guid: 46545526fb181924591465cfb347afd0, type: 3}
+  myClip: {fileID: 8300000, guid: 45f8f27a7578b4546b93a2e247793444, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
