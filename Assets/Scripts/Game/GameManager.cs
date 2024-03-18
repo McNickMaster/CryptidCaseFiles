@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [Header("Modules")]
     public GameData gameData;
+    public Transform playerUIParent;
     public SceneLoadHelper sceneLoad;
     public DialogueLoader dialogueLoader;
     public PhonecallManager phonecallManager;
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject lineDrawer;
     public GameObject winScreen, loseScreen;
     public CaseFile caseFileObj;
+    public GameObject evidencePopPrefab;
 
     [Header("Data")]
     public e_Scene startScene = e_Scene.OFFICE;
@@ -245,6 +247,8 @@ public class GameManager : MonoBehaviour
     {
         return completedMilestones.Contains(m);
     }
+
+    int popCount = 0;
     public void AddMilestone(Milestone m)
     {
         if(CheckMilestone(m))
@@ -297,7 +301,10 @@ public class GameManager : MonoBehaviour
                 Debug.Log("id after replacing: " + id);
             }
 
-            EvidencePopup.instance.Spawn(title, id);
+            EvidencePopup pop = Instantiate(evidencePopPrefab, new Vector3(25,-25,0), Quaternion.identity, playerUIParent).GetComponent<EvidencePopup>();
+            pop.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(25,-25,0);
+            pop.Spawn(title, id);
+            pop.transform.SetAsFirstSibling();
         }
     }
     
