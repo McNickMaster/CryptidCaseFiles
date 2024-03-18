@@ -21,8 +21,13 @@ MonoBehaviour:
   autopsyText: {fileID: 11400000, guid: 153229df2d30cd140bfcf65687a2df90, type: 2}
   codexText: {fileID: 0}
   testimonyText: {fileID: 11400000, guid: 3e030db8046179f41a85f720ca44db8e, type: 2}
-  culpritList: 030000000400000005000000
+  culpritList: 
   causeOfDeathList: 
-  victimList: 0100000002000000030000000400000005000000
+  victimList: 
   evidenceList: 
-  phoneCallList: []
+  phoneCallList:
+  - {fileID: 11400000, guid: f9fcd8a210e1c5d4cac8db483697dd31, type: 2}
+  - {fileID: 11400000, guid: 34253f9ab3601f54683364a91d68684b, type: 2}
+  - {fileID: 11400000, guid: 30539c08676d3a8439c5ce5a6efd9195, type: 2}
+  - {fileID: 11400000, guid: b01da3fb6bc953a43a6f7794ec7340b6, type: 2}
+  - {fileID: 11400000, guid: ac2f1e90c700faa4ba4ce67e95e7adeb, type: 2}
