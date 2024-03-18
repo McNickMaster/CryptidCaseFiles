@@ -15,11 +15,16 @@ public class GameData : MonoBehaviour
 
     public GameObject[] CAUSE_MUGSHOTS;
     public GameObject[] VICTIM_MUGSHOTS;
+    public GameObject[] EVIDENCE_MUGSHOTS;
 
 [Header("Audio")]
     public AudioClip pageTurn;
     public AudioClip puzzleDrop;
     public AudioClip evidenceFound;
+
+    public AudioClip[] OFFICE_SFX;
+
+    public AudioClip[] CRIME_SFX;
 [Header("Config")]
     public float PUZZLE_AUTO_LOCK = 0.3f;
 

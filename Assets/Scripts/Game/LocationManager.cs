@@ -6,10 +6,14 @@ public class LocationManager : MonoBehaviour
 {
     public static LocationManager instance;
     public View defaultView;
+
+    public View[] views;
     //public Light myDirectional;
     
     void Awake()
     {
+        
+        GameManager.instance.views = views;
         GameManager.instance.currentLocation = this;
         GameManager.instance.SetNewView(defaultView);
         

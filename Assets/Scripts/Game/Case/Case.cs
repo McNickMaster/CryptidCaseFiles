@@ -16,6 +16,7 @@ public class Case : ScriptableObject
     public List<Culprit> culpritList = new List<Culprit>();
     public List<CauseOfDeath> causeOfDeathList = new List<CauseOfDeath>();
     public List<Victim> victimList = new List<Victim>();
+    public List<Milestone> evidenceList = new List<Milestone>();
 
     public List<DialogueData> phoneCallList;
 
@@ -25,6 +26,7 @@ public class Case : ScriptableObject
     {
         
         //culpritList = new List<Culprit>();
+        //causeOfDeathList = new List<CauseOfDeath>();
         
     }
 
