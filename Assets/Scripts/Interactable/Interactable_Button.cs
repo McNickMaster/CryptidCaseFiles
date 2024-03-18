@@ -144,7 +144,7 @@ public class Interactable_Button : Interactable
         {
             ResetButtonTint();
 
-            if(showNameOnHover)
+            if(showNameOnHover && nameText != null)
             {
                 nameText.gameObject.SetActive(false);
             }

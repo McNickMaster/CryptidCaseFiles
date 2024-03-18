@@ -27,6 +27,26 @@ public class Case : ScriptableObject
         
         //culpritList = new List<Culprit>();
         //causeOfDeathList = new List<CauseOfDeath>();
+
+        //what case am I? and reset lists accoordingly
+        switch(crimeScene)
+        {
+            case e_Scene.CS1:
+            {
+                culpritList = new List<Culprit>();
+                causeOfDeathList = new List<CauseOfDeath>();
+                evidenceList = new List<Milestone>();
+                break;
+            }
+            case e_Scene.CS2:
+            {
+                culpritList = new List<Culprit>();
+                victimList = new List<Victim>();
+                evidenceList = new List<Milestone>();
+                break;
+            }
+
+        }
         
     }
 
