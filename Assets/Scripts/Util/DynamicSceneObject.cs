@@ -15,12 +15,17 @@ public class DynamicSceneObject : MonoBehaviour
 
     void Awake()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     
     void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

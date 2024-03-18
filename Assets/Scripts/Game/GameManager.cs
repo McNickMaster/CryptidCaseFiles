@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public DialogueLoader dialogueLoader;
     public PhonecallManager phonecallManager;
     public Cutscene travelCutscene;
+    public Cutscene endCaseCutscene;
     public GameObject lineDrawer;
     public GameObject winScreen, loseScreen;
     public CaseFile caseFileObj;
@@ -173,8 +174,9 @@ public class GameManager : MonoBehaviour
     {
         currentGuess = CaseFile.instance.GetGuess();
 
-        PhoneManager.instance.Trigger_CaseSolved(currentCase.SolveCase(currentGuess));
+        
 
+       // GameEvents.instance.Event_SolveCase.Invoke();
         NextCase();
 
     }
@@ -194,11 +196,21 @@ public class GameManager : MonoBehaviour
 
         } else 
         {
-            
+            bool caseSolved = currentCase.SolveCase(currentGuess);
+            Case oldCase = currentCase;
+
+
             SetNewCase(cases[caseIndex]);
             CaseFile.instance.ResetCaseFile();
             currentCase.Setup();
             CaseFile.instance.SetCase(currentCase);
+            
+            
+            endCaseCutscene.StartCutscene();
+            sceneLoad.LoadNewScene("OFFICE");
+            currentScene = e_Scene.OFFICE;
+            GameEvents.instance.Event_SolveCase.Invoke();
+            PhoneManager.instance.Trigger_CaseSolved(oldCase, caseSolved, 0.5f);
 
 
         }

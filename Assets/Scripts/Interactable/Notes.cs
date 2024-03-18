@@ -108,6 +108,7 @@ public class Notes : Interactable
                 if(milestoneID.Length > 0)
                 {
                     GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
+                    GameEvents.instance.Event_Evidence.Invoke();
             
                 }
             }

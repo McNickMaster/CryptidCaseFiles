@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000004, guid: 9922ca553aa40244cbc1df2303494f9b, type: 2}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 7543ebb6086dba04da8b8643312c1f9f, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 6fb47060815e8764e9c974606a0f917f, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -10017,7 +10017,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.78
   m_Range: 35.64
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -10746,6 +10746,7 @@ GameObject:
   - component: {fileID: 2079351986226000400}
   - component: {fileID: 507769192492925164}
   - component: {fileID: 2828648134677345857}
+  - component: {fileID: 2828648134677345858}
   m_Layer: 11
   m_Name: SpawnAutopsyButton
   m_TagString: Untagged
@@ -10774,6 +10775,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.89, z: 0.45}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2828648134677345858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2828648134677345856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff89f8ad986783c4dbe2a3629ba5a240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 507769192492925164}
+  buttonType: 0
 --- !u!33 &2882392216072536085
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13202,6 +13217,7 @@ GameObject:
   - component: {fileID: 5635836941044706432}
   - component: {fileID: 6757872819115990749}
   - component: {fileID: 3718500957762701036}
+  - component: {fileID: 6757872819115990750}
   m_Layer: 11
   m_Name: SpawnCodex
   m_TagString: Untagged
@@ -14855,6 +14871,20 @@ MonoBehaviour:
   objectToToggle: {fileID: 0}
   state: 0
   newView: {fileID: 0}
+--- !u!114 &6757872819115990750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5327023459328428258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff89f8ad986783c4dbe2a3629ba5a240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 6757872819115990749}
+  buttonType: 1
 --- !u!1 &6775940037615829906
 GameObject:
   m_ObjectHideFlags: 0
@@ -15572,6 +15602,7 @@ GameObject:
   - component: {fileID: 4212215347293480842}
   - component: {fileID: 4783546830666777005}
   - component: {fileID: 7604227849771823333}
+  - component: {fileID: 7604227849771823334}
   m_Layer: 11
   m_Name: SpawnTestimoniesButton
   m_TagString: Untagged
@@ -15654,6 +15685,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0239551, y: 0.5993597, z: 0.3133511}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7604227849771823334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523956767922824571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff89f8ad986783c4dbe2a3629ba5a240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 4783546830666777005}
+  buttonType: 2
 --- !u!65 &7680594126460386292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17443,5 +17488,5 @@ GameObject:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 900302396467444884}
   - {fileID: 1276591192}
+  - {fileID: 900302396467444884}

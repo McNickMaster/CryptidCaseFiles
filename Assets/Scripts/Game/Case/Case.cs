@@ -13,6 +13,8 @@ public class Case : ScriptableObject
 
     public SimpleTextData correctResult, incorrectResult;
 
+    public SimpleTextData autopsyText, codexText, testimonyText;
+
     public List<Culprit> culpritList = new List<Culprit>();
     public List<CauseOfDeath> causeOfDeathList = new List<CauseOfDeath>();
     public List<Victim> victimList = new List<Victim>();
