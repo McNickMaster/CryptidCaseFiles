@@ -19,7 +19,14 @@ public class Corkboard : MonoBehaviour
         parentObj = new GameObject("PolaroidParent");
         SpawnAll();
 
-        
+        GameEvents.instance.Event_Evidence.AddListener(SpawnAll);
+        GameEvents.instance.Event_SolveCase.AddListener(RemoveAll);
+    }
+
+    void OnDisable()
+    {
+        GameEvents.instance.Event_Evidence.RemoveListener(SpawnAll);
+        GameEvents.instance.Event_SolveCase.RemoveListener(RemoveAll);
     }
     
 
@@ -40,12 +47,21 @@ public class Corkboard : MonoBehaviour
 
     void SpawnAll()
     {
+        Debug.Log("managing the corkboard");
         thisCase = GameManager.instance.currentCase;
 
         SpawnCulprits();
         SpawnCauses();
         SpawnVictims();
         SpawnEvidence();
+    }
+
+    void RemoveAll()
+    {
+        foreach(GameObject g in spawnedPhotos)
+        {
+            Destroy(g);
+        }
     }
 
     void SpawnCulprits()
@@ -59,7 +75,7 @@ public class Corkboard : MonoBehaviour
             string objName = ConvertPhotoEnumToObj(thisCase.culpritList[i].ToString());
             for(int j = 0; j < GameData.instance.CULPRIT_MUGSHOTS.Length; j++)
             {
-                //Debug.Log("looking for: " + objName + " from: " + GameData.instance.CULPRIT_MUGSHOTS[j].name);
+//                Debug.Log("looking for: " + objName + " from: " + GameData.instance.CULPRIT_MUGSHOTS[j].name);
                 if(GameData.instance.CULPRIT_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name.Contains(objName)))
                 {
                     float x = (i * (corkboardWidth/thisCase.culpritList.Count)) - (corkboardWidth/2);
@@ -82,7 +98,7 @@ public class Corkboard : MonoBehaviour
             for(int j = 0; j < GameData.instance.CAUSE_MUGSHOTS.Length; j++)
             {
                 //Debug.Log("looking for: " + objName + " from: " + GameData.instance.CAUSE_MUGSHOTS[j].name);
-                if(GameData.instance.CAUSE_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name == objName))
+                if(GameData.instance.CAUSE_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name.Contains(objName)))
                 {
                     float x = (i * (corkboardWidth/causeAmount)) - (corkboardWidth/2);
                     spawnPos = new Vector3(x, causeSpawnY.position.y, 2);
@@ -104,7 +120,7 @@ public class Corkboard : MonoBehaviour
             for(int j = 0; j < GameData.instance.EVIDENCE_MUGSHOTS.Length; j++)
             {
                 //Debug.Log("looking for: " + objName + " from: " + GameData.instance.EVIDENCE_MUGSHOTS[j].name);
-                if(GameData.instance.EVIDENCE_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name == objName))
+                if(GameData.instance.EVIDENCE_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name.Contains(objName)))
                 {
                     float x = (i * (corkboardWidth/evidenceAmount)) - (corkboardWidth/2);
                     spawnPos = new Vector3(x, evidenceY.position.y, 2);
@@ -125,7 +141,7 @@ public class Corkboard : MonoBehaviour
             for(int j = 0; j < GameData.instance.VICTIM_MUGSHOTS.Length; j++)
             {
                 //Debug.Log("looking for: " + objName + " from: " + GameData.instance.VICTIM_MUGSHOTS[j].name);
-                if(GameData.instance.VICTIM_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name == objName))
+                if(GameData.instance.VICTIM_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name.Contains(objName)))
                 {
                     float x = (i * (corkboardWidth/victimAmount)) - (corkboardWidth/2);
                     spawnPos = new Vector3(x, victimY.position.y, 2);

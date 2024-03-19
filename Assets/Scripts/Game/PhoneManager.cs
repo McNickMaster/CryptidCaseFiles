@@ -7,6 +7,8 @@ public class PhoneManager : MonoBehaviour
 
     public static PhoneManager instance;
 
+    private SimpleTextData caseResult;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -20,20 +22,34 @@ public class PhoneManager : MonoBehaviour
         
     }
 
-    public void Trigger_CaseSolved(bool correct)
+    public void Trigger_CaseSolved(Case myCase, bool correct)
     {
         if(correct)
         {
-            SpawnPhoneCall(GameManager.instance.currentCase.correctResult);
+            caseResult = myCase.correctResult;
         } else 
         {
-            SpawnPhoneCall(GameManager.instance.currentCase.incorrectResult);
+            caseResult = myCase.incorrectResult;
         }
+        SpawnPhoneCall();
     }
 
-    void SpawnPhoneCall(SimpleTextData textData)
+    public void Trigger_CaseSolved(Case myCase, bool correct, float delay)
     {
-        DialogueLoader.instance.LoadPhonecall(""+textData.name);
+        if(correct)
+        {
+            caseResult = (myCase.correctResult);
+        } else 
+        {
+            caseResult = (myCase.incorrectResult);
+        }
+        
+        Invoke("SpawnPhoneCall",delay);
+    }
+
+    void SpawnPhoneCall()
+    {
+        DialogueLoader.instance.LoadPhonecall(""+caseResult.name);
         
     }
 

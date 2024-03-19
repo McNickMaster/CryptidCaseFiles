@@ -16,6 +16,7 @@ public class GameEvents : MonoBehaviour
     public UnityEvent Event_EnterOffice;
     public UnityEvent Event_FirstNote;
     public UnityEvent Event_FirstCaseFile;
+    public UnityEvent Event_SolveCase;
 
     private bool firstEvidence = true, firstNPC = true, firstNote = true, firstCaseFale = true;
 
@@ -42,6 +43,10 @@ public class GameEvents : MonoBehaviour
         if (Event_EnterOffice == null)
             Event_EnterOffice = new UnityEvent();
 
+        if(Event_SolveCase == null)
+        {
+            Event_SolveCase = new UnityEvent();
+        }
         
         if (Event_Evidence == null)
             Event_Evidence = new UnityEvent();

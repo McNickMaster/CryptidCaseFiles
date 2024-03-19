@@ -148,6 +148,8 @@ public class DialogueLoader : MonoBehaviour
         {
             GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
             
+            
+            
         }
 
         dialogueIndex = 0;

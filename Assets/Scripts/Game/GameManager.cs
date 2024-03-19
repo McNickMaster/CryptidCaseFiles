@@ -11,13 +11,16 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [Header("Modules")]
     public GameData gameData;
+    public Transform playerUIParent;
     public SceneLoadHelper sceneLoad;
     public DialogueLoader dialogueLoader;
     public PhonecallManager phonecallManager;
     public Cutscene travelCutscene;
+    public Cutscene endCaseCutscene;
     public GameObject lineDrawer;
     public GameObject winScreen, loseScreen;
     public CaseFile caseFileObj;
+    public GameObject evidencePopPrefab;
 
     [Header("Data")]
     public e_Scene startScene = e_Scene.OFFICE;
@@ -173,8 +176,9 @@ public class GameManager : MonoBehaviour
     {
         currentGuess = CaseFile.instance.GetGuess();
 
-        PhoneManager.instance.Trigger_CaseSolved(currentCase.SolveCase(currentGuess));
+        
 
+       // GameEvents.instance.Event_SolveCase.Invoke();
         NextCase();
 
     }
@@ -194,11 +198,21 @@ public class GameManager : MonoBehaviour
 
         } else 
         {
-            
+            bool caseSolved = currentCase.SolveCase(currentGuess);
+            Case oldCase = currentCase;
+
+
             SetNewCase(cases[caseIndex]);
             CaseFile.instance.ResetCaseFile();
             currentCase.Setup();
             CaseFile.instance.SetCase(currentCase);
+            
+            
+            endCaseCutscene.StartCutscene();
+            sceneLoad.LoadNewScene("OFFICE");
+            currentScene = e_Scene.OFFICE;
+            GameEvents.instance.Event_SolveCase.Invoke();
+            PhoneManager.instance.Trigger_CaseSolved(oldCase, caseSolved, 0.5f);
 
 
         }
@@ -233,6 +247,8 @@ public class GameManager : MonoBehaviour
     {
         return completedMilestones.Contains(m);
     }
+
+    int popCount = 0;
     public void AddMilestone(Milestone m)
     {
         if(CheckMilestone(m))
@@ -285,7 +301,10 @@ public class GameManager : MonoBehaviour
                 Debug.Log("id after replacing: " + id);
             }
 
-            EvidencePopup.instance.Spawn(title, id);
+            EvidencePopup pop = Instantiate(evidencePopPrefab, new Vector3(25,-25,0), Quaternion.identity, playerUIParent).GetComponent<EvidencePopup>();
+            pop.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(25,-25,0);
+            pop.Spawn(title, id);
+            pop.transform.SetAsFirstSibling();
         }
     }
     
