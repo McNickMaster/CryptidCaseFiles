@@ -201,20 +201,16 @@ public class GameManager : MonoBehaviour
             bool caseSolved = currentCase.SolveCase(currentGuess);
             Case oldCase = currentCase;
 
-
             SetNewCase(cases[caseIndex]);
             CaseFile.instance.ResetCaseFile();
             currentCase.Setup();
             CaseFile.instance.SetCase(currentCase);
-            
             
             endCaseCutscene.StartCutscene();
             sceneLoad.LoadNewScene("OFFICE");
             currentScene = e_Scene.OFFICE;
             GameEvents.instance.Event_SolveCase.Invoke();
             PhoneManager.instance.Trigger_CaseSolved(oldCase, caseSolved, 0.5f);
-
-
         }
     }
 

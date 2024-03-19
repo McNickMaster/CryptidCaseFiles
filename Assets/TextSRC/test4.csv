@@ -238,84 +238,84 @@ ID,TITLE,BODY
 2131,David Tsarot,“Wha- you-” *click*[end]
 3,You,“Do you have a minute?”
 31,David Tsarot,“I guess… why?”[back111]
-@0,Vivian DeTour,“Mrs. DeTour speaking”
-1,You,"You: “Hello ma’am, I’m calling about Evan Banks.”"
-11,Vivian DeTour,“Oh! Do- do you know where he is?”
-111,You,"You: “Afraid not, I just have some questions.”"
-1111,You,You: “When did you last see Evan?”
-11111,Vivian DeTour,"“April 9th, he didn’t say where he was going…”"
-111111,Vivian DeTour,"“I guess I didn’t ask him, but oh how I wish I did. I tried calling him when it got late and nothing, so I called the police”[back111]"
-1112,You,You: “What does Evan do for work?”
-11121,Vivian DeTour,"“He works at some dock in Abra City, I couldn’t tell you why. He was always more of a fan of the mountains and forests. He doesn’t even like the water.”[back111]"
-1113,You,You: “Does Evan own a brown fishing jacket?”
-11131,Vivian DeTour,"“Fishing jacket? I doubt it, are you sure it wasn’t some sort of hiking gear? That’d be him.”[back111]"
-1114,You,You: “Does Evan or someone close to him own a boat?”
-11141,Vivian DeTour,"“Own a boat? He’s 26! There’s no way he could afford a boat, nor any of his friends for that matter.”[back111]"
-1115,You,"You: “That’s everything, thanks.”[end]"
-112,You,You: “I’m calling to figure that out.”
-1121,Vivian DeTour,“I see… very well”[back111]
-113,You,You: “We may have found him.”
-1131,Vivian DeTour,“Oh thank God! Oh I’ve missed him so much.”
-11311,You,"You: “We found a body, ma’am. Found in a fishing boat.”"
-113111,Vivian DeTour,“Oh no–! Wait…”
-1131111,Vivian DeTour,“A fishing boat? Evan didn’t fish!”
-11311111,You,You: “Would Evan have gone out with a friend?”
-113111111,Vivian DeTour,“Evan hates being on the sea! This doesn’t make any sense.”
-1131111111,Vivian DeTour,“I can’t– this can’t be true.” *click*[end]
-11311112,You,You: “He could’ve been going to Pettiget Island.”
-113111121,Vivian DeTour,"“For what reason? We don’t know anyone there, he hated sailing.”"
-1131111211,Vivian DeTour,"“Who even are you, I’m calling the police.” *click*[end]"
-11312,You,"You: “He’s dead, killed at sea.”"
-113121,Vivian DeTour,“Killed at sea!? What was he doing out there?! He didn’t even like the sea!”
-1131211,Vivian DeTour,“Is this some sort of sick joke? Who are you!? I’m calling the police.” *click*[end]
-2,You,"You: “I’m a detective with Abra PD, is this Evan Banks’ mother?”"
-21,Vivian DeTour,“yes it is… is there some update with the case?”
-211,You,"You: “Yes, I just need to ask you some questions.”"
-2111,You,You: “When did you last see Evan?”
-21111,Vivian DeTour,"“On the 9th. He was going out for something, but didn't say what.”"
-211111,Vivian DeTour,"“He normally comes home around midnight if he’s hanging out with friends, but I called all of them and they said they hadn’t seen him.”[back211]"
-2112,You,"You: “What did Evan do for work, for fun?”"
-21121,Vivian DeTour,"“For work? He worked at the docks in Abra, which he absolutely hated. He loves hiking and the mountains, not the water– whatsoever.”[back211]"
-2113,You,You: “Did Evan own a brown fishing jacket?”
-21131,Vivian DeTour,"“Well, he didn’t go fishing, so I doubt it. You sure it wasn’t some sort of survival gear?”[back211]"
-2114,You,You: “Did Evan have a boat?”
-21141,Vivian DeTour,"“God no, he works minimum wage.”[back211]"
-2115,You,"You: “I have everything I need, thank you”"
-21151,Vivian DeTour,"“Wait wait wait, what’s the update?”"
-211511,You,"You: “We found a body, I don’t believe it’s Evan’s however.”"
-2115111,Vivian DeTour,“I hope you’re right then. Good bye.” *click*[end]
-211512,You,"You: “We found a body, it may be Evan.”"
-2115121,Vivian DeTour,"“I– I– I’m coming to the station, you need me to identify it right? I’ll– oh my– one second–” *click*[end]"
-212,You,"You: “Possibly, can you tell me about Evan?”"
-2121,Vivian DeTour,"“Sure I suppose… he worked at the dock here in Abra, which he hated. He’s much more interested in hiking and camping, that sort of thing.”"
-21211,Vivian DeTour,“What else do you want to know?”
-212111,You,You: “Why’d he hate his work?”
-2121111,Vivian DeTour,"“He hates the water, really, always hated boats. I think he only works at the dock cause… well… it’s all he could get.”[back21211]"
-212112,You,You: “When did you last see him?”
-2121121,Vivian DeTour,"“April 9th, he left in the morning, when he didn’t come home, and no one knew where he was, that's when I called the police.”[back21211]"
-212113,You,You: “Did he own a brown fishing jacket?”
-2121131,Vivian DeTour,“You sure it wasn’t some survival gear? Cause he didn’t fish.”[back21211]
-212114,You,You: “I think I know all I need to now”[end]
-213,You,"You: “No, I’m calling for a different case.”"
-2131,Vivian DeTour,“Why’re you calling me then?”
-21311,You,You: “I need you to tell me when you last saw Evan.”
-213111,Vivian DeTour,"“Oh, uh, April 9th.”[back2131]"
-21312,You,You: “I need to confirm some things about Evan.”
-213121,You,You: “Does he own a brown fishing jacket?”
-2131211,Vivian DeTour,"“No I don’t think so, he didn’t fish”[back21312]"
-213122,You,You: “Does he have a boat?”
-2131221,Vivian DeTour,"“If he does and didn’t tell me, I’d be royally pissed that’s for sure”"
-21312211,Vivian DeTour,“And confused as to how he afforded it.”[back21312]
-213123,You,"You: “That’s all, thanks for your time”[end]"
-12313,You,You: “To see if they’re related.”
-213131,Vivian DeTour,“Alright I suppose…”[back21312]
-3,You,You: “Can you answer a few questions?”
-31,Vivian DeTour,“I’m not interested in whatever you’re selling”
-311,You,"You: “No no no, I’m a detective.”"
-3111,Vivian DeTour,“Well why didn’t you say so?”[back111]
-312,You,You: “It’s about Evan.”
-3121,Vivian DeTour,“...”
-31211,Vivian DeTour,“Did you find him?”[back212]
+@0,Eloise DeTour,“Mrs. DeTour speaking”
+1,You,"“Hello ma’am, I’m calling about Evan Banks.”"
+11,Eloise DeTour,“Oh! Do- do you know where he is?”
+111,You,"“Afraid not, I just have some questions.”"
+1111,You,“When did you last see Evan?”
+11111,Eloise DeTour,"“April 9th, he didn’t say where he was going…”"
+111111,Eloise DeTour,"“I guess I didn’t ask him, but oh how I wish I did. I tried calling him when it got late and nothing, so I called the police”[back111]"
+1112,You,“What does Evan do for work?”
+11121,Eloise DeTour,"“He works at some dock in Abra City, I couldn’t tell you why. He was always more of a fan of the mountains and forests. He doesn’t even like the water.”[back111]"
+1113,You,“Does Evan own a brown fishing jacket?”
+11131,Eloise DeTour,"“Fishing jacket? I doubt it, are you sure it wasn’t some sort of hiking gear? That’d be him.”[back111]"
+1114,You,“Does Evan or someone close to him own a boat?”
+11141,Eloise DeTour,"“Own a boat? He’s 26! There’s no way he could afford a boat, nor any of his friends for that matter.”[back111]"
+1115,You,"“That’s everything, thanks.”[end]"
+112,You,“I’m calling to figure that out.”
+1121,Eloise DeTour,“I see… very well”[back111]
+113,You,“We may have found him.”
+1131,Eloise DeTour,“Oh thank God! Oh I’ve missed him so much.”
+11311,You,"“We found a body, ma’am. Found in a fishing boat.”"
+113111,Eloise DeTour,“Oh no–! Wait…”
+1131111,Eloise DeTour,“A fishing boat? Evan didn’t fish!”
+11311111,You,“Would Evan have gone out with a friend?”
+113111111,Eloise DeTour,“Evan hates being on the sea! This doesn’t make any sense.”
+1131111111,Eloise DeTour,“I can’t– this can’t be true.” *click*[end]
+11311112,You,“He could’ve been going to Pettiget Island.”
+113111121,Eloise DeTour,"“For what reason? We don’t know anyone there, he hated sailing.”"
+1131111211,Eloise DeTour,"“Who even are you, I’m calling the police.” *click*[end]"
+11312,You,"“He’s dead, killed at sea.”"
+113121,Eloise DeTour,“Killed at sea!? What was he doing out there?! He didn’t even like the sea!”
+1131211,Eloise DeTour,“Is this some sort of sick joke? Who are you!? I’m calling the police.” *click*[end]
+2,You,"“I’m a detective with Abra PD, is this Evan Banks’ mother?”"
+21,Eloise DeTour,“yes it is… is there some update with the case?”
+211,You,"“Yes, I just need to ask you some questions.”"
+2111,You,“When did you last see Evan?”
+21111,Eloise DeTour,"“On the 9th. He was going out for something, but didn't say what.”"
+211111,Eloise DeTour,"“He normally comes home around midnight if he’s hanging out with friends, but I called all of them and they said they hadn’t seen him.”[back211]"
+2112,You,"“What did Evan do for work, for fun?”"
+21121,Eloise DeTour,"“For work? He worked at the docks in Abra, which he absolutely hated. He loves hiking and the mountains, not the water– whatsoever.”[back211]"
+2113,You,“Did Evan own a brown fishing jacket?”
+21131,Eloise DeTour,"“Well, he didn’t go fishing, so I doubt it. You sure it wasn’t some sort of survival gear?”[back211]"
+2114,You,“Did Evan have a boat?”
+21141,Eloise DeTour,"“God no, he works minimum wage.”[back211]"
+2115,You,"“I have everything I need, thank you”"
+21151,Eloise DeTour,"“Wait wait wait, what’s the update?”"
+211511,You,"“We found a body, I don’t believe it’s Evan’s however.”"
+2115111,Eloise DeTour,“I hope you’re right then. Good bye.” *click*[end]
+211512,You,"“We found a body, it may be Evan.”"
+2115121,Eloise DeTour,"“I– I– I’m coming to the station, you need me to identify it right? I’ll– oh my– one second–” *click*[end]"
+212,You,"“Possibly, can you tell me about Evan?”"
+2121,Eloise DeTour,"“Sure I suppose… he worked at the dock here in Abra, which he hated. He’s much more interested in hiking and camping, that sort of thing.”"
+21211,Eloise DeTour,“What else do you want to know?”
+212111,You,“Why’d he hate his work?”
+2121111,Eloise DeTour,"“He hates the water, really, always hated boats. I think he only works at the dock cause… well… it’s all he could get.”[back21211]"
+212112,You,“When did you last see him?”
+2121121,Eloise DeTour,"“April 9th, he left in the morning, when he didn’t come home, and no one knew where he was, that's when I called the police.”[back21211]"
+212113,You,“Did he own a brown fishing jacket?”
+2121131,Eloise DeTour,“You sure it wasn’t some survival gear? Cause he didn’t fish.”[back21211]
+212114,You,“I think I know all I need to now”[end]
+213,You,"“No, I’m calling for a different case.”"
+2131,Eloise DeTour,“Why’re you calling me then?”
+21311,You,“I need you to tell me when you last saw Evan.”
+213111,Eloise DeTour,"“Oh, uh, April 9th.”[back2131]"
+21312,You,“I need to confirm some things about Evan.”
+213121,You,“Does he own a brown fishing jacket?”
+2131211,Eloise DeTour,"“No I don’t think so, he didn’t fish”[back21312]"
+213122,You,“Does he have a boat?”
+2131221,Eloise DeTour,"“If he does and didn’t tell me, I’d be royally pissed that’s for sure”"
+21312211,Eloise DeTour,“And confused as to how he afforded it.”[back21312]
+213123,You,"“That’s all, thanks for your time”[end]"
+12313,You,“To see if they’re related.”
+213131,Eloise DeTour,“Alright I suppose…”[back21312]
+3,You,“Can you answer a few questions?”
+31,Eloise DeTour,“I’m not interested in whatever you’re selling”
+311,You,"“No no no, I’m a detective.”"
+3111,Eloise DeTour,“Well why didn’t you say so?”[back111]
+312,You,“It’s about Evan.”
+3121,Eloise DeTour,“...”
+31211,Eloise DeTour,“Did you find him?”[back212]
 @0,Renee Bondopulos,“Hello?”
 1,You,"“Hello, is this Renee Bondopulos?”"
 11,Renee Bondopulos,"“This is her, and you are?”"
@@ -363,67 +363,67 @@ ID,TITLE,BODY
 31211412,You,"“Possibly, we’ll be in touch.”[end]"
 31211413,You,"“Unfortunately it’s likely, someone from the department will call you soon.”[end]"
 @0,Carter Plank,"“Hello, who is this?”"
-1,You,"You: “I’m just calling from the Abra Police Department, got a few questions.”"
+1,You,"“I’m just calling from the Abra Police Department, got a few questions.”"
 11,Carter Plank,“I’m not in trouble am I?”
-111,You,"You: “No you’re not, I just need to talk about Timothy Plank.”"
+111,You,"“No you’re not, I just need to talk about Timothy Plank.”"
 1111,Carter Plank,"“Oh, right. What do you need to know?”"
-11111,You,You: “Who saw him last?”
+11111,You,“Who saw him last?”
 111111,Carter Plank,"“Probably his buddies at work. I talked to him earlier this month, around the 3rd maybe.”"
 1111111,Carter Plank,"“When I went by on the 9th just to say hi he wasn’t around, and his boss said he hadn’t been to work in a day or two, so that's when I reported him missing” [back1111]"
-11112,You,You: “What does he do for work?”
+11112,You,“What does he do for work?”
 111121,Carter Plank,"“He’s a fisherman, works around here in Oldport. I don’t really know exactly what he does, but he sure stays busy.” [back1111] [unlock11116]"
-11113,You,You: “Does he own a brown fishing jacket?”
+11113,You,“Does he own a brown fishing jacket?”
 111131,Carter Plank,"“I dunno what he wears at work, sorry” [back1111]"
-11114,You,You: “Does he own a boat?”
+11114,You,“Does he own a boat?”
 111141,Carter Plank,"“I think so, yeah yeah he’s talked about it before.” [back1111]"
-11115,You,You: “I think I have everything”
+11115,You,“I think I have everything”
 111151,Carter Plank,“Hope I was some help.”[end]
-11116,You,[locked] You: “Do you think he might have any other jobs?”
+11116,You,[locked] “Do you think he might have any other jobs?”
 111161,Carter Plank,"“I mean, probably, guy’s gotta pay the bills right?” [back1111]"
-112,You,You: “Not unless you did something illegal.”
+112,You,“Not unless you did something illegal.”
 1121,Carter Plank,"“Right, of course. Why’re you calling then?”"
-11211,You,You: “It’s about your uncle.” [back1111]
-113,You,You: “Not as long as you answer my questions fully.”
+11211,You,“It’s about your uncle.” [back1111]
+113,You,“Not as long as you answer my questions fully.”
 1131,Carter Plank,“The fullest! I’ll spare no detail.”
-11311,You,You: “Who saw him last?”
+11311,You,“Who saw him last?”
 113111,Carter Plank,"“So- probably someone he worked with I assume. He works almost every day, whereas I only visit him a few times a month probably.”"
 1131111,Carter Plank,"“I saw him on the 3rd, just chatting, checking up. He lives alone so I try to make an effort in visiting him. I went by again on the 9th and he wasn’t there.”"
 11311111,Carter Plank,"“I called his boss and they said he hadn’t come in since the 7th, so after a bit more calling around I decided to call the police.” [back1131]"
-11312,You,You: “What did he do for work?”
+11312,You,“What did he do for work?”
 113121,Carter Plank,"“He was a fisherman primarily. Always out on the water, he loved it. I think I remember him saying he had some odd jobs here and there.”"
 1131211,Carter Plank,"“He went to Pettiget a lot, but I forget why…” [back1131]"
-11313,You,You: “Does he own a brown fishing jacket?”
+11313,You,“Does he own a brown fishing jacket?”
 113131,Carter Plank,"“Oh jeez, I’ll have to really wrack my memory”"
 1131311,Carter Plank,“I don’t– I mean–... probably?”
 11313111,Carter Plank,“That’s the best I can remember” [back1131]
-11314,You,You: “Does he own a boat?”
+11314,You,“Does he own a boat?”
 113141,Carter Plank,"“Sure does, dunno how he’d– y'know, be a fisherman without one.” [back1131]"
-11315,You,You: “I think that’s enough”
+11315,You,“I think that’s enough”
 113151,Carter Plank,"“I’m good, right?”[end]"
-2,You,"You: “I’m a detective, is this Carter Plank?”"
+2,You,"“I’m a detective, is this Carter Plank?”"
 21,Carter Plank,“Mmmmmmyyesss?”
-211,You,"You: “I’ve just got a few questions about your uncle, Timothy Plank.”"
+211,You,"“I’ve just got a few questions about your uncle, Timothy Plank.”"
 2111,Carter Plank,“Oh that makes sense.” [back1111]
-212,You,You: “..are you sure?”
+212,You,“..are you sure?”
 2121,Carter Plank,“Yeah.”
 21211,Carter Plank,“Sorry I’m just tired.”
-212111,You,You: “I need to talk to you about your uncle.” [back1111]
-3,You,You: “Could I just have a moment of your time?”
+212111,You,“I need to talk to you about your uncle.” [back1111]
+3,You,“Could I just have a moment of your time?”
 31,Carter Plank,"“Whatever it is, I don't want it.”"
-311,You,"You: “I’m not a salesperson, I’m a detective.”"
+311,You,"“I’m not a salesperson, I’m a detective.”"
 3111,Carter Plank,“You shoulda led with that then. What’s up?”
-31111,You,You: “I need to know when your uncle was last seen.”
+31111,You,“I need to know when your uncle was last seen.”
 311111,Carter Plank,"“By me? On the 3rd. I didn’t see him every day though, I mean– I only noticed he was missing about a week later.” [back3111]"
-31112,You,You: “What does Timothy Plank do for work?”
+31112,You,“What does Timothy Plank do for work?”
 311121,Carter Plank,"“He’s a fisherman, through and through. Always busy too.” [back3111]"
-31113,You,You: “Do you know if your uncle owns a brown fishing jacket?”
+31113,You,“Do you know if your uncle owns a brown fishing jacket?”
 311131,Carter Plank,“I would assume so. He’s got all that sorta stuff.” [back3111]
-31114,You,You: “Does your uncle own a boat?”
+31114,You,“Does your uncle own a boat?”
 311141,Carter Plank,“Sure does. I don’t think it’s anything fancy though.” [back3111]
-31115,You,You: “That’s everything.”[end]
-312,You,You: “It’s about your uncle.”
+31115,You,“That’s everything.”[end]
+312,You,“It’s about your uncle.”
 3121,Carter Plank,“Oh? Is there any news about him?”
-31211,You,"You: “Maybe, I just have a few questions.” [back1111]"
+31211,You,"“Maybe, I just have a few questions.” [back1111]"
 @0,Daisy Beebug,“Hello?”
 1,You,"“Hello, am I speaking to Daisy Beebug?”"
 11,Daisy Beebug,“You are. Who is this?”

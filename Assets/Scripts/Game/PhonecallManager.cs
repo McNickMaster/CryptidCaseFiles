@@ -12,11 +12,19 @@ public class PhonecallManager : MonoBehaviour
 
     public GameObject[] buttons;
 
+    void Awake()
+    {
+        
+    }
 
     void OnEnable()
     {
+        
+
         SetPhoneCallList(GameManager.instance.currentCase.phoneCallList);
-        PlayerInput.instance.phoneCallUIActive = true;
+
+
+        PlayerInput.instance.phoneCallUIActive = GameManager.instance.currentCase.phoneCallList.Count > 0;
     }
 
     void OnDisable()
@@ -39,11 +47,7 @@ public class PhonecallManager : MonoBehaviour
     {
         phoneCalls = newPhoneCalls;
 
-        if(phoneCalls.Count < 1)
-        {
-            Debug.Log("hi im messing up your phone");
-            phoneToggle.enabled = false;
-        }
+        
 
         DialogueData tempPhoneCall;
         Button tempButton;
