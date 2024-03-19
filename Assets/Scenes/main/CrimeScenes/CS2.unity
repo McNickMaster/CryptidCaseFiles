@@ -334,6 +334,99 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606979124}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1671953373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671953374}
+  m_Layer: 0
+  m_Name: name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1671953374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671953373}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.5229923, z: -0, w: -0.8523375}
+  m_LocalPosition: {x: -11.241028, y: 4.807, z: -31.14173}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7387367642403578656}
+  m_LocalEulerAnglesHint: {x: 0, y: 423.066, z: 0}
+--- !u!1 &1798940848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1798940849}
+  m_Layer: 0
+  m_Name: name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1798940849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798940848}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.6275901, z: -0, w: 0.778544}
+  m_LocalPosition: {x: -10.117315, y: 5.252, z: -34.125786}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7387367642403578656}
+  m_LocalEulerAnglesHint: {x: 0, y: 77.745, z: 0}
+--- !u!1 &2089710528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2089710529}
+  m_Layer: 0
+  m_Name: name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2089710529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089710528}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.020510757, y: -0.2237406, z: -0.011600237, w: -0.97436386}
+  m_LocalPosition: {x: -16.18115, y: 5.202326, z: -27.778488}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7387367642403578656}
+  m_LocalEulerAnglesHint: {x: 1.993, y: 25.897, z: 1.822}
 --- !u!4 &235338039285443312
 Transform:
   m_ObjectHideFlags: 0
@@ -475,6 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultView: {fileID: 3337514323117024432}
+  views: []
 --- !u!136 &746358318225100801
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -745,11 +839,14 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 9
   is3D: 1
-  myClip: {fileID: 0}
+  myClip: {fileID: 8300000, guid: 7cf305c3bcc1c974e833376c77ac9ff0, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: 
+  nameSpawnPoint: {fileID: 0}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -1305,11 +1402,14 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 9
   is3D: 1
-  myClip: {fileID: 0}
+  myClip: {fileID: 8300000, guid: 9d765c960e5ef474a867bad7b15d2772, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: 
+  nameSpawnPoint: {fileID: 0}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -1599,11 +1699,14 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 9
   is3D: 1
-  myClip: {fileID: 0}
+  myClip: {fileID: 8300000, guid: 99ebd178b3b7f5245acea393fd930b51, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: 
+  nameSpawnPoint: {fileID: 0}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -2132,11 +2235,14 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 4
   is3D: 1
-  myClip: {fileID: 0}
+  myClip: {fileID: 8300000, guid: 43a67560c5425394eb5d8c0ce02fe4a3, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: Technician
+  nameSpawnPoint: {fileID: 1798940849}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -2576,11 +2682,14 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 4
   is3D: 1
-  myClip: {fileID: 0}
+  myClip: {fileID: 8300000, guid: 43a67560c5425394eb5d8c0ce02fe4a3, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: Reporter
+  nameSpawnPoint: {fileID: 2089710529}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -2618,11 +2727,14 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 4
   is3D: 1
-  myClip: {fileID: 0}
+  myClip: {fileID: 8300000, guid: 6e946f84e941fb94aafb81cb730758ae, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: Sailor
+  nameSpawnPoint: {fileID: 1671953374}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -2791,11 +2903,14 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 9
   is3D: 1
-  myClip: {fileID: 0}
+  myClip: {fileID: 8300000, guid: 99ebd178b3b7f5245acea393fd930b51, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: 
+  nameSpawnPoint: {fileID: 0}
   hovering: 0
   selected: 0
   destination: {fileID: 0}
@@ -4400,8 +4515,11 @@ Transform:
   - {fileID: 6447466294993500493}
   - {fileID: 6081038255118444410}
   - {fileID: 2892180901801590498}
+  - {fileID: 2089710529}
   - {fileID: 8081330314145562570}
+  - {fileID: 1671953374}
   - {fileID: 5684686338430643932}
+  - {fileID: 1798940849}
   - {fileID: 8728041159239709816}
   - {fileID: 5315897471976972945}
   - {fileID: 7918154259915672979}
@@ -5117,11 +5235,14 @@ MonoBehaviour:
   thisEnabled: 1
   btn_type: 9
   is3D: 1
-  myClip: {fileID: 0}
+  myClip: {fileID: 8300000, guid: 7cf305c3bcc1c974e833376c77ac9ff0, type: 3}
   isVisible: 1
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: 
+  nameSpawnPoint: {fileID: 0}
   hovering: 0
   selected: 0
   destination: {fileID: 0}

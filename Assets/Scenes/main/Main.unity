@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3451,6 +3451,7 @@ MonoBehaviour:
   EVIDENCE_MUGSHOTS:
   - {fileID: 7055814892817486851, guid: 11d274d3579d061429fef3447d53bf39, type: 3}
   - {fileID: 7055814892817486851, guid: deff8a35f66074548906c0b86b7a2dbf, type: 3}
+  - {fileID: 7055814892817486851, guid: 84aa856f54fd5344e89936cd5e1ab844, type: 3}
   pageTurn: {fileID: 8300000, guid: a696ab9247beb3f4b8a79f730b6d20a9, type: 3}
   puzzleDrop: {fileID: 8300000, guid: 6d589674f63e69e498620f6dc1e1c44e, type: 3}
   evidenceFound: {fileID: 8300000, guid: 42830562f3e02824d95e717a314c3137, type: 3}
@@ -3510,8 +3511,8 @@ MonoBehaviour:
   loseScreen: {fileID: 904603700}
   caseFileObj: {fileID: 0}
   evidencePopPrefab: {fileID: 8004170317590808554, guid: 8198f6c13ede0f34daa446f65afbe3ab, type: 3}
-  startScene: 0
-  currentScene: 0
+  startScene: 1
+  currentScene: 1
   currentView: {fileID: 0}
   views:
   - {fileID: 0}
@@ -3573,7 +3574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03347492e92cb74c886fb7a612ca2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnableTutorialDialogue: 0
+  EnableTutorialDialogue: 1
   Event_EnterCrimeScene1:
     m_PersistentCalls:
       m_Calls:
