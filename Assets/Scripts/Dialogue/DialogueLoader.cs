@@ -37,6 +37,9 @@ public class DialogueLoader : MonoBehaviour
     private DialogueData dialogueData;
     private GameObject objInstance;
 
+    private e_Scene travelLocation;
+    private bool transport = false;
+
     private int dialogueIndex = 0, numPages = 0;
     private bool evidence = false;
 
@@ -143,12 +146,26 @@ public class DialogueLoader : MonoBehaviour
             milestoneID = simpleTextPages[0].Substring(index, simpleTextPages[0].Length - index - 1);
             simpleTextPages[0] = simpleTextPages[0].Substring(0, simpleTextPages[0].Length - milestoneID.Length - 5);
         }
-        //Debug.Log(milestoneID + " " + milestoneID.Length);
         if(milestoneID != "")
         {
             GameManager.instance.AddMilestone(Enum.Parse<Milestone>(milestoneID));
             
-            
+        }
+
+        string travelID = "";
+        if(simpleTextPages[0].Contains("[travel"))
+        {
+            int index = simpleTextPages[0].IndexOf("[travel")+6;
+            travelID = simpleTextPages[0].Substring(index, simpleTextPages[0].Length - index - 1);
+            simpleTextPages[0] = simpleTextPages[0].Substring(0, simpleTextPages[0].Length - milestoneID.Length - 7);
+            transport = true;
+        }
+        Debug.Log(travelID + " " + travelID.Length);
+
+        
+        if(transport)
+        {
+            travelLocation = Enum.Parse<e_Scene>(travelID);
             
         }
 
@@ -176,6 +193,11 @@ public class DialogueLoader : MonoBehaviour
                 GameEvents.instance.Event_Evidence.Invoke();
             }
             evidence = false;
+
+            if(transport)
+            {
+                GameManager.instance.Travel(travelLocation);
+            }
 
         } else 
         {

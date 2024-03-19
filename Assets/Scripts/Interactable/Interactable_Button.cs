@@ -84,17 +84,20 @@ public class Interactable_Button : Interactable
                     if(showNameOnHover)
                     {
                         Vector3 nameSpawn;
+                        Quaternion rotation;
                         if(nameSpawnPoint!=null)
                         {
                             nameSpawn = nameSpawnPoint.position;
+                            rotation = nameSpawnPoint.rotation;
                         } else 
                         {
                             nameSpawn = transform.position + new Vector3(0,2.85f,0);
+                            rotation = Quaternion.identity;
                         }
                          
-                        GameObject obj = Instantiate(GameData.instance.interactableNamePrefab, nameSpawn, Quaternion.identity, null);
+                        GameObject obj = Instantiate(GameData.instance.interactableNamePrefab, nameSpawn, rotation, null);
                         
-                        
+                        //obj.transform.LookAt()
                         nameText = obj.GetComponentInChildren<TextMeshProUGUI>();
                         
                         nameText.gameObject.SetActive(false);
@@ -143,13 +146,14 @@ public class Interactable_Button : Interactable
         } else 
         {
             ResetButtonTint();
-
-            if(showNameOnHover && nameText != null)
+            
+            //Debug.Log(this.gameObject.name + " text disable check");
+            if(nameText != null)
             {
                 nameText.gameObject.SetActive(false);
             }
         }
-        
+//        Debug.Log(this.gameObject.name + " " + selected + " " + hovering);
         selected = false;
         hovering = false;
 
@@ -347,7 +351,7 @@ public class Interactable_Button : Interactable
     }
 
     public void SetGuess()
-    {
+    { 
 
     }
 
