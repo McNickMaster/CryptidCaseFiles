@@ -41,6 +41,7 @@ public class PhonecallManager : MonoBehaviour
 
         if(phoneCalls.Count < 1)
         {
+            Debug.Log("hi im messing up your phone");
             phoneToggle.enabled = false;
         }
 
