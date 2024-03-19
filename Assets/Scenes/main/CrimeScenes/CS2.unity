@@ -358,13 +358,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671953373}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.13438427, z: -0, w: 0.9909293}
+  m_LocalRotation: {x: -0, y: -0.5229923, z: -0, w: -0.8523375}
   m_LocalPosition: {x: -11.241028, y: 4.807, z: -31.14173}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7387367642403578656}
-  m_LocalEulerAnglesHint: {x: 0, y: 103.657, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 423.066, z: 0}
 --- !u!1 &1798940848
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,13 +389,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798940848}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.34558144, z: -0, w: 0.9383888}
+  m_LocalRotation: {x: -0, y: 0.6275901, z: -0, w: 0.778544}
   m_LocalPosition: {x: -10.117315, y: 5.252, z: -34.125786}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7387367642403578656}
-  m_LocalEulerAnglesHint: {x: 0, y: 147.602, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 77.745, z: 0}
 --- !u!1 &2089710528
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,13 +420,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089710528}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.007565494, y: 0.9467946, z: 0.022316333, w: -0.32097474}
+  m_LocalRotation: {x: -0.020510757, y: -0.2237406, z: -0.011600237, w: -0.97436386}
   m_LocalPosition: {x: -16.18115, y: 5.202326, z: -27.778488}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7387367642403578656}
-  m_LocalEulerAnglesHint: {x: -0.438, y: 33.081, z: 1.475}
+  m_LocalEulerAnglesHint: {x: 1.993, y: 25.897, z: 1.822}
 --- !u!4 &235338039285443312
 Transform:
   m_ObjectHideFlags: 0
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   showNameOnHover: 1
-  interactableName: Crime Scene Technician
+  interactableName: Technician
   nameSpawnPoint: {fileID: 1798940849}
   hovering: 0
   selected: 0
