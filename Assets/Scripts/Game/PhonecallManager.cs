@@ -58,7 +58,9 @@ public class PhonecallManager : MonoBehaviour
             Debug.Log(tempPhoneCall.name + "  " + tempPhoneCall.fileName);
             tempButton.GetComponent<PhonecallData>().id = tempPhoneCall.fileName;
             //tempButton.onClick.AddListener(() => DialogueLoader.instance.LoadConversation(tempPhoneCall.fileName));
-            buttons[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = tempPhoneCall.name;
+            string s = tempPhoneCall.name;
+            s = s.Substring(6, s.Length - 6);
+            buttons[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = s;
         }
     }
 

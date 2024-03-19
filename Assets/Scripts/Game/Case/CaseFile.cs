@@ -70,9 +70,11 @@ public class CaseFile : MonoBehaviour
         Destroy(objectParent);
         objectParent = new GameObject("PolaroidParent");
         objectParent.transform.parent = GetComponentInParent<TempNode>().transform;
+        thisCase = GameManager.instance.currentCase;
         PopulateCulprits(); 
         PopulateCauses();
         PopulateVictims();
+
     }
 
     public void PopulateCulprits()

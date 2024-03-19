@@ -259,6 +259,7 @@ public class Interactable_Button : Interactable
             {
                 Notes note = GetComponentInParent<Notes>();
                 
+                SoundManager.instance.PlaySFX(GameData.instance.pageTurn);
                 if(pageButtonLeft)
                 {
                     note.PageTurn_Left();
@@ -266,7 +267,6 @@ public class Interactable_Button : Interactable
                 {
                     note.PageTurn_Right();
                 }
-                SoundManager.instance.PlaySFX(GameData.instance.pageTurn);
 //                Debug.Log("turn page");
                 break;
             }
