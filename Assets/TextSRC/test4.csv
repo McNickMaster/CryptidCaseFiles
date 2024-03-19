@@ -106,9 +106,9 @@ ID,TITLE,BODY
 112131,Eric Meng,"“All I see is a hand, so I don’t know how I’d recognize them.”[back1121][unlock11216]"
 11214,You,“I think that’s everything”[end]
 11215,You,[locked] “Why isn’t this more common?”
-112151,Eric Meng,"“Most creatures in the sea aren’t that aggressive, especially towards big ships with barely any meat on them. This couldn’t have been a random attack.”[back1121]"
+112151,Eric Meng,"“Most creatures in the sea aren’t that aggressive, especially towards bigger ships. This couldn’t have been a random attack.”[back1121]"
 11216,You,"[locked] “Must’ve been a fisher though, right?”"
-112161,Eric Meng,"“This is a fishing ship, but I don’t see the typical equipment. Plenty of fishermen have odd jobs around here, maybe they were on an errand.”[back1121]"
+112161,Eric Meng,"“This is a fishing ship, but I don’t see the equipment. Plenty of fishermen have odd jobs around here, maybe they were on an errand.”[back1121]"
 2,You,"“Good afternoon, just got a few questions.”"
 21,Eric Meng,"“Sure thing, ask away”"
 211,You,“Notice anything off?”
@@ -130,7 +130,7 @@ ID,TITLE,BODY
 313,You,“Have you seen this happen before?”
 3131,Eric Meng,"“A wreck like this? Almost never happens, good thing too, given the town’s dependence on the water.”[back31]"
 314,You,“Know anything about the ship or crew?”
-3141,Eric Meng,"“Typical gillnetter like this would just have one or two people manning it, given that there’s just the one hand and no other signs, I’m assuming just one sailor.”[back31][unlock317]"
+3141,Eric Meng,"“Typical gillnetter like this would just have one or two people manning it, so I’m assuming just one sailor.”[back31][unlock317]"
 315,You,"“My minute’s up, that’s everything.”[end]"
 316,You,[locked] “What would provoke something?”
 3161,Eric Meng,"“Oh I dunno, attacking it I guess? Staying too long in its territory maybe?”[back31]"
@@ -146,7 +146,7 @@ ID,TITLE,BODY
 112,You,“Do you recognize the ship?”
 1121,Old Sailor,"“Yessir, that’s a gillnetter. Fishing ship, decent enough to get you as far as Pettiget by the looks of it.”[back11]"
 113,You,“Know what could’ve done this?”
-1131,Old Sailor,"“Ah hell, no clue. We’ve got a lot of sea beasties in this lake, but us sailors know how to avoid them and they know to avoid us, so I dunno what changed here.”[back11]"
+1131,Old Sailor,"“Ah hell, no clue. We’ve got a lot of sea beasties in this lake, but us sailors know how to avoid them, so I dunno what changed here.”[back11]"
 114,You,“No further questions.”[end]
 115,You,"[locked] ""Do a lot of people here have odd jobs?”"
 1151,Old Sailor,"“Oh for sure, most people I know got a side gig or two. Most commonly quick trips to Pettiget, sometimes passengers, sometimes cargo.”[back11]"
@@ -160,23 +160,23 @@ ID,TITLE,BODY
 2131,Fred Fiegel,“Like the back of my hand!”[back21][unlock215][unlock216]
 214,You,"“Thanks for your help, that’ll be all”[end]"
 215,You,[locked] “What can you tell me about the route to Pettiget from here?”
-2151,Fred Fiegel,"“The water’s not too treacherous on its own, but the visibility is often pretty shit. Were someone to sail on their own they’d need to be fairly experienced.”[back21]"
+2151,Fred Fiegel,"“The water’s not too treacherous on its own, but the visibility is often bad. Were someone to sail on their own they’d need to be experienced.”[back21]"
 216,You,[locked] “What can you tell me about the creatures that live in the lake?”
-2161,Fred Fiegel,"“Oh there’s plenty, a few make their homes around Pettiget, nests and whatnot. Though we’ve got all those spots marked so we know to avoid ‘em.”[back21]"
+2161,Fred Fiegel,"“Oh there’s plenty, a few make their homes around Pettiget. Though we’ve got all those spots marked so we know to avoid ‘em.”[back21]"
 3,You,"“Hello, you have a minute?”"
 31,Old Sailor,"“Oh sure thing, d’ya need me for something?”"
 311,You,"""Just need you to answer some questions.”"
 3111,You,“What could’ve done this to a ship?”
-31111,Old Sailor,"“Oh there’s plenty that could’ve, but I dunno many that would’ve. No real reason for our beasties to attack us, we’re hardly worth the trouble to eat.”[back311]"
+31111,Old Sailor,"“Oh there’s plenty that could’ve, but I dunno many that would’ve. We’re hardly worth the trouble to eat.”[back311]"
 3112,You,“What was this ship doing out there?”
-31121,Old Sailor,"“Coulda been just out fishing, but I don’t see any big nets prepared. They might have been doin’ some errands, lotta sailors get hired to transport things to and from Pettiget.”[back311]"
+31121,Old Sailor,"“Coulda been just out fishing. They might have been doin’ some errands, lotta sailors get hired to transport things to and from Pettiget.”[back311]"
 3113,You,“Where would this ship have been sailing?”
 31131,Old Sailor,"“Either sittin’ out in the open water, or to Pettiget Island.”"
 311311,Old Sailor,“The trip across the lake ain’t really viable.”[back311]
 312,You,“I was wondering if you had any insights?”
 3121,Old Sailor,“Insights into what? The wreck? Oh jeez I dunno.”
 31211,You,“Just tell me if you know anything useful”
-312111,Old Sailor,"“Ah heck, I dunno what you’d think is useful. That’s a gillnetter there, doesn’t go far, so I dunno what could’ve wrecked it. Nothin’ between here and Pettiget ever really attacks us sailors”[back3121][unlock31214]"
+312111,Old Sailor,"“Well, that’s a gillnetter there, doesn’t go far, so I dunno what could’ve wrecked it. Almost nothin’ between here and Pettiget attacks us”[back3121][unlock31214]"
 31212,You,"Any clue what caused the wreck?"""""
 312121,Old Sailor,"“I mean that’s some nasty damage to the hull, no ordinary crash I can tell you that!”[back3121]"
 31213,You,“Nevermind.”[end]
@@ -204,7 +204,7 @@ ID,TITLE,BODY
 2,You,“What’re you doing?”
 21,Amelia Watson,"“Investigating, organizing, snapping pictures, that sorta thing.”"
 211,You,“How bad’s the damage?”
-2111,Amelia Watson,"“On the boat? Not bad, I mean, it managed to still drift back to shore. Whatever attacked it didn’t intend to sink it, I don’t think. The marks look like it was getting at something onboard.”[back21]"
+2111,Amelia Watson,"“Whatever attacked it didn’t intend to sink it, I don’t think. The marks look like it was getting at something onboard.”[back21]"
 212,You,“What’s the deal with the hand?”
 2121,Amelia Watson,“Bitten clean off– well… not really actually”
 21211,Amelia Watson,"“The body was bitten off the hand, and it wasn’t a clean bite either.”[back21]"
@@ -218,7 +218,7 @@ ID,TITLE,BODY
 1111,David Tsarot,“Ah… alright?”
 11111,You,“When did you last see Hillary?”
 111111,David Tsarot,"“April 11th, it was really early, she was already leaving when I woke up.”"
-1111111,David Tsarot,"“She just said she was going to her fitness class, but she never came back. I called the place and they said she didn’t arrive, so– I dunno what to make of that”[back1111]"
+1111111,David Tsarot,"“She just said she was going to her fitness class, but she never came back. I called the place and they said she didn’t arrive, so– I dunno whats up”[back1111]"
 11112,You,“What does she do for work?”
 111121,David Tsarot,“She is a seasonal assistant harbormaster… which is to say she didn’t do all that much.”[back1111]
 11113,You,“Does she own a brown fishing jacket?”
@@ -246,7 +246,7 @@ ID,TITLE,BODY
 11111,Vivian DeTour,"“April 9th, he didn’t say where he was going…”"
 111111,Vivian DeTour,"“I guess I didn’t ask him, but oh how I wish I did. I tried calling him when it got late and nothing, so I called the police”[back111]"
 1112,You,You: “What does Evan do for work?”
-11121,Vivian DeTour,"“He works at some dock in Abra City, I couldn’t tell you why. He was always more of a fan of the mountains and forests. He doesn’t even like the water.”[back111]"
+11121,Vivian DeTour,"“He works at some dock in Abra City, I couldn’t tell you why. He was always more of a fan of the mountains. He doesn’t even like the water.”[back111]"
 1113,You,You: “Does Evan own a brown fishing jacket?”
 11131,Vivian DeTour,"“Fishing jacket? I doubt it, are you sure it wasn’t some sort of hiking gear? That’d be him.”[back111]"
 1114,You,You: “Does Evan or someone close to him own a boat?”
@@ -323,7 +323,7 @@ ID,TITLE,BODY
 1111,Renee Bondopulos,"“I see, and you’re calling about…?”"
 11111,You,"“Your father, Eugene.”"
 111111,You,“When did you last see him?”
-1111111,Renee Bondopulos,"“April 5th. He seemed excited, but also busy, so I didn’t want to bother him with questions. Didn’t see him around much that day, then the next day when he wasn’t at home I reported him missing.” [back11111] [unlock111114]"
+1111111,Renee Bondopulos,"“April 5th. He seemed excited, but also busy, so I didn’t want to bother him. The next day when he wasn’t at home I reported him missing.” [back11111] [unlock111114]"
 111112,You,“Does he own a brown fishing jacket?”
 1111121,Renee Bondopulos,"“He definitely could’ve, he owned a lot of fishing gear.” [back11111]"
 111113,You,“No further questions.”[end]
@@ -369,7 +369,7 @@ ID,TITLE,BODY
 1111,Carter Plank,"“Oh, right. What do you need to know?”"
 11111,You,You: “Who saw him last?”
 111111,Carter Plank,"“Probably his buddies at work. I talked to him earlier this month, around the 3rd maybe.”"
-1111111,Carter Plank,"“When I went by on the 9th just to say hi he wasn’t around, and his boss said he hadn’t been to work in a day or two, so that's when I reported him missing” [back1111]"
+1111111,Carter Plank,"“When I went by on the 9th just to say hi he wasn’t around, and his boss said he hadn’t been to work in a day or two, so I reported him missing” [back1111]"
 11112,You,You: “What does he do for work?”
 111121,Carter Plank,"“He’s a fisherman, works around here in Oldport. I don’t really know exactly what he does, but he sure stays busy.” [back1111] [unlock11116]"
 11113,You,You: “Does he own a brown fishing jacket?”
