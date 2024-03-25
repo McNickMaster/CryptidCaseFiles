@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1028,7 +1028,7 @@ MonoBehaviour:
   interactMask:
     serializedVersion: 2
     m_Bits: 499
-  PAUSE_MENU: 27
+  PAUSE_MENU: 127
   NOTEBOOK_OPEN: 9
   MAP_OPEN: 109
 --- !u!4 &548221336
@@ -3393,6 +3393,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3e030db8046179f41a85f720ca44db8e, type: 2}
   - {fileID: 11400000, guid: 153229df2d30cd140bfcf65687a2df90, type: 2}
   - {fileID: 11400000, guid: 829bfb13352c1bf44a0dfe9bf97faf86, type: 2}
+  - {fileID: 11400000, guid: e4dc97ec3dac35a46b49ccc2c6b030ec, type: 2}
+  - {fileID: 11400000, guid: 42334d80be43f5643838b844da82396a, type: 2}
   data: []
   slides: []
   branches: []

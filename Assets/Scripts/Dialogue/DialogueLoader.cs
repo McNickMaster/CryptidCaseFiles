@@ -153,14 +153,18 @@ public class DialogueLoader : MonoBehaviour
         }
 
         string travelID = "";
-        if(simpleTextPages[0].Contains("[travel"))
+        
+        string s = simpleTextPages[numPages - 1];
+        transport = false;
+        if(s.Contains("[travel"))
         {
-            int index = simpleTextPages[0].IndexOf("[travel")+6;
-            travelID = simpleTextPages[0].Substring(index, simpleTextPages[0].Length - index - 1);
-            simpleTextPages[0] = simpleTextPages[0].Substring(0, simpleTextPages[0].Length - milestoneID.Length - 7);
+            Debug.Log(s);
+            int index = s.IndexOf("[travel")+7;
+            travelID = s.Substring(index, s.Length - index - 1);
+            simpleTextPages[numPages - 1] = s.Substring(0, s.Length - travelID.Length - 8);
             transport = true;
         }
-        Debug.Log(travelID + " " + travelID.Length);
+       // Debug.Log("travel info: " + travelID + " " + travelID.Length + " " + transport);
 
         
         if(transport)
@@ -288,7 +292,7 @@ public class DialogueLoader : MonoBehaviour
             {
                 case PathEndBehaviour.GOTO:
                 {
-//                    Debug.Log("trying to spawn new branch with id: " + currentPath.gotoID);
+                    Debug.Log("trying to spawn new branch with id: " + currentPath.gotoID);
                     SpawnBranch(FindBranch(currentPath.gotoID));
                     break;
                 }

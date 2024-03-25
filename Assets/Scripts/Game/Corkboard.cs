@@ -78,7 +78,8 @@ public class Corkboard : MonoBehaviour
 //                Debug.Log("looking for: " + objName + " from: " + GameData.instance.CULPRIT_MUGSHOTS[j].name);
                 if(GameData.instance.CULPRIT_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name.Contains(objName)))
                 {
-                    float x = (i * (corkboardWidth/thisCase.culpritList.Count)) - (corkboardWidth/2);
+                    //float x = (i * (corkboardWidth/thisCase.culpritList.Count)) - (corkboardWidth/2);
+                    float x = (Random.Range(-5f, corkboardWidth/3));
                     spawnPos = new Vector3(x, culpritSpawnY.position.y, 3.5f);
                     spawnedPhotos.Add(ConvertDeskPhotoToCork(Instantiate(GameData.instance.CULPRIT_MUGSHOTS[j], spawnPos, Quaternion.AngleAxis(90, Vector3.right), parentObj.transform)));
                 }
@@ -100,7 +101,8 @@ public class Corkboard : MonoBehaviour
                 //Debug.Log("looking for: " + objName + " from: " + GameData.instance.CAUSE_MUGSHOTS[j].name);
                 if(GameData.instance.CAUSE_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name.Contains(objName)))
                 {
-                    float x = (i * (corkboardWidth/causeAmount)) - (corkboardWidth/2);
+                    //float x = (i * (corkboardWidth/causeAmount)) - (corkboardWidth/2);
+                    float x = (Random.Range(-5f, corkboardWidth/3));
                     spawnPos = new Vector3(x, causeSpawnY.position.y, 2);
                     spawnedPhotos.Add(ConvertDeskPhotoToCork(Instantiate(GameData.instance.CAUSE_MUGSHOTS[j], spawnPos, Quaternion.AngleAxis(90, Vector3.right), parentObj.transform)));
                 }
@@ -122,7 +124,8 @@ public class Corkboard : MonoBehaviour
                 //Debug.Log("looking for: " + objName + " from: " + GameData.instance.EVIDENCE_MUGSHOTS[j].name);
                 if(GameData.instance.EVIDENCE_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name.Contains(objName)))
                 {
-                    float x = (i * (corkboardWidth/evidenceAmount)) - (corkboardWidth/2);
+                    //float x = (i * (corkboardWidth/evidenceAmount)) - (corkboardWidth/2);
+                    float x = (Random.Range(-5f, corkboardWidth/3));
                     spawnPos = new Vector3(x, evidenceY.position.y, 2);
                     spawnedPhotos.Add(ConvertDeskPhotoToCork(Instantiate(GameData.instance.EVIDENCE_MUGSHOTS[j], spawnPos, Quaternion.AngleAxis(90, Vector3.right), parentObj.transform)));
                 }
@@ -143,7 +146,8 @@ public class Corkboard : MonoBehaviour
                 //Debug.Log("looking for: " + objName + " from: " + GameData.instance.VICTIM_MUGSHOTS[j].name);
                 if(GameData.instance.VICTIM_MUGSHOTS[j].name.Equals(objName) && !spawnedPhotos.Exists(p => p.name.Contains(objName)))
                 {
-                    float x = (i * (corkboardWidth/victimAmount)) - (corkboardWidth/2);
+                    //float x = (i * (corkboardWidth/victimAmount)) - (corkboardWidth/2);
+                    float x = (Random.Range(-5f, corkboardWidth/3));
                     spawnPos = new Vector3(x, victimY.position.y, 2);
                     spawnedPhotos.Add(ConvertDeskPhotoToCork(Instantiate(GameData.instance.VICTIM_MUGSHOTS[j], spawnPos, Quaternion.AngleAxis(90, Vector3.right), parentObj.transform)));
                 }
