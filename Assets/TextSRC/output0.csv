@@ -1,8 +1,8 @@
 ID,TITLE,BODY
 0,Edo,"Edo diligently searches the scene, and despite being bothered by the truck's blinding headlights, sniffs out something."
-1,You,"""Whatcha got there?"""
+1,You,""Whatcha got there?""
 11,Edo,Edo barks!
-111,You,"""C'mere boy!"""
+111,You,""C'mere boy!""
 1111,Edo,"Edo stares at you till you walk over. You see what he's found, tiny gray flecks on the ground. Scales- or maybe feathers, hard to tell.[getEVIDENCE_FLECKS][end]"
 112,You,Walk over.
 1121,You,"You walk over to see what he's found. Tiny gray flecks on the ground. Scales- or maybe feathers, hard to tell.[getEVIDENCE_FLECKS]"
@@ -16,7 +16,7 @@ ID,TITLE,BODY
 212,You,Walk back.[end]
 3,You,Wait.
 31,Technician,"One of the technicians walks over to Edo, and bags up something from the ground. They walk over and hand it to you."
-311,You,"""Thanks."""
-3111,Technician,"""No prob."" Inside the bag, some small gray flecks. Looks like scales maybe- or feathers?[getEVIDENCE_FLECKS][end]"
+311,You,""Thanks.""
+3111,Technician,""No prob."" Inside the bag, some small gray flecks. Looks like scales maybe- or feathers?[getEVIDENCE_FLECKS][end]"
 312,You,Wordlessly accept it.
 3121,You,"Looking inside the bag, you notice some small gray flecks. Looks like scales of some sort, or maybe feathers.[getEVIDENCE_FLECKS][end]"
