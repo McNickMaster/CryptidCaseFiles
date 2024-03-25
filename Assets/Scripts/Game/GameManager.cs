@@ -350,7 +350,7 @@ public enum CauseOfDeath
 [Serializable]
 public enum Victim
 {
-    NULL, NPC1, NPC2, NPC3, NPC4, NPC5
+    NULL, HILLARYxTSAROT, TARAxPESCI, EUGUENExBONDOPULOUS, TIMOTHYxPLANK, EVANxBANKS
 }
 
 [Serializable]

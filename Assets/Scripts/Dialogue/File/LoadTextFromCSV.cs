@@ -134,7 +134,7 @@ public class LoadTextFromCSV : MonoBehaviour
   
         //Debug.Log("size of tree: " + tree.Count);
  
-    */
+    
 
         Debug.Log("start branches");  
         foreach(Branch branch in branches)
@@ -150,13 +150,13 @@ public class LoadTextFromCSV : MonoBehaviour
                 }
             }
             Debug.Log("end paths");
-            */
+           
             
             Debug.Log("     " + branch.myPathOptions[0].firstSlide.ID + " " + branch.myPathOptions[0].firstSlide.Body + " depth: " +  branch.myPathOptions.Count);
         }
         Debug.Log("end branches");
 
-
+*/
 
 
 
