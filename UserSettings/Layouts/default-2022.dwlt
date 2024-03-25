@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357.3334
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 118
+  controlID: 121
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -313,9 +313,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4c730000
-      m_LastClickedID: 0
-      m_ExpandedIDs: ca97ffffa69bffffeca2ffffc8a6fffff0d1ffffdef2ffff2efbffff6c780000d0780000ec780000f2820000a6830000
+      m_SelectedIDs: 5ee9feff
+      m_LastClickedID: -71330
+      m_ExpandedIDs: ce2affffe632ffffc236ffff2efbffff6a6e0000aa6e00001e6f00002a9200004697000062970000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -827,9 +827,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.0797185, y: -4.4608073, z: 2.3478935}
+    m_Target: {x: -12.788823, y: 4.523689, z: -0.52354604}
     speed: 2
-    m_Value: {x: 1.0797185, y: -4.4608073, z: 2.3478935}
+    m_Value: {x: -12.788823, y: 4.523689, z: -0.52354604}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -867,7 +867,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -875,13 +875,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.40909043, y: 0.070685685, z: -0.031819683, w: -0.9092055}
+    m_Target: {x: 0.5187961, y: 0.10787762, z: -0.06602134, w: 0.84555846}
     speed: 2
-    m_Value: {x: -0.40903842, y: 0.072048746, z: -0.03243298, w: -0.90909}
+    m_Value: {x: 0.5186667, y: 0.10913956, z: -0.066795625, w: 0.8453471}
   m_Size:
-    m_Target: 10.22595
+    m_Target: 0.4137468
     speed: 2
-    m_Value: 9.785599
+    m_Value: 0.4137468
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -988,7 +988,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/main/CrimeScenes
+    - Assets/Art
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -996,16 +996,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/main/CrimeScenes
+  - Assets/Art
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wvincen1\Documents\GitHub\CryptidCaseFiles
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 320.99994}
-    m_SelectedIDs: 1a750000
-    m_LastClickedID: 29978
-    m_ExpandedIDs: 000000000e75000010750000127500001475000016750000187500001a7500001c7500002477000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 95}
+    m_SelectedIDs: 4c750000
+    m_LastClickedID: 30028
+    m_ExpandedIDs: 000000004a7500004c7500004e7500005075000052750000547500005675000058750000a277000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1033,7 +1033,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000e75000010750000127500001475000016750000187500001a7500001c750000
+    m_ExpandedIDs: 000000004a7500004c7500004e75000050750000527500005475000056750000587500005a750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
