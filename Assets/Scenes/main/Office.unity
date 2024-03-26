@@ -1117,9 +1117,9 @@ RectTransform:
   - {fileID: 1558746567}
   m_Father: {fileID: 611131952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 4, y: -2.1204}
   m_SizeDelta: {x: 8, y: 1.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427441377
@@ -1366,9 +1366,9 @@ RectTransform:
   - {fileID: 488068197}
   m_Father: {fileID: 611131952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 4, y: -3.7104}
   m_SizeDelta: {x: 8, y: 1.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &456523338
@@ -1972,7 +1972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &562235031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1986,7 +1986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneCalls: []
-  phoneToggle: {fileID: 7701941222928591312}
+  phoneToggle: {fileID: 1438174424}
   buttons:
   - {fileID: 427441375}
   - {fileID: 456523336}
@@ -2764,9 +2764,9 @@ RectTransform:
   - {fileID: 1736450207}
   m_Father: {fileID: 611131952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 4, y: -8.4804}
   m_SizeDelta: {x: 8, y: 1.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &654119086
@@ -2817,6 +2817,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7437831626183120709, guid: 4881f7403e45d1c4fba5f52ea615ea99, type: 3}
+      propertyPath: noteSpawnPoint
+      value: 
+      objectReference: {fileID: 119021629}
     - target: {fileID: 7437831626183120709, guid: 4881f7403e45d1c4fba5f52ea615ea99, type: 3}
       propertyPath: showNameOnHover
       value: 0
@@ -3277,9 +3281,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 611131952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3.93635, y: -0.6377}
   m_SizeDelta: {x: 7.8727, y: 1.2754}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866608772
@@ -3886,6 +3890,56 @@ RectTransform:
   m_AnchoredPosition: {x: 10.23, y: 14.91}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &969948557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 969948558}
+  - component: {fileID: 969948559}
+  m_Layer: 11
+  m_Name: OfficePhone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &969948558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969948557}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.86, y: 0.6, z: 16.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1438174423}
+  - {fileID: 7701941222928591310}
+  m_Father: {fileID: 4162375724957181653}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &969948559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969948557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5110395f36bc2ab4684a05baa3aeb614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useMilestone: 1
+  myMilestone: 7
+  useCurrentScene: 0
+  scene: 0
 --- !u!1001 &1002472228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4145,9 +4199,9 @@ RectTransform:
   - {fileID: 1366594391}
   m_Father: {fileID: 611131952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 4, y: -5.3004}
   m_SizeDelta: {x: 8, y: 1.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009138142
@@ -5151,9 +5205,9 @@ RectTransform:
   - {fileID: 1006780979}
   m_Father: {fileID: 611131952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 4, y: -6.8904}
   m_SizeDelta: {x: 8, y: 1.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1228795280
@@ -5765,6 +5819,97 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 2
+--- !u!1 &1438174422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1438174423}
+  - component: {fileID: 1438174424}
+  - component: {fileID: 1438174425}
+  m_Layer: 11
+  m_Name: PhoneButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1438174423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438174422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 969948558}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1438174424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438174422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  thisEnabled: 1
+  btn_type: 6
+  is3D: 1
+  myClip: {fileID: 0}
+  isVisible: 1
+  normalTint: {r: 1, g: 1, b: 1, a: 1}
+  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  showNameOnHover: 1
+  interactableName: Phone
+  nameSpawnPoint: {fileID: 0}
+  hovering: 0
+  selected: 0
+  destination: {fileID: 0}
+  destinationScene: 0
+  noteToSpawn: {fileID: 0}
+  noteSpawnPoint: {fileID: 0}
+  textData: {fileID: 0}
+  pageButtonLeft: 0
+  dialogue: {fileID: 0}
+  monologue: {fileID: 0}
+  objectToToggle: {fileID: 562235030}
+  state: 0
+  newView: {fileID: 0}
+--- !u!135 &1438174425
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438174422}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.82
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1439157874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11889,7 +12034,7 @@ Transform:
   - {fileID: 5688694103227885379}
   - {fileID: 3708218122608638659}
   - {fileID: 562235032}
-  - {fileID: 7701941222928591310}
+  - {fileID: 969948558}
   - {fileID: 2198349163694877922}
   m_Father: {fileID: 900302396467444884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15772,19 +15917,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4162375724957181653}
+    m_TransformParent: {fileID: 969948558}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1b48d2007fa3d6840961139e61fa45d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.61
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b48d2007fa3d6840961139e61fa45d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b48d2007fa3d6840961139e61fa45d6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b48d2007fa3d6840961139e61fa45d6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15829,82 +15974,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b48d2007fa3d6840961139e61fa45d6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7701941222928591312}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b48d2007fa3d6840961139e61fa45d6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7701941222928591313}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b48d2007fa3d6840961139e61fa45d6, type: 3}
 --- !u!4 &7701941222928591310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1b48d2007fa3d6840961139e61fa45d6, type: 3}
   m_PrefabInstance: {fileID: 7701941222928591309}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7701941222928591311 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b48d2007fa3d6840961139e61fa45d6, type: 3}
-  m_PrefabInstance: {fileID: 7701941222928591309}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7701941222928591312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7701941222928591311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2047a2146e9188745adabcfa9c7b0f48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  thisEnabled: 1
-  btn_type: 6
-  is3D: 1
-  myClip: {fileID: 0}
-  isVisible: 1
-  normalTint: {r: 1, g: 1, b: 1, a: 1}
-  hoverTint: {r: 0.9, g: 0.9, b: 0.9, a: 1}
-  selectTint: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  showNameOnHover: 1
-  interactableName: Phone
-  nameSpawnPoint: {fileID: 0}
-  hovering: 0
-  selected: 0
-  destination: {fileID: 0}
-  destinationScene: 0
-  noteToSpawn: {fileID: 0}
-  noteSpawnPoint: {fileID: 0}
-  textData: {fileID: 0}
-  pageButtonLeft: 0
-  dialogue: {fileID: 0}
-  monologue: {fileID: 0}
-  objectToToggle: {fileID: 562235030}
-  state: 0
-  newView: {fileID: 0}
---- !u!65 &7701941222928591313
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7701941222928591311}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 207.84412, y: 140.78673, z: 284.0949}
-  m_Center: {x: 0.00012587354, y: -8.212479, z: -4.2279053}
 --- !u!1 &7731392367843814218
 GameObject:
   m_ObjectHideFlags: 0
