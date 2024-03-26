@@ -130,7 +130,8 @@ public class DialogueLoader : MonoBehaviour
 
 
         objInstance = Instantiate(prefab, Vector3.zero, Quaternion.identity, dialogueParent);
-        objInstance.transform.localPosition = Vector3.zero;
+        //objInstance.transform.localPosition = Vector3.zero;
+        objInstance.GetComponent<RectTransform>().anchoredPosition3D = Vector3.zero;
         title = objInstance.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         body = objInstance.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
 
@@ -212,7 +213,7 @@ public class DialogueLoader : MonoBehaviour
     
     public void LoadConversation(string id)
     {
-        Debug.Log("loading convo with id: " + id);
+//        Debug.Log("loading convo with id: " + id);
         DialogueFileData dialogueFile = SaveLoadData.LoadDialogue(id);       
 
         myBranches = dialogueFile.GetBranches();
@@ -342,7 +343,8 @@ public class DialogueLoader : MonoBehaviour
         
         Destroy(currentUIObject);
         SlideObject spawnSlide = Instantiate(slidePrefab, Vector3.zero, Quaternion.identity, dialogueParent).GetComponent<SlideObject>();
-        spawnSlide.gameObject.transform.localPosition = Vector3.zero;
+        //spawnSlide.gameObject.transform.localPosition = Vector3.zero;
+        spawnSlide.GetComponent<RectTransform>().anchoredPosition3D = Vector3.zero;
         spawnSlide.GetComponent<Button>().onClick.AddListener(DialogueLoader.instance.LoadNextInPath);
         currentUIObject = spawnSlide.gameObject;
         spawnSlide.slide = s;
@@ -356,7 +358,8 @@ public class DialogueLoader : MonoBehaviour
         pathIndex = 0;
 
         BranchObject spawnBranch = Instantiate(branchPrefab, Vector3.zero, Quaternion.identity, dialogueParent).GetComponent<BranchObject>();
-        spawnBranch.gameObject.transform.localPosition = Vector3.zero;
+        //spawnBranch.gameObject.transform.localPosition = Vector3.zero;
+        spawnBranch.GetComponent<RectTransform>().anchoredPosition3D = Vector3.zero;
         spawnBranch.branch = b;
         currentUIObject = spawnBranch.gameObject;
 
