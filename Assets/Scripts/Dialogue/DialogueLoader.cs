@@ -37,7 +37,11 @@ public class DialogueLoader : MonoBehaviour
     private DialogueData dialogueData;
     private GameObject objInstance;
 
+    private e_Scene travelLocation;
+    private bool transport = false;
+
     private int dialogueIndex = 0, numPages = 0;
+    private bool evidence = false;
 
     void Awake()
     {
@@ -84,8 +88,7 @@ public class DialogueLoader : MonoBehaviour
         }
     }
 */
-
-    public void LoadMonologue(string file)
+    public void LoadPhonecall(string file)
     {
         if(file == "-1")
         {
@@ -97,15 +100,38 @@ public class DialogueLoader : MonoBehaviour
             simpleTextPages = dataFile.GetFilePages();
 
         }
+
+        StartMonologue(phoneCallPrefab);
     }
-    public void StartMonologue()
+
+    public void LoadMonologue(string file)
+    {
+        if(file == "-1")
+        {
+            
+        } else 
+        {
+            if(file.Contains("Evidence_"))
+            {
+                evidence = true;
+            }
+            Debug.Log("loading mono with id: " + file);
+            SimpleTextFileData dataFile = SaveLoadData.LoadText(file);
+            simpleTextPages = dataFile.GetFilePages();
+
+        }
+
+        StartMonologue(monologuePrefab);
+    }
+    private void StartMonologue(GameObject prefab)
     {
         dialogueIndex = 0;
         PlayerInput.instance.enabled = false;
 
 
-        objInstance = Instantiate(monologuePrefab, Vector3.zero, Quaternion.identity, dialogueParent);
-        objInstance.transform.localPosition = Vector3.zero;
+        objInstance = Instantiate(prefab, Vector3.zero, Quaternion.identity, dialogueParent);
+        //objInstance.transform.localPosition = Vector3.zero;
+        objInstance.GetComponent<RectTransform>().anchoredPosition3D = Vector3.zero;
         title = objInstance.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         body = objInstance.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>();
 
@@ -127,11 +153,32 @@ public class DialogueLoader : MonoBehaviour
             
         }
 
+        string travelID = "";
+        
+        string s = simpleTextPages[numPages - 1];
+        transport = false;
+        if(s.Contains("[travel"))
+        {
+            Debug.Log(s);
+            int index = s.IndexOf("[travel")+7;
+            travelID = s.Substring(index, s.Length - index - 1);
+            simpleTextPages[numPages - 1] = s.Substring(0, s.Length - travelID.Length - 8);
+            transport = true;
+        }
+       // Debug.Log("travel info: " + travelID + " " + travelID.Length + " " + transport);
+
+        
+        if(transport)
+        {
+            travelLocation = Enum.Parse<e_Scene>(travelID);
+            
+        }
+
         dialogueIndex = 0;
         title.text = "Monologue";
         body.text = simpleTextPages[dialogueIndex];
 
-
+        
     }
 
 
@@ -142,8 +189,20 @@ public class DialogueLoader : MonoBehaviour
 
         if(dialogueIndex >= numPages)
         {
+
             Destroy(objInstance);
             PlayerInput.instance.enabled = true;
+            
+            if(evidence)
+            {
+                GameEvents.instance.Event_Evidence.Invoke();
+            }
+            evidence = false;
+
+            if(transport)
+            {
+                GameManager.instance.Travel(travelLocation);
+            }
 
         } else 
         {
@@ -154,10 +213,13 @@ public class DialogueLoader : MonoBehaviour
     
     public void LoadConversation(string id)
     {
-        DialogueFileData dialogueFile = SaveLoadData.LoadDialogue(Int32.Parse(id));       
+//        Debug.Log("loading convo with id: " + id);
+        DialogueFileData dialogueFile = SaveLoadData.LoadDialogue(id);       
 
         myBranches = dialogueFile.GetBranches();
         mySlides = dialogueFile.GetSlides();
+
+        StartConversation();
     }
 
     public void StartConversation()
@@ -179,6 +241,7 @@ public class DialogueLoader : MonoBehaviour
 
     public void EndConversation()
     {
+        GameEvents.instance.Event_NPC.Invoke();
         Destroy(currentUIObject);
         currentUIObject = null;
     }
@@ -230,7 +293,7 @@ public class DialogueLoader : MonoBehaviour
             {
                 case PathEndBehaviour.GOTO:
                 {
-//                    Debug.Log("trying to spawn new branch with id: " + currentPath.gotoID);
+                    Debug.Log("trying to spawn new branch with id: " + currentPath.gotoID);
                     SpawnBranch(FindBranch(currentPath.gotoID));
                     break;
                 }
@@ -280,7 +343,8 @@ public class DialogueLoader : MonoBehaviour
         
         Destroy(currentUIObject);
         SlideObject spawnSlide = Instantiate(slidePrefab, Vector3.zero, Quaternion.identity, dialogueParent).GetComponent<SlideObject>();
-        spawnSlide.gameObject.transform.localPosition = Vector3.zero;
+        //spawnSlide.gameObject.transform.localPosition = Vector3.zero;
+        spawnSlide.GetComponent<RectTransform>().anchoredPosition3D = Vector3.zero;
         spawnSlide.GetComponent<Button>().onClick.AddListener(DialogueLoader.instance.LoadNextInPath);
         currentUIObject = spawnSlide.gameObject;
         spawnSlide.slide = s;
@@ -294,7 +358,8 @@ public class DialogueLoader : MonoBehaviour
         pathIndex = 0;
 
         BranchObject spawnBranch = Instantiate(branchPrefab, Vector3.zero, Quaternion.identity, dialogueParent).GetComponent<BranchObject>();
-        spawnBranch.gameObject.transform.localPosition = Vector3.zero;
+        //spawnBranch.gameObject.transform.localPosition = Vector3.zero;
+        spawnBranch.GetComponent<RectTransform>().anchoredPosition3D = Vector3.zero;
         spawnBranch.branch = b;
         currentUIObject = spawnBranch.gameObject;
 
@@ -343,7 +408,7 @@ public class DialogueLoader : MonoBehaviour
 
     void OnDisable()
     {
-        EndConversation();
+        //EndConversation();
     }
 
 

@@ -11,19 +11,27 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [Header("Modules")]
     public GameData gameData;
+    public Transform playerUIParent;
     public SceneLoadHelper sceneLoad;
     public DialogueLoader dialogueLoader;
-    public LocationManager currentLocation;
-    public e_Scene startScene = e_Scene.OFFICE;
-    public e_Scene currentScene;
+    public PhonecallManager phonecallManager;
     public Cutscene travelCutscene;
-    public View currentView;
-    public View[] views;
+    public Cutscene endCaseCutscene;
     public GameObject lineDrawer;
     public GameObject winScreen, loseScreen;
     public CaseFile caseFileObj;
+    public GameObject evidencePopPrefab;
+
+    [Header("Data")]
+    public e_Scene startScene = e_Scene.OFFICE;
+    public e_Scene currentScene;
+    public View currentView;
+    public View[] views;
     public Case[] cases;
+
+    [Header("Instances")]
     public Case currentCase;
+    public LocationManager currentLocation;
     private Case currentGuess;
     private int caseIndex;
 
@@ -34,15 +42,21 @@ public class GameManager : MonoBehaviour
     public bool loadSave = false;
     public bool loadFirstScene = true;
 
-    void OnEnable()
-    {
-        //instance = this;
-    }
     void Awake()
     {
         instance = this;
 
         
+        
+        
+        //currentLocation = FindObjectOfType<LocationManager>();
+       
+    }
+    
+    void OnEnable()
+    {
+        //instance = this;
+
         if(loadSave)
         {
             LoadSave();
@@ -55,12 +69,9 @@ public class GameManager : MonoBehaviour
             currentScene = startScene;
         }
 
-        currentCase = cases[0];
+        SetNewCase(cases[0]);
         currentCase.Setup();
 
-        
-        //currentLocation = FindObjectOfType<LocationManager>();
-       
     }
 
     // Start is called before the first frame update
@@ -165,8 +176,9 @@ public class GameManager : MonoBehaviour
     {
         currentGuess = CaseFile.instance.GetGuess();
 
-        PhoneManager.instance.Trigger_CaseSolved(currentCase.SolveCase(currentGuess));
+        
 
+       // GameEvents.instance.Event_SolveCase.Invoke();
         NextCase();
 
     }
@@ -186,11 +198,19 @@ public class GameManager : MonoBehaviour
 
         } else 
         {
+            bool caseSolved = currentCase.SolveCase(currentGuess);
+            Case oldCase = currentCase;
+
+            SetNewCase(cases[caseIndex]);
+            CaseFile.instance.ResetCaseFile();
+            currentCase.Setup();
+            CaseFile.instance.SetCase(currentCase);
             
-            //SetNewCase(cases[caseIndex]);
-            //CaseFile.instance.ResetCaseFile();
-            //currentCase.Setup();
-            //CaseFile.instance.SetCase(currentCase);
+            endCaseCutscene.StartCutscene();
+            sceneLoad.LoadNewScene("OFFICE");
+            currentScene = e_Scene.OFFICE;
+            GameEvents.instance.Event_SolveCase.Invoke();
+            PhoneManager.instance.Trigger_CaseSolved(oldCase, caseSolved, 0.5f);
         }
     }
 
@@ -223,6 +243,8 @@ public class GameManager : MonoBehaviour
     {
         return completedMilestones.Contains(m);
     }
+
+    int popCount = 0;
     public void AddMilestone(Milestone m)
     {
         if(CheckMilestone(m))
@@ -243,6 +265,7 @@ public class GameManager : MonoBehaviour
                 {
                     
                     title = "Evidence";
+                    currentCase.evidenceList.Add(m);
                     break;
                 }
 
@@ -255,8 +278,14 @@ public class GameManager : MonoBehaviour
                 }
                 case "CULP":
                 {
-
+                    currentCase.culpritList.Add(Enum.Parse<Culprit>(id));
                     title = "Culprit";
+                    break;
+                }
+                case "VICTIM":
+                {
+                    currentCase.victimList.Add(Enum.Parse<Victim>(id));
+                    title = "Victim";
                     break;
                 }
             }
@@ -268,7 +297,10 @@ public class GameManager : MonoBehaviour
                 Debug.Log("id after replacing: " + id);
             }
 
-            EvidencePopup.instance.Spawn(title, id);
+            EvidencePopup pop = Instantiate(evidencePopPrefab, new Vector3(25,-25,0), Quaternion.identity, playerUIParent).GetComponent<EvidencePopup>();
+            pop.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(25,-25,0);
+            pop.Spawn(title, id);
+            pop.transform.SetAsFirstSibling();
         }
     }
     
@@ -308,36 +340,41 @@ public class GameManager : MonoBehaviour
 [Serializable]
 public enum Culprit
 {
-    NULL, MOTHMAN, WEREWOLF, KRAKEN, MAHAMBA, SKEL
+    NULL, MOTHMAN, WEREWOLF, KRAKEN, MAHAMBA, SKELJASKRIMSLI, NGUMAxMONENE, WENDIGO, SKINWALKER, CAPELOBO
 }
 [Serializable]
 public enum CauseOfDeath
 {
-    NULL, HEARTATTACK, BLEED, POISONED
+    NULL, HEARTATTACK, BLEED, POISONED, MUTILATION, CRUSHED, DEEPxWOUNDS
 }
 [Serializable]
 public enum Victim
 {
-    NULL, NPC1, NPC2, NPC3, NPC4, NPC5
+    NULL, HILLARYxTSAROT, TARAxPESCI, EUGUENExBONDOPULOUS, TIMOTHYxPLANK, EVANxBANKS, PARKERxBENNET, TIAxMCINTYRE, ALFREDxFRENCH, EILEENxHOLMES
 }
 
 [Serializable]
 public enum Milestone
 {
 
-    EVIDENCE_FOOTPRINTS, EVIDENCE_FEATHERS, EVIDENCE_C1_3, EVIDENCE_C1_4, EVIDENCE_C1_5, 
-    EVIDENCE_PUZZLExCYPHER, EVIDENCE_C2_2, EVIDENCE_C2_3, EVIDENCE_C2_4, EVIDENCE_C2_5, 
+    EVIDENCE_FOOTPRINTS, EVIDENCE_FLECKS, EVIDENCE_C1_3, EVIDENCE_C1_4, EVIDENCE_C1_5, 
+    EVIDENCE_PUZZLExCYPHER, EVIDENCE_CLAWMARKS, EVIDENCE_CARGOxMANIFEST, EVIDENCE_C2_4, EVIDENCE_C2_5, 
     EVIDENCE_C3_1, EVIDENCE_C3_2, EVIDENCE_C3_3, EVIDENCE_C3_4, EVIDENCE_C3_5, 
     EVIDENCE_C4_1, EVIDENCE_C4_2, EVIDENCE_C4_3, EVIDENCE_C4_4, EVIDENCE_C4_5, 
     EVIDENCE_C5_1, EVIDENCE_C5_2, EVIDENCE_C5_3, EVIDENCE_C5_4, EVIDENCE_C5_5, 
     CAUSE_BLEED, CAUSE_HEARTATTACK, CULP_MOTHMAN, CULP_WEREWOLF,
     ITEM_PUZZLE,
     CS1_DONE, CS2_DONE, CS3_DONE, CS4_DONE, CS5_DONE,
-    CULP_KRAKEN, CULP_MAHAMBA, CULP_SKEL, 
-    CAUSE_NPC1, CAUSE_NPC2, CAUSE_NPC3, CAUSE_NPC4, CAUSE_NPC5,
+    CULP_KRAKEN, CULP_MAHAMBA, CULP_SKELJASKRIMSLI, 
+    VICTIM_HILLARYxTSAROT, VICTIM_TARAxPESCI, VICTIM_EUGUENExBONDOPULOUS, VICTIM_TIMOTHYxPLANK, VICTIM_EVANxBANKS,
 
     ITEM_CARGO, ITEM_5, ITEM_6, ITEM_7, ITEM_8, ITEM_9, ITEM_10, ITEM_11,
-    PUZZLE2_DONE, PUZZLE3_DONE, PUZZLE4_DONE, PUZZLE5_DONE
+    PUZZLE2_DONE, PUZZLE3_DONE, PUZZLE4_DONE, PUZZLE5_DONE,
+    CULP_NGUMAxMONENE, CULP_WENDIGO, CULP_SKINWALKER, CULP_CAPELOBO,
+    VICTIM_PARKERxBENNET, VICTIM_TIAxMCINTYRE, VICTIM_ALFREDxFRENCH, VICTIM_EILEENxHOLMES,
+    CAUSE_MUTILATION, CAUSE_CRUSHED, CAUSE_DEEPxWOUNDS
+
+
 
 
 

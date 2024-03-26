@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -20,6 +21,8 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField]
     private bool _dragging = false, inUI = false, typing = false;
+    [HideInInspector]
+    public bool phoneCallUIActive = false;
 
     private Vector3 mousePosOnClick = Vector3.zero;
     private Notes noteInteracted;
@@ -81,6 +84,11 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetKeyDown(PAUSE_MENU))
         {
             Application.Quit();
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
         }
 
         if(Input.GetKeyDown(NOTEBOOK_OPEN) && !mapObj.activeSelf)

@@ -26,6 +26,8 @@ public class LoadTextFromCSV : MonoBehaviour
     [HideInInspector]
     public Path path;
 
+    public bool editor = true;
+
     int numFiles = 0;
 
 
@@ -36,7 +38,7 @@ public class LoadTextFromCSV : MonoBehaviour
 
         
         //Sinbad.CsvUtil.SaveObjects<Line>();
-
+        
         StreamReader sr = new StreamReader(FILE_PATH+fileName+".csv");
         string bigInput = sr.ReadToEnd();
 
@@ -52,17 +54,21 @@ public class LoadTextFromCSV : MonoBehaviour
                     output = "ID,TITLE,BODY\n" + output;
                 }
                 outputFile.Write(output);
+                outputFile.Close();
+
+                LoadDialogueCSV("output" + i);
+                SaveLoadData.SaveDialogueData(branches, slides, ""+i);
             }
         }
         numFiles = splits.Length;
 
-        ConvertAllCSVToBin();
+       // ConvertAllCSVToBin();
 
         string[] tempText; //go through each textData
         for(int i = 0; i < simpleTextData.Length; i++)
         {
-            List<SimpleLine> tempFile = Sinbad.CsvUtil.LoadObjects<SimpleLine>(FILE_PATH + simpleTextData[i].file + ".csv");
-            simpleTextData[i].order = i;
+            List<SimpleLine> tempFile = Sinbad.CsvUtil.LoadObjects<SimpleLine>(FILE_PATH + simpleTextData[i].name + ".csv");
+            //simpleTextData[i].order = i;
 
             tempText = new string[tempFile.Count];
             //set temp to be temp
@@ -73,7 +79,7 @@ public class LoadTextFromCSV : MonoBehaviour
                 tempText[j] = s;
             }
 
-            SaveLoadData.SaveSimpleTextData(tempText, ""+i);
+            SaveLoadData.SaveSimpleTextData(tempText, ""+ simpleTextData[i].name);
         }
         
     }
@@ -89,8 +95,7 @@ public class LoadTextFromCSV : MonoBehaviour
     {
         for(int i = 0; i < numFiles; i++)
         {
-            LoadDialogueCSV("output" + i);
-            SaveLoadData.SaveDialogueData(branches, slides, i);
+            
         }
         
     }
@@ -134,6 +139,7 @@ public class LoadTextFromCSV : MonoBehaviour
         Debug.Log("start branches");  
         foreach(Branch branch in branches)
         {
+            /*
             Debug.Log("start paths");  
             foreach(Path path in branch.myPathOptions)
             {
@@ -144,11 +150,13 @@ public class LoadTextFromCSV : MonoBehaviour
                 }
             }
             Debug.Log("end paths");
+           
+            
+            Debug.Log("     " + branch.myPathOptions[0].firstSlide.ID + " " + branch.myPathOptions[0].firstSlide.Body + " depth: " +  branch.myPathOptions.Count);
         }
         Debug.Log("end branches");
 
-*/ 
-
+*/
 
 
 
