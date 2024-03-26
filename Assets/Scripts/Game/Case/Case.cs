@@ -8,6 +8,7 @@ public class Case : ScriptableObject
     public Culprit culprit;
     public CauseOfDeath causeOfDeath;
     public Victim victim;
+    public Victim victim2;
 
     public e_Scene crimeScene;
 
@@ -57,7 +58,15 @@ public class Case : ScriptableObject
     {
         culprit = culp;
         causeOfDeath = cause;
-        victim = victim;
+        this.victim = victim;
+    }
+
+    public void InitGuess(Culprit culp, CauseOfDeath cause, Victim victim, Victim victim2)
+    {
+        culprit = culp;
+        causeOfDeath = cause;
+        this.victim = victim;
+        this.victim2 = victim2;
     }
 
 
@@ -65,9 +74,9 @@ public class Case : ScriptableObject
     {
         bool culp = guess.culprit == this.culprit;
         bool cause = guess.causeOfDeath == this.causeOfDeath;
-        bool vict = guess.victim == this.victim;
+        bool vict = (guess.victim == this.victim) && (guess.victim2 == this.victim2);
 
-        if(culp && cause)
+        if(culp && cause && vict)
         {
             return true;
         } 
