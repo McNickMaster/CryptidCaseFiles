@@ -10,6 +10,7 @@ public class BranchObject : MonoBehaviour
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI[] options;
     public Button closeButton;
+    public GameObject[] greyedOutImages;
 
     // Start is called before the first frame update
     void Awake()
@@ -37,17 +38,20 @@ public class BranchObject : MonoBehaviour
         for(int i = options.Length; i > branch.myPathOptions.Count; i--)
         {
             options[i-1].transform.parent.gameObject.SetActive(false);
+            
         }
     
         //Debug.Log("Option length: " + options.Length + " Branch path count: " + branch.myPathOptions.Count);
         for(int i = 0; i < branch.myPathOptions.Count; i++)
         {
+            greyedOutImages[i].SetActive(false);
             options[i].transform.parent.gameObject.SetActive(!branch.myPathOptions[i].locked);
             options[i].text = branch.myPathOptions[i].firstSlide.Body;
 
             if(branch.myPathOptions[i].chosenBefore)
             {
-                
+                Debug.Log("chosen before!: " + branch.myPathOptions[i].firstSlide.Body);
+                greyedOutImages[i].SetActive(true);
             }
         }
 
