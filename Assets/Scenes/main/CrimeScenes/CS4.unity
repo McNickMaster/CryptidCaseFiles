@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (100)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -252,6 +256,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (117)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -323,6 +331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (118)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -384,6 +396,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -455,6 +471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (115)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -524,6 +544,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -599,6 +623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Autopsy Table (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d07ecfd8fa6976645962e7ac4be61664, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -669,6 +697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (94)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -678,68 +710,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
   m_PrefabInstance: {fileID: 76579366}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &126676457
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 528583268}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_Name
-      value: Hospital Floor (41)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
---- !u!4 &126676458 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-  m_PrefabInstance: {fileID: 126676457}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &132573275
 PrefabInstance:
@@ -792,6 +762,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -855,6 +829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -916,6 +894,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -994,6 +976,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
       propertyPath: m_Name
       value: Evidence Marker 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1110,6 +1096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (111)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1171,6 +1161,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1234,6 +1228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1295,6 +1293,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1373,6 +1375,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
       propertyPath: m_Name
       value: Evidence Marker 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1489,6 +1495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1515,7 +1525,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &239238152
 Transform:
@@ -1526,7 +1536,7 @@ Transform:
   m_GameObject: {fileID: 239238151}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.029999971, y: 0.93, z: 2.882}
+  m_LocalPosition: {x: 0.029999971, y: 0, z: 2.882}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1567,8 +1577,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.84733063, b: 0.47798735, a: 1}
-  m_Intensity: 10
-  m_Range: 15
+  m_Intensity: 5
+  m_Range: 5.5
   m_SpotAngle: 106.06279
   m_InnerSpotAngle: 16.786465
   m_CookieSize: 10
@@ -1669,6 +1679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Basic (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1738,6 +1752,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1809,6 +1827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (128)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1830,6 +1852,10 @@ PrefabInstance:
     - target: {fileID: 1834062448705385722, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_Name
       value: Locker Wall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834062448705385722, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4279138991469062967, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalScale.y
@@ -1874,6 +1900,10 @@ PrefabInstance:
     - target: {fileID: 4279138991469062967, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776934541856381234, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1940,6 +1970,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2bec1ce2763f64d4ca7566f78dcef675, type: 3}
       propertyPath: m_Name
       value: Ceiling Vent (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2bec1ce2763f64d4ca7566f78dcef675, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2011,6 +2045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (127)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2080,6 +2118,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (116)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2151,6 +2193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (112)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2212,6 +2258,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2282,6 +2332,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2357,6 +2411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plain Wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2418,6 +2476,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2489,6 +2551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2510,6 +2576,10 @@ PrefabInstance:
     - target: {fileID: 1834062448705385722, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_Name
       value: Locker Wall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834062448705385722, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4279138991469062967, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalScale.y
@@ -2554,6 +2624,10 @@ PrefabInstance:
     - target: {fileID: 4279138991469062967, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776934541856381234, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2621,6 +2695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Light (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bae769452d63f9641ad83323598dd9e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2647,7 +2725,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &438968624
 MonoBehaviour:
@@ -2684,8 +2762,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.84733063, b: 0.47798735, a: 1}
-  m_Intensity: 7
-  m_Range: 10
+  m_Intensity: 6
+  m_Range: 6
   m_SpotAngle: 106.06279
   m_InnerSpotAngle: 16.786465
   m_CookieSize: 10
@@ -2809,6 +2887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plain Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2879,6 +2961,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2941,6 +3027,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Light (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bae769452d63f9641ad83323598dd9e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3002,6 +3092,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3073,6 +3167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3135,6 +3233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3159,7 +3261,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &528583268
 Transform:
@@ -3176,13 +3278,11 @@ Transform:
   m_Children:
   - {fileID: 2118300485}
   - {fileID: 1158260615}
-  - {fileID: 126676458}
   - {fileID: 525636752}
   - {fileID: 980358420}
   - {fileID: 1295779635}
   - {fileID: 1134350410}
   - {fileID: 413001514}
-  - {fileID: 1081117159}
   - {fileID: 737019550}
   - {fileID: 602155677}
   - {fileID: 500203844}
@@ -3191,13 +3291,11 @@ Transform:
   - {fileID: 1636720557}
   - {fileID: 1364066921}
   - {fileID: 1322791955}
-  - {fileID: 904774105}
   - {fileID: 1400479240}
   - {fileID: 2023783899}
   - {fileID: 1365812257}
   - {fileID: 708847192}
   - {fileID: 214240386}
-  - {fileID: 1987012076}
   - {fileID: 803289159}
   - {fileID: 926180655}
   - {fileID: 1407990977}
@@ -3212,7 +3310,6 @@ Transform:
   - {fileID: 58806018}
   - {fileID: 280393964}
   - {fileID: 1683575926}
-  - {fileID: 732588574}
   - {fileID: 1517194551}
   - {fileID: 418299380}
   - {fileID: 462104890}
@@ -3286,6 +3383,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2bec1ce2763f64d4ca7566f78dcef675, type: 3}
       propertyPath: m_Name
       value: Ceiling Vent (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2bec1ce2763f64d4ca7566f78dcef675, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3361,6 +3462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Autopsy Table
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d07ecfd8fa6976645962e7ac4be61664, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3430,6 +3535,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (122)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3505,6 +3614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Morgue Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a89f2bd9418877849bc89f37009839a2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3567,6 +3680,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3628,6 +3745,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3699,6 +3820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (95)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3769,6 +3894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (114)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3787,6 +3916,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1925829730}
     m_Modifications:
+    - target: {fileID: -9038585923029775698, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3447
@@ -3847,6 +3980,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 825894089210680117, guid: da4c6535a012c36489f1f167fb389fa5, type: 3}
@@ -3875,7 +4012,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &638710265
 MonoBehaviour:
@@ -3912,8 +4049,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.84733063, b: 0.47798735, a: 1}
-  m_Intensity: 7
-  m_Range: 10
+  m_Intensity: 4
+  m_Range: 6
   m_SpotAngle: 106.06279
   m_InnerSpotAngle: 16.786465
   m_CookieSize: 10
@@ -4029,6 +4166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4103,6 +4244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plain Wall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4173,6 +4318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (120)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4199,7 +4348,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &670417415
 Transform:
@@ -4251,8 +4400,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.84733063, b: 0.47798735, a: 1}
-  m_Intensity: 10
-  m_Range: 15
+  m_Intensity: 6
+  m_Range: 7
   m_SpotAngle: 106.06279
   m_InnerSpotAngle: 16.786465
   m_CookieSize: 10
@@ -4315,7 +4464,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &676990189
 Transform:
@@ -4405,6 +4554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (99)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4466,6 +4619,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4529,6 +4686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Basic (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4591,6 +4752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4600,76 +4765,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
   m_PrefabInstance: {fileID: 715422232}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &732588573
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 528583268}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.019999998
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.019999998
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_Name
-      value: Hospital Floor (71)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
---- !u!4 &732588574 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-  m_PrefabInstance: {fileID: 732588573}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &737019549
 PrefabInstance:
@@ -4722,6 +4817,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4797,6 +4896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Autopsy Table (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d07ecfd8fa6976645962e7ac4be61664, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4871,6 +4974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plain Wall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4895,7 +5002,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &748570800
 Transform:
@@ -4993,6 +5100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (88)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5062,6 +5173,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (108)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5133,6 +5248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5194,6 +5313,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5264,6 +5387,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5339,6 +5466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dirt Mound
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9ff435eb36d4b34a9ada122a519db5b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5371,7 +5502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.8299999
+      value: 1.943
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5404,6 +5535,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
       propertyPath: m_Name
       value: Plain Wall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5474,6 +5609,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5674,6 +5813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Basic (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5747,6 +5890,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 587f18ac12f282543b851e581e4b4886, type: 3}
       propertyPath: m_Name
       value: Fire Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 587f18ac12f282543b851e581e4b4886, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5822,6 +5969,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toe Tag
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 23072124a612dbb4c97b5bc7aa0f9576, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5884,6 +6035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5929,6 +6084,14 @@ PrefabInstance:
     - target: {fileID: 1834062448705385722, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_Name
       value: Locker Wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834062448705385722, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899755131155955383, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4279138991469062967, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalScale.y
@@ -6022,6 +6185,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.5666
       objectReference: {fileID: 0}
+    - target: {fileID: 5595496115088771440, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761545930692849052, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076369574877653651, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776934541856381234, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8889780183686098985, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.011148999
@@ -6055,68 +6234,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4279138991469062967, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
   m_PrefabInstance: {fileID: 903698878}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &904774104
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 528583268}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_Name
-      value: Hospital Floor (53)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
---- !u!4 &904774105 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-  m_PrefabInstance: {fileID: 904774104}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &910323641
 PrefabInstance:
@@ -6173,6 +6290,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7331cc50e2deb61419db73bfd6028c1e, type: 3}
       propertyPath: m_Name
       value: Window Wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7331cc50e2deb61419db73bfd6028c1e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6236,6 +6357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Basic (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6297,6 +6422,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6368,6 +6497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (105)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6430,6 +6563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6470,7 +6607,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.25
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -6626,6 +6763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door Only
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 556e805a72e7c71449c40556924bb8c0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6695,6 +6836,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (89)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6766,6 +6911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (110)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6836,6 +6985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (132)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6897,6 +7050,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2bec1ce2763f64d4ca7566f78dcef675, type: 3}
       propertyPath: m_Name
       value: Ceiling Vent
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2bec1ce2763f64d4ca7566f78dcef675, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6968,6 +7125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (102)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7029,6 +7190,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7100,6 +7265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (135)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7161,6 +7330,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7232,6 +7405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (96)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7294,6 +7471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Basic (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7339,6 +7520,14 @@ PrefabInstance:
     - target: {fileID: 1834062448705385722, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_Name
       value: Locker Wall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834062448705385722, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899755131155955383, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4279138991469062967, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalScale.y
@@ -7431,6 +7620,22 @@ PrefabInstance:
     - target: {fileID: 5110708985300882378, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.5254
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595496115088771440, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761545930692849052, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076369574877653651, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776934541856381234, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8889780183686098985, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalScale.x
@@ -7526,6 +7731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7596,6 +7805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7605,68 +7818,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
   m_PrefabInstance: {fileID: 1077034239}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1081117158
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 528583268}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_Name
-      value: Hospital Floor (45)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
---- !u!4 &1081117159 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-  m_PrefabInstance: {fileID: 1081117158}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1081236663
 PrefabInstance:
@@ -7719,6 +7870,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7782,6 +7937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Basic (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7843,6 +8002,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7906,6 +8069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7968,6 +8135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8029,6 +8200,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8100,6 +8275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (92)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8161,6 +8340,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8224,6 +8407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8286,6 +8473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8347,6 +8538,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8418,6 +8613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8488,6 +8687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8554,6 +8757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Window Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7331cc50e2deb61419db73bfd6028c1e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8615,6 +8822,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8686,6 +8897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (101)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8748,6 +8963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8772,7 +8991,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1274816734
 Transform:
@@ -8895,6 +9114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (98)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8961,6 +9184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plain Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9023,6 +9250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9084,6 +9315,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9155,6 +9390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (125)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9216,6 +9455,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9287,6 +9530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (104)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9349,6 +9596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9410,6 +9661,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9481,6 +9736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (129)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9542,6 +9801,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9613,6 +9876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (121)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9674,6 +9941,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9745,6 +10016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (126)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9815,6 +10090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (106)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9825,6 +10104,124 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
   m_PrefabInstance: {fileID: 1418528395}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1446978818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1446978821}
+  - component: {fileID: 1446978820}
+  - component: {fileID: 1446978819}
+  m_Layer: 0
+  m_Name: Spot Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1446978819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446978818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &1446978820
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446978818}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 15
+  m_Range: 5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1446978821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446978818}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.348, y: 4.544, z: -25.668}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1447262106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9876,6 +10273,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9947,6 +10348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9963,8 +10368,12 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1925829730}
+    m_TransformParent: {fileID: 1947106865}
     m_Modifications:
+    - target: {fileID: -8961359253771211100, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4999999
@@ -9979,19 +10388,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.7209997
+      value: 3.1400003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.008
+      value: -0.008000016
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.64965
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7551866
+      value: 0.26367968
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9999,7 +10408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.65550995
+      value: -0.96461034
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_LocalRotation.z
@@ -10011,7 +10420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -81.917
+      value: -149.423
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10021,9 +10430,89 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -7146521406498821007, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5471901410102084090, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5063223942988036812, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1018664272722485354, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -466329591000292508, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 50754954277266222, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
       propertyPath: m_Name
       value: Doctor2Pose
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767400413853537203, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148817236446094103, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233112405309087440, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245042011116262203, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507901977716847365, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919683763462532184, guid: 8bc4709b10675834f99a958dd5b57e79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10132,6 +10621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Basic (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10194,6 +10687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Basic (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10238,7 +10735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 42f89cf153e495048b2d6fa8f57c8f82, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.3694773
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 42f89cf153e495048b2d6fa8f57c8f82, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10246,7 +10743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 42f89cf153e495048b2d6fa8f57c8f82, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.9292398
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 42f89cf153e495048b2d6fa8f57c8f82, type: 3}
       propertyPath: m_LocalRotation.z
@@ -10258,7 +10755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 42f89cf153e495048b2d6fa8f57c8f82, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -136.633
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 42f89cf153e495048b2d6fa8f57c8f82, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10267,6 +10764,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 42f89cf153e495048b2d6fa8f57c8f82, type: 3}
       propertyPath: m_Name
       value: Urn
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42f89cf153e495048b2d6fa8f57c8f82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10338,6 +10839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10366,7 +10871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1522167902
 AudioListener:
   m_ObjectHideFlags: 0
@@ -10545,6 +11050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10606,6 +11115,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10677,9 +11190,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2615453208677245630, guid: d44e88e0d07254244a0571c19f03506b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d44e88e0d07254244a0571c19f03506b, type: 3}
       propertyPath: m_Name
       value: Janitor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d44e88e0d07254244a0571c19f03506b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -10745,6 +11266,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10816,6 +11341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (109)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10877,6 +11406,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10948,6 +11481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (113)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11010,6 +11547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Light (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bae769452d63f9641ad83323598dd9e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11071,6 +11612,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bae769452d63f9641ad83323598dd9e9, type: 3}
       propertyPath: m_Name
       value: Ceiling Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bae769452d63f9641ad83323598dd9e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11149,6 +11694,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
       propertyPath: m_Name
       value: Evidence Marker 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11265,6 +11814,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11326,6 +11879,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11397,6 +11954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (119)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11467,6 +12028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (107)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11476,6 +12041,71 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
   m_PrefabInstance: {fileID: 1735991453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1803257594
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1947106865}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.828
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.769
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.8119998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+      propertyPath: m_Name
+      value: Corkboard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: -2377678898046858952, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+    - {fileID: 825894089210680117, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+    - {fileID: -840777845830954692, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+--- !u!4 &1803257595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ebcaf72598ca6124188beb3ddde439f5, type: 3}
+  m_PrefabInstance: {fileID: 1803257594}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1810239810
 PrefabInstance:
@@ -11540,6 +12170,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3ffb7cf12b9fc724b8173190310e52a1, type: 3}
       propertyPath: m_Name
       value: Bookmark
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ffb7cf12b9fc724b8173190310e52a1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11619,6 +12253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ouija Board
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8fdf2d6d38abd8149bbbf07eae6359ae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11689,6 +12327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (103)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11758,6 +12400,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (123)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11833,9 +12479,89 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8464961331765542660, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -6988857176046992567, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5471901410102084090, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -4819223349682164798, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -2200882221121276871, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1895213390092701054, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1688617927700330159, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -822889000768747396, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -86660355763864230, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 357344144889231236, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 834192292310563322, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
       propertyPath: m_Name
       value: TechPoseStand
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767400413853537203, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859259852128964746, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6146275318639410543, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753705370032899036, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540762849855351454, guid: ce41448aade3fd547a705668e659bb5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11952,6 +12678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12013,6 +12743,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
       propertyPath: m_Name
       value: Ceiling Basic (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12076,6 +12810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Basic (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dda5db8f721125468563760518f0e81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12100,7 +12838,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1925829730
 Transform:
@@ -12141,7 +12879,6 @@ Transform:
   - {fileID: 2014673724}
   - {fileID: 2086834177}
   - {fileID: 1810239811}
-  - {fileID: 1457399484}
   - {fileID: 1811976529}
   - {fileID: 2096861079}
   - {fileID: 438968626}
@@ -12215,6 +12952,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
       propertyPath: m_Name
       value: Evidence Marker 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12323,6 +13064,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Light (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bae769452d63f9641ad83323598dd9e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12347,7 +13092,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1947106865
 Transform:
@@ -12378,6 +13123,8 @@ Transform:
   - {fileID: 892543805}
   - {fileID: 1594324379}
   - {fileID: 2136287454}
+  - {fileID: 1457399484}
+  - {fileID: 1803257595}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1979962274
@@ -12440,6 +13187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12449,68 +13200,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
   m_PrefabInstance: {fileID: 1979962274}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1987012075
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 528583268}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-      propertyPath: m_Name
-      value: Hospital Floor (57)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
---- !u!4 &1987012076 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
-  m_PrefabInstance: {fileID: 1987012075}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2000642606
 PrefabInstance:
@@ -12563,6 +13252,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12638,6 +13331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toe Tag (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 23072124a612dbb4c97b5bc7aa0f9576, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12700,6 +13397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12718,6 +13419,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1925829730}
     m_Modifications:
+    - target: {fileID: -8961359253771211100, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.6983
@@ -12770,9 +13475,81 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -8153468022190502949, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -7146521406498821007, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -5471901410102084090, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -466329591000292508, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -208595431880416365, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 50754954277266222, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
       propertyPath: m_Name
       value: DoctorSitCloth2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767400413853537203, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148817236446094103, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507901977716847365, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: d6b33d2a49a037945a524b4f1c8b83ec, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12839,6 +13616,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
       propertyPath: m_Name
       value: Plain Wall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12910,6 +13691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (124)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12936,7 +13721,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2073563132
 Transform:
@@ -12947,7 +13732,7 @@ Transform:
   m_GameObject: {fileID: 2073563131}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.029999971, y: 0.927, z: 10.294}
+  m_LocalPosition: {x: 0.029999971, y: 0, z: 10.294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12988,8 +13773,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.84733063, b: 0.47798735, a: 1}
-  m_Intensity: 5
-  m_Range: 10
+  m_Intensity: 3
+  m_Range: 4
   m_SpotAngle: 106.06279
   m_InnerSpotAngle: 16.786465
   m_CookieSize: 10
@@ -13102,6 +13887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scalpel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 958d4d339f5ca6d4aa46d3ad16e15d31, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13179,6 +13968,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
       propertyPath: m_Name
       value: Evidence Marker 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13287,6 +14080,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13365,6 +14162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ouija Piece
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4d0aec94d9c7b754c95333754981eb2d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13427,6 +14228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13459,7 +14264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.84
+      value: -4.047
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13492,6 +14297,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
       propertyPath: m_Name
       value: Plain Wall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8be76982d903dda468e2d31ff954730d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13570,6 +14379,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
       propertyPath: m_Name
       value: Evidence Marker 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb4d7e838294dd449af43a3bbe250a76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13678,6 +14491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hospital Floor (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13739,6 +14556,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
       propertyPath: m_Name
       value: Hospital Floor (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 340ab12605ea00746a99c705323c90a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13802,6 +14623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling Light (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bae769452d63f9641ad83323598dd9e9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13812,6 +14637,124 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bae769452d63f9641ad83323598dd9e9, type: 3}
   m_PrefabInstance: {fileID: 2134519256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2135075263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2135075266}
+  - component: {fileID: 2135075265}
+  - component: {fileID: 2135075264}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2135075264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135075263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &2135075265
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135075263}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 15
+  m_Range: 5
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &2135075266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135075263}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.348, y: 4.564, z: -27.474}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &2136287453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13834,7 +14777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7426756
+      value: 0.8086336
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13842,11 +14785,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.6929903
+      value: -5.6182737
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.2651247
+      value: 0.34742734
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
       propertyPath: m_LocalRotation.x
@@ -13854,7 +14797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9642142
+      value: 0.9377069
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
       propertyPath: m_LocalRotation.z
@@ -13866,15 +14809,99 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 149.251
+      value: 139.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8464961331765542660, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -6988857176046992567, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -4819223349682164798, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -3756473180518285571, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -2200882221121276871, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1895213390092701054, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -822889000768747396, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -86660355763864230, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 357344144889231236, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 834192292310563322, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
       propertyPath: m_Name
       value: Police2Pose
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217997653156786049, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891746525080496957, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329032454911230265, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163674051017368978, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233112405309087440, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753705370032899036, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8540762849855351454, guid: 2a1c69bb2d4c3474bbe5f41a3be33a24, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13966,6 +14993,14 @@ PrefabInstance:
     - target: {fileID: 1834062448705385722, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_Name
       value: Locker Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834062448705385722, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899755131155955383, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4279138991469062967, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalScale.y
@@ -14059,6 +15094,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.5282
       objectReference: {fileID: 0}
+    - target: {fileID: 5595496115088771440, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761545930692849052, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076369574877653651, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776934541856381234, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8889780183686098985, guid: ae6b396c617752e48a1b1d945c42ca7e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.010884
@@ -14102,3 +15153,5 @@ SceneRoots:
   - {fileID: 1947106865}
   - {fileID: 1522167904}
   - {fileID: 1925829730}
+  - {fileID: 2135075266}
+  - {fileID: 1446978821}
