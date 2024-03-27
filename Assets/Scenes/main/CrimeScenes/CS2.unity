@@ -878,10 +878,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1190441210255788028, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
+    - {fileID: 3054690775968739903, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
+    - {fileID: 2678031355925540073, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
+    - {fileID: 353668296590801887, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
+    - {fileID: 5074844847353792507, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
+    - {fileID: 8118060643074707207, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
+    - {fileID: 1572519357755386057, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
+    - {fileID: 5358387513010880695, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
+    - {fileID: 7003851726061411993, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5550768261619565754, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
-      insertIndex: 20
+      insertIndex: 12
       addedObject: {fileID: 1774588430}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc209d6e0a9e5b4c8beb7212800d1e1, type: 3}
@@ -6184,10 +6193,6 @@ Transform:
   - {fileID: 2346441107614405773}
   - {fileID: 1606979125}
   - {fileID: 426022312}
-  - {fileID: 2020165745}
-  - {fileID: 632195547}
-  - {fileID: 784009036}
-  - {fileID: 774253912}
   m_Father: {fileID: 5850935339766198327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7522646538022418286
