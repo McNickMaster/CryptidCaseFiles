@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3291,6 +3291,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e4dc97ec3dac35a46b49ccc2c6b030ec, type: 2}
   - {fileID: 11400000, guid: 42334d80be43f5643838b844da82396a, type: 2}
   - {fileID: 11400000, guid: 1670eedab41072940a69650794e1c5c9, type: 2}
+  - {fileID: 11400000, guid: 4e70f6e0a40406e4c984b8322d3f82bb, type: 2}
+  - {fileID: 11400000, guid: 5416ca0847c613d48ad67bee4ca8c3de, type: 2}
+  - {fileID: 11400000, guid: d64634185f81344459242e63f631b772, type: 2}
+  - {fileID: 11400000, guid: 148eec85b1777c74c90a734fae7ee6cf, type: 2}
+  - {fileID: 11400000, guid: 585ee7064bfb9624f89aebf468666a10, type: 2}
   data: []
   slides: []
   branches: []
@@ -3432,7 +3437,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   loadSave: 0
-  loadFirstScene: 1
+  loadFirstScene: 0
 --- !u!4 &1480938467
 Transform:
   m_ObjectHideFlags: 0

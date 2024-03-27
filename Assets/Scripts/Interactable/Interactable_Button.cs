@@ -349,6 +349,10 @@ public class Interactable_Button : Interactable
 
         
     }
+    public override void AltInteract()
+    {
+        
+    }
 
     public void SetGuess()
     { 

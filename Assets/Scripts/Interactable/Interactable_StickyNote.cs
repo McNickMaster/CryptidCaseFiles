@@ -29,6 +29,10 @@ public class Interactable_StickyNote : Interactable
     {
         //nothin
     }
+    public override void AltInteract()
+    {
+        
+    }
 
     public void Disable()
     {
