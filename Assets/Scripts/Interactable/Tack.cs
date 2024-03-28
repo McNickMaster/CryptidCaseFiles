@@ -13,6 +13,7 @@ public class Tack : Interactable
     List<DrawLine> linesFromThis = new List<DrawLine>();
     public List<DrawLine> linesToThis = new List<DrawLine>();
     private DrawLine currentLineDrawer;
+    [SerializeField]
     private bool drawing = false, dragging = false;
 
     // Start is called before the first frame update
@@ -52,8 +53,12 @@ public class Tack : Interactable
 
         if(dragging)
         {
-            transform.position = PlayerInput.instance.GetConvertedMousePos();
+            transform.position = PlayerInput.instance.GetConvertedMousePos() + new Vector3(0,0,-1f);
 
+            if(Input.GetMouseButtonDown(0))
+            {
+                Interact();
+            }
 
         } else 
         {
@@ -68,11 +73,18 @@ public class Tack : Interactable
             
             foreach(DrawLine line in linesFromThis)
             {
-                line.SetPoint(0, transform.position);
+                if(line != null)
+                {
+                    line.SetPoint(0, transform.position);
+                }
+                
             }
             foreach(DrawLine line in linesToThis)
             {
-                line.SetPoint(1, transform.position);
+                if(line != null)
+                {
+                    line.SetPoint(1, transform.position);
+                }
             }
         }
 
@@ -86,7 +98,7 @@ public class Tack : Interactable
     {
 
         //nothin
-        dragging = false;
+        StopDrag();
         Debug.Log("drop tack");
 
     }
@@ -105,11 +117,6 @@ public class Tack : Interactable
         
     }
 
-    public void StopDrag()
-    {
-        CastForTackParent();
-    }
-
     public void StopDraw()
     {
         //Debug.Log("stopping line draw");
@@ -126,6 +133,7 @@ public class Tack : Interactable
            {
                 otherTack.linesToThis.Add(currentLineDrawer);
                 linesFromThis.Add(currentLineDrawer);
+                currentLineDrawer.DisableLineDraw();
            }
         } else 
         {
@@ -133,10 +141,19 @@ public class Tack : Interactable
             currentLineDrawer.DestroyLine();
         }
 
+        
         currentLineDrawer = null;
         drawing = false;
 
     }
+    
+    public void StopDrag()
+    {
+        CastForTackParent();
+        
+        dragging = false;
+    }
+
 
 
     
@@ -152,7 +169,14 @@ public class Tack : Interactable
             {
                 
                 parent = hit.transform.gameObject.transform;
-                parent.gameObject.GetComponent<Interactable>().myTack = this;
+                if(parent.gameObject.GetComponent<Interactable>().myTack == null)
+                {
+                    parent.gameObject.GetComponent<Interactable>().myTack = this;
+                } else 
+                {
+                    //dont put anything here
+                }
+                
                 
                 transform.parent = parent;
                 transform.localPosition = new Vector3(0, -0.5f, -2.5f);
@@ -161,9 +185,12 @@ public class Tack : Interactable
             {
                 
             }
-            Debug.Log(hit.transform.gameObject.name);
+            //Debug.Log(hit.transform.gameObject.name);
         }
 
-        
+        if(parent == null)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

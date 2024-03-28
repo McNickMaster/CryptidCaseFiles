@@ -314,6 +314,12 @@ public class PlayerInput : MonoBehaviour
                         break;
                     }
 
+                    case (InteractType.LINE):
+                    {
+                        interacted.Interact();
+                        break;
+                    }
+
                     
                 }
             }
@@ -358,7 +364,7 @@ public class PlayerInput : MonoBehaviour
 
                     case (InteractType.LINE):
                     {
-                        interacted.Interact();
+                        //interacted.Interact();
                         break;
                     }
 

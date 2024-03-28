@@ -242,8 +242,12 @@ public class Interactable_Button : Interactable
                 } else 
                 {
                     noteSpawned = Instantiate(noteToSpawn, noteSpawnPoint.position + new Vector3(0,0, -0.1f), Quaternion.identity, GetComponentInParent<TempNode>().transform);
-                    noteSpawned.GetComponent<Notes>().textData = textData;
-                    noteSpawned.GetComponent<Notes>().Init();
+                    Notes note = noteSpawned.GetComponent<Notes>();
+                    if(note != null)
+                    {
+                        noteSpawned.GetComponent<Notes>().textData = textData;
+                        noteSpawned.GetComponent<Notes>().Init();
+                    }
                 }
                 break;
             }
@@ -251,7 +255,12 @@ public class Interactable_Button : Interactable
             case ButtonType.SPAWN_STICKY:
             {
                 GameObject obj = Instantiate(noteToSpawn, noteSpawnPoint.position + new Vector3(0,0, -0.1f), Quaternion.identity, GetComponentInParent<TempNode>().transform);
-                obj.GetComponentInChildren<Canvas>().worldCamera = GameManager.instance.currentView.myCamera;
+
+                if(obj.GetComponentInChildren<Canvas>() != null)
+                {
+                    obj.GetComponentInChildren<Canvas>().worldCamera = GameManager.instance.currentView.myCamera;
+                }
+                
                 break;
             }
             

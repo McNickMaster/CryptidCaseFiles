@@ -3262,7 +3262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f294eda6da782544b13df5fd1d198f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: DialougeFull
+  fileName: DialogueFull
   simpleTextData:
   - {fileID: 11400000, guid: b5087c13ae5d4a649848f78e772790ad, type: 2}
   - {fileID: 11400000, guid: e4639262481948b4396d1fa59a93246c, type: 2}
@@ -3422,16 +3422,16 @@ MonoBehaviour:
   loseScreen: {fileID: 904603700}
   caseFileObj: {fileID: 0}
   evidencePopPrefab: {fileID: 8004170317590808554, guid: 8198f6c13ede0f34daa446f65afbe3ab, type: 3}
-  startScene: 1
-  currentScene: 0
+  startScene: 0
+  currentScene: 1
   currentView: {fileID: 0}
   views:
   - {fileID: 0}
   - {fileID: 0}
   cases:
+  - {fileID: 11400000, guid: fec463ac3ff5ea9458ac758e087de82c, type: 2}
   - {fileID: 11400000, guid: e25036c690f860441ab4ce21e12022e6, type: 2}
   - {fileID: 11400000, guid: c42b497838b49644eb7fa09f54038924, type: 2}
-  - {fileID: 11400000, guid: fec463ac3ff5ea9458ac758e087de82c, type: 2}
   currentCase: {fileID: 0}
   currentLocation: {fileID: 0}
   completedMilestones: 
