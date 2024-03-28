@@ -109,6 +109,11 @@ public class Interactable_PuzzleObject : Draggable
         boxCollider.enabled = false;
         meshCollider.enabled = false;
     }
+    
+    public override void AltInteract()
+    {
+        
+    }
 
     void ResetRB()
     {

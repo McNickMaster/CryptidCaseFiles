@@ -62,7 +62,7 @@ public class DrawLine : MonoBehaviour
 
     public void DisableLineDraw()
     {
-        if(Vector3.Distance(line.GetPosition(0), line.GetPosition(1) )< 1)
+        if(Vector3.Distance(line.GetPosition(0), line.GetPosition(1) )< 2)
         {
             Destroy(this.gameObject);
         } else 
@@ -81,6 +81,11 @@ public class DrawLine : MonoBehaviour
         line.positionCount = 0;
         lineIndex = 0;
         
+    }
+
+    public void DestroyLine()
+    {
+        Destroy(this.gameObject);
     }
 
 

@@ -151,4 +151,15 @@ public class Notes : Interactable
     {
         //this.transform.GetChild(0).gameObject.SetActive(true);
     }
+
+    public override void AltInteract()
+    {
+        Debug.Log("notes alt interacted");
+        if(myTack != null)
+        {
+            myTack.StartDraw();
+        }
+        
+    }
+
 }

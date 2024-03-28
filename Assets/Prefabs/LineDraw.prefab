@@ -131,7 +131,7 @@ LineRenderer:
     textureMode: 1
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
-    generateLightingData: 0
+    generateLightingData: 1
   m_MaskInteraction: 0
   m_UseWorldSpace: 1
   m_Loop: 0
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
+  thisEnabled: 1
 --- !u!64 &1416032305920308354
 MeshCollider:
   m_ObjectHideFlags: 0
