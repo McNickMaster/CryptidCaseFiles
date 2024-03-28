@@ -218,7 +218,7 @@ public class PlayerInput : MonoBehaviour
         if(tackInteracted!=null)
         { 
             tackInteracted.StopDrag();
-            //tackInteracted = null;
+            tackInteracted = null;
         }
 
         //objectInteracted.layer = LayerMask.GetMask("IgnoreRaycast");
@@ -347,7 +347,7 @@ public class PlayerInput : MonoBehaviour
                     interacted.GetComponent<Interactable_Picture>().AltInteract();
                 }
 */
-                if(interacted.GetComponent<Tack>() == null)
+                if(tackInteracted == null && interacted.GetComponentInChildren<Tack>() != null)
                 {
                     tackInteracted = interacted.GetComponentInChildren<Tack>();
                 }

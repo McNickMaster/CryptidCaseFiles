@@ -5,9 +5,15 @@ using UnityEngine;
 public class Tack : Interactable
 {
 
-    private DrawLine lineDrawer;
+
     [SerializeField]
     private Tack otherTack;
+
+
+    List<DrawLine> linesFromThis = new List<DrawLine>();
+    public List<DrawLine> linesToThis = new List<DrawLine>();
+    private DrawLine currentLineDrawer;
+    private bool drawing = false, dragging = false;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +21,16 @@ public class Tack : Interactable
         
     }
 
+    void Awake()
+    {
+        Debug.Log("i live!");
+        dragging = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
-
+/*
         if(lineDrawer != null)
         {
              if(otherTack != null)
@@ -36,6 +48,35 @@ public class Tack : Interactable
                 //lineDrawer = null;
             }
         }
+        */
+
+        if(dragging)
+        {
+            transform.position = PlayerInput.instance.GetConvertedMousePos();
+
+
+        } else 
+        {
+            if(drawing)
+            {
+                currentLineDrawer.SetPoint(0, transform.position);
+                currentLineDrawer.SetPoint(1, PlayerInput.instance.GetConvertedMousePos());
+            } else 
+            {
+                
+            }
+            
+            foreach(DrawLine line in linesFromThis)
+            {
+                line.SetPoint(0, transform.position);
+            }
+            foreach(DrawLine line in linesToThis)
+            {
+                line.SetPoint(1, transform.position);
+            }
+        }
+
+        
 
 
        
@@ -45,6 +86,8 @@ public class Tack : Interactable
     {
 
         //nothin
+        dragging = false;
+        Debug.Log("drop tack");
 
     }
 
@@ -55,9 +98,11 @@ public class Tack : Interactable
 
     public void StartDraw()
     {
-        Debug.Log("starting draw for: " + gameObject.name);
-        lineDrawer = GameManager.instance.SpawnLineDrawer();
-        lineDrawer.SetPoint(0, transform.position);
+//        Debug.Log("starting draw for: " + gameObject.name);
+        currentLineDrawer = GameManager.instance.SpawnLineDrawer();
+        currentLineDrawer.SetPoint(0, transform.position);
+        drawing = true;
+        
     }
 
     public void StopDrag()
@@ -67,15 +112,29 @@ public class Tack : Interactable
 
     public void StopDraw()
     {
-        Debug.Log("stopping line draw");
+        //Debug.Log("stopping line draw");
         //lineDrawer.DisableLineDraw();
         
         otherTack = PlayerInput.instance.CastForTack();
 
-        if(otherTack != null && otherTack.gameObject.name.Equals(this.gameObject.name))
+        if(otherTack != null){
+           if(otherTack.gameObject.GetInstanceID().Equals(this.gameObject.GetInstanceID()))
+           {  
+                otherTack = null;
+                currentLineDrawer.DestroyLine();
+           } else 
+           {
+                otherTack.linesToThis.Add(currentLineDrawer);
+                linesFromThis.Add(currentLineDrawer);
+           }
+        } else 
         {
-            otherTack = null;
+            
+            currentLineDrawer.DestroyLine();
         }
+
+        currentLineDrawer = null;
+        drawing = false;
 
     }
 
