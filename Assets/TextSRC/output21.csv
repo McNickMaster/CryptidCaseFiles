@@ -1,0 +1,30 @@
+ID,TITLE,BODY
+0,Myling,"You place the dirt down on your desk, and lay your hands on the board."
+1,You,"""Are there any spirits here?"""
+11,Myling,"The papers on your corkboard rustle, the lights flicker, and the board shudders."
+111,You,"""Why are you lingering in our world?"""
+1111,Myling,A voice drifts through the window.
+11111,Myling,"""I was not buried… in my home’s soil… MacGrain..."""
+111111,Myling,the voice dies down before it could finish its sentence.[back11][unlock115]
+112,You,"""Who were you?"""
+1121,Myling,"A human visage flickers before you, remaining on a second, but enough to get a look at the young adult ghost, covered in dirt and grime, with incredibly long nails growing out of their fingernails[getEVIDENCE_CLAWS]"
+11211,Myling,"""...a foreigner… to this land.""[back11]"
+113,You,"""Why was Dr. MacGrain contacting you?"""
+1131,Myling,"The board rattles, and the open book yellows momentarily"
+11311,Myling,"""He was… curious… asking if I… was haunting…""[back11]"
+114,You,"""Thank you spirit, you may leave.""[end]"
+115,You,"[locked] ""How was MacGrain connected?"""
+1151,Myling,The dirt crumbles into dust on your desk.
+11511,Myling,"""He said… to fly me home… unnecessary… my family… listened.""[getEVIDENCE_BURIAL][back11]"
+2,You,"""Myling, I call upon you!"""
+21,Myling,"There’s a sudden sharp scraping sound, and claw marks faintly appear on your desk.[getEVIDENCE_CLAWS]"
+211,You,"""Why do you remain here?"""
+2111,Myling,"The board rattles, and over it’s rattling you faintly hear ethereal words."
+21111,Myling,"""MacGrain, he advised… my family to not… fly me back… I’m separated… from my home’s soil.""[getEVIDENCE_BURIAL][back21]"
+212,You,"""Name yourself."""
+2121,Myling,The claw marks deepen in the desk as a voice quietly fills the room.
+21211,Myling,"""Forgotten… my only memory… is of home…""[back21]"
+213,You,"""Why attack Dr. MacGrain?"""
+2131,Myling,The dirt on your desk crumbles into dust.
+21311,Myling,"""He had asked me… if I was… punishing him… I did not… attack…""[back21]"
+214,You,"""I release you!""[end]"

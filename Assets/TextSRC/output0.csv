@@ -1,5 +1,5 @@
 ID,TITLE,BODY
-0,Edo,"Edo diligently searches the scene, and despite being bothered by the truck's blinding headlights, sniffs out something."
+0,Edo,"Edo diligently searches the scene, and after a moment sniffs out something."
 1,You,"""Whatcha got there?"""
 11,Edo,Edo barks!
 111,You,"""C'mere boy!"""
@@ -17,6 +17,6 @@ ID,TITLE,BODY
 3,You,Wait.
 31,Technician,"One of the technicians walks over to Edo, and bags up something from the ground. They walk over and hand it to you."
 311,You,"""Thanks."""
-3111,Technician,"""No prob."" Inside the bag, some small gray flecks. Looks like scales maybe- or feathers?[getEVIDENCE_FLECKS][end]"
+3111,Technician,"""Of course Detective."" Inside the bag, some small gray flecks. Looks like scales maybe- or feathers?[getEVIDENCE_FLECKS][end]"
 312,You,Wordlessly accept it.
 3121,You,"Looking inside the bag, you notice some small gray flecks. Looks like scales of some sort, or maybe feathers.[getEVIDENCE_FLECKS][end]"
