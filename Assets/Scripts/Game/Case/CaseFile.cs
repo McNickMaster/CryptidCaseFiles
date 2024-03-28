@@ -8,10 +8,12 @@ public class CaseFile : MonoBehaviour
     public Culprit culpritGuess;
     public CauseOfDeath causeOfDeathGuess;
     public Victim victimGuess;
+    public Victim victim2Guess;
 
     public GameObject culpritPicture;
     public GameObject causePicture;
     public GameObject victimPicture;
+    public GameObject victim2Picture;
 
     public Case thisCase;
 
@@ -193,12 +195,23 @@ public class CaseFile : MonoBehaviour
             {
                 if(victimPicture != null && victimPicture != parentObj)
                 {
-                    victimPicture.transform.position = GetRandomPointWithinSpawn();
+                    if(victim2Picture != null && victim2Picture != parentObj)
+                    {
+                        
+                        //reset
+                        victimPicture.transform.position = GetRandomPointWithinSpawn();
+                    } else 
+                    {
+                        
+                        victim2Guess = interactable.myVictim;
+                        victim2Picture = interactable.gameObject;
+                    }
+                } else 
+                {
+                    victimGuess = interactable.myVictim;
+                    victimPicture = interactable.gameObject;
                 }
 
-
-                victimGuess = interactable.myVictim;
-                victimPicture = interactable.gameObject;
             }
         }
     }

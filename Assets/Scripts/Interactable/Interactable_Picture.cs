@@ -42,6 +42,16 @@ public class Interactable_Picture : Interactable
 
     public override void Interact()
     {
-        //nothin
+        //nothin 
+    }
+    
+    public override void AltInteract()
+    {
+        Debug.Log("notes alt interacted");
+        if(myTack != null)
+        {
+            myTack.StartDraw();
+        }
+        
     }
 }

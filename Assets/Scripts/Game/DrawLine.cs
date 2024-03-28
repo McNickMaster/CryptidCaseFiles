@@ -40,6 +40,12 @@ public class DrawLine : MonoBehaviour
         
     }
 
+    void FixedUpdate()
+    {
+        
+        BakeMesh(); // this is so sketchy, i sohuldnt do this every frame !!!!!
+    }
+
     public void SetPoint(int index, Vector3 pos)
     {
         line.SetPosition(index, pos + (Vector3.forward * -0.25f));
@@ -62,25 +68,35 @@ public class DrawLine : MonoBehaviour
 
     public void DisableLineDraw()
     {
-        if(Vector3.Distance(line.GetPosition(0), line.GetPosition(1) )< 1)
+        if(Vector3.Distance(line.GetPosition(0), line.GetPosition(1) )< 2)
         {
             Destroy(this.gameObject);
         } else 
         {
+            BakeMesh();
             
-            Mesh mesh = new Mesh();
-            line.BakeMesh(mesh, GameManager.instance.currentView.myCamera, true);
-
-            meshCollider.sharedMesh = mesh;
         }
 
-    }
+   }
+
+   public void BakeMesh()
+   {
+        Mesh mesh = new Mesh();
+        line.BakeMesh(mesh, GameManager.instance.currentView.myCamera, true);
+
+        meshCollider.sharedMesh = mesh;
+   }
 
     public void ClearLine()
     {
         line.positionCount = 0;
         lineIndex = 0;
         
+    }
+
+    public void DestroyLine()
+    {
+        Destroy(this.gameObject);
     }
 
 

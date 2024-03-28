@@ -28,6 +28,8 @@ public class PlayerInput : MonoBehaviour
     private Notes noteInteracted;
     private Interactable_PuzzleObject puzzleInteracted;
     private Interactable_StickyNote stickyInteracted;
+    [SerializeField]
+    private Tack tackInteracted;
 
     public LayerMask defaultMask, interactMask;
 
@@ -120,6 +122,8 @@ public class PlayerInput : MonoBehaviour
         {
             MouseRightClick();
         }
+
+       
         
 
         if(Input.GetMouseButtonUp(0))
@@ -131,6 +135,16 @@ public class PlayerInput : MonoBehaviour
             
             _dragging = false;
             interacted = null;
+        }
+
+        if(Input.GetMouseButtonUp(1))
+        {
+            
+            if(tackInteracted != null)
+            { 
+                tackInteracted.StopDraw();
+                tackInteracted = null;
+            }
         }
         
         if(_dragging)
@@ -200,6 +214,13 @@ public class PlayerInput : MonoBehaviour
         {
             stickyInteracted.Enable();
         }
+
+        if(tackInteracted!=null)
+        { 
+            tackInteracted.StopDrag();
+            tackInteracted = null;
+        }
+
         //objectInteracted.layer = LayerMask.GetMask("IgnoreRaycast");
         objectInteracted = null;
         _dragging = false;
@@ -273,6 +294,10 @@ public class PlayerInput : MonoBehaviour
                         noteInteracted = interacted.GetComponent<Notes>();
                         puzzleInteracted = interacted.GetComponent<Interactable_PuzzleObject>();
                         stickyInteracted = interacted.GetComponent<Interactable_StickyNote>();
+                        if(tackInteracted == null)
+                        {
+                            tackInteracted = interacted.GetComponent<Tack>();
+                        }
                         if(puzzleInteracted != null)
                         {
                             
@@ -285,6 +310,12 @@ public class PlayerInput : MonoBehaviour
 
                     case (InteractType.BUTTON):
                     {   
+                        interacted.Interact();
+                        break;
+                    }
+
+                    case (InteractType.LINE):
+                    {
                         interacted.Interact();
                         break;
                     }
@@ -303,22 +334,73 @@ public class PlayerInput : MonoBehaviour
         {
         
             interacted = hit.transform.GetComponent<Interactable>();
-
+            
+            
             if(interacted != null)
             {
+                interacted.AltInteract();
+                
+                if(interacted.GetComponent<Notes>() != null)
+                {
+                    Debug.Log("interacting with notes");
+                    interacted.GetComponent<Notes>().AltInteract();
+                }
+
+/*
+                if(interacted.GetComponent<Interactable_Picture>() != null)
+                {
+                    Debug.Log("interacting with notes");
+                    interacted.GetComponent<Interactable_Picture>().AltInteract();
+                }
+*/
+                if(tackInteracted == null && interacted.GetComponentInChildren<Tack>() != null)
+                {
+                    tackInteracted = interacted.GetComponentInChildren<Tack>();
+                }
+
                 Debug.Log(interacted.gameObject.name);
                 switch(interacted.type)
                 {
 
                     case (InteractType.LINE):
                     {
-                        interacted.Interact();
+                        //interacted.Interact();
                         break;
                     }
+
                 }
+
+
+
             }
         }
     }
+
+    public Tack CastForTack()
+    {
+        Tack tack = null;
+        RaycastHit hit = SendCast();
+        if(hit.transform != null)
+        {
+        
+            interacted = hit.transform.GetComponent<Interactable>();
+
+            
+            if(interacted != null)
+            {
+                Debug.Log("interacted nonnull");
+                if(interacted.myTack != null)
+                {
+                    Debug.Log("tack nonnull: " + interacted.myTack.gameObject.name);
+                    tack = interacted.myTack;
+                }
+
+            }
+        }
+
+        return tack;
+    }
+
 
     private void SendCastForHover()
     {

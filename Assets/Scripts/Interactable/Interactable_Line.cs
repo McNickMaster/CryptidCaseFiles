@@ -24,4 +24,8 @@ public class Interactable_Line : Interactable
 
 
     }
+
+    public override void AltInteract()
+    {
+    }
 }
